@@ -27,7 +27,7 @@ Edit these files:
 
 This repo uses GitHub Pages with two deploy targets:
 
-- **Staging:** push to the `staging` branch → publishes to `/staging/`
+- **Staging:** push/merge to the `staging` branch → publishes to `/staging/`
 - **Production:** merge to `main` → publishes to `/`
 
-(Implementation: `.github/workflows/pages.yml` deploys to the `gh-pages` branch.)
+See: `docs/DEPLOY.md` (includes the **one-time GitHub Pages enablement step**).
