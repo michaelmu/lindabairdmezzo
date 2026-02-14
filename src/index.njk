@@ -1,0 +1,153 @@
+---
+layout: layout.njk
+title: Linda Baird — Mezzo Soprano
+---
+
+<div class="fh5co-loader"></div>
+
+<div id="page">
+  <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url({{ '/include/images/header/header.jpg' | url }});">
+    <div class="overlay"></div>
+    <div class="fh5co-container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center">
+          <div class="display-t">
+            <div class="display-tc animate-box" data-animate-effect="fadeIn">
+              <h1>Linda Baird</h1>
+              <h2>Mezzo Soprano</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="fh5co-about" class="fh5co-bg-dark">
+    <div class="fh5co-container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h2>About</h2>
+          <div class="lead">{{ aboutHtml | safe }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="fh5co-media" class="fh5co-bg">
+    <div class="fh5co-container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h2>Videos</h2>
+          <div class="row">
+            {% for v in videos %}
+              <div class="col-md-6" style="margin-bottom: 24px;">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ v.youtubeId }}" allowfullscreen></iframe>
+                </div>
+                {% if v.descriptionHtml %}
+                  <p>{{ v.descriptionHtml | safe }}</p>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="fh5co-gallery" class="fh5co-bg-dark">
+    <div class="fh5co-container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h2>Gallery</h2>
+          <div class="row">
+            {% for p in photos %}
+              <div class="col-sm-6 col-md-3" style="margin-bottom: 18px;">
+                <a href="{{ ('/include/images/gallery/' + p.file) | url }}" class="image-popup" title="{{ p.captionHtml | safe }}">
+                  <img src="{{ ('/include/images/gallery/' + p.file) | url }}" class="img-responsive" alt="{{ p.captionHtml | striptags }}" />
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="fh5co-resume" class="fh5co-bg">
+    <div class="fh5co-container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h2>Resume</h2>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Work</th>
+                <th>Role</th>
+                <th>Company</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for r in resume %}
+                <tr>
+                  <td>{{ r.work }}</td>
+                  <td>{{ r.role }}</td>
+                  <td>{{ r.company }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="fh5co-engagements" class="fh5co-bg-dark">
+    <div class="fh5co-container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h2>Engagements</h2>
+          <table class="table table-condensed">
+            <thead>
+              <tr>
+                <th>Presenter</th>
+                <th>Work</th>
+                <th>Date</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for e in engagements %}
+                <tr>
+                  <td>{{ e.presenterHtml | safe }}</td>
+                  <td>{{ e.work }}</td>
+                  <td>{{ e.date }}</td>
+                  <td>
+                    {{ e.notesHtml | safe }}
+                    {% if e.links and e.links.length %}
+                      <div style="margin-top: 6px;">
+                        {% for link in e.links %}
+                          <a href="{{ link }}" target="_blank" rel="noopener">link {{ loop.index }}</a>{% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                      </div>
+                    {% endif %}
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="fh5co-footer" class="fh5co-bg-dark">
+    <div class="fh5co-container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <p style="margin: 0;">© {{ currentYear }} Linda Baird</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
