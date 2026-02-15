@@ -412,6 +412,37 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   background-repeat: no-repeat; }
 
+/*
+  Home hero cover (we use .qbootstrap-cover as a JS-set background image).
+  The original theme styles the hero via #qbootstrap-slider-hero .flexslider .slides li;
+  add equivalent sizing/cover rules here so the header photo is full-bleed.
+*/
+.qbootstrap-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  min-height: 770px;
+  position: relative;
+}
+
+.qbootstrap-cover:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.qbootstrap-cover .display-t,
+.qbootstrap-cover .display-tc {
+  position: relative;
+  z-index: 2;
+  min-height: 770px;
+}
+
 #qbootstrap-resume {
   background-size: cover;
   background-color: #68768E;
