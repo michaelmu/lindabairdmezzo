@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en" data-theme="cathedral-rose">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Theme Lab — Linda Baird</title>
+
+    <!-- Google Fonts (classical / recital-leaning) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Cormorant+Garamond:wght@400;600;700&family=EB+Garamond:wght@400;600;700&family=Libre+Baskerville:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&family=Spectral:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Reuse site bootstrap for basic grid -->
+    <link rel="stylesheet" href="/lindabairdmezzo/staging/include/css/bootstrap.css" />
+
+    <style>
+      /* Theme Lab uses CSS variables so we can swap palettes + font pairings quickly. */
+      :root {
+        --bg: #fbf7f2;
+        --panel: rgba(255,255,255,0.72);
+        --text: #231f20;
+        --muted: rgba(35, 31, 32, 0.72);
+        --primary: #7b1e3a;
+        --accent: #c6a15b;
+        --border: rgba(35, 31, 32, 0.12);
+        --link: var(--primary);
+
+        --font-heading: "Playfair Display", "Times New Roman", serif;
+        --font-body: "Source Sans 3", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        --letterspace: 0.06em;
+      }
+
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        background: radial-gradient(1200px 900px at 20% 0%, rgba(198,161,91,0.18), transparent 60%),
+                    radial-gradient(900px 700px at 80% 20%, rgba(123,30,58,0.12), transparent 55%),
+                    var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+      }
+
+      a { color: var(--link); }
+      a:hover { color: var(--accent); }
+
+      .lab-shell { padding: 22px 0 60px; }
+
+      .lab-topbar {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: color-mix(in srgb, var(--bg) 85%, white 15%);
+        border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(10px);
+      }
+      .lab-topbar .inner { padding: 14px 0; }
+
+      .lab-title {
+        font-family: var(--font-heading);
+        letter-spacing: 0.02em;
+        margin: 0;
+        font-size: 26px;
+      }
+      .lab-subtitle {
+        margin: 4px 0 0;
+        color: var(--muted);
+      }
+
+      .theme-picker {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 6px;
+      }
+      .theme-picker label { margin: 0; color: var(--muted); font-weight: 600; }
+      .theme-picker select {
+        border: 1px solid var(--border);
+        padding: 8px 10px;
+        border-radius: 10px;
+        background: rgba(255,255,255,0.75);
+        color: var(--text);
+      }
+
+      .hero {
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        overflow: hidden;
+        background:
+          linear-gradient(120deg, rgba(0,0,0,0.18), rgba(0,0,0,0.06)),
+          radial-gradient(900px 420px at 70% 20%, rgba(198,161,91,0.30), transparent 60%),
+          radial-gradient(800px 500px at 20% 80%, rgba(123,30,58,0.22), transparent 60%),
+          #222;
+        color: white;
+      }
+      .hero .pad { padding: 44px 36px; }
+      .hero h1 {
+        font-family: var(--font-heading);
+        margin: 0;
+        font-size: 52px;
+        line-height: 1.05;
+        letter-spacing: 0.01em;
+      }
+      .hero .tag {
+        margin-top: 14px;
+        font-weight: 700;
+        letter-spacing: var(--letterspace);
+        text-transform: uppercase;
+        opacity: 0.92;
+      }
+      .hero .meta {
+        margin-top: 16px;
+        max-width: 60ch;
+        opacity: 0.92;
+      }
+      .hero .cta {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .btn-lab {
+        display: inline-block;
+        padding: 10px 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.28);
+        color: white;
+        background: rgba(255,255,255,0.10);
+        text-decoration: none;
+        font-weight: 700;
+      }
+      .btn-lab.primary {
+        background: color-mix(in srgb, var(--primary) 72%, black 28%);
+        border-color: rgba(255,255,255,0.18);
+      }
+
+      .section-title {
+        margin: 34px 0 10px;
+        font-family: var(--font-heading);
+        font-size: 30px;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 14px;
+      }
+      .cardx {
+        grid-column: span 6;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: var(--panel);
+        padding: 18px;
+      }
+      @media (max-width: 900px) {
+        .cardx { grid-column: span 12; }
+        .hero h1 { font-size: 40px; }
+      }
+
+      .cardx h3 {
+        margin: 0 0 10px;
+        font-family: var(--font-heading);
+        font-size: 22px;
+      }
+      .swatches { display: flex; gap: 10px; flex-wrap: wrap; }
+      .swatch {
+        display: flex; gap: 8px; align-items: center;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 7px 10px;
+        background: rgba(255,255,255,0.55);
+      }
+      .dot { width: 14px; height: 14px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.18); }
+      .dot.bg { background: var(--bg); }
+      .dot.text { background: var(--text); }
+      .dot.primary { background: var(--primary); }
+      .dot.accent { background: var(--accent); }
+
+      .sample {
+        color: var(--muted);
+        margin: 0;
+      }
+      .sample strong { color: var(--text); }
+
+      /* 8 classical themes */
+      html[data-theme="cathedral-rose"] {
+        --bg: #fbf7f2;
+        --panel: rgba(255,255,255,0.78);
+        --text: #231f20;
+        --muted: rgba(35,31,32,0.70);
+        --primary: #7b1e3a;   /* rose/wine */
+        --accent: #c6a15b;    /* gilt */
+        --link: #7b1e3a;
+        --font-heading: "Playfair Display", serif;
+        --font-body: "Source Sans 3", sans-serif;
+      }
+
+      html[data-theme="midnight-velvet"] {
+        --bg: #0f1622;
+        --panel: rgba(255,255,255,0.06);
+        --text: #f4f1ea;
+        --muted: rgba(244,241,234,0.70);
+        --primary: #c6a15b;
+        --accent: #e04e6f;
+        --border: rgba(244,241,234,0.16);
+        --link: #c6a15b;
+        --font-heading: "Cormorant Garamond", serif;
+        --font-body: "Source Sans 3", sans-serif;
+      }
+
+      html[data-theme="bordeaux-ink"] {
+        --bg: #f7f3ef;
+        --panel: rgba(255,255,255,0.78);
+        --text: #111318;
+        --muted: rgba(17,19,24,0.70);
+        --primary: #5f1020;
+        --accent: #1f3a5b;
+        --link: #5f1020;
+        --font-heading: "Libre Baskerville", serif;
+        --font-body: "Crimson Text", serif;
+      }
+
+      html[data-theme="sage-studio"] {
+        --bg: #f4f4ee;
+        --panel: rgba(255,255,255,0.72);
+        --text: #1d2a22;
+        --muted: rgba(29,42,34,0.70);
+        --primary: #3a6a55;
+        --accent: #b56b4b;
+        --link: #2f5d4a;
+        --font-heading: "Spectral", serif;
+        --font-body: "Source Sans 3", sans-serif;
+      }
+
+      html[data-theme="concert-hall"] {
+        --bg: #ffffff;
+        --panel: rgba(250,250,250,0.92);
+        --text: #0c0c0e;
+        --muted: rgba(12,12,14,0.64);
+        --primary: #0c0c0e;
+        --accent: #7b1e3a;
+        --border: rgba(12,12,14,0.14);
+        --link: #7b1e3a;
+        --font-heading: "EB Garamond", serif;
+        --font-body: "Source Sans 3", sans-serif;
+      }
+
+      html[data-theme="desert-candle"] {
+        --bg: #fbf2e4;
+        --panel: rgba(255,255,255,0.72);
+        --text: #2a1e16;
+        --muted: rgba(42,30,22,0.68);
+        --primary: #a55a2a;
+        --accent: #d3b37a;
+        --link: #8c4521;
+        --font-heading: "Cormorant Garamond", serif;
+        --font-body: "Spectral", serif;
+      }
+
+      html[data-theme="winter-blue"] {
+        --bg: #eef3f7;
+        --panel: rgba(255,255,255,0.76);
+        --text: #102132;
+        --muted: rgba(16,33,50,0.70);
+        --primary: #244c77;
+        --accent: #93a9c1;
+        --link: #244c77;
+        --font-heading: "Libre Baskerville", serif;
+        --font-body: "Source Sans 3", sans-serif;
+      }
+
+      html[data-theme="royal-plum"] {
+        --bg: #f8f4fb;
+        --panel: rgba(255,255,255,0.76);
+        --text: #1b1022;
+        --muted: rgba(27,16,34,0.70);
+        --primary: #3a1b5a;
+        --accent: #c6a15b;
+        --link: #3a1b5a;
+        --font-heading: "Playfair Display", serif;
+        --font-body: "Crimson Text", serif;
+      }
+
+      /* Make dark theme readable */
+      html[data-theme="midnight-velvet"] body {
+        background: radial-gradient(1200px 900px at 20% 0%, rgba(198,161,91,0.18), transparent 60%),
+                    radial-gradient(900px 700px at 80% 20%, rgba(224,78,111,0.12), transparent 55%),
+                    var(--bg);
+      }
+      html[data-theme="midnight-velvet"] .hero {
+        border-color: rgba(244,241,234,0.18);
+      }
+
+      .kbd {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 7px;
+        border: 1px solid var(--border);
+        background: rgba(255,255,255,0.55);
+      }
+      html[data-theme="midnight-velvet"] .kbd { background: rgba(255,255,255,0.08); }
+    </style>
+  </head>
+  <body>
+    
+<div class="lab-topbar">
+  <div class="container inner">
+    <div class="row" style="display:flex; align-items:flex-end;">
+      <div class="col-sm-7">
+        <h1 class="lab-title">Theme Lab</h1>
+        <p class="lab-subtitle">Pick a classical look & feel. Current: <strong id="themeName">—</strong></p>
+      </div>
+      <div class="col-sm-5">
+        <div class="theme-picker">
+          <label for="themeSelect">Theme</label>
+          <select id="themeSelect">
+            <option value="cathedral-rose">Cathedral Rose</option>
+            <option value="midnight-velvet">Midnight Velvet</option>
+            <option value="bordeaux-ink">Bordeaux & Ink</option>
+            <option value="sage-studio">Sage Studio</option>
+            <option value="concert-hall">Concert Hall</option>
+            <option value="desert-candle">Desert Candle</option>
+            <option value="winter-blue">Winter Blue</option>
+            <option value="royal-plum">Royal Plum</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lab-shell">
+  <div class="container">
+    <div class="hero">
+      <div class="pad">
+        <div class="tag">Mezzo Soprano</div>
+        <h1>Linda Baird</h1>
+        <p class="meta">This page is just a style sampler. Colors + fonts here are what will carry over onto the real site once you pick a favorite.</p>
+        <div class="cta">
+          <a class="btn-lab primary" href="#">Primary button</a>
+          <a class="btn-lab" href="#">Secondary button</a>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Palette + Type</h2>
+    <div class="cards">
+      <div class="cardx">
+        <h3>Color swatches</h3>
+        <div class="swatches">
+          <div class="swatch"><span class="dot bg"></span> Background</div>
+          <div class="swatch"><span class="dot text"></span> Text</div>
+          <div class="swatch"><span class="dot primary"></span> Primary</div>
+          <div class="swatch"><span class="dot accent"></span> Accent</div>
+        </div>
+        <p class="sample" style="margin-top: 12px;">Links look like <a href="#">this</a>. Accent hover is subtle on purpose.</p>
+      </div>
+
+      <div class="cardx">
+        <h3>Typography sample</h3>
+        <p class="sample"><strong>Heading font:</strong> used for names + section headings.</p>
+        <p class="sample"><strong>Body font:</strong> used for paragraphs and tables (readability first).</p>
+        <p class="sample" style="margin-top: 10px; color: var(--text); font-family: var(--font-heading); font-size: 26px;">Ombra mai fu</p>
+        <p class="sample">A short line of copy to judge legibility. If anything feels too modern, too cold, or too busy, tell me and I’ll adjust.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Layout sanity check</h2>
+    <div class="cards">
+      <div class="cardx">
+        <h3>Section heading</h3>
+        <p class="sample">This is roughly what “About / Gallery / Videos / Resume” sections will feel like.</p>
+        <ul>
+          <li>Elegant, recital-forward</li>
+          <li>Readable on mobile</li>
+          <li>One clear accent color</li>
+        </ul>
+      </div>
+      <div class="cardx">
+        <h3>Notes</h3>
+        <p class="sample">Once you pick a theme: I’ll apply it to the real site, then we can tune details (hero overlay strength, section backgrounds, heading sizes).</p>
+        <p class="sample">Shortcut: tell me the theme name you like, or just send a screenshot with the one you want circled.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 26px; color: var(--muted);">Tip: your choice is saved in this browser via <span class="kbd">localStorage</span>, so it will stick when you refresh.</p>
+  </div>
+</div>
+
+
+    <script>
+      (function(){
+        const select = document.getElementById('themeSelect');
+        if (!select) return;
+
+        const storageKey = 'lb_theme_lab_choice_v1';
+        const html = document.documentElement;
+
+        const apply = (theme) => {
+          html.setAttribute('data-theme', theme);
+          if (select.value !== theme) select.value = theme;
+        };
+
+        const saved = localStorage.getItem(storageKey);
+        if (saved) apply(saved);
+
+        select.addEventListener('change', () => {
+          const theme = select.value;
+          apply(theme);
+          localStorage.setItem(storageKey, theme);
+
+          const label = select.options[select.selectedIndex]?.textContent || theme;
+          const el = document.getElementById('themeName');
+          if (el) el.textContent = label;
+        });
+
+        // Set initial label
+        const el = document.getElementById('themeName');
+        if (el) {
+          const label = select.options[select.selectedIndex]?.textContent || select.value;
+          el.textContent = label;
+        }
+      })();
+    </script>
+  </body>
+</html>
