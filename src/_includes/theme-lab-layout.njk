@@ -183,6 +183,21 @@
       .sample strong { color: var(--text); }
 
       /* 8 classical themes */
+      html[data-theme="current-classic"] {
+        /* Mimics current lindabairdmezzo.com vibe (qbootstrap): */
+        --bg: #877c62;          /* contact section brown */
+        --panel: rgba(255,255,255,0.10);
+        --text: #ffffff;
+        --muted: rgba(255,255,255,0.78);
+        --primary: #e04e6f;     /* pink accent used throughout current site */
+        --accent: #c6a15b;      /* warm/gilt */
+        --border: rgba(255,255,255,0.18);
+        --link: #e04e6f;
+        --font-heading: "Cormorant Garamond", serif;
+        --font-body: "Source Sans 3", sans-serif;
+        --letterspace: 0.10em;
+      }
+
       html[data-theme="cathedral-rose"] {
         --bg: #fbf7f2;
         --panel: rgba(255,255,255,0.78);
