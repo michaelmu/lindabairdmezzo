@@ -1,0 +1,463 @@
+---
+import fs from 'node:fs';
+import yaml from 'js-yaml';
+
+const aboutHtml = fs.readFileSync('content/about.md', 'utf8');
+const photos = (yaml.load(fs.readFileSync('content/photos.yml', 'utf8'))?.photos) ?? [];
+const videos = (yaml.load(fs.readFileSync('content/videos.yml', 'utf8'))?.videos) ?? [];
+const resume = (yaml.load(fs.readFileSync('content/resume.yml', 'utf8'))?.resume) ?? [];
+const engagements = (yaml.load(fs.readFileSync('content/engagements.yml', 'utf8'))?.engagements) ?? [];
+
+const year = new Date().getFullYear();
+
+const heroImages = [
+  'include/images/header/linda_header_gate.jpg',
+  'include/images/header/linda_header_field.jpg',
+  'include/images/header/linda_header_inside.jpg',
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Linda Baird — Mezzo Soprano</title>
+
+    <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.ico`} />
+
+    <!-- Fonts (classical + clean) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      :root {
+        --bg: #fbf7f2;
+        --panel: rgba(255, 255, 255, 0.78);
+        --text: #171717;
+        --muted: rgba(23, 23, 23, 0.72);
+        --primary: #7b1e3a; /* rose/wine */
+        --accent: #c6a15b;  /* gilt */
+        --border: rgba(23, 23, 23, 0.12);
+
+        --font-heading: "Cormorant Garamond", "Times New Roman", serif;
+        --font-body: "Source Sans 3", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+        --radius: 18px;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        color: var(--text);
+        background:
+          radial-gradient(1200px 900px at 20% 0%, rgba(198,161,91,0.18), transparent 60%),
+          radial-gradient(900px 700px at 80% 20%, rgba(123,30,58,0.10), transparent 55%),
+          var(--bg);
+        font-family: var(--font-body);
+        line-height: 1.5;
+      }
+      a { color: var(--primary); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      a:hover { color: color-mix(in srgb, var(--primary) 55%, black 45%); }
+
+      .container { max-width: 1120px; margin: 0 auto; padding: 0 18px; }
+
+      header.site {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        border-bottom: 1px solid var(--border);
+        background: color-mix(in srgb, var(--bg) 82%, white 18%);
+        backdrop-filter: blur(10px);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
+        gap: 14px;
+      }
+      .brand {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        font-size: 20px;
+        white-space: nowrap;
+      }
+      .nav a { color: var(--text); text-decoration: none; }
+      .nav a:hover { color: var(--primary); }
+      .links {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        font-size: 14px;
+      }
+
+      .hero {
+        margin: 18px 0 0;
+        border: 1px solid var(--border);
+        border-radius: calc(var(--radius) + 4px);
+        overflow: hidden;
+        position: relative;
+        min-height: 66vh;
+        display: grid;
+        place-items: center;
+        color: white;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: 50% 18%;
+        transform: scale(1.02);
+        filter: saturate(1.02);
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(120deg, rgba(0,0,0,0.55), rgba(0,0,0,0.22)),
+          radial-gradient(900px 420px at 70% 20%, rgba(198,161,91,0.26), transparent 60%);
+      }
+      .hero .inner {
+        position: relative;
+        z-index: 2;
+        padding: 56px 18px;
+        text-align: center;
+      }
+      .hero h1 {
+        font-family: var(--font-heading);
+        font-size: clamp(44px, 5.3vw, 72px);
+        margin: 0;
+        letter-spacing: 0.01em;
+        line-height: 1.05;
+      }
+      .hero .subtitle {
+        margin-top: 10px;
+        font-weight: 700;
+        letter-spacing: 0.10em;
+        text-transform: uppercase;
+        opacity: 0.95;
+      }
+
+      .section { padding: 42px 0; }
+      .panel {
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--panel);
+        padding: 22px;
+      }
+      .section h2 {
+        font-family: var(--font-heading);
+        font-size: 34px;
+        margin: 0 0 12px;
+      }
+
+      /* Cards */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 14px;
+      }
+      .col-6 { grid-column: span 6; }
+      .col-3 { grid-column: span 3; }
+      .col-12 { grid-column: span 12; }
+      @media (max-width: 900px) {
+        .col-6, .col-3 { grid-column: span 12; }
+        .links { gap: 10px; }
+      }
+
+      /* Gallery */
+      .thumb {
+        display: block;
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid rgba(0,0,0,0.10);
+        background: rgba(255,255,255,0.35);
+      }
+      .thumb img { display: block; width: 100%; height: auto; }
+
+      /* Tables */
+      table { width: 100%; border-collapse: collapse; }
+      th, td { padding: 10px 10px; border-bottom: 1px solid rgba(0,0,0,0.10); text-align: left; vertical-align: top; }
+      th { font-weight: 700; font-size: 14px; color: rgba(0,0,0,0.75); }
+
+      footer {
+        padding: 30px 0 50px;
+        color: var(--muted);
+      }
+
+      /* Dialog lightbox */
+      dialog::backdrop { background: rgba(0,0,0,0.72); }
+      dialog {
+        border: none;
+        padding: 0;
+        border-radius: 18px;
+        overflow: hidden;
+        max-width: min(1100px, calc(100vw - 26px));
+      }
+      .lightbox-img { display:block; max-width: 100%; height: auto; }
+      .lightbox-cap { padding: 12px 14px; background: rgba(255,255,255,0.92); color: #111; }
+      .xbtn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(255,255,255,0.9);
+        border: 1px solid rgba(0,0,0,0.14);
+        border-radius: 999px;
+        width: 38px;
+        height: 38px;
+        cursor: pointer;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site">
+      <div class="container">
+        <nav class="nav" aria-label="Primary">
+          <div class="brand"><a href="#home">Linda Baird</a></div>
+          <div class="links">
+            <a href="#about">About</a>
+            <a href="#videos">Videos</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#resume">Resume</a>
+            <a href="#engagements">Engagements</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="container">
+        <div class="hero" id="hero" aria-label="Header images">
+          <div class="inner">
+            <h1>Linda Baird</h1>
+            <div class="subtitle">Mezzo Soprano</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="panel">
+            <h2>About</h2>
+            <div set:html={aboutHtml} />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="videos">
+        <div class="container">
+          <div class="panel">
+            <h2>Videos</h2>
+            <div class="grid" style="margin-top: 14px;">
+              {videos.map((v) => (
+                <div class="col-6">
+                  <div style="border-radius: 16px; overflow:hidden; border:1px solid rgba(0,0,0,0.12); background: rgba(255,255,255,0.35);">
+                    <div style="aspect-ratio: 16 / 9; width: 100%; background: rgba(0,0,0,0.08);">
+                      <iframe
+                        title={v.title ?? 'YouTube video'}
+                        style="width:100%; height:100%; border:0;"
+                        src={`https://www.youtube.com/embed/${v.youtubeId}`}
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      />
+                    </div>
+                  </div>
+                  {v.descriptionHtml ? (
+                    <div class="" set:html={v.descriptionHtml} />
+                  ) : null}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="gallery">
+        <div class="container">
+          <div class="panel">
+            <h2>Gallery</h2>
+            <div class="grid" style="margin-top: 14px;">
+              {photos.map((p) => (
+                <div class="col-3">
+                  <a
+                    class="thumb"
+                    href={`${import.meta.env.BASE_URL}include/images/gallery/${p.file}`}
+                    data-lightbox="1"
+                    data-caption={p.captionHtml ?? ''}
+                  >
+                    <img
+                      src={`${import.meta.env.BASE_URL}include/images/gallery/${p.file}`}
+                      alt={(p.captionHtml ?? 'Photo').replace(/<[^>]+>/g, '')}
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="resume">
+        <div class="container">
+          <div class="panel">
+            <h2>Resume</h2>
+            <div style="overflow:auto; margin-top: 8px;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Work</th>
+                    <th>Role</th>
+                    <th>Company</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {resume.map((r) => (
+                    <tr>
+                      <td>{r.work}</td>
+                      <td>{r.role}</td>
+                      <td>{r.company}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="engagements">
+        <div class="container">
+          <div class="panel">
+            <h2>Engagements</h2>
+            <div style="overflow:auto; margin-top: 8px;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Presenter</th>
+                    <th>Work</th>
+                    <th>Date</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {engagements.map((e) => (
+                    <tr>
+                      <td><span set:html={e.presenterHtml ?? ''} /></td>
+                      <td>{e.work}</td>
+                      <td>{e.date}</td>
+                      <td>
+                        <span set:html={e.notesHtml ?? ''} />
+                        {e.links?.length ? (
+                          <div style="margin-top: 6px;">
+                            {e.links.map((link, idx) => (
+                              <a href={link} target="_blank" rel="noopener">link {idx + 1}</a>
+                            ))}
+                          </div>
+                        ) : null}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="panel">
+            <h2>Contact</h2>
+            <p style="margin:0; color: var(--muted);">Add contact links here (email / agent / socials). Tell me what you want displayed.</p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container">© {year} Linda Baird</div>
+      </footer>
+    </main>
+
+    <dialog id="lightbox">
+      <div style="position:relative; background:#000;">
+        <button class="xbtn" id="lightboxClose" aria-label="Close">×</button>
+        <img class="lightbox-img" id="lightboxImg" alt="" />
+      </div>
+      <div class="lightbox-cap" id="lightboxCap"></div>
+    </dialog>
+
+    <script define:vars={{ heroImages }}>
+      // Hero background rotation + lightweight gallery lightbox.
+      (function () {
+        const base = import.meta.env.BASE_URL;
+
+        // Hero carousel
+        const hero = document.getElementById('hero');
+        if (hero) {
+          const imgs = heroImages.map((p) => base + p);
+          let idx = 0;
+
+          const apply = () => {
+            hero.style.setProperty('--hero-url', `url("${imgs[idx]}")`);
+            hero.style.backgroundImage = `url("${imgs[idx]}")`;
+            hero.style.backgroundSize = 'cover';
+            hero.style.backgroundPosition = '50% 18%';
+          };
+
+          // Use ::before if possible
+          const styleId = 'hero-before-style';
+          const style = document.getElementById(styleId) || document.createElement('style');
+          style.id = styleId;
+          style.textContent = `.hero::before{ background-image: var(--hero-url); }`;
+          document.head.appendChild(style);
+
+          apply();
+          setInterval(() => {
+            idx = (idx + 1) % imgs.length;
+            apply();
+          }, 6500);
+        }
+
+        // Lightbox (native dialog)
+        const dlg = document.getElementById('lightbox');
+        const img = document.getElementById('lightboxImg');
+        const cap = document.getElementById('lightboxCap');
+        const closeBtn = document.getElementById('lightboxClose');
+
+        if (dlg && img && cap && closeBtn) {
+          closeBtn.addEventListener('click', () => dlg.close());
+          dlg.addEventListener('click', (e) => {
+            const rect = dlg.getBoundingClientRect();
+            // close when clicking outside the dialog content
+            if (e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom) {
+              dlg.close();
+            }
+          });
+
+          document.addEventListener('click', (e) => {
+            const a = e.target && (e.target.closest?.('a[data-lightbox="1"]'));
+            if (!a) return;
+            e.preventDefault();
+
+            const href = a.getAttribute('href');
+            const caption = a.getAttribute('data-caption') || '';
+            img.src = href;
+            cap.innerHTML = caption;
+            dlg.showModal();
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

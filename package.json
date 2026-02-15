@@ -3,12 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "eleventy",
-    "serve": "eleventy --serve",
+    "build": "astro build && cp -R include _site/include && cp favicon.ico _site/favicon.ico",
+    "serve": "astro dev",
     "clean": "rm -rf _site"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0",
+    "astro": "^4.16.5",
     "js-yaml": "^4.1.0"
   }
 }

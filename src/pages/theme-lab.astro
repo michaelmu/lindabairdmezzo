@@ -1,0 +1,15 @@
+---
+// Temporary: keep the theme lab available during the redesign.
+import fs from 'node:fs';
+const html = fs.readFileSync('src/theme-lab.njk', 'utf8');
+---
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Theme Lab (legacy)</title>
+  </head>
+  <body>
+    <pre style="white-space: pre-wrap;">Theme Lab was built in the Eleventy version. I can port it to Astro next.</pre>
+  </body>
+</html>
