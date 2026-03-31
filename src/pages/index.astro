@@ -29,65 +29,85 @@ const heroImages = [
     <!-- Fonts (classical + clean) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
     <style>
       :root {
-        --bg: #fbf7f2;
-        --panel: rgba(255, 255, 255, 0.78);
-        --text: #171717;
-        --muted: rgba(23, 23, 23, 0.72);
-        --primary: #7b1e3a; /* rose/wine */
-        --accent: #c6a15b;  /* gilt */
-        --border: rgba(23, 23, 23, 0.12);
+        --bg: #ffffff;
+        --panel: rgba(255, 255, 255, 0.92);
+        --text: #7f7f7f;
+        --muted: #929292;
+        --primary: #E04E6F;
+        --accent: #f9f6f0;
+        --border: rgba(0, 0, 0, 0.10);
 
         --font-heading: "Cormorant Garamond", "Times New Roman", serif;
-        --font-body: "Source Sans 3", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        --font-body: "Source Sans Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 
-        --radius: 18px;
+        --radius: 0px;
       }
 
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
       body {
         margin: 0;
-        color: var(--text);
-        background:
-          radial-gradient(1200px 900px at 20% 0%, rgba(198,161,91,0.18), transparent 60%),
-          radial-gradient(900px 700px at 80% 20%, rgba(123,30,58,0.10), transparent 55%),
-          var(--bg);
         font-family: var(--font-body);
-        line-height: 1.5;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.8;
+        color: var(--text);
+        background: var(--bg);
+        height: 100%;
+        position: relative;
       }
-      a { color: var(--primary); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-      a:hover { color: color-mix(in srgb, var(--primary) 55%, black 45%); }
+      a {
+        color: var(--primary);
+        transition: 0.5s;
+      }
+      a:hover, a:active, a:focus {
+        color: var(--primary);
+        outline: none;
+      }
 
-      .container { max-width: 1120px; margin: 0 auto; padding: 0 18px; }
+      .container { max-width: 1140px; margin: 0 auto; padding: 0 18px; }
 
+      /* Nav: match lindabairdmezzo.com */
       header.site {
-        position: sticky;
+        position: absolute;
+        z-index: 99;
+        width: 100%;
         top: 0;
-        z-index: 50;
-        border-bottom: 1px solid var(--border);
-        background: color-mix(in srgb, var(--bg) 82%, white 18%);
-        backdrop-filter: blur(10px);
+        margin-top: 20px;
       }
+      header.site.fixed {
+        position: fixed;
+        background: #fff;
+        box-shadow: 0 0 9px 0 rgba(0,0,0,0.1);
+        margin-top: 0;
+        top: 0;
+      }
+
       .nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 12px 0;
+        padding: 10px 0;
         gap: 14px;
       }
       .brand {
+        float: left;
+        display: block;
+        font-size: 34px;
+        padding-left: 0;
+        color: #fff;
         font-family: var(--font-heading);
-        font-weight: 700;
-        letter-spacing: 0.02em;
-        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 0.18em;
         white-space: nowrap;
+        text-decoration: none;
       }
-      .nav a { color: var(--text); text-decoration: none; }
-      .nav a:hover { color: var(--primary); }
+      header.site.fixed .brand { color: var(--primary); }
+
       .links {
         display: flex;
         gap: 14px;
@@ -95,54 +115,126 @@ const heroImages = [
         justify-content: flex-end;
         font-size: 14px;
       }
-
-      .hero {
-        margin: 18px 0 0;
-        border: 1px solid var(--border);
-        border-radius: calc(var(--radius) + 4px);
-        overflow: hidden;
+      .links a {
+        font-family: var(--font-body);
+        color: rgba(255,255,255,0.5);
         position: relative;
-        min-height: 66vh;
-        display: grid;
-        place-items: center;
-        color: white;
+        text-decoration: none;
       }
+      header.site.fixed .links a { color: rgba(0,0,0,0.5); }
+      .links a span { position: relative; display: block; padding-bottom: 2px; }
+      .links a span:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--primary);
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+      }
+      .links a:hover { color: #fff; }
+      header.site.fixed .links a:hover { color: var(--primary); }
+      .links a:hover span:before { visibility: visible; transform: scaleX(1); }
+
+      @media (max-width: 768px) {
+        header.site {
+          margin-top: 0;
+          background: #fff;
+          box-shadow: 0 0 9px 0 rgba(0,0,0,0.1);
+        }
+        .brand { color: var(--primary); font-size: 28px; }
+        .links a { color: rgba(0,0,0,0.5); }
+        .links a:hover { color: var(--primary); }
+      }
+
+      /* Hero: match lindabairdmezzo.com */
+      .hero {
+        position: relative;
+        height: 800px;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+        color: #fff;
+      }
+      @media (max-width: 768px) { .hero { height: 700px; } }
+
       .hero::before {
         content: "";
         position: absolute;
         inset: 0;
         background-size: cover;
-        background-position: 50% 18%;
-        transform: scale(1.02);
-        filter: saturate(1.02);
+        background-position: top center;
       }
       .hero::after {
         content: "";
         position: absolute;
         inset: 0;
-        background:
-          linear-gradient(120deg, rgba(0,0,0,0.55), rgba(0,0,0,0.22)),
-          radial-gradient(900px 420px at 70% 20%, rgba(198,161,91,0.26), transparent 60%);
+        background: rgba(0,0,0,0.4);
       }
+
       .hero .inner {
         position: relative;
         z-index: 2;
-        padding: 56px 18px;
+        height: 100%;
+        display: table;
+        width: 100%;
         text-align: center;
       }
-      .hero h1 {
-        font-family: var(--font-heading);
-        font-size: clamp(44px, 5.3vw, 72px);
-        margin: 0;
-        letter-spacing: 0.01em;
-        line-height: 1.05;
+      .hero .inner > div {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 18px;
       }
-      .hero .subtitle {
-        margin-top: 10px;
-        font-weight: 700;
-        letter-spacing: 0.10em;
+
+      .hero .holder {
+        color: #fff;
+        font-family: var(--font-body);
+        font-size: 18px;
         text-transform: uppercase;
-        opacity: 0.95;
+        letter-spacing: 10px;
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+      .hero .holder span { position: relative; }
+      .hero .holder span:before,
+      .hero .holder span:after {
+        position: absolute;
+        top: 49%;
+        width: 100px;
+        height: 2px;
+        background: #fff;
+        content: '';
+      }
+      .hero .holder span:before { left: -110px; }
+      .hero .holder span:after { right: -110px; }
+      @media (max-width: 768px) {
+        .hero .holder { letter-spacing: 2px; }
+        .hero .holder span:before,
+        .hero .holder span:after { width: 50px; }
+        .hero .holder span:before { left: -60px; }
+        .hero .holder span:after { right: -60px; }
+      }
+
+      .hero h1 {
+        color: #fff;
+        font-size: 80px;
+        margin: 0 0 20px;
+        font-weight: 300;
+        font-family: var(--font-heading);
+        letter-spacing: 7px;
+        line-height: 1.3;
+      }
+      @media (max-width: 768px) { .hero h1 { font-size: 60px; } }
+
+      .hero .subtitle {
+        color: #fff;
+        font-weight: 400;
+        font-size: 20px;
+        letter-spacing: 10px;
+        margin: 0;
       }
 
       .section { padding: 42px 0; }
@@ -173,14 +265,35 @@ const heroImages = [
       }
 
       /* Gallery */
+      #gallery .grid { gap: 0; }
+
       .thumb {
         display: block;
-        border-radius: 14px;
+        border-radius: 0;
         overflow: hidden;
-        border: 1px solid rgba(0,0,0,0.10);
-        background: rgba(255,255,255,0.35);
+        border: 0;
+        background: transparent;
       }
-      .thumb img { display: block; width: 100%; height: auto; }
+      .thumb img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 4 / 5; /* consistent face scale */
+        object-fit: cover;
+        object-position: var(--pos, 50% 30%);
+      }
+      .thumb.contain img {
+        object-fit: contain; /* use for wide/orchestra shots */
+        background: rgba(0,0,0,0.06);
+      }
+
+      /* Gallery responsive: keep it puzzle-tight, but not 1-per-row */
+      @media (max-width: 900px) {
+        #gallery .col-3 { grid-column: span 6; }
+      }
+      @media (max-width: 520px) {
+        #gallery .col-3 { grid-column: span 12; }
+      }
 
       /* Tables */
       table { width: 100%; border-collapse: collapse; }
@@ -216,30 +329,48 @@ const heroImages = [
         font-weight: 800;
       }
     </style>
+
+    <script is:inline>
+      // Toggle fixed header style to match lindabairdmezzo.com
+      (() => {
+        const header = document.querySelector('header.site');
+        const hero = document.getElementById('hero');
+        if (!header || !hero) return;
+        const setFixed = (fixed) => header.classList.toggle('fixed', fixed);
+        const observer = new IntersectionObserver((entries) => {
+          const entry = entries[0];
+          setFixed(!entry.isIntersecting);
+        }, { threshold: 0.01 });
+        observer.observe(hero);
+      })();
+    </script>
   </head>
   <body>
     <header class="site">
       <div class="container">
         <nav class="nav" aria-label="Primary">
-          <div class="brand"><a href="#home">Linda Baird</a></div>
+          <a class="brand" href="#home">Linda Baird</a>
           <div class="links">
-            <a href="#about">About</a>
-            <a href="#videos">Videos</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#resume">Resume</a>
-            <a href="#engagements">Engagements</a>
-            <a href="#contact">Contact</a>
+            <a href="#about"><span>About</span></a>
+            <a href="#videos"><span>Videos</span></a>
+            <a href="#gallery"><span>Gallery</span></a>
+            <a href="#resume"><span>Resume</span></a>
+            <a href="#engagements"><span>Engagements</span></a>
+            <a href="#contact"><span>Contact</span></a>
           </div>
         </nav>
       </div>
     </header>
 
     <main id="home">
-      <section class="container">
+      <section>
         <div class="hero" id="hero" aria-label="Header images">
           <div class="inner">
-            <h1>Linda Baird</h1>
-            <div class="subtitle">Mezzo Soprano</div>
+            <div>
+              <div class="holder"><span>Mezzo Soprano</span></div>
+              <h1>Linda Baird</h1>
+              <p class="subtitle">Mezzo Soprano</p>
+            </div>
           </div>
         </div>
       </section>
@@ -288,9 +419,10 @@ const heroImages = [
             <h2>Gallery</h2>
             <div class="grid" style="margin-top: 14px;">
               {photos.map((p) => (
-                <div class="col-3">
+                <div class={p.span === 6 ? 'col-6' : p.span === 12 ? 'col-12' : 'col-3'}>
                   <a
-                    class="thumb"
+                    class={`thumb${p.fit === 'contain' ? ' contain' : ''}`}
+                    style={`--pos: ${p.pos ?? '50% 30%'};`}
                     href={`${import.meta.env.BASE_URL}include/images/gallery/${p.file}`}
                     data-lightbox="1"
                     data-caption={p.captionHtml ?? ''}

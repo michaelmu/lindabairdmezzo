@@ -9,5 +9,12 @@ node_modules/
 _site/
 .eleventy-cache/
 
+# Astro
+.astro/
+
+# Local tooling artifacts
+tools/screenshots/
+tools/reference/
+
 # OS
 .DS_Store
