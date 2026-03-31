@@ -237,18 +237,31 @@ const heroImages = [
         margin: 0;
       }
 
-      .section { padding: 42px 0; }
+      /* Sections: match lindabairdmezzo.com spacing */
+      .section { padding: 3em 0; }
+      @media (max-width: 480px) { .section { padding: 2em 0; } }
+
+      /* Our architecture keeps .panel wrappers; make them visually transparent */
       .panel {
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        background: var(--panel);
-        padding: 22px;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        padding: 0;
       }
+
+      /* Heading styling (approx original) */
       .section h2 {
         font-family: var(--font-heading);
-        font-size: 34px;
-        margin: 0 0 12px;
+        font-size: 80px;
+        color: var(--primary);
+        display: block;
+        margin: 0;
+        padding-bottom: 20px;
+        line-height: 1.5;
+        letter-spacing: 7px;
+        font-weight: 400;
       }
+      @media (max-width: 768px) { .section h2 { font-size: 50px; } }
 
       /* Cards */
       .grid {
@@ -256,6 +269,29 @@ const heroImages = [
         grid-template-columns: repeat(12, 1fr);
         gap: 14px;
       }
+
+      /* Section background blocks (original palette) */
+      #gallery { background-color: #6c5e55; }
+      #gallery h2 { color: #fff; }
+
+      #resume {
+        background-color: #68768E;
+        color: #fff;
+        position: relative;
+      }
+      #resume::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.4);
+        z-index: 0;
+      }
+      #resume .container { position: relative; z-index: 1; }
+      #resume h2 { color: #fff; }
+
+      #contact { background-color: #877c62; }
+      #contact h2 { color: #fff; }
+      #contact p { color: rgba(255,255,255,0.85) !important; }
       .col-6 { grid-column: span 6; }
       .col-3 { grid-column: span 3; }
       .col-12 { grid-column: span 12; }
@@ -299,6 +335,10 @@ const heroImages = [
       table { width: 100%; border-collapse: collapse; }
       th, td { padding: 10px 10px; border-bottom: 1px solid rgba(0,0,0,0.10); text-align: left; vertical-align: top; }
       th { font-weight: 700; font-size: 14px; color: rgba(0,0,0,0.75); }
+
+      /* Make resume/engagements tables readable on dark sections */
+      #resume table, #resume th, #resume td { color: #fff; }
+      #resume th, #resume td { border-bottom-color: rgba(255,255,255,0.18); }
 
       footer {
         padding: 30px 0 50px;
@@ -444,7 +484,7 @@ const heroImages = [
         <div class="container">
           <div class="panel">
             <h2>Resume</h2>
-            <div style="overflow:auto; margin-top: 8px;">
+            <div style="overflow:auto; margin-top: 8px; background: rgba(0,0,0,0.05);">
               <table>
                 <thead>
                   <tr>
