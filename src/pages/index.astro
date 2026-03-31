@@ -529,10 +529,10 @@ const heroImages = [
       <div class="lightbox-cap" id="lightboxCap"></div>
     </dialog>
 
-    <script define:vars={{ heroImages }}>
+    <script define:vars={{ heroImages, baseUrl: import.meta.env.BASE_URL }}>
       // Hero background rotation + lightweight gallery lightbox.
       (function () {
-        const base = import.meta.env.BASE_URL;
+        const base = baseUrl || '/';
 
         // Hero carousel
         const hero = document.getElementById('hero');
@@ -544,7 +544,7 @@ const heroImages = [
             hero.style.setProperty('--hero-url', `url("${imgs[idx]}")`);
             hero.style.backgroundImage = `url("${imgs[idx]}")`;
             hero.style.backgroundSize = 'cover';
-            hero.style.backgroundPosition = '50% 18%';
+            hero.style.backgroundPosition = 'top center';
           };
 
           // Use ::before if possible
