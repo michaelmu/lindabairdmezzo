@@ -435,30 +435,20 @@ const heroImages = [
     </style>
 
     <script is:inline>
-      // Keep header visible; switch to opaque background after we scroll past the hero.
+      // Keep header visible; make it opaque once the page is scrolled.
+      // (Robust: avoid relying on IntersectionObserver timing/caching.)
       (() => {
         const header = document.querySelector('header.site');
-        const hero = document.getElementById('hero');
-        if (!header || !hero) return;
+        if (!header) return;
 
-        const setScrolled = (scrolled) => header.classList.toggle('scrolled', scrolled);
+        const SCROLL_AT = 40;
+        const onScroll = () => {
+          const y = window.scrollY || document.documentElement.scrollTop || 0;
+          header.classList.toggle('scrolled', y > SCROLL_AT);
+        };
 
-        // Prefer IntersectionObserver so the threshold follows hero height.
-        if ('IntersectionObserver' in window) {
-          const observer = new IntersectionObserver((entries) => {
-            const entry = entries[0];
-            setScrolled(!entry.isIntersecting);
-          }, { threshold: 0.01 });
-          observer.observe(hero);
-        } else {
-          // Fallback: approximate with hero height.
-          const onScroll = () => {
-            const y = window.scrollY || document.documentElement.scrollTop || 0;
-            setScrolled(y > (hero.offsetHeight - 60));
-          };
-          window.addEventListener('scroll', onScroll, { passive: true });
-          onScroll();
-        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
       })();
     </script>
   </head>
