@@ -72,23 +72,38 @@ const heroImages = [
 
       .container { max-width: 1140px; margin: 0 auto; padding: 0 18px; }
 
-      /* Nav: persistent while scrolling.
-         - Transparent over the hero
-         - Opaque background once scrolled past the hero
+      /* Nav behavior to match lindabairdmezzo.com:
+         - Starts over the hero (absolute, with top margin)
+         - Becomes fixed after you scroll down a bit (opaque background)
+         - When returning to the very top, slides out and returns to absolute
       */
       header.site {
-        position: fixed;
+        position: absolute;
         z-index: 99;
         width: 100%;
         top: 0;
-        margin-top: 0;
+        margin-top: 20px;
         background: transparent;
-        transition: background-color .2s ease, box-shadow .2s ease;
+        will-change: transform, opacity;
       }
-      header.site.scrolled {
+      header.site.fixed {
+        position: fixed;
+        top: 0;
+        margin-top: 0;
         background: #fff;
         box-shadow: 0 0 9px 0 rgba(0,0,0,0.1);
       }
+
+      @keyframes slideInDown {
+        from { transform: translate3d(0,-100%,0); opacity: 0; }
+        to { transform: translate3d(0,0,0); opacity: 1; }
+      }
+      @keyframes slideOutUp {
+        from { transform: translate3d(0,0,0); opacity: 1; }
+        to { transform: translate3d(0,-100%,0); opacity: 0; }
+      }
+      header.site.slideInDown { animation: slideInDown .3s both; }
+      header.site.slideOutUp { animation: slideOutUp .3s both; }
 
       .nav {
         position: relative;
@@ -113,7 +128,7 @@ const heroImages = [
         opacity: 0;
         pointer-events: none;
       }
-      header.site.scrolled .brand {
+      header.site.fixed .brand {
         color: var(--primary);
         opacity: 1;
         pointer-events: auto;
@@ -145,7 +160,7 @@ const heroImages = [
         text-decoration: none;
         letter-spacing: 0.03em;
       }
-      header.site.scrolled .links a { color: rgba(0,0,0,0.5); }
+      header.site.fixed .links a { color: rgba(0,0,0,0.5); }
       .links a span { position: relative; display: block; padding-bottom: 2px; }
       .links a span:before {
         content: "";
@@ -160,7 +175,7 @@ const heroImages = [
         transition: all 0.3s ease-in-out;
       }
       .links a:hover { color: #fff; }
-      header.site.scrolled .links a:hover { color: var(--primary); }
+      header.site.fixed .links a:hover { color: var(--primary); }
       .links a:hover span:before { visibility: visible; transform: scaleX(1); }
 
       @media (max-width: 768px) {
@@ -431,22 +446,38 @@ const heroImages = [
     </style>
 
     <script is:inline>
-      // Keep nav persistent; switch to opaque background when past the hero.
+      // Match lindabairdmezzo.com nav scroll behavior
       (() => {
         const header = document.querySelector('header.site');
-        const hero = document.getElementById('hero');
-        if (!header || !hero) return;
+        if (!header) return;
 
-        const setScrolled = (scrolled) => header.classList.toggle('scrolled', scrolled);
+        const FIX_AT = 500;
+        let isFixed = false;
 
-        // Use IntersectionObserver so the threshold adapts to hero height.
-        const observer = new IntersectionObserver((entries) => {
-          const entry = entries[0];
-          // When hero is NOT intersecting, we're past it → opaque nav.
-          setScrolled(!entry.isIntersecting);
-        }, { threshold: 0.01 });
+        const onScroll = () => {
+          const y = window.scrollY || document.documentElement.scrollTop || 0;
 
-        observer.observe(hero);
+          if (y > FIX_AT) {
+            if (!isFixed) {
+              isFixed = true;
+              header.classList.remove('slideOutUp');
+              header.classList.add('fixed', 'slideInDown');
+              setTimeout(() => header.classList.remove('slideInDown'), 350);
+            }
+          } else {
+            if (isFixed) {
+              isFixed = false;
+              header.classList.remove('slideInDown');
+              header.classList.add('slideOutUp');
+              setTimeout(() => {
+                header.classList.remove('fixed', 'slideOutUp');
+              }, 120);
+            }
+          }
+        };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
       })();
     </script>
   </head>
