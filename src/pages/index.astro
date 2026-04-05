@@ -72,20 +72,19 @@ const heroImages = [
 
       .container { max-width: 1140px; margin: 0 auto; padding: 0 18px; }
 
-      /* Nav: match lindabairdmezzo.com */
+      /* Nav: keep visible (sticky/fixed) */
       header.site {
-        position: absolute;
+        position: fixed;
         z-index: 99;
         width: 100%;
         top: 0;
-        margin-top: 20px;
+        margin-top: 0;
+        /* Transparent over the hero; we'll add background when scrolled */
+        background: transparent;
       }
       header.site.fixed {
-        position: fixed;
         background: #fff;
         box-shadow: 0 0 9px 0 rgba(0,0,0,0.1);
-        margin-top: 0;
-        top: 0;
       }
 
       .nav {
@@ -114,10 +113,10 @@ const heroImages = [
 
       .links {
         display: flex;
-        gap: 18px;
+        gap: 24px;
         flex-wrap: wrap;
         justify-content: flex-end;
-        font-size: 15px;
+        font-size: 18px; /* ~20% larger */
       }
       .links a {
         font-family: var(--font-body);
@@ -186,12 +185,22 @@ const heroImages = [
         height: 100%;
         display: table;
         width: 100%;
-        text-align: center;
+        /* Production positions the hero copy toward the right */
+        text-align: right;
       }
       .hero .inner > div {
         display: table-cell;
         vertical-align: middle;
         padding: 0 18px;
+      }
+      .hero .copy {
+        display: inline-block;
+        text-align: center;
+        margin-right: 6vw;
+      }
+      @media (max-width: 768px) {
+        .hero .inner { text-align: center; }
+        .hero .copy { margin-right: 0; }
       }
 
       .hero .holder {
@@ -237,7 +246,7 @@ const heroImages = [
       /* (subtitle removed; we use the holder line below the name) */
 
       /* Sections: match lindabairdmezzo.com spacing */
-      .section { padding: 3em 0; }
+      .section { padding: 3em 0; scroll-margin-top: 90px; }
       @media (max-width: 480px) { .section { padding: 2em 0; } }
 
       /* Our architecture keeps .panel wrappers; make them visually transparent */
@@ -321,7 +330,7 @@ const heroImages = [
       .col-12 { grid-column: span 12; }
       @media (max-width: 900px) {
         .col-6, .col-3 { grid-column: span 12; }
-        .links { gap: 12px; }
+        .links { gap: 14px; }
       }
 
       /* Gallery */
@@ -430,7 +439,7 @@ const heroImages = [
       <section>
         <div class="hero" id="hero" aria-label="Header images">
           <div class="inner">
-            <div>
+            <div class="copy">
               <h1>Linda Baird</h1>
               <div class="holder"><span>Mezzo Soprano</span></div>
             </div>
