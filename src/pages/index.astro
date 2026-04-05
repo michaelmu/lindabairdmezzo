@@ -309,6 +309,20 @@ const heroImages = [
       }
       @media (max-width: 768px) { .section h2 { font-size: 50px; } }
 
+      /* Section headings: horizontal rules + title (matches Resume styling) */
+      .section-heading {
+        max-width: 760px;
+        margin: 0 auto 10px;
+        text-align: center;
+      }
+      .section-heading hr {
+        border: 0;
+        border-top: 1px solid rgba(0,0,0,0.20);
+        max-width: 520px;
+        margin: 0 auto 18px;
+      }
+      /* Resume is on a dark background; override to a light rule below */
+
       /* Resume: restore the background image from the original site */
       #resume {
         position: relative;
@@ -591,7 +605,10 @@ const heroImages = [
       <section class="section" id="about">
         <div class="container">
           <div class="panel">
-            <h2>About</h2>
+            <div class="section-heading">
+              <hr />
+              <h2><span>About</span></h2>
+            </div>
             <div class="about-grid">
               <div class="about-text" set:html={aboutHtml} />
               <div class="about-photo">
@@ -609,7 +626,10 @@ const heroImages = [
       <section class="section" id="gallery">
         <div class="container">
           <div class="panel">
-            <h2>Gallery</h2>
+            <div class="section-heading">
+              <hr />
+              <h2><span>Gallery</span></h2>
+            </div>
             <div class="masonry" style="margin-top: 14px;">
               {photos.map((p) => (
                 <div class="masonry-item">
@@ -638,7 +658,10 @@ const heroImages = [
       <section class="section" id="videos">
         <div class="container">
           <div class="panel">
-            <h2>Videos</h2>
+            <div class="section-heading">
+              <hr />
+              <h2><span>Videos</span></h2>
+            </div>
             <div class="grid" style="margin-top: 14px;">
               {videos.map((v) => (
                 <div class="col-6">
@@ -708,7 +731,10 @@ const heroImages = [
       <section class="section" id="engagements">
         <div class="container">
           <div class="panel">
-            <h2>Engagements</h2>
+            <div class="section-heading">
+              <hr />
+              <h2><span>Engagements</span></h2>
+            </div>
             <div style="overflow:auto; margin-top: 8px;">
               <table>
                 <thead>
@@ -747,7 +773,10 @@ const heroImages = [
       <section class="section" id="contact">
         <div class="container">
           <div class="panel">
-            <h2>Contact</h2>
+            <div class="section-heading">
+              <hr />
+              <h2><span>Contact</span></h2>
+            </div>
 
             <form class="contact-form" action="https://formspree.io/baird.lj@gmail.com" method="POST">
               <div class="contact-grid" style="margin-top: 14px;">
