@@ -214,9 +214,10 @@ const heroImages = [
       /* Center the hero copy within the right-side “block” */
       .hero .copy {
         text-align: center;
-        width: min(520px, 100%);
-        /* shift the whole block right, but keep it centered within itself */
-        margin-right: 18vw;
+        /* Define a right-side "block" and center the text within it */
+        width: 40%;
+        max-width: 520px;
+        margin-right: 0;
       }
       @media (max-width: 768px) {
         .hero .inner { justify-content: center; }
