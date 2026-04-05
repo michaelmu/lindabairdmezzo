@@ -94,7 +94,8 @@ const heroImages = [
       header.site.scrolled {
         background: #fff;
         box-shadow: 0 0 9px 0 rgba(0,0,0,0.1);
-        padding-top: 0;
+        /* Make the nav bar taller when it becomes fixed (roughly 2x) */
+        padding-top: 20px;
       }
 
       .nav {
@@ -104,6 +105,9 @@ const heroImages = [
         justify-content: space-between;
         padding: 10px 0;
         gap: 14px;
+      }
+      header.site.scrolled .nav {
+        padding: 20px 0;
       }
       .brand {
         float: left;
