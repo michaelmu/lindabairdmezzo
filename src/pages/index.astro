@@ -434,31 +434,7 @@ const heroImages = [
       }
     </style>
 
-    <script is:inline>
-      // Keep header visible; make it opaque once the page is scrolled.
-      // IMPORTANT: run after DOM is ready (script is in <head>).
-      (() => {
-        const init = () => {
-          const header = document.querySelector('header.site');
-          if (!header) return;
-
-          const SCROLL_AT = 40;
-          const onScroll = () => {
-            const y = window.scrollY || document.documentElement.scrollTop || 0;
-            header.classList.toggle('scrolled', y > SCROLL_AT);
-          };
-
-          window.addEventListener('scroll', onScroll, { passive: true });
-          onScroll();
-        };
-
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', init, { once: true });
-        } else {
-          init();
-        }
-      })();
-    </script>
+    <!-- nav scroll behavior is initialized at end-of-body script -->
   </head>
   <body>
     <header class="site">
@@ -658,6 +634,18 @@ const heroImages = [
       // Hero background rotation + lightweight gallery lightbox.
       (function () {
         const base = baseUrl || '/';
+
+        // Nav: keep visible; add opaque background after scrolling a bit
+        const header = document.querySelector('header.site');
+        if (header) {
+          const SCROLL_AT = 40;
+          const onScroll = () => {
+            const y = window.scrollY || document.documentElement.scrollTop || 0;
+            header.classList.toggle('scrolled', y > SCROLL_AT);
+          };
+          window.addEventListener('scroll', onScroll, { passive: true });
+          onScroll();
+        }
 
         // Hero cover image (match production behavior)
         const hero = document.getElementById('hero');
