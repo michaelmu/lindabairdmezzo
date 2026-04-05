@@ -364,8 +364,19 @@ const heroImages = [
         .links { gap: 16px; }
       }
 
-      /* Gallery */
-      #gallery .grid { gap: 0; }
+      /* Gallery (Option B): masonry using CSS columns */
+      #gallery .masonry {
+        column-count: 4;
+        column-gap: 14px;
+      }
+      @media (max-width: 1100px) { #gallery .masonry { column-count: 3; } }
+      @media (max-width: 900px) { #gallery .masonry { column-count: 2; } }
+      @media (max-width: 520px) { #gallery .masonry { column-count: 1; } }
+
+      #gallery .masonry-item {
+        break-inside: avoid;
+        margin: 0 0 14px;
+      }
 
       .thumb {
         display: block;
@@ -373,26 +384,27 @@ const heroImages = [
         overflow: hidden;
         border: 0;
         background: transparent;
+        transform: translateZ(0);
       }
       .thumb img {
         display: block;
         width: 100%;
-        height: 100%;
-        aspect-ratio: 4 / 5; /* consistent face scale */
-        object-fit: cover;
-        object-position: var(--pos, 50% 30%);
-      }
-      .thumb.contain img {
-        object-fit: contain; /* use for wide/orchestra shots */
-        background: rgba(0,0,0,0.06);
+        height: auto;
       }
 
-      /* Gallery responsive: keep it puzzle-tight, but not 1-per-row */
-      @media (max-width: 900px) {
-        #gallery .col-3 { grid-column: span 6; }
+      /* Subtle polish */
+      .thumb img {
+        transition: transform .25s ease, filter .25s ease;
       }
-      @media (max-width: 520px) {
-        #gallery .col-3 { grid-column: span 12; }
+      .thumb:hover img {
+        transform: scale(1.02);
+        filter: contrast(1.03);
+      }
+
+      /* Keep contain option for any odd aspect-ratio assets */
+      .thumb.contain img {
+        background: rgba(0,0,0,0.06);
+        object-fit: contain;
       }
 
       /* Tables */
@@ -518,9 +530,9 @@ const heroImages = [
         <div class="container">
           <div class="panel">
             <h2>Gallery</h2>
-            <div class="grid" style="margin-top: 14px;">
+            <div class="masonry" style="margin-top: 14px;">
               {photos.map((p) => (
-                <div class={p.span === 6 ? 'col-6' : p.span === 12 ? 'col-12' : 'col-3'}>
+                <div class="masonry-item">
                   <a
                     class={`thumb${p.fit === 'contain' ? ' contain' : ''}`}
                     style={`--pos: ${p.pos ?? '50% 30%'};`}
