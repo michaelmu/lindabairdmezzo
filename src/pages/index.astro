@@ -1,0 +1,639 @@
+---
+import fs from 'node:fs';
+import yaml from 'js-yaml';
+
+const aboutHtml = fs.readFileSync('content/about.md', 'utf8');
+const photos = (yaml.load(fs.readFileSync('content/photos.yml', 'utf8'))?.photos) ?? [];
+const videos = (yaml.load(fs.readFileSync('content/videos.yml', 'utf8'))?.videos) ?? [];
+const resume = (yaml.load(fs.readFileSync('content/resume.yml', 'utf8'))?.resume) ?? [];
+const engagements = (yaml.load(fs.readFileSync('content/engagements.yml', 'utf8'))?.engagements) ?? [];
+
+const year = new Date().getFullYear();
+
+// Keep in sync with current production (lindabairdmezzo.com):
+// the hero picks a cover based on the week number.
+const heroImages = [
+  'include/images/header/linda_header_gate.jpg',
+  'include/images/header/linda_header_field.jpg',
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Linda Baird — Mezzo Soprano</title>
+
+    <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.ico`} />
+
+    <!-- Fonts (classical + clean) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      :root {
+        --bg: #ffffff;
+        --panel: rgba(255, 255, 255, 0.92);
+        --text: #7f7f7f;
+        --muted: #929292;
+        --primary: #E04E6F;
+        --accent: #f9f6f0;
+        --border: rgba(0, 0, 0, 0.10);
+
+        --font-heading: "Cormorant Garamond", "Times New Roman", serif;
+        --font-body: "Source Sans Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+        --radius: 0px;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: var(--font-body);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.8;
+        color: var(--text);
+        background: var(--bg);
+        height: 100%;
+        position: relative;
+      }
+      a {
+        color: var(--primary);
+        transition: 0.5s;
+      }
+      a:hover, a:active, a:focus {
+        color: var(--primary);
+        outline: none;
+      }
+
+      .container { max-width: 1140px; margin: 0 auto; padding: 0 18px; }
+
+      /* Nav: match lindabairdmezzo.com */
+      header.site {
+        position: absolute;
+        z-index: 99;
+        width: 100%;
+        top: 0;
+        margin-top: 20px;
+      }
+      header.site.fixed {
+        position: fixed;
+        background: #fff;
+        box-shadow: 0 0 9px 0 rgba(0,0,0,0.1);
+        margin-top: 0;
+        top: 0;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        gap: 14px;
+      }
+      .brand {
+        float: left;
+        display: block;
+        font-size: 34px;
+        padding-left: 0;
+        color: #fff;
+        font-family: var(--font-heading);
+        font-weight: 400;
+        letter-spacing: 0.18em;
+        white-space: nowrap;
+        text-decoration: none;
+      }
+      header.site.fixed .brand { color: var(--primary); }
+
+      .links {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        font-size: 14px;
+      }
+      .links a {
+        font-family: var(--font-body);
+        color: rgba(255,255,255,0.5);
+        position: relative;
+        text-decoration: none;
+      }
+      header.site.fixed .links a { color: rgba(0,0,0,0.5); }
+      .links a span { position: relative; display: block; padding-bottom: 2px; }
+      .links a span:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--primary);
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+      }
+      .links a:hover { color: #fff; }
+      header.site.fixed .links a:hover { color: var(--primary); }
+      .links a:hover span:before { visibility: visible; transform: scaleX(1); }
+
+      @media (max-width: 768px) {
+        header.site {
+          margin-top: 0;
+          background: #fff;
+          box-shadow: 0 0 9px 0 rgba(0,0,0,0.1);
+        }
+        .brand { color: var(--primary); font-size: 28px; }
+        .links a { color: rgba(0,0,0,0.5); }
+        .links a:hover { color: var(--primary); }
+      }
+
+      /* Hero: match lindabairdmezzo.com */
+      .hero {
+        position: relative;
+        height: 800px;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+        color: #fff;
+      }
+      @media (max-width: 768px) { .hero { height: 700px; } }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: top center;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.4);
+      }
+
+      .hero .inner {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        display: table;
+        width: 100%;
+        text-align: center;
+      }
+      .hero .inner > div {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 18px;
+      }
+
+      .hero .holder {
+        color: #fff;
+        font-family: var(--font-body);
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+      .hero .holder span { position: relative; }
+      .hero .holder span:before,
+      .hero .holder span:after {
+        position: absolute;
+        top: 49%;
+        width: 100px;
+        height: 2px;
+        background: #fff;
+        content: '';
+      }
+      .hero .holder span:before { left: -110px; }
+      .hero .holder span:after { right: -110px; }
+      @media (max-width: 768px) {
+        .hero .holder { letter-spacing: 2px; }
+        .hero .holder span:before,
+        .hero .holder span:after { width: 50px; }
+        .hero .holder span:before { left: -60px; }
+        .hero .holder span:after { right: -60px; }
+      }
+
+      .hero h1 {
+        color: #fff;
+        font-size: 80px;
+        margin: 0 0 20px;
+        font-weight: 300;
+        font-family: var(--font-heading);
+        letter-spacing: 7px;
+        line-height: 1.3;
+      }
+      @media (max-width: 768px) { .hero h1 { font-size: 60px; } }
+
+      .hero .subtitle {
+        color: #fff;
+        font-weight: 400;
+        font-size: 20px;
+        letter-spacing: 10px;
+        margin: 0;
+      }
+
+      /* Sections: match lindabairdmezzo.com spacing */
+      .section { padding: 3em 0; }
+      @media (max-width: 480px) { .section { padding: 2em 0; } }
+
+      /* Our architecture keeps .panel wrappers; make them visually transparent */
+      .panel {
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        padding: 0;
+      }
+
+      /* Heading styling (approx original) */
+      .section h2 {
+        font-family: var(--font-heading);
+        font-size: 80px;
+        color: var(--primary);
+        display: block;
+        margin: 0;
+        padding-bottom: 20px;
+        line-height: 1.5;
+        letter-spacing: 7px;
+        font-weight: 400;
+      }
+      @media (max-width: 768px) { .section h2 { font-size: 50px; } }
+
+      /* Cards */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 14px;
+      }
+
+      /* Section background blocks (original palette) */
+      #gallery { background-color: #6c5e55; }
+      #gallery h2 { color: #fff; }
+
+      #resume {
+        background-color: #68768E;
+        color: #fff;
+        position: relative;
+      }
+      #resume::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.4);
+        z-index: 0;
+      }
+      #resume .container { position: relative; z-index: 1; }
+      #resume h2 { color: #fff; }
+
+      #contact { background-color: #877c62; }
+      #contact h2 { color: #fff; }
+      #contact p { color: rgba(255,255,255,0.85) !important; }
+      .col-6 { grid-column: span 6; }
+      .col-3 { grid-column: span 3; }
+      .col-12 { grid-column: span 12; }
+      @media (max-width: 900px) {
+        .col-6, .col-3 { grid-column: span 12; }
+        .links { gap: 10px; }
+      }
+
+      /* Gallery */
+      #gallery .grid { gap: 0; }
+
+      .thumb {
+        display: block;
+        border-radius: 0;
+        overflow: hidden;
+        border: 0;
+        background: transparent;
+      }
+      .thumb img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 4 / 5; /* consistent face scale */
+        object-fit: cover;
+        object-position: var(--pos, 50% 30%);
+      }
+      .thumb.contain img {
+        object-fit: contain; /* use for wide/orchestra shots */
+        background: rgba(0,0,0,0.06);
+      }
+
+      /* Gallery responsive: keep it puzzle-tight, but not 1-per-row */
+      @media (max-width: 900px) {
+        #gallery .col-3 { grid-column: span 6; }
+      }
+      @media (max-width: 520px) {
+        #gallery .col-3 { grid-column: span 12; }
+      }
+
+      /* Tables */
+      table { width: 100%; border-collapse: collapse; }
+      th, td { padding: 10px 10px; border-bottom: 1px solid rgba(0,0,0,0.10); text-align: left; vertical-align: top; }
+      th { font-weight: 700; font-size: 14px; color: rgba(0,0,0,0.75); }
+
+      /* Make resume/engagements tables readable on dark sections */
+      #resume table, #resume th, #resume td { color: #fff; }
+      #resume th, #resume td { border-bottom-color: rgba(255,255,255,0.18); }
+
+      footer {
+        padding: 30px 0 50px;
+        color: var(--muted);
+      }
+
+      /* Dialog lightbox */
+      dialog::backdrop { background: rgba(0,0,0,0.72); }
+      dialog {
+        border: none;
+        padding: 0;
+        border-radius: 18px;
+        overflow: hidden;
+        max-width: min(1100px, calc(100vw - 26px));
+      }
+      .lightbox-img { display:block; max-width: 100%; height: auto; }
+      .lightbox-cap { padding: 12px 14px; background: rgba(255,255,255,0.92); color: #111; }
+      .xbtn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(255,255,255,0.9);
+        border: 1px solid rgba(0,0,0,0.14);
+        border-radius: 999px;
+        width: 38px;
+        height: 38px;
+        cursor: pointer;
+        font-weight: 800;
+      }
+    </style>
+
+    <script is:inline>
+      // Toggle fixed header style to match lindabairdmezzo.com
+      (() => {
+        const header = document.querySelector('header.site');
+        const hero = document.getElementById('hero');
+        if (!header || !hero) return;
+        const setFixed = (fixed) => header.classList.toggle('fixed', fixed);
+        const observer = new IntersectionObserver((entries) => {
+          const entry = entries[0];
+          setFixed(!entry.isIntersecting);
+        }, { threshold: 0.01 });
+        observer.observe(hero);
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site">
+      <div class="container">
+        <nav class="nav" aria-label="Primary">
+          <a class="brand" href="#home">Linda Baird</a>
+          <div class="links">
+            <a href="#about"><span>About</span></a>
+            <a href="#videos"><span>Videos</span></a>
+            <a href="#gallery"><span>Gallery</span></a>
+            <a href="#resume"><span>Resume</span></a>
+            <a href="#engagements"><span>Engagements</span></a>
+            <a href="#contact"><span>Contact</span></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section>
+        <div class="hero" id="hero" aria-label="Header images">
+          <div class="inner">
+            <div>
+              <div class="holder"><span>Mezzo Soprano</span></div>
+              <h1>Linda Baird</h1>
+              <p class="subtitle">Mezzo Soprano</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="panel">
+            <h2>About</h2>
+            <div set:html={aboutHtml} />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="videos">
+        <div class="container">
+          <div class="panel">
+            <h2>Videos</h2>
+            <div class="grid" style="margin-top: 14px;">
+              {videos.map((v) => (
+                <div class="col-6">
+                  <div style="border-radius: 16px; overflow:hidden; border:1px solid rgba(0,0,0,0.12); background: rgba(255,255,255,0.35);">
+                    <div style="aspect-ratio: 16 / 9; width: 100%; background: rgba(0,0,0,0.08);">
+                      <iframe
+                        title={v.title ?? 'YouTube video'}
+                        style="width:100%; height:100%; border:0;"
+                        src={`https://www.youtube.com/embed/${v.youtubeId}`}
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      />
+                    </div>
+                  </div>
+                  {v.descriptionHtml ? (
+                    <div class="" set:html={v.descriptionHtml} />
+                  ) : null}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="gallery">
+        <div class="container">
+          <div class="panel">
+            <h2>Gallery</h2>
+            <div class="grid" style="margin-top: 14px;">
+              {photos.map((p) => (
+                <div class={p.span === 6 ? 'col-6' : p.span === 12 ? 'col-12' : 'col-3'}>
+                  <a
+                    class={`thumb${p.fit === 'contain' ? ' contain' : ''}`}
+                    style={`--pos: ${p.pos ?? '50% 30%'};`}
+                    href={`${import.meta.env.BASE_URL}include/images/gallery/${p.file}`}
+                    data-lightbox="1"
+                    data-caption={p.captionHtml ?? ''}
+                  >
+                    <img
+                      src={`${import.meta.env.BASE_URL}include/images/gallery/${p.file}`}
+                      alt={(p.captionHtml ?? 'Photo').replace(/<[^>]+>/g, '')}
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="resume">
+        <div class="container">
+          <div class="panel">
+            <h2>Resume</h2>
+            <div style="overflow:auto; margin-top: 8px; background: rgba(0,0,0,0.05);">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Work</th>
+                    <th>Role</th>
+                    <th>Company</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {resume.map((r) => (
+                    <tr>
+                      <td>{r.work}</td>
+                      <td>{r.role}</td>
+                      <td>{r.company}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="engagements">
+        <div class="container">
+          <div class="panel">
+            <h2>Engagements</h2>
+            <div style="overflow:auto; margin-top: 8px;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Presenter</th>
+                    <th>Work</th>
+                    <th>Date</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {engagements.map((e) => (
+                    <tr>
+                      <td><span set:html={e.presenterHtml ?? ''} /></td>
+                      <td>{e.work}</td>
+                      <td>{e.date}</td>
+                      <td>
+                        <span set:html={e.notesHtml ?? ''} />
+                        {e.links?.length ? (
+                          <div style="margin-top: 6px;">
+                            {e.links.map((link, idx) => (
+                              <a href={link} target="_blank" rel="noopener">link {idx + 1}</a>
+                            ))}
+                          </div>
+                        ) : null}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="panel">
+            <h2>Contact</h2>
+            <p style="margin:0; color: var(--muted);">Add contact links here (email / agent / socials). Tell me what you want displayed.</p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container">© {year} Linda Baird</div>
+      </footer>
+    </main>
+
+    <dialog id="lightbox">
+      <div style="position:relative; background:#000;">
+        <button class="xbtn" id="lightboxClose" aria-label="Close">×</button>
+        <img class="lightbox-img" id="lightboxImg" alt="" />
+      </div>
+      <div class="lightbox-cap" id="lightboxCap"></div>
+    </dialog>
+
+    <script define:vars={{ heroImages, baseUrl: import.meta.env.BASE_URL }}>
+      // Hero background rotation + lightweight gallery lightbox.
+      (function () {
+        const base = baseUrl || '/';
+
+        // Hero cover image (match production behavior)
+        const hero = document.getElementById('hero');
+        if (hero) {
+          const imgs = heroImages.map((p) => base + p);
+
+          // Week number (ISO-ish, matches the current production site's logic)
+          Date.prototype.getWeekNumber = function () {
+            const d = new Date(Date.UTC(this.getFullYear(), this.getMonth(), this.getDate()));
+            const dayNum = d.getUTCDay() || 7;
+            d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+            const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+            return Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+          };
+
+          const idx = (new Date()).getWeekNumber() % imgs.length;
+          const url = imgs[idx];
+
+          // Use ::before for the actual background (keeps overlay + text layering clean)
+          hero.style.setProperty('--hero-url', `url("${url}")`);
+          hero.style.backgroundImage = `url("${url}")`; // fallback
+          hero.style.backgroundSize = 'cover';
+          hero.style.backgroundPosition = 'top center';
+
+          const styleId = 'hero-before-style';
+          const style = document.getElementById(styleId) || document.createElement('style');
+          style.id = styleId;
+          style.textContent = `.hero::before{ background-image: var(--hero-url); }`;
+          document.head.appendChild(style);
+        }
+
+        // Lightbox (native dialog)
+        const dlg = document.getElementById('lightbox');
+        const img = document.getElementById('lightboxImg');
+        const cap = document.getElementById('lightboxCap');
+        const closeBtn = document.getElementById('lightboxClose');
+
+        if (dlg && img && cap && closeBtn) {
+          closeBtn.addEventListener('click', () => dlg.close());
+          dlg.addEventListener('click', (e) => {
+            const rect = dlg.getBoundingClientRect();
+            // close when clicking outside the dialog content
+            if (e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom) {
+              dlg.close();
+            }
+          });
+
+          document.addEventListener('click', (e) => {
+            const a = e.target && (e.target.closest?.('a[data-lightbox="1"]'));
+            if (!a) return;
+            e.preventDefault();
+
+            const href = a.getAttribute('href');
+            const caption = a.getAttribute('data-caption') || '';
+            img.src = href;
+            cap.innerHTML = caption;
+            dlg.showModal();
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

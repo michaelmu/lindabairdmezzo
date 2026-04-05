@@ -1,0 +1,173 @@
+---
+layout: layout.njk
+title: Linda Baird — Mezzo Soprano
+---
+
+<div class="fh5co-loader"></div>
+
+<header role="banner" id="qbootstrap-header">
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <a href="#" class="js-qbootstrap-nav-toggle qbootstrap-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
+          <li><a href="#" data-nav-section="about"><span>About</span></a></li>
+          <li><a href="#" data-nav-section="gallery"><span>Gallery</span></a></li>
+          <li><a href="#" data-nav-section="recordings"><span>Recordings</span></a></li>
+          <li><a href="#" data-nav-section="resume"><span>Resume</span></a></li>
+          <li><a href="#" data-nav-section="engagements"><span>Engagements</span></a></li>
+          <li><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="qbootstrap-hero" data-section="home">
+  <div class="qbootstrap-cover text-center" data-stellar-background-ratio="0.5">
+    <div class="display-t">
+      <div class="display-tc title">
+        <div class="container">
+          <div class="qbootstrap-cover-text col-md-8 col-md-offset-3">
+            <div class="animate-box svg-sm colored">
+              <h2>Linda Baird</h2>
+              <h1 class="holder"><span>Mezzo Soprano</span></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="qbootstrap-about" class="qbootstrap-section-gray" data-section="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h2>About</h2>
+          <div class="lead">{{ aboutHtml | safe }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="qbootstrap-recordings" class="qbootstrap-section-gray" data-section="recordings">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h2>Videos</h2>
+          <div class="row">
+            {% for v in videos %}
+              <div class="col-md-6" style="margin-bottom: 24px;">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ v.youtubeId }}" allowfullscreen></iframe>
+                </div>
+                {% if v.descriptionHtml %}
+                  <p>{{ v.descriptionHtml | safe }}</p>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="qbootstrap-gallery" class="qbootstrap-section-gray" data-section="gallery">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h2>Gallery</h2>
+          <div class="row">
+            {% for p in photos %}
+              <div class="col-sm-6 col-md-3" style="margin-bottom: 18px;">
+                <a href="{{ ('/include/images/gallery/' + p.file) | url }}" class="image-popup" title="{{ p.captionHtml | safe }}">
+                  <img src="{{ ('/include/images/gallery/' + p.file) | url }}" class="img-responsive" alt="{{ p.captionHtml | striptags }}" />
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="qbootstrap-resume" class="qbootstrap-section-gray" data-section="resume">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h2>Resume</h2>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Work</th>
+                <th>Role</th>
+                <th>Company</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for r in resume %}
+                <tr>
+                  <td>{{ r.work }}</td>
+                  <td>{{ r.role }}</td>
+                  <td>{{ r.company }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="qbootstrap-engagements" class="qbootstrap-section-gray" data-section="engagements">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h2>Engagements</h2>
+          <table class="table table-condensed">
+            <thead>
+              <tr>
+                <th>Presenter</th>
+                <th>Work</th>
+                <th>Date</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for e in engagements %}
+                <tr>
+                  <td>{{ e.presenterHtml | safe }}</td>
+                  <td>{{ e.work }}</td>
+                  <td>{{ e.date }}</td>
+                  <td>
+                    {{ e.notesHtml | safe }}
+                    {% if e.links and e.links.length %}
+                      <div style="margin-top: 6px;">
+                        {% for link in e.links %}
+                          <a href="{{ link }}" target="_blank" rel="noopener">link {{ loop.index }}</a>{% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                      </div>
+                    {% endif %}
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="qbootstrap-footer" class="qbootstrap-section-gray" data-section="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <p style="margin: 0;">© {{ currentYear }} Linda Baird</p>
+        </div>
+      </div>
+    </div>
+  </footer>
