@@ -455,8 +455,8 @@ const heroImages = [
           <a class="brand" href="#home" aria-label="Linda Baird"></a>
           <div class="links">
             <a href="#about"><span>About</span></a>
-            <a href="#videos"><span>Videos</span></a>
             <a href="#gallery"><span>Gallery</span></a>
+            <a href="#videos"><span>Videos</span></a>
             <a href="#resume"><span>Resume</span></a>
             <a href="#engagements"><span>Engagements</span></a>
             <a href="#contact"><span>Contact</span></a>
@@ -497,6 +497,35 @@ const heroImages = [
         </div>
       </section>
 
+      <section class="section" id="gallery">
+        <div class="container">
+          <div class="panel">
+            <h2>Gallery</h2>
+            <div class="masonry" style="margin-top: 14px;">
+              {photos.map((p) => (
+                <div class="masonry-item">
+                  <a
+                    class={`thumb${p.fit === 'contain' ? ' contain' : ''}`}
+                    style={`--pos: ${p.pos ?? '50% 30%'};`}
+                    href={`${import.meta.env.BASE_URL}include/images/gallery/${p.file}`}
+                    data-lightbox="1"
+                    data-caption={p.captionHtml ?? ''}
+                  >
+                    <img
+                      src={`${import.meta.env.BASE_URL}include/images/gallery/${p.file}`}
+                      alt={(p.captionHtml ?? 'Photo').replace(/<[^>]+>/g, '')}
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
       <section class="section" id="videos">
         <div class="container">
           <div class="panel">
@@ -519,33 +548,6 @@ const heroImages = [
                   {v.descriptionHtml ? (
                     <div class="" set:html={v.descriptionHtml} />
                   ) : null}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="gallery">
-        <div class="container">
-          <div class="panel">
-            <h2>Gallery</h2>
-            <div class="masonry" style="margin-top: 14px;">
-              {photos.map((p) => (
-                <div class="masonry-item">
-                  <a
-                    class={`thumb${p.fit === 'contain' ? ' contain' : ''}`}
-                    style={`--pos: ${p.pos ?? '50% 30%'};`}
-                    href={`${import.meta.env.BASE_URL}include/images/gallery/${p.file}`}
-                    data-lightbox="1"
-                    data-caption={p.captionHtml ?? ''}
-                  >
-                    <img
-                      src={`${import.meta.env.BASE_URL}include/images/gallery/${p.file}`}
-                      alt={(p.captionHtml ?? 'Photo').replace(/<[^>]+>/g, '')}
-                      loading="lazy"
-                    />
-                  </a>
                 </div>
               ))}
             </div>
