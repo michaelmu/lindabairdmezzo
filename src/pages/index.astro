@@ -436,19 +436,27 @@ const heroImages = [
 
     <script is:inline>
       // Keep header visible; make it opaque once the page is scrolled.
-      // (Robust: avoid relying on IntersectionObserver timing/caching.)
+      // IMPORTANT: run after DOM is ready (script is in <head>).
       (() => {
-        const header = document.querySelector('header.site');
-        if (!header) return;
+        const init = () => {
+          const header = document.querySelector('header.site');
+          if (!header) return;
 
-        const SCROLL_AT = 40;
-        const onScroll = () => {
-          const y = window.scrollY || document.documentElement.scrollTop || 0;
-          header.classList.toggle('scrolled', y > SCROLL_AT);
+          const SCROLL_AT = 40;
+          const onScroll = () => {
+            const y = window.scrollY || document.documentElement.scrollTop || 0;
+            header.classList.toggle('scrolled', y > SCROLL_AT);
+          };
+
+          window.addEventListener('scroll', onScroll, { passive: true });
+          onScroll();
         };
 
-        window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll();
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', init, { once: true });
+        } else {
+          init();
+        }
       })();
     </script>
   </head>
