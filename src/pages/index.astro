@@ -106,15 +106,18 @@ const heroImages = [
         letter-spacing: 0.18em;
         white-space: nowrap;
         text-decoration: none;
+        /* Hide the redundant top-left name (keep the anchor for layout + a11y) */
+        opacity: 0;
+        pointer-events: none;
       }
       header.site.fixed .brand { color: var(--primary); }
 
       .links {
         display: flex;
-        gap: 14px;
+        gap: 18px;
         flex-wrap: wrap;
         justify-content: flex-end;
-        font-size: 14px;
+        font-size: 15px;
       }
       .links a {
         font-family: var(--font-body);
@@ -230,13 +233,7 @@ const heroImages = [
       }
       @media (max-width: 768px) { .hero h1 { font-size: 60px; } }
 
-      .hero .subtitle {
-        color: #fff;
-        font-weight: 400;
-        font-size: 20px;
-        letter-spacing: 10px;
-        margin: 0;
-      }
+      /* (subtitle removed; we use the holder line below the name) */
 
       /* Sections: match lindabairdmezzo.com spacing */
       .section { padding: 3em 0; }
@@ -298,7 +295,7 @@ const heroImages = [
       .col-12 { grid-column: span 12; }
       @media (max-width: 900px) {
         .col-6, .col-3 { grid-column: span 12; }
-        .links { gap: 10px; }
+        .links { gap: 12px; }
       }
 
       /* Gallery */
@@ -390,7 +387,7 @@ const heroImages = [
     <header class="site">
       <div class="container">
         <nav class="nav" aria-label="Primary">
-          <a class="brand" href="#home">Linda Baird</a>
+          <a class="brand" href="#home" aria-label="Linda Baird"></a>
           <div class="links">
             <a href="#about"><span>About</span></a>
             <a href="#videos"><span>Videos</span></a>
@@ -408,9 +405,8 @@ const heroImages = [
         <div class="hero" id="hero" aria-label="Header images">
           <div class="inner">
             <div>
-              <div class="holder"><span>Mezzo Soprano</span></div>
               <h1>Linda Baird</h1>
-              <p class="subtitle">Mezzo Soprano</p>
+              <div class="holder"><span>Mezzo Soprano</span></div>
             </div>
           </div>
         </div>
