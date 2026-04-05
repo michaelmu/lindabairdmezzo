@@ -207,22 +207,23 @@ const heroImages = [
         z-index: 2;
         height: 100%;
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        padding: 0 18px;
       }
-      /* Center the hero copy within the right-side “block” */
+
+      /* Position the hero copy so its CENTER sits at ~65% of the page width */
       .hero .copy {
+        position: absolute;
+        left: 65%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         text-align: center;
-        /* Define a right-side "block" and center the text within it */
-        width: 40%;
-        max-width: 520px;
-        margin-right: 0;
+        width: min(520px, calc(100vw - 36px));
       }
+
       @media (max-width: 768px) {
-        .hero .inner { justify-content: center; }
-        .hero .copy { margin-right: 0; }
+        .hero .copy {
+          left: 50%;
+          width: min(520px, calc(100vw - 36px));
+        }
       }
 
       .hero .holder {
