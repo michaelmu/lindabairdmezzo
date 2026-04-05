@@ -72,6 +72,9 @@ const heroImages = [
 
       .container { max-width: 1140px; margin: 0 auto; padding: 0 18px; }
 
+      /* Ensure headings are not italic */
+      h1, h2, h3, h4, h5, h6 { font-style: normal; }
+
       /* Nav: keep it visible while scrolling.
          Transparent over hero; turns opaque after scrolling down.
       */
@@ -301,6 +304,22 @@ const heroImages = [
         font-weight: 400;
       }
       @media (max-width: 768px) { .section h2 { font-size: 50px; } }
+
+      /* Resume: restore the background image from the original site */
+      #resume {
+        position: relative;
+        background-color: #68768E;
+        color: #fff;
+      }
+      @media (min-width: 640px) {
+        #resume {
+          background-image: var(--resume-bg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: 70% center;
+        }
+      }
+      #resume h2 { color: #fff; }
 
       /* About (text + photo) */
       .about-grid {
@@ -612,11 +631,15 @@ const heroImages = [
         </div>
       </section>
 
-      <section class="section" id="resume">
+      <section
+        class="section"
+        id="resume"
+        style={`--resume-bg: url('${import.meta.env.BASE_URL}include/images/linda_blue_cross_med.jpg');`}
+      >
         <div class="container">
           <div class="panel">
             <h2>Resume</h2>
-            <div style="overflow:auto; margin-top: 8px; background: rgba(0,0,0,0.05);">
+            <div style="overflow:auto; margin-top: 8px; background: rgba(255,255,255,0.14); backdrop-filter: blur(2px);">
               <table>
                 <thead>
                   <tr>
