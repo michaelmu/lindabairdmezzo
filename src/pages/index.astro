@@ -205,24 +205,21 @@ const heroImages = [
         position: relative;
         z-index: 2;
         height: 100%;
-        display: table;
         width: 100%;
-        /* Production positions the hero copy toward the right */
-        text-align: right;
-      }
-      .hero .inner > div {
-        display: table-cell;
-        vertical-align: middle;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
         padding: 0 18px;
       }
+      /* Center the hero copy within the right-side “block” */
       .hero .copy {
-        display: inline-block;
         text-align: center;
-        /* push the hero copy to the right ~30% (desktop) */
-        margin-right: 30vw;
+        width: min(520px, 100%);
+        /* shift the whole block right, but keep it centered within itself */
+        margin-right: 18vw;
       }
       @media (max-width: 768px) {
-        .hero .inner { text-align: center; }
+        .hero .inner { justify-content: center; }
         .hero .copy { margin-right: 0; }
       }
 
