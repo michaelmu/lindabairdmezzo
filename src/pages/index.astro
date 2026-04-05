@@ -77,12 +77,15 @@ const heroImages = [
       */
       header.site {
         position: fixed;
-        z-index: 99;
+        z-index: 1000;
+        left: 0;
+        right: 0;
         width: 100%;
         top: 0;
         background: transparent;
         box-shadow: none;
         padding-top: 20px; /* match the original top offset */
+        transform: translateZ(0);
         transition: background-color .2s ease, box-shadow .2s ease, padding-top .2s ease;
       }
       header.site.scrolled {
@@ -432,19 +435,30 @@ const heroImages = [
     </style>
 
     <script is:inline>
-      // Keep header visible; make it opaque once we scroll down.
+      // Keep header visible; switch to opaque background after we scroll past the hero.
       (() => {
         const header = document.querySelector('header.site');
-        if (!header) return;
+        const hero = document.getElementById('hero');
+        if (!header || !hero) return;
 
-        const SCROLL_AT = 40; // small threshold so it becomes opaque quickly
-        const onScroll = () => {
-          const y = window.scrollY || document.documentElement.scrollTop || 0;
-          header.classList.toggle('scrolled', y > SCROLL_AT);
-        };
+        const setScrolled = (scrolled) => header.classList.toggle('scrolled', scrolled);
 
-        window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll();
+        // Prefer IntersectionObserver so the threshold follows hero height.
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            setScrolled(!entry.isIntersecting);
+          }, { threshold: 0.01 });
+          observer.observe(hero);
+        } else {
+          // Fallback: approximate with hero height.
+          const onScroll = () => {
+            const y = window.scrollY || document.documentElement.scrollTop || 0;
+            setScrolled(y > (hero.offsetHeight - 60));
+          };
+          window.addEventListener('scroll', onScroll, { passive: true });
+          onScroll();
+        }
       })();
     </script>
   </head>
