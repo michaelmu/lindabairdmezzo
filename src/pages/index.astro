@@ -172,11 +172,12 @@ const heroImages = [
         background-size: cover;
         background-position: top center;
       }
+      /* Remove dark overlay on hero (match request) */
       .hero::after {
         content: "";
         position: absolute;
         inset: 0;
-        background: rgba(0,0,0,0.4);
+        background: transparent;
       }
 
       .hero .inner {
