@@ -222,20 +222,26 @@ const heroImages = [
         width: 100%;
       }
 
-      /* Position the hero copy so its CENTER sits at ~65% of the page width */
+      /* Use a container inside the hero so positioning matches the nav container */
+      .hero-container {
+        position: relative;
+        height: 100%;
+      }
+
+      /* Position the hero copy so its CENTER sits at ~65% of the CONTAINER width */
       .hero .copy {
         position: absolute;
         left: 65%;
         top: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-        width: min(520px, calc(100vw - 36px));
+        width: min(520px, calc(100% - 36px));
       }
 
       @media (max-width: 768px) {
         .hero .copy {
           left: 50%;
-          width: min(520px, calc(100vw - 36px));
+          width: min(520px, calc(100% - 36px));
         }
       }
 
@@ -499,9 +505,11 @@ const heroImages = [
       <section>
         <div class="hero" id="hero" aria-label="Header images">
           <div class="inner">
-            <div class="copy">
-              <h1>Linda Baird</h1>
-              <div class="holder"><span>Mezzo Soprano</span></div>
+            <div class="container hero-container">
+              <div class="copy">
+                <h1>Linda Baird</h1>
+                <div class="holder"><span>Mezzo Soprano</span></div>
+              </div>
             </div>
           </div>
         </div>
