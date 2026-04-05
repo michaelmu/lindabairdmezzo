@@ -10,10 +10,11 @@ const engagements = (yaml.load(fs.readFileSync('content/engagements.yml', 'utf8'
 
 const year = new Date().getFullYear();
 
+// Keep in sync with current production (lindabairdmezzo.com):
+// the hero picks a cover based on the week number.
 const heroImages = [
   'include/images/header/linda_header_gate.jpg',
   'include/images/header/linda_header_field.jpg',
-  'include/images/header/linda_header_inside.jpg',
 ];
 ---
 
@@ -574,31 +575,34 @@ const heroImages = [
       (function () {
         const base = baseUrl || '/';
 
-        // Hero carousel
+        // Hero cover image (match production behavior)
         const hero = document.getElementById('hero');
         if (hero) {
           const imgs = heroImages.map((p) => base + p);
-          let idx = 0;
 
-          const apply = () => {
-            hero.style.setProperty('--hero-url', `url("${imgs[idx]}")`);
-            hero.style.backgroundImage = `url("${imgs[idx]}")`;
-            hero.style.backgroundSize = 'cover';
-            hero.style.backgroundPosition = 'top center';
+          // Week number (ISO-ish, matches the current production site's logic)
+          Date.prototype.getWeekNumber = function () {
+            const d = new Date(Date.UTC(this.getFullYear(), this.getMonth(), this.getDate()));
+            const dayNum = d.getUTCDay() || 7;
+            d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+            const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+            return Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
           };
 
-          // Use ::before if possible
+          const idx = (new Date()).getWeekNumber() % imgs.length;
+          const url = imgs[idx];
+
+          // Use ::before for the actual background (keeps overlay + text layering clean)
+          hero.style.setProperty('--hero-url', `url("${url}")`);
+          hero.style.backgroundImage = `url("${url}")`; // fallback
+          hero.style.backgroundSize = 'cover';
+          hero.style.backgroundPosition = 'top center';
+
           const styleId = 'hero-before-style';
           const style = document.getElementById(styleId) || document.createElement('style');
           style.id = styleId;
           style.textContent = `.hero::before{ background-image: var(--hero-url); }`;
           document.head.appendChild(style);
-
-          apply();
-          setInterval(() => {
-            idx = (idx + 1) % imgs.length;
-            apply();
-          }, 6500);
         }
 
         // Lightbox (native dialog)
