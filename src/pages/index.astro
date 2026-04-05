@@ -135,16 +135,17 @@ const heroImages = [
 
       .links {
         display: flex;
-        gap: 24px;
+        gap: 28px;
         flex-wrap: wrap;
         justify-content: flex-end;
-        font-size: 18px; /* ~20% larger */
+        font-size: 19px;
       }
       .links a {
         font-family: var(--font-body);
         color: rgba(255,255,255,0.5);
         position: relative;
         text-decoration: none;
+        letter-spacing: 0.03em;
       }
       header.site.fixed .links a { color: rgba(0,0,0,0.5); }
       .links a span { position: relative; display: block; padding-bottom: 2px; }
@@ -351,7 +352,7 @@ const heroImages = [
       .col-12 { grid-column: span 12; }
       @media (max-width: 900px) {
         .col-6, .col-3 { grid-column: span 12; }
-        .links { gap: 14px; }
+        .links { gap: 16px; }
       }
 
       /* Gallery */
