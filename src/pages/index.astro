@@ -561,7 +561,14 @@ const heroImages = [
         overflow: hidden;
         max-width: min(1100px, calc(100vw - 26px));
       }
-      .lightbox-img { display:block; max-width: 100%; height: auto; }
+      .lightbox-img {
+        display: block;
+        /* Keep dialog size stable between thumb → full image swap */
+        width: min(1100px, 92vw);
+        height: auto;
+        max-height: 80vh;
+        object-fit: contain;
+      }
       .lightbox-cap { padding: 12px 14px; background: rgba(255,255,255,0.92); color: #111; }
       .xbtn {
         position: absolute;
