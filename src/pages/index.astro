@@ -886,6 +886,8 @@ const heroImages = [
             }
           });
 
+          let loadToken = 0;
+
           document.addEventListener('click', (e) => {
             const a = e.target && (e.target.closest?.('a[data-lightbox="1"]'));
             if (!a) return;
@@ -893,9 +895,22 @@ const heroImages = [
 
             const href = a.getAttribute('href');
             const caption = a.getAttribute('data-caption') || '';
-            img.src = href;
+            const thumbSrc = a.querySelector('img')?.getAttribute('src');
+
+            // Show the clicked thumbnail immediately (prevents the previous full-size
+            // image from lingering while the next one downloads).
+            if (thumbSrc) img.src = thumbSrc;
             cap.innerHTML = caption;
             dlg.showModal();
+
+            // Then swap in the full-size image once it finishes loading.
+            const token = ++loadToken;
+            const pre = new Image();
+            pre.onload = () => {
+              if (token !== loadToken) return; // a newer image was requested
+              img.src = href;
+            };
+            pre.src = href;
           });
         }
       })();
