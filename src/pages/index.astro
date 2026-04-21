@@ -641,9 +641,10 @@ const heroImages = [
                     data-caption={p.captionHtml ?? ''}
                   >
                     <img
-                      src={`${import.meta.env.BASE_URL}include/images/gallery/${p.file}`}
+                      src={`${import.meta.env.BASE_URL}include/images/gallery/thumbs/${p.file}`}
                       alt={(p.captionHtml ?? 'Photo').replace(/<[^>]+>/g, '')}
                       loading="lazy"
+                      decoding="async"
                     />
                   </a>
                 </div>
