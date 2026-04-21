@@ -27,6 +27,7 @@ Optional flags:
 from __future__ import annotations
 
 import argparse
+import json
 import os
 from pathlib import Path
 
@@ -36,6 +37,7 @@ from PIL import Image, ImageOps
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 PHOTOS_YML = REPO_ROOT / "content" / "photos.yml"
+PHOTOS_META_JSON = REPO_ROOT / "content" / "photos_meta.json"
 GALLERY_DIR = REPO_ROOT / "include" / "images" / "gallery"
 THUMBS_DIR = GALLERY_DIR / "thumbs"
 
@@ -82,6 +84,7 @@ def main() -> int:
 
     referenced_thumbs = set()
     changed = 0
+    meta: dict[str, dict[str, int]] = {}
 
     for fname in files:
         src = GALLERY_DIR / fname
@@ -98,7 +101,16 @@ def main() -> int:
         after = dst.stat().st_size
         if before != after:
             changed += 1
-        print(f"thumb: {fname}  {orig_size[0]}x{orig_size[1]} -> {new_size[0]}x{new_size[1]}  ({after/1024:.0f}KB)")
+
+        meta[Path(fname).name] = {"w": new_size[0], "h": new_size[1]}
+
+        print(
+            f"thumb: {fname}  {orig_size[0]}x{orig_size[1]} -> {new_size[0]}x{new_size[1]}  ({after/1024:.0f}KB)"
+        )
+
+    # Write dimensions metadata for layout-stable placeholders.
+    PHOTOS_META_JSON.write_text(json.dumps(meta, indent=2, sort_keys=True) + "\n", "utf-8")
+    print(f"wrote {PHOTOS_META_JSON} ({len(meta)} entries)")
 
     if args.clean:
         removed = 0

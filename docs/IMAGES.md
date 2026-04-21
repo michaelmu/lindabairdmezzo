@@ -16,7 +16,7 @@ The thumbnail filename matches the original filename.
 
 1. Add the full-size image to `include/images/gallery/`
 2. Add an entry to `content/photos.yml` with `file:` and `captionHtml:`
-3. Generate/update thumbnails:
+3. Generate/update thumbnails (also updates `content/photos_meta.json` used for layout-stable placeholders):
 
 ```bash
 python3 tools/generate_gallery_thumbs.py

@@ -4,6 +4,13 @@ import yaml from 'js-yaml';
 
 const aboutHtml = fs.readFileSync('content/about.md', 'utf8');
 const photos = (yaml.load(fs.readFileSync('content/photos.yml', 'utf8'))?.photos) ?? [];
+const photosMeta = (() => {
+  try {
+    return JSON.parse(fs.readFileSync('content/photos_meta.json', 'utf8')) ?? {};
+  } catch {
+    return {};
+  }
+})();
 const videos = (yaml.load(fs.readFileSync('content/videos.yml', 'utf8'))?.videos) ?? [];
 const resume = (yaml.load(fs.readFileSync('content/resume.yml', 'utf8'))?.resume) ?? [];
 const engagements = (yaml.load(fs.readFileSync('content/engagements.yml', 'utf8'))?.engagements) ?? [];
@@ -449,7 +456,8 @@ const heroImages = [
         border-radius: 0;
         overflow: hidden;
         border: 0;
-        background: transparent;
+        /* Placeholder while thumbs lazy-load: stable + nicer than white gaps */
+        background: linear-gradient(135deg, rgba(224, 78, 111, 0.20), rgba(135, 124, 98, 0.22));
         transform: translateZ(0);
       }
       .thumb img {
@@ -642,6 +650,8 @@ const heroImages = [
                   >
                     <img
                       src={`${import.meta.env.BASE_URL}include/images/gallery/thumbs/${p.file}`}
+                      width={photosMeta?.[p.file]?.w}
+                      height={photosMeta?.[p.file]?.h}
                       alt={(p.captionHtml ?? 'Photo').replace(/<[^>]+>/g, '')}
                       loading="lazy"
                       decoding="async"
