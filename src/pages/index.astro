@@ -346,16 +346,24 @@ const heroImages = [
       }
       #resume h2 { color: #fff; }
 
-      /* Center the resume title + subheading within the same width as the table */
+      /* Resume layout: keep content off-center to the left so the right-side image shows */
       #resume .resume-block {
-        max-width: 760px;
-        margin: 0 auto;
+        max-width: 700px;
+        margin: 0; /* left aligned within the container */
       }
 
       #resume .section-heading {
-        max-width: 760px;
-        margin: 0 auto 10px;
+        max-width: 700px;
+        margin: 0 0 10px;
         text-align: center;
+      }
+      /* On wide screens, push the resume block a bit left and leave a right gutter */
+      @media (min-width: 900px) {
+        #resume .resume-block,
+        #resume .section-heading {
+          width: 62%;
+          max-width: none;
+        }
       }
       #resume .section-heading hr,
       #resume .resume-hr {
@@ -545,7 +553,11 @@ const heroImages = [
 
       /* Make resume/engagements tables readable on dark sections */
       #resume table, #resume th, #resume td { color: #fff; }
-      #resume th, #resume td { border-bottom-color: rgba(255,255,255,0.18); }
+      /* Remove the drawn line between every resume row (match original) */
+      #resume th, #resume td { border-bottom: none; }
+      /* Tighten spacing slightly */
+      #resume th, #resume td { padding-top: 6px; padding-bottom: 6px; }
+      #resume th { color: rgba(255,255,255,0.85); }
 
       footer {
         padding: 30px 0 50px;
@@ -719,7 +731,7 @@ const heroImages = [
               <h4 id="resume-subheading"><span>OPERA/ORATORIO</span></h4>
               <hr class="resume-hr" />
 
-              <div style="overflow:auto; margin-top: 8px; background: rgba(255,255,255,0.14); backdrop-filter: blur(2px);">
+              <div style="overflow:auto; margin-top: 8px; background: transparent;">
                 <table>
                   <thead>
                     <tr>
