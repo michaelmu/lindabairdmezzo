@@ -365,14 +365,17 @@ const heroImages = [
           max-width: none;
         }
       }
+      /* Resume rules: brighter + span the resume block width */
       #resume .section-heading hr,
       #resume .resume-hr {
         border: 0;
-        /* Brighter + wider rule (match original) */
-        border-top: 1px solid rgba(255,255,255,0.55);
+        border-top: 1px solid rgba(255,255,255,0.65);
+        width: 100%;
         max-width: 100%;
-        margin: 0 auto 14px;
+        margin: 0 auto 16px;
       }
+      /* Extra breathing room above the title rule (like the reference) */
+      #resume .section-heading hr { margin-top: 10px; margin-bottom: 30px; }
       #resume .section-heading h2 { padding-bottom: 10px; }
 
       #resume #resume-subheading {
@@ -564,25 +567,31 @@ const heroImages = [
       #resume table, #resume th, #resume td { color: #fff; }
 
       /* Tighten spacing (closer to original single-spaced list feel) */
-      #resume table { line-height: 1.35; }
-      #resume th, #resume td { padding-top: 4px; padding-bottom: 4px; }
+      #resume table { line-height: 1.32; }
+      #resume td { padding-top: 10px; padding-bottom: 10px; }
+      /* keep headings controlled separately */
+      #resume th { padding-left: 10px; padding-right: 10px; }
+      #resume td { padding-left: 10px; padding-right: 10px; }
 
       /* Column headings: centered + larger, with rules above and below */
       #resume thead {
-        border-top: 1px solid rgba(255,255,255,0.55);
-        border-bottom: 1px solid rgba(255,255,255,0.55);
+        border-top: 1px solid rgba(255,255,255,0.65);
+        border-bottom: 1px solid rgba(255,255,255,0.65);
       }
       #resume th, #resume td { border-bottom: none; }
       #resume th {
         text-align: center;
-        font-weight: 600;
-        font-size: 16px;
-        letter-spacing: 0.08em;
-        color: rgba(255,255,255,0.92);
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 0.02em;
+        color: rgba(255,255,255,0.95);
         text-transform: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
       }
 
-      /* Make every Role entry bold */
+      /* Body styling (match reference: Opera italic, Role bold) */
+      #resume tbody td:nth-child(1) { font-style: italic; }
       #resume tbody td:nth-child(2) { font-weight: 800; }
 
       footer {
