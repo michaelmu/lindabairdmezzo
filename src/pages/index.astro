@@ -439,9 +439,9 @@ const heroImages = [
       #resume .container { position: relative; z-index: 1; }
       #resume h2 { color: #fff; }
 
-      #contact { background-color: #877c62; }
-      #contact h2 { color: #fff; }
-      #contact p { color: rgba(255,255,255,0.85) !important; }
+      #contact { background-color: #fff; }
+      #contact h2 { color: var(--primary); }
+      #contact p { color: var(--text) !important; }
       .col-6 { grid-column: span 6; }
       .col-3 { grid-column: span 3; }
       .col-12 { grid-column: span 12; }
@@ -596,7 +596,8 @@ const heroImages = [
 
       footer {
         padding: 30px 0 50px;
-        color: var(--muted);
+        background: #877c62; /* original Contact background */
+        color: rgba(255,255,255,0.85);
       }
 
       /* Dialog lightbox */
@@ -643,7 +644,7 @@ const heroImages = [
             <a href="#gallery"><span>Gallery</span></a>
             <a href="#videos"><span>Videos</span></a>
             <a href="#resume"><span>Resume</span></a>
-            <a href="#engagements"><span>Engagements</span></a>
+            <!-- Engagements removed -->
             <a href="#contact"><span>Contact</span></a>
           </div>
         </nav>
@@ -791,47 +792,8 @@ const heroImages = [
         </div>
       </section>
 
-      <section class="section" id="engagements">
-        <div class="container">
-          <div class="panel">
-            <div class="section-heading">
-              <hr />
-              <h2><span>Engagements</span></h2>
-            </div>
-            <div style="overflow:auto; margin-top: 8px;">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Presenter</th>
-                    <th>Work</th>
-                    <th>Date</th>
-                    <th>Notes</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {engagements.map((e) => (
-                    <tr>
-                      <td><span set:html={e.presenterHtml ?? ''} /></td>
-                      <td>{e.work}</td>
-                      <td>{e.date}</td>
-                      <td>
-                        <span set:html={e.notesHtml ?? ''} />
-                        {e.links?.length ? (
-                          <div style="margin-top: 6px;">
-                            {e.links.map((link, idx) => (
-                              <a href={link} target="_blank" rel="noopener">link {idx + 1}</a>
-                            ))}
-                          </div>
-                        ) : null}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      <!-- Engagements section removed -->
 
       <section class="section" id="contact">
         <div class="container">
