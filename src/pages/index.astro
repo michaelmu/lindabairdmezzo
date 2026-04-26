@@ -4,6 +4,13 @@ import yaml from 'js-yaml';
 
 const aboutHtml = fs.readFileSync('content/about.md', 'utf8');
 const photos = (yaml.load(fs.readFileSync('content/photos.yml', 'utf8'))?.photos) ?? [];
+const photosMeta = (() => {
+  try {
+    return JSON.parse(fs.readFileSync('content/photos_meta.json', 'utf8')) ?? {};
+  } catch {
+    return {};
+  }
+})();
 const videos = (yaml.load(fs.readFileSync('content/videos.yml', 'utf8'))?.videos) ?? [];
 const resume = (yaml.load(fs.readFileSync('content/resume.yml', 'utf8'))?.resume) ?? [];
 const engagements = (yaml.load(fs.readFileSync('content/engagements.yml', 'utf8'))?.engagements) ?? [];
@@ -49,7 +56,7 @@ const heroImages = [
       }
 
       * { box-sizing: border-box; }
-      html { scroll-behavior: smooth; }
+      html { scroll-behavior: smooth; scroll-padding-top: 20px; }
       body {
         margin: 0;
         font-family: var(--font-body);
@@ -72,28 +79,42 @@ const heroImages = [
 
       .container { max-width: 1140px; margin: 0 auto; padding: 0 18px; }
 
-      /* Nav: match lindabairdmezzo.com */
+      /* Ensure headings are not italic */
+      h1, h2, h3, h4, h5, h6 { font-style: normal; }
+
+      /* Nav: keep it visible while scrolling.
+         Transparent over hero; turns opaque after scrolling down.
+      */
       header.site {
-        position: absolute;
-        z-index: 99;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        right: 0;
         width: 100%;
         top: 0;
-        margin-top: 20px;
+        background: transparent;
+        box-shadow: none;
+        padding-top: 20px; /* match the original top offset */
+        transform: translateZ(0);
+        transition: background-color .2s ease, box-shadow .2s ease, padding-top .2s ease;
       }
-      header.site.fixed {
-        position: fixed;
+      header.site.scrolled {
         background: #fff;
         box-shadow: 0 0 9px 0 rgba(0,0,0,0.1);
-        margin-top: 0;
-        top: 0;
+        /* Make the nav bar taller when it becomes fixed (roughly 2x) */
+        padding-top: 20px;
       }
 
       .nav {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 10px 0;
         gap: 14px;
+      }
+      header.site.scrolled .nav {
+        padding: 20px 0;
       }
       .brand {
         float: left;
@@ -106,23 +127,43 @@ const heroImages = [
         letter-spacing: 0.18em;
         white-space: nowrap;
         text-decoration: none;
+        /* Hide the redundant top-left name until the header becomes fixed */
+        opacity: 0;
+        pointer-events: none;
       }
-      header.site.fixed .brand { color: var(--primary); }
+      header.site.scrolled .brand {
+        color: var(--primary);
+        opacity: 1;
+        pointer-events: auto;
+      }
 
       .links {
         display: flex;
-        gap: 14px;
+        gap: 28px;
         flex-wrap: wrap;
         justify-content: flex-end;
-        font-size: 14px;
+        font-size: 19px;
+      }
+
+      /* Align nav links with the hero copy (centered around ~65% page width) */
+      @media (min-width: 901px) {
+        .links {
+          position: absolute;
+          left: 65%;
+          transform: translateX(-50%);
+          justify-content: center;
+          width: max-content;
+          max-width: 100%;
+        }
       }
       .links a {
         font-family: var(--font-body);
         color: rgba(255,255,255,0.5);
         position: relative;
         text-decoration: none;
+        letter-spacing: 0.03em;
       }
-      header.site.fixed .links a { color: rgba(0,0,0,0.5); }
+      header.site.scrolled .links a { color: rgba(0,0,0,0.5); }
       .links a span { position: relative; display: block; padding-bottom: 2px; }
       .links a span:before {
         content: "";
@@ -137,7 +178,7 @@ const heroImages = [
         transition: all 0.3s ease-in-out;
       }
       .links a:hover { color: #fff; }
-      header.site.fixed .links a:hover { color: var(--primary); }
+      header.site.scrolled .links a:hover { color: var(--primary); }
       .links a:hover span:before { visibility: visible; transform: scaleX(1); }
 
       @media (max-width: 768px) {
@@ -169,25 +210,42 @@ const heroImages = [
         background-size: cover;
         background-position: top center;
       }
+      /* Remove dark overlay on hero (match request) */
       .hero::after {
         content: "";
         position: absolute;
         inset: 0;
-        background: rgba(0,0,0,0.4);
+        background: transparent;
       }
 
       .hero .inner {
         position: relative;
         z-index: 2;
         height: 100%;
-        display: table;
         width: 100%;
-        text-align: center;
       }
-      .hero .inner > div {
-        display: table-cell;
-        vertical-align: middle;
-        padding: 0 18px;
+
+      /* Use a container inside the hero so positioning matches the nav container */
+      .hero-container {
+        position: relative;
+        height: 100%;
+      }
+
+      /* Position the hero copy so its CENTER sits at ~65% of the CONTAINER width */
+      .hero .copy {
+        position: absolute;
+        left: 65%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: min(520px, calc(100% - 36px));
+      }
+
+      @media (max-width: 768px) {
+        .hero .copy {
+          left: 50%;
+          width: min(520px, calc(100% - 36px));
+        }
       }
 
       .hero .holder {
@@ -230,16 +288,10 @@ const heroImages = [
       }
       @media (max-width: 768px) { .hero h1 { font-size: 60px; } }
 
-      .hero .subtitle {
-        color: #fff;
-        font-weight: 400;
-        font-size: 20px;
-        letter-spacing: 10px;
-        margin: 0;
-      }
+      /* (subtitle removed; we use the holder line below the name) */
 
       /* Sections: match lindabairdmezzo.com spacing */
-      .section { padding: 3em 0; }
+      .section { padding: 3em 0; scroll-margin-top: 20px; }
       @media (max-width: 480px) { .section { padding: 2em 0; } }
 
       /* Our architecture keeps .panel wrappers; make them visually transparent */
@@ -263,6 +315,104 @@ const heroImages = [
         font-weight: 400;
       }
       @media (max-width: 768px) { .section h2 { font-size: 50px; } }
+
+      /* Section headings: horizontal rules + title (matches Resume styling) */
+      .section-heading {
+        max-width: 760px;
+        margin: 0 auto 10px;
+        text-align: center;
+      }
+      .section-heading hr {
+        border: 0;
+        border-top: 1px solid rgba(0,0,0,0.20);
+        max-width: 520px;
+        margin: 0 auto 18px;
+      }
+      /* Resume is on a dark background; override to a light rule below */
+
+      /* Resume: restore the background image from the original site */
+      #resume {
+        position: relative;
+        background-color: #68768E;
+        color: #fff;
+      }
+      @media (min-width: 640px) {
+        #resume {
+          background-image: var(--resume-bg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: 70% center;
+        }
+      }
+      #resume h2 { color: #fff; }
+
+      /* Resume layout: keep content off-center to the left so the right-side image shows */
+      #resume .resume-block {
+        max-width: 700px;
+        margin: 0; /* left aligned within the container */
+      }
+
+      #resume .section-heading {
+        max-width: 700px;
+        margin: 0 0 10px;
+        text-align: center;
+      }
+      /* On wide screens, push the resume block a bit left and leave a right gutter */
+      @media (min-width: 900px) {
+        #resume .resume-block,
+        #resume .section-heading {
+          width: 62%;
+          max-width: none;
+        }
+      }
+      /* Resume rules: brighter + span the resume block width */
+      #resume .section-heading hr,
+      #resume .resume-hr {
+        border: 0;
+        /* slightly brighter/clearer rule */
+        border-top: 1px solid rgba(255,255,255,0.78);
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto 16px;
+      }
+      /* Extra breathing room above the title rule (like the reference) */
+      #resume .section-heading hr { margin-top: 10px; margin-bottom: 30px; }
+      #resume .section-heading h2 { padding-bottom: 10px; }
+
+      #resume #resume-subheading {
+        text-align: center;
+        font-size: 14px;
+        letter-spacing: 0.18em;
+        margin: 0;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.92);
+      }
+
+      /* About (text + photo) */
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1.6fr 0.8fr;
+        gap: 28px;
+        align-items: start;
+      }
+      .about-photo img {
+        display: block;
+        width: 100%;
+        max-width: 260px;
+        height: auto;
+        margin-left: auto;
+        margin-top: 70px; /* nudge down further */
+        border-radius: 0;
+      }
+      @media (max-width: 900px) {
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+        .about-photo img {
+          max-width: 220px;
+          margin: 40px auto 0;
+        }
+      }
 
       /* Cards */
       .grid {
@@ -290,60 +440,175 @@ const heroImages = [
       #resume .container { position: relative; z-index: 1; }
       #resume h2 { color: #fff; }
 
-      #contact { background-color: #877c62; }
-      #contact h2 { color: #fff; }
-      #contact p { color: rgba(255,255,255,0.85) !important; }
+      #contact { background-color: #fff; }
+      #contact h2 { color: var(--primary); }
+      #contact p { color: var(--text) !important; }
       .col-6 { grid-column: span 6; }
       .col-3 { grid-column: span 3; }
       .col-12 { grid-column: span 12; }
       @media (max-width: 900px) {
         .col-6, .col-3 { grid-column: span 12; }
-        .links { gap: 10px; }
+        .links { gap: 16px; }
       }
 
-      /* Gallery */
-      #gallery .grid { gap: 0; }
+      /* Gallery (Option B): masonry using CSS columns */
+      #gallery .masonry {
+        column-count: 4;
+        column-gap: 18px;
+      }
+      @media (max-width: 1100px) { #gallery .masonry { column-count: 3; } }
+      @media (max-width: 900px) { #gallery .masonry { column-count: 2; } }
+      @media (max-width: 520px) { #gallery .masonry { column-count: 1; } }
+
+      #gallery .masonry-item {
+        break-inside: avoid;
+        margin: 0 0 18px;
+      }
 
       .thumb {
         display: block;
         border-radius: 0;
         overflow: hidden;
         border: 0;
-        background: transparent;
+        /* Placeholder while thumbs lazy-load: stable + nicer than white gaps */
+        background: linear-gradient(135deg, rgba(224, 78, 111, 0.20), rgba(135, 124, 98, 0.22));
+        transform: translateZ(0);
       }
       .thumb img {
         display: block;
         width: 100%;
-        height: 100%;
-        aspect-ratio: 4 / 5; /* consistent face scale */
-        object-fit: cover;
-        object-position: var(--pos, 50% 30%);
-      }
-      .thumb.contain img {
-        object-fit: contain; /* use for wide/orchestra shots */
-        background: rgba(0,0,0,0.06);
+        height: auto;
       }
 
-      /* Gallery responsive: keep it puzzle-tight, but not 1-per-row */
+      /* Subtle polish */
+      .thumb img {
+        transition: transform .25s ease, filter .25s ease;
+      }
+      .thumb:hover img {
+        transform: scale(1.02);
+        filter: contrast(1.03);
+      }
+
+      /* Keep contain option for any odd aspect-ratio assets */
+      .thumb.contain img {
+        background: rgba(0,0,0,0.06);
+        object-fit: contain;
+      }
+
+      /* Contact form */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        font-family: var(--font-body);
+        font-size: 18px;
+        line-height: 1.4;
+        color: #111;
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.18);
+        border-radius: 10px;
+        padding: 14px 14px;
+        outline: none;
+      }
+      .contact-form input::placeholder,
+      .contact-form textarea::placeholder {
+        color: rgba(0, 0, 0, 0.45);
+      }
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        border-color: rgba(224, 78, 111, 0.65);
+        box-shadow: 0 0 0 4px rgba(224, 78, 111, 0.14);
+      }
+      .contact-form {
+        max-width: 70%; /* ~30% narrower */
+        margin: 0 auto; /* center */
+      }
       @media (max-width: 900px) {
-        #gallery .col-3 { grid-column: span 6; }
+        .contact-form { max-width: 100%; }
       }
-      @media (max-width: 520px) {
-        #gallery .col-3 { grid-column: span 12; }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
       }
+      .contact-grid .span-2 { grid-column: span 2; }
+      @media (max-width: 768px) {
+        .contact-grid { grid-template-columns: 1fr; }
+        .contact-grid .span-2 { grid-column: auto; }
+      }
+      .btn-send {
+        height: 54px;
+        border: none;
+        background: var(--primary);
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding: 0 36px;
+        letter-spacing: 2px;
+        cursor: pointer;
+        border-radius: 12px;
+      }
+      .btn-send:hover { background: #c93f5d; }
 
       /* Tables */
       table { width: 100%; border-collapse: collapse; }
       th, td { padding: 10px 10px; border-bottom: 1px solid rgba(0,0,0,0.10); text-align: left; vertical-align: top; }
       th { font-weight: 700; font-size: 14px; color: rgba(0,0,0,0.75); }
 
-      /* Make resume/engagements tables readable on dark sections */
+      /* Resume typography: use Garamond for the resume content */
+      #resume table,
+      #resume th,
+      #resume td,
+      #resume #resume-subheading {
+        font-family: var(--font-heading);
+      }
+
+      /* Make resume tables readable on dark sections */
       #resume table, #resume th, #resume td { color: #fff; }
-      #resume th, #resume td { border-bottom-color: rgba(255,255,255,0.18); }
+
+      /* Tighten spacing (closer to original single-spaced list feel) */
+      #resume table { line-height: 1.32; }
+      #resume td { padding-top: 10px; padding-bottom: 10px; }
+      /* keep headings controlled separately */
+      #resume th { padding-left: 10px; padding-right: 10px; }
+      #resume td { padding-left: 10px; padding-right: 10px; }
+
+      /* Column headings: centered + larger, with rules above and below */
+      #resume thead {
+        border-top: 1px solid rgba(255,255,255,0.65);
+        border-bottom: 1px solid rgba(255,255,255,0.65);
+      }
+      #resume th, #resume td { border-bottom: none; }
+      #resume th {
+        text-align: center;
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 0.02em;
+        color: rgba(255,255,255,0.95);
+        text-transform: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      /* Body styling */
+      #resume tbody td:nth-child(2) { font-weight: 800; }
 
       footer {
         padding: 30px 0 50px;
-        color: var(--muted);
+        background: #877c62; /* original Contact background */
+        color: rgba(255,255,255,0.85);
       }
 
       /* Dialog lightbox */
@@ -355,7 +620,14 @@ const heroImages = [
         overflow: hidden;
         max-width: min(1100px, calc(100vw - 26px));
       }
-      .lightbox-img { display:block; max-width: 100%; height: auto; }
+      .lightbox-img {
+        display: block;
+        /* Keep dialog size stable between thumb → full image swap */
+        width: min(1100px, 92vw);
+        height: auto;
+        max-height: 80vh;
+        object-fit: contain;
+      }
       .lightbox-cap { padding: 12px 14px; background: rgba(255,255,255,0.92); color: #111; }
       .xbtn {
         position: absolute;
@@ -371,32 +643,19 @@ const heroImages = [
       }
     </style>
 
-    <script is:inline>
-      // Toggle fixed header style to match lindabairdmezzo.com
-      (() => {
-        const header = document.querySelector('header.site');
-        const hero = document.getElementById('hero');
-        if (!header || !hero) return;
-        const setFixed = (fixed) => header.classList.toggle('fixed', fixed);
-        const observer = new IntersectionObserver((entries) => {
-          const entry = entries[0];
-          setFixed(!entry.isIntersecting);
-        }, { threshold: 0.01 });
-        observer.observe(hero);
-      })();
-    </script>
+    <!-- nav scroll behavior is initialized at end-of-body script -->
   </head>
   <body>
     <header class="site">
       <div class="container">
         <nav class="nav" aria-label="Primary">
-          <a class="brand" href="#home">Linda Baird</a>
+          <a class="brand" href="#home" aria-label="Linda Baird"></a>
           <div class="links">
             <a href="#about"><span>About</span></a>
-            <a href="#videos"><span>Videos</span></a>
             <a href="#gallery"><span>Gallery</span></a>
+            <a href="#videos"><span>Videos</span></a>
             <a href="#resume"><span>Resume</span></a>
-            <a href="#engagements"><span>Engagements</span></a>
+            <!-- Engagements removed -->
             <a href="#contact"><span>Contact</span></a>
           </div>
         </nav>
@@ -407,10 +666,11 @@ const heroImages = [
       <section>
         <div class="hero" id="hero" aria-label="Header images">
           <div class="inner">
-            <div>
-              <div class="holder"><span>Mezzo Soprano</span></div>
-              <h1>Linda Baird</h1>
-              <p class="subtitle">Mezzo Soprano</p>
+            <div class="container hero-container">
+              <div class="copy">
+                <h1>Linda Baird</h1>
+                <div class="holder"><span>Mezzo Soprano</span></div>
+              </div>
             </div>
           </div>
         </div>
@@ -419,16 +679,66 @@ const heroImages = [
       <section class="section" id="about">
         <div class="container">
           <div class="panel">
-            <h2>About</h2>
-            <div set:html={aboutHtml} />
+            <div class="section-heading">
+              <hr />
+              <h2><span>About</span></h2>
+            </div>
+            <div class="about-grid">
+              <div class="about-text" set:html={aboutHtml} />
+              <div class="about-photo">
+                <img
+                  src={`${import.meta.env.BASE_URL}include/images/linda_baird_about_3.jpg`}
+                  alt="Linda Baird"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
+      <section class="section" id="gallery">
+        <div class="container">
+          <div class="panel">
+            <div class="section-heading">
+              <hr />
+              <h2><span>Gallery</span></h2>
+            </div>
+            <div class="masonry" style="margin-top: 14px;">
+              {photos.map((p) => (
+                <div class="masonry-item">
+                  <a
+                    class={`thumb${p.fit === 'contain' ? ' contain' : ''}`}
+                    style={`--pos: ${p.pos ?? '50% 30%'};`}
+                    href={`${import.meta.env.BASE_URL}include/images/gallery/${p.file}`}
+                    data-lightbox="1"
+                    data-caption={p.captionHtml ?? ''}
+                  >
+                    <img
+                      src={`${import.meta.env.BASE_URL}include/images/gallery/thumbs/${p.file}`}
+                      width={photosMeta?.[p.file]?.w}
+                      height={photosMeta?.[p.file]?.h}
+                      alt={(p.captionHtml ?? 'Photo').replace(/<[^>]+>/g, '')}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
       <section class="section" id="videos">
         <div class="container">
           <div class="panel">
-            <h2>Videos</h2>
+            <div class="section-heading">
+              <hr />
+              <h2><span>Videos</span></h2>
+            </div>
             <div class="grid" style="margin-top: 14px;">
               {videos.map((v) => (
                 <div class="col-6">
@@ -444,9 +754,7 @@ const heroImages = [
                       />
                     </div>
                   </div>
-                  {v.descriptionHtml ? (
-                    <div class="" set:html={v.descriptionHtml} />
-                  ) : null}
+                  {/* descriptions removed (keep the grid clean) */}
                 </div>
               ))}
             </div>
@@ -454,105 +762,77 @@ const heroImages = [
         </div>
       </section>
 
-      <section class="section" id="gallery">
+      <section
+        class="section"
+        id="resume"
+        style={`--resume-bg: url('${import.meta.env.BASE_URL}include/images/linda_blue_cross_med.jpg');`}
+      >
         <div class="container">
           <div class="panel">
-            <h2>Gallery</h2>
-            <div class="grid" style="margin-top: 14px;">
-              {photos.map((p) => (
-                <div class={p.span === 6 ? 'col-6' : p.span === 12 ? 'col-12' : 'col-3'}>
-                  <a
-                    class={`thumb${p.fit === 'contain' ? ' contain' : ''}`}
-                    style={`--pos: ${p.pos ?? '50% 30%'};`}
-                    href={`${import.meta.env.BASE_URL}include/images/gallery/${p.file}`}
-                    data-lightbox="1"
-                    data-caption={p.captionHtml ?? ''}
-                  >
-                    <img
-                      src={`${import.meta.env.BASE_URL}include/images/gallery/${p.file}`}
-                      alt={(p.captionHtml ?? 'Photo').replace(/<[^>]+>/g, '')}
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-              ))}
+            <div class="section-heading">
+              <hr />
+              <h2><span>Resume</span></h2>
+            </div>
+
+            <div class="resume-block">
+              <h4 id="resume-subheading"><span>OPERA/ORATORIO</span></h4>
+              <hr class="resume-hr" />
+
+              <div style="overflow:auto; margin-top: 8px; background: transparent;">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Opera</th>
+                      <th>Role</th>
+                      <th>Company</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {resume.map((r) => (
+                      <tr>
+                        <td>{r.work}</td>
+                        <td>{r.role}</td>
+                        <td>{r.company}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="resume">
-        <div class="container">
-          <div class="panel">
-            <h2>Resume</h2>
-            <div style="overflow:auto; margin-top: 8px; background: rgba(0,0,0,0.05);">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Work</th>
-                    <th>Role</th>
-                    <th>Company</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {resume.map((r) => (
-                    <tr>
-                      <td>{r.work}</td>
-                      <td>{r.role}</td>
-                      <td>{r.company}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="section" id="engagements">
-        <div class="container">
-          <div class="panel">
-            <h2>Engagements</h2>
-            <div style="overflow:auto; margin-top: 8px;">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Presenter</th>
-                    <th>Work</th>
-                    <th>Date</th>
-                    <th>Notes</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {engagements.map((e) => (
-                    <tr>
-                      <td><span set:html={e.presenterHtml ?? ''} /></td>
-                      <td>{e.work}</td>
-                      <td>{e.date}</td>
-                      <td>
-                        <span set:html={e.notesHtml ?? ''} />
-                        {e.links?.length ? (
-                          <div style="margin-top: 6px;">
-                            {e.links.map((link, idx) => (
-                              <a href={link} target="_blank" rel="noopener">link {idx + 1}</a>
-                            ))}
-                          </div>
-                        ) : null}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
+      <!-- Engagements section removed -->
 
       <section class="section" id="contact">
         <div class="container">
           <div class="panel">
-            <h2>Contact</h2>
-            <p style="margin:0; color: var(--muted);">Add contact links here (email / agent / socials). Tell me what you want displayed.</p>
+            <div class="section-heading">
+              <hr />
+              <h2><span>Contact</span></h2>
+            </div>
+
+            <form class="contact-form" action="https://formspree.io/baird.lj@gmail.com" method="POST">
+              <div class="contact-grid" style="margin-top: 14px;">
+                <div>
+                  <label class="sr-only" for="contact_name">Name</label>
+                  <input id="contact_name" type="text" name="name" placeholder="Name" required />
+                </div>
+                <div>
+                  <label class="sr-only" for="contact_email">Email</label>
+                  <input id="contact_email" type="email" name="_replyto" placeholder="Email" required />
+                </div>
+                <div class="span-2">
+                  <label class="sr-only" for="contact_message">Message</label>
+                  <textarea id="contact_message" name="message" placeholder="Write your message here." rows={5} required />
+                </div>
+                <div class="span-2" style="display:flex; justify-content:flex-end;">
+                  <button type="submit" class="btn-send">Send message</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </section>
@@ -574,6 +854,18 @@ const heroImages = [
       // Hero background rotation + lightweight gallery lightbox.
       (function () {
         const base = baseUrl || '/';
+
+        // Nav: keep visible; add opaque background after scrolling a bit
+        const header = document.querySelector('header.site');
+        if (header) {
+          const SCROLL_AT = 40;
+          const onScroll = () => {
+            const y = window.scrollY || document.documentElement.scrollTop || 0;
+            header.classList.toggle('scrolled', y > SCROLL_AT);
+          };
+          window.addEventListener('scroll', onScroll, { passive: true });
+          onScroll();
+        }
 
         // Hero cover image (match production behavior)
         const hero = document.getElementById('hero');
@@ -621,6 +913,8 @@ const heroImages = [
             }
           });
 
+          let loadToken = 0;
+
           document.addEventListener('click', (e) => {
             const a = e.target && (e.target.closest?.('a[data-lightbox="1"]'));
             if (!a) return;
@@ -628,9 +922,22 @@ const heroImages = [
 
             const href = a.getAttribute('href');
             const caption = a.getAttribute('data-caption') || '';
-            img.src = href;
+            const thumbSrc = a.querySelector('img')?.getAttribute('src');
+
+            // Show the clicked thumbnail immediately (prevents the previous full-size
+            // image from lingering while the next one downloads).
+            if (thumbSrc) img.src = thumbSrc;
             cap.innerHTML = caption;
             dlg.showModal();
+
+            // Then swap in the full-size image once it finishes loading.
+            const token = ++loadToken;
+            const pre = new Image();
+            pre.onload = () => {
+              if (token !== loadToken) return; // a newer image was requested
+              img.src = href;
+            };
+            pre.src = href;
           });
         }
       })();

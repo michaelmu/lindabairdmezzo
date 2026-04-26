@@ -9,10 +9,11 @@ function normalizeBase(v) {
   return b;
 }
 
-// PATH_PREFIX is set by CI for GitHub Pages.
+// PATH_PREFIX is set by CI for the public deploy path.
 // Examples:
 // - /lindabairdmezzo/
 // - /lindabairdmezzo/staging/
+// - /
 const base = normalizeBase(process.env.PATH_PREFIX || '/');
 
 export default defineConfig({

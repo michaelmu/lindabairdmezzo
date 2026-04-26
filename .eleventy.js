@@ -20,9 +20,10 @@ export default function (eleventyConfig) {
   eleventyConfig.addGlobalData("engagements", () => readYaml("content/engagements.yml").engagements ?? []);
   eleventyConfig.addGlobalData("currentYear", () => String(new Date().getFullYear()));
 
-  // GitHub Pages path prefix (set by CI). Examples:
+  // Public deploy path prefix (set by CI). Examples:
   // - /lindabairdmezzo/
   // - /lindabairdmezzo/staging/
+  // - /
   const prefix = process.env.PATH_PREFIX || "/";
 
   return {
