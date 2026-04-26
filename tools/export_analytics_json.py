@@ -108,11 +108,15 @@ def run_aws(args: list[str], env: dict[str, str] | None = None) -> str:
         full_env.update(env)
     result = subprocess.run(
         ["aws", *args],
-        check=True,
         capture_output=True,
         text=True,
         env=full_env,
     )
+    if result.returncode != 0:
+        stderr = (result.stderr or "").strip()
+        stdout = (result.stdout or "").strip()
+        details = stderr or stdout or "no output from aws cli"
+        raise RuntimeError(f"AWS CLI failed ({result.returncode}) for {' '.join(args)}: {details}")
     return result.stdout
 
 
