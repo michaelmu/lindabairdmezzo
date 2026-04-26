@@ -57,6 +57,7 @@ See:
 
 - Analytics page route: `/analytics/`
 - Snapshot source files: `content/analytics/`
+- Current cuts: traffic trends, top pages, device type, browser family, operating system, and referrer source
 - Refresh locally:
 
 ```bash

@@ -42,6 +42,61 @@ AND cs_uri_stem NOT LIKE '%.woff2'
 AND cs_uri_stem NOT LIKE '%.xml'
 """.strip()
 
+BOT_REGEX = "bot|crawl|spider|slurp|headless|lighthouse|wget|curl|python-requests"
+
+DEVICE_CLASS_SQL = f"""
+CASE
+  WHEN regexp_like(user_agent, '{BOT_REGEX}') THEN 'Bots'
+  WHEN regexp_like(user_agent, 'ipad|tablet|kindle|silk|playbook')
+    OR (regexp_like(user_agent, 'android') AND NOT regexp_like(user_agent, 'mobile')) THEN 'Tablet'
+  WHEN regexp_like(user_agent, 'iphone|ipod|windows phone|mobile')
+    OR regexp_like(user_agent, 'android') THEN 'Mobile'
+  WHEN user_agent = '' OR user_agent = '-' THEN 'Unknown'
+  ELSE 'Desktop'
+END
+""".strip()
+
+BROWSER_FAMILY_SQL = f"""
+CASE
+  WHEN regexp_like(user_agent, '{BOT_REGEX}') THEN 'Bots'
+  WHEN regexp_like(user_agent, 'edg/|edge/') THEN 'Edge'
+  WHEN regexp_like(user_agent, 'opr/|opera') THEN 'Opera'
+  WHEN regexp_like(user_agent, 'samsungbrowser/') THEN 'Samsung Internet'
+  WHEN regexp_like(user_agent, 'firefox/|fxios/') THEN 'Firefox'
+  WHEN regexp_like(user_agent, 'chrome/|crios/') THEN 'Chrome'
+  WHEN regexp_like(user_agent, 'safari/') THEN 'Safari'
+  WHEN user_agent = '' OR user_agent = '-' THEN 'Unknown'
+  ELSE 'Other'
+END
+""".strip()
+
+OPERATING_SYSTEM_SQL = f"""
+CASE
+  WHEN regexp_like(user_agent, '{BOT_REGEX}') THEN 'Bots'
+  WHEN regexp_like(user_agent, 'iphone|ipad|ipod|ios') THEN 'iOS'
+  WHEN regexp_like(user_agent, 'android') THEN 'Android'
+  WHEN regexp_like(user_agent, 'cros') THEN 'ChromeOS'
+  WHEN regexp_like(user_agent, 'windows') THEN 'Windows'
+  WHEN regexp_like(user_agent, 'mac os x|macintosh') THEN 'macOS'
+  WHEN regexp_like(user_agent, 'linux') THEN 'Linux'
+  WHEN user_agent = '' OR user_agent = '-' THEN 'Unknown'
+  ELSE 'Other'
+END
+""".strip()
+
+REFERRER_HOST_SQL = """
+CASE
+  WHEN referrer = '' OR referrer = '-' THEN 'Direct / Unknown'
+  WHEN regexp_like(referrer, 'https?://(?:www\\.)?lindabairdmezzo\\.com(?:[:/]|$)')
+    OR regexp_like(referrer, 'https?://michaelmu\\.github\\.io(?:[:/]|$)')
+    OR regexp_like(referrer, 'https?://d2o8ggei9u5n44\\.cloudfront\\.net(?:[:/]|$)')
+    OR regexp_like(referrer, 'https?://lindabairdmezzo\\.com\\.s3-website-us-west-1\\.amazonaws\\.com(?:[:/]|$)')
+    THEN 'Internal navigation'
+  WHEN regexp_extract(referrer, '^(?:https?://)?(?:www\\.)?([^/:?#]+)', 1) = '' THEN 'Other referrals'
+  ELSE regexp_extract(referrer, '^(?:https?://)?(?:www\\.)?([^/:?#]+)', 1)
+END
+""".strip()
+
 
 def run_aws(args: list[str], env: dict[str, str] | None = None) -> str:
     full_env = os.environ.copy()
@@ -329,6 +384,107 @@ LIMIT {limit}
     }
 
 
+def export_dimension_breakdown(
+    *,
+    profile: str,
+    workgroup: str,
+    database: str,
+    output_location: str,
+    days: int,
+    label_sql: str,
+    limit: int | None = None,
+) -> list[dict]:
+    limit_clause = f"\nLIMIT {limit}" if limit else ""
+    query = f"""
+WITH page_requests AS (
+  SELECT
+    "date" AS log_date,
+    c_ip,
+    sc_bytes,
+    lower(coalesce(cs_user_agent, '')) AS user_agent,
+    lower(coalesce(cs_referrer, '')) AS referrer
+  FROM cloudfront_standard_logs
+  WHERE {PAGE_REQUEST_FILTER}
+)
+SELECT
+  label,
+  COUNT(*) AS requests,
+  COUNT(DISTINCT c_ip) AS unique_ip_count
+FROM (
+  SELECT
+    c_ip,
+    {label_sql} AS label
+  FROM page_requests
+  WHERE log_date >= current_date - interval '{days}' day
+) ranked
+GROUP BY 1
+ORDER BY requests DESC, unique_ip_count DESC, label ASC{limit_clause}
+"""
+    rows = run_query(
+        query,
+        profile=profile,
+        workgroup=workgroup,
+        database=database,
+        output_location=output_location,
+    )
+    return [
+        {
+            "label": row["label"],
+            "requests": to_int(row["requests"]),
+            "unique_ip_count": to_int(row["unique_ip_count"]),
+        }
+        for row in rows
+    ]
+
+
+def export_segments(
+    *,
+    profile: str,
+    workgroup: str,
+    database: str,
+    output_location: str,
+    days: int,
+    referrer_limit: int,
+) -> dict:
+    return {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "window_days": days,
+        "device_types": export_dimension_breakdown(
+            profile=profile,
+            workgroup=workgroup,
+            database=database,
+            output_location=output_location,
+            days=days,
+            label_sql=DEVICE_CLASS_SQL,
+        ),
+        "browsers": export_dimension_breakdown(
+            profile=profile,
+            workgroup=workgroup,
+            database=database,
+            output_location=output_location,
+            days=days,
+            label_sql=BROWSER_FAMILY_SQL,
+        ),
+        "operating_systems": export_dimension_breakdown(
+            profile=profile,
+            workgroup=workgroup,
+            database=database,
+            output_location=output_location,
+            days=days,
+            label_sql=OPERATING_SYSTEM_SQL,
+        ),
+        "referrers": export_dimension_breakdown(
+            profile=profile,
+            workgroup=workgroup,
+            database=database,
+            output_location=output_location,
+            days=days,
+            label_sql=REFERRER_HOST_SQL,
+            limit=referrer_limit,
+        ),
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--profile", default="lindabairdmezzo-admin")
@@ -342,6 +498,8 @@ def main() -> int:
     parser.add_argument("--daily-days", type=int, default=180)
     parser.add_argument("--top-days", type=int, default=30)
     parser.add_argument("--top-limit", type=int, default=12)
+    parser.add_argument("--segment-days", type=int, default=30)
+    parser.add_argument("--referrer-limit", type=int, default=8)
     args = parser.parse_args()
 
     output_dir = Path(args.output_dir)
@@ -368,14 +526,24 @@ def main() -> int:
         days=args.top_days,
         limit=args.top_limit,
     )
+    segments = export_segments(
+        profile=args.profile,
+        workgroup=args.workgroup,
+        database=args.database,
+        output_location=args.output_location,
+        days=args.segment_days,
+        referrer_limit=args.referrer_limit,
+    )
 
     (output_dir / "summary.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
     (output_dir / "daily.json").write_text(json.dumps(daily, indent=2) + "\n", encoding="utf-8")
     (output_dir / "top-pages.json").write_text(json.dumps(top_pages, indent=2) + "\n", encoding="utf-8")
+    (output_dir / "segments.json").write_text(json.dumps(segments, indent=2) + "\n", encoding="utf-8")
 
     print(f"Wrote {output_dir / 'summary.json'}")
     print(f"Wrote {output_dir / 'daily.json'}")
     print(f"Wrote {output_dir / 'top-pages.json'}")
+    print(f"Wrote {output_dir / 'segments.json'}")
     return 0
 
 

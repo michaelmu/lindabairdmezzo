@@ -1,10 +1,14 @@
 {
-  "generated_at": "2026-04-26T20:21:06.593684+00:00",
+  "generated_at": "2026-04-26T20:36:15.694357+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 4
+      "requests": 10
+    },
+    {
+      "path": "/analytics/",
+      "requests": 3
     }
   ]
 }
