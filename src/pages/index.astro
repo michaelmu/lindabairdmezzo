@@ -512,20 +512,21 @@ const heroImages = [
         font-family: var(--font-body);
         font-size: 18px;
         line-height: 1.4;
-        color: #fff;
-        background: rgba(255, 255, 255, 0.18);
-        border: 0;
-        border-radius: 0;
+        color: #111;
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.18);
+        border-radius: 10px;
         padding: 14px 14px;
         outline: none;
       }
       .contact-form input::placeholder,
       .contact-form textarea::placeholder {
-        color: rgba(255, 255, 255, 0.85);
+        color: rgba(0, 0, 0, 0.45);
       }
       .contact-form input:focus,
       .contact-form textarea:focus {
-        background: rgba(255, 255, 255, 0.26);
+        border-color: rgba(224, 78, 111, 0.65);
+        box-shadow: 0 0 0 4px rgba(224, 78, 111, 0.14);
       }
       .contact-grid {
         display: grid;
