@@ -63,4 +63,4 @@ See:
 npm run analytics:export
 ```
 
-- Scheduled refresh workflow: `.github/workflows/refresh-analytics.yml`
+- Scheduled refresh workflow: `.github/workflows/refresh-analytics.yml` (hourly at `:17` past the hour UTC)
