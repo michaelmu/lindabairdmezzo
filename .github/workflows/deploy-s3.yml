@@ -1,0 +1,119 @@
+name: Deploy to S3 (prod)
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: s3-deploy-prod
+  cancel-in-progress: true
+
+env:
+  AWS_REGION: ${{ vars.AWS_REGION }}
+  AWS_ROLE_ARN: ${{ vars.AWS_ROLE_ARN }}
+  AWS_S3_BUCKET_PROD: ${{ vars.AWS_S3_BUCKET_PROD }}
+  S3_PREFIX_PROD: ${{ vars.S3_PREFIX_PROD }}
+  SITE_BASE_PATH_PROD: ${{ vars.SITE_BASE_PATH_PROD }}
+  CLOUDFRONT_DISTRIBUTION_ID_PROD: ${{ vars.CLOUDFRONT_DISTRIBUTION_ID_PROD }}
+  CLOUDFRONT_INVALIDATION_PATHS_PROD: ${{ vars.CLOUDFRONT_INVALIDATION_PATHS_PROD }}
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Validate deployment configuration
+        run: |
+          set -euo pipefail
+
+          required_vars=(
+            AWS_REGION
+            AWS_ROLE_ARN
+            AWS_S3_BUCKET_PROD
+          )
+
+          for name in "${required_vars[@]}"; do
+            if [ -z "${!name:-}" ]; then
+              echo "Missing required GitHub Actions variable: $name" >&2
+              exit 1
+            fi
+          done
+
+      - name: Derive deployment settings
+        id: deploy
+        run: |
+          set -euo pipefail
+
+          trim_prefix() {
+            local value="$1"
+            value="${value#/}"
+            value="${value%/}"
+            printf '%s' "$value"
+          }
+
+          deploy_bucket="${AWS_S3_BUCKET_PROD}"
+          deploy_prefix="$(trim_prefix "${S3_PREFIX_PROD:-}")"
+          deploy_base_path="${SITE_BASE_PATH_PROD:-/}"
+          cf_distribution_id="${CLOUDFRONT_DISTRIBUTION_ID_PROD:-}"
+          cf_invalidation_paths="${CLOUDFRONT_INVALIDATION_PATHS_PROD:-/*}"
+
+          if [ -n "${deploy_prefix}" ]; then
+            deploy_s3_uri="s3://${deploy_bucket}/${deploy_prefix}/"
+          else
+            deploy_s3_uri="s3://${deploy_bucket}/"
+          fi
+
+          {
+            echo "bucket=${deploy_bucket}"
+            echo "prefix=${deploy_prefix}"
+            echo "s3_uri=${deploy_s3_uri}"
+            echo "base_path=${deploy_base_path}"
+            echo "cloudfront_distribution_id=${cf_distribution_id}"
+            echo "cloudfront_invalidation_paths=${cf_invalidation_paths}"
+          } >> "${GITHUB_OUTPUT}"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        env:
+          PATH_PREFIX: ${{ steps.deploy.outputs.base_path }}
+        run: npm run build
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v5.1.1
+        with:
+          aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: ${{ env.AWS_ROLE_ARN }}
+          role-session-name: github-actions-lindabairdmezzo-deploy
+
+      - name: Deploy to S3
+        env:
+          DEPLOY_S3_URI: ${{ steps.deploy.outputs.s3_uri }}
+        run: |
+          set -euo pipefail
+          aws s3 sync _site/ "${DEPLOY_S3_URI}" --delete --no-progress
+
+      - name: Invalidate CloudFront
+        if: ${{ steps.deploy.outputs.cloudfront_distribution_id != '' }}
+        env:
+          CF_DISTRIBUTION_ID: ${{ steps.deploy.outputs.cloudfront_distribution_id }}
+          CF_INVALIDATION_PATHS: ${{ steps.deploy.outputs.cloudfront_invalidation_paths }}
+        run: |
+          set -euo pipefail
+          # Intentionally allow shell splitting so multiple paths can be supplied.
+          aws cloudfront create-invalidation --distribution-id "${CF_DISTRIBUTION_ID}" --paths ${CF_INVALIDATION_PATHS}

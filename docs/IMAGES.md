@@ -35,4 +35,4 @@ python3 tools/generate_gallery_thumbs.py --clean
 ## Notes
 
 - The script respects EXIF orientation (via `ImageOps.exif_transpose`).
-- Thumbnails are committed to the repo so GitHub Pages deploys them automatically.
+- Thumbnails are committed to the repo so the static deploy workflow pushes them automatically.

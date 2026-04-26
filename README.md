@@ -7,11 +7,11 @@ Linda Baird’s static website.
 Prereqs: Node 20+
 
 ```bash
-npm install
+npm ci --include=dev
 npm run serve
 ```
 
-Eleventy outputs the static site to `_site/`.
+Astro outputs the static site to `_site/`.
 
 ## Content editing (non-technical)
 
@@ -38,11 +38,17 @@ python3 tools/generate_gallery_thumbs.py
 
 Details: `docs/IMAGES.md`
 
-## Deploy (staging → production)
+## Deploy (staging -> production)
 
-This repo uses GitHub Pages with two deploy targets:
+This repo uses GitHub Actions with two deployment targets:
 
-- **Staging:** push/merge to the `staging` branch → publishes to `/staging/`
-- **Production:** merge to `main` → publishes to `/`
+- **GitHub Pages**
+  - `staging` -> `/staging/`
+  - `main` -> `/`
+- **Amazon S3**
+  - `main` only
 
-See: `docs/DEPLOY.md` (includes the **one-time GitHub Pages enablement step**).
+See:
+
+- `docs/DEPLOY.md`
+- `docs/DEPLOY-AWS-S3.md`
