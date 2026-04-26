@@ -11,6 +11,7 @@ function readJson(path, fallback) {
 
 const summary = readJson('content/analytics/summary.json', { generated_at: null, items: [] });
 const daily = readJson('content/analytics/daily.json', { generated_at: null, window_days: 180, days: [] });
+const hourly = readJson('content/analytics/hourly.json', { generated_at: null, window_hours: 48, hours: [] });
 const topPages = readJson('content/analytics/top-pages.json', { generated_at: null, window_days: 30, pages: [] });
 const segments = readJson('content/analytics/segments.json', {
   generated_at: null,
@@ -21,9 +22,10 @@ const segments = readJson('content/analytics/segments.json', {
   referrers: []
 });
 
-const generatedAt = summary.generated_at || daily.generated_at || topPages.generated_at || segments.generated_at || null;
+const generatedAt = summary.generated_at || daily.generated_at || hourly.generated_at || topPages.generated_at || segments.generated_at || null;
 const summaryItems = summary.items ?? [];
 const dailyItems = daily.days ?? [];
+const hourlyItems = hourly.hours ?? [];
 const topPageItems = topPages.pages ?? [];
 const deviceItems = segments.device_types ?? [];
 const browserItems = segments.browsers ?? [];
@@ -50,6 +52,16 @@ function formatDate(value) {
   return new Date(value).toLocaleString('en-US', {
     dateStyle: 'medium',
     timeStyle: 'short',
+    timeZone: 'UTC'
+  }) + ' UTC';
+}
+
+function formatHour(value) {
+  if (!value) return 'No data yet';
+  return new Date(value).toLocaleString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
     timeZone: 'UTC'
   }) + ' UTC';
 }
@@ -89,6 +101,9 @@ function chartTicks(items, key, count = 4) {
 const requestPath = makeLinePath(dailyItems, 'requests');
 const requestArea = makeAreaPath(dailyItems, 'requests');
 const requestTicks = chartTicks(dailyItems, 'requests');
+const hourlyVisitorPath = makeLinePath(hourlyItems, 'unique_ip_count');
+const hourlyVisitorArea = makeAreaPath(hourlyItems, 'unique_ip_count');
+const hourlyVisitorTicks = chartTicks(hourlyItems, 'unique_ip_count');
 const visitorPath = makeLinePath(dailyItems, 'unique_ip_count');
 const visitorArea = makeAreaPath(dailyItems, 'unique_ip_count');
 const visitorTicks = chartTicks(dailyItems, 'unique_ip_count');
@@ -547,6 +562,38 @@ const referrerMax = Math.max(...referrerItems.map((item) => Number(item.requests
             </div>
           </div>
         </aside>
+      </section>
+
+      <section class="chart-grid">
+        <article class="panel chart-panel">
+          <h2>Visitors By Hour</h2>
+          <div class="chart-note">Distinct client IPs by UTC hour for the last {hourly.window_hours || 48} hours. Empty hours are retained as zeroes.</div>
+          {hourlyItems.length ? (
+            <>
+              <div class="chart-wrap">
+                <svg class="chart" viewBox="0 0 820 240" role="img" aria-label="Approximate visitors by hour over the last 48 hours">
+                  {hourlyVisitorTicks.map((tick) => {
+                    const y = 28 + (240 - 56) * tick.ratio;
+                    return (
+                      <>
+                        <line x1="28" y1={y} x2="792" y2={y} class="chart-gridline" />
+                        <text x="10" y={y + 4} class="chart-axis-label">{formatNumber(tick.value)}</text>
+                      </>
+                    );
+                  })}
+                  <path d={hourlyVisitorArea} class="chart-area" />
+                  <path d={hourlyVisitorPath} class="chart-path" />
+                </svg>
+              </div>
+              <div class="chart-caption">
+                <span>{formatHour(hourlyItems[0]?.hour)}</span>
+                <span>{formatHour(hourlyItems[hourlyItems.length - 1]?.hour)}</span>
+              </div>
+            </>
+          ) : (
+            <div class="empty">Hourly analytics will appear after the next populated export.</div>
+          )}
+        </article>
       </section>
 
       <section class="summary-grid">

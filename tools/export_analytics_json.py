@@ -7,7 +7,7 @@ import os
 import subprocess
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 
@@ -95,6 +95,10 @@ CASE
   WHEN regexp_extract(referrer, '^(?:https?://)?(?:www\\.)?([^/:?#]+)', 1) = '' THEN 'Other referrals'
   ELSE regexp_extract(referrer, '^(?:https?://)?(?:www\\.)?([^/:?#]+)', 1)
 END
+""".strip()
+
+REQUEST_TIMESTAMP_SQL = """
+from_iso8601_timestamp(concat(cast("date" as varchar), 'T', "time", 'Z'))
 """.strip()
 
 
@@ -341,6 +345,68 @@ ORDER BY 1 ASC
     }
 
 
+def export_hourly(
+    *,
+    profile: str,
+    workgroup: str,
+    database: str,
+    output_location: str,
+    hours: int,
+) -> dict:
+    query = f"""
+WITH
+page_requests AS (
+  SELECT
+    date_trunc('hour', {REQUEST_TIMESTAMP_SQL}) AS hour_bucket,
+    c_ip
+  FROM cloudfront_standard_logs
+  WHERE {PAGE_REQUEST_FILTER}
+    AND {REQUEST_TIMESTAMP_SQL} >= current_timestamp - interval '{hours}' hour
+)
+SELECT
+  CAST(date_format(hour_bucket, '%Y-%m-%dT%H:00:00Z') AS VARCHAR) AS hour,
+  COUNT(*) AS requests,
+  COUNT(DISTINCT c_ip) AS unique_ip_count
+FROM page_requests
+GROUP BY 1
+ORDER BY 1 ASC
+"""
+    rows = run_query(
+        query,
+        profile=profile,
+        workgroup=workgroup,
+        database=database,
+        output_location=output_location,
+    )
+    row_map = {
+        row["hour"]: {
+            "requests": to_int(row["requests"]),
+            "unique_ip_count": to_int(row["unique_ip_count"]),
+        }
+        for row in rows
+    }
+    end_hour = datetime.now(timezone.utc).replace(minute=0, second=0, microsecond=0)
+    start_hour = end_hour - timedelta(hours=hours - 1)
+    hour_items = []
+    current = start_hour
+    while current <= end_hour:
+        hour_key = current.strftime("%Y-%m-%dT%H:00:00Z")
+        metrics = row_map.get(hour_key, {"requests": 0, "unique_ip_count": 0})
+        hour_items.append(
+            {
+                "hour": hour_key,
+                "requests": metrics["requests"],
+                "unique_ip_count": metrics["unique_ip_count"],
+            }
+        )
+        current += timedelta(hours=1)
+    return {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "window_hours": hours,
+        "hours": hour_items,
+    }
+
+
 def export_top_pages(
     *,
     profile: str,
@@ -496,6 +562,7 @@ def main() -> int:
     )
     parser.add_argument("--output-dir", default="content/analytics")
     parser.add_argument("--daily-days", type=int, default=180)
+    parser.add_argument("--hourly-hours", type=int, default=48)
     parser.add_argument("--top-days", type=int, default=30)
     parser.add_argument("--top-limit", type=int, default=12)
     parser.add_argument("--segment-days", type=int, default=30)
@@ -518,6 +585,13 @@ def main() -> int:
         output_location=args.output_location,
         days=args.daily_days,
     )
+    hourly = export_hourly(
+        profile=args.profile,
+        workgroup=args.workgroup,
+        database=args.database,
+        output_location=args.output_location,
+        hours=args.hourly_hours,
+    )
     top_pages = export_top_pages(
         profile=args.profile,
         workgroup=args.workgroup,
@@ -537,11 +611,13 @@ def main() -> int:
 
     (output_dir / "summary.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
     (output_dir / "daily.json").write_text(json.dumps(daily, indent=2) + "\n", encoding="utf-8")
+    (output_dir / "hourly.json").write_text(json.dumps(hourly, indent=2) + "\n", encoding="utf-8")
     (output_dir / "top-pages.json").write_text(json.dumps(top_pages, indent=2) + "\n", encoding="utf-8")
     (output_dir / "segments.json").write_text(json.dumps(segments, indent=2) + "\n", encoding="utf-8")
 
     print(f"Wrote {output_dir / 'summary.json'}")
     print(f"Wrote {output_dir / 'daily.json'}")
+    print(f"Wrote {output_dir / 'hourly.json'}")
     print(f"Wrote {output_dir / 'top-pages.json'}")
     print(f"Wrote {output_dir / 'segments.json'}")
     return 0
