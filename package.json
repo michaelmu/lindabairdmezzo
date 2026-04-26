@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "astro build && cp -R include _site/include && cp favicon.ico _site/favicon.ico",
+    "analytics:export": "python3 tools/export_analytics_json.py",
     "serve": "astro dev",
     "clean": "rm -rf _site"
   },

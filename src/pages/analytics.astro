@@ -1,0 +1,591 @@
+---
+import fs from 'node:fs';
+
+function readJson(path, fallback) {
+  try {
+    return JSON.parse(fs.readFileSync(path, 'utf8'));
+  } catch {
+    return fallback;
+  }
+}
+
+const summary = readJson('content/analytics/summary.json', { generated_at: null, items: [] });
+const daily = readJson('content/analytics/daily.json', { generated_at: null, window_days: 180, days: [] });
+const topPages = readJson('content/analytics/top-pages.json', { generated_at: null, window_days: 30, pages: [] });
+
+const generatedAt = summary.generated_at || daily.generated_at || topPages.generated_at || null;
+const summaryItems = summary.items ?? [];
+const dailyItems = daily.days ?? [];
+const topPageItems = topPages.pages ?? [];
+
+function formatNumber(value) {
+  return new Intl.NumberFormat('en-US').format(Number(value || 0));
+}
+
+function formatBytes(value) {
+  const units = ['B', 'KB', 'MB', 'GB', 'TB'];
+  let size = Number(value || 0);
+  let unit = 0;
+  while (size >= 1024 && unit < units.length - 1) {
+    size /= 1024;
+    unit += 1;
+  }
+  return `${size.toFixed(size >= 10 || unit === 0 ? 0 : 1)} ${units[unit]}`;
+}
+
+function formatDate(value) {
+  if (!value) return 'No data yet';
+  return new Date(value).toLocaleString('en-US', {
+    dateStyle: 'medium',
+    timeStyle: 'short',
+    timeZone: 'UTC'
+  }) + ' UTC';
+}
+
+function makeLinePath(items, key, width = 820, height = 240, padding = 28) {
+  if (!items.length) return '';
+  const values = items.map((item) => Number(item[key] || 0));
+  const max = Math.max(...values, 1);
+  const stepX = items.length > 1 ? (width - padding * 2) / (items.length - 1) : 0;
+  return values.map((value, index) => {
+    const x = padding + stepX * index;
+    const y = height - padding - ((height - padding * 2) * value / max);
+    return `${index === 0 ? 'M' : 'L'} ${x.toFixed(2)} ${y.toFixed(2)}`;
+  }).join(' ');
+}
+
+function makeAreaPath(items, key, width = 820, height = 240, padding = 28) {
+  if (!items.length) return '';
+  const line = makeLinePath(items, key, width, height, padding);
+  const startX = padding;
+  const endX = items.length > 1 ? width - padding : padding;
+  const baseY = height - padding;
+  return `${line} L ${endX.toFixed(2)} ${baseY.toFixed(2)} L ${startX.toFixed(2)} ${baseY.toFixed(2)} Z`;
+}
+
+function chartTicks(items, key, count = 4) {
+  const max = Math.max(...items.map((item) => Number(item[key] || 0)), 1);
+  return Array.from({ length: count + 1 }, (_, index) => {
+    const ratio = index / count;
+    return {
+      value: Math.round(max * (1 - ratio)),
+      ratio,
+    };
+  });
+}
+
+const requestPath = makeLinePath(dailyItems, 'requests');
+const requestArea = makeAreaPath(dailyItems, 'requests');
+const requestTicks = chartTicks(dailyItems, 'requests');
+const visitorPath = makeLinePath(dailyItems, 'unique_ip_count');
+const visitorArea = makeAreaPath(dailyItems, 'unique_ip_count');
+const visitorTicks = chartTicks(dailyItems, 'unique_ip_count');
+const topPageMax = Math.max(...topPageItems.map((item) => Number(item.requests || 0)), 1);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Analytics — Linda Baird</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.ico`} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      :root {
+        --bg: #f5efe8;
+        --panel: rgba(255, 255, 255, 0.94);
+        --line: rgba(0, 0, 0, 0.08);
+        --text: #4d4d4d;
+        --muted: #7a7a7a;
+        --rose: #e04e6f;
+        --rose-soft: rgba(224, 78, 111, 0.16);
+        --plum: #8a4f62;
+        --gold: #b38a4e;
+        --font-heading: "Cormorant Garamond", "Times New Roman", serif;
+        --font-body: "Source Sans Pro", system-ui, sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: var(--font-body);
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(224, 78, 111, 0.12), transparent 36%),
+          radial-gradient(circle at top right, rgba(179, 138, 78, 0.14), transparent 28%),
+          linear-gradient(180deg, #f7f1ea 0%, #f2ebe3 100%);
+      }
+
+      .shell {
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 28px 20px 64px;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        align-items: baseline;
+        margin-bottom: 26px;
+      }
+
+      .brand {
+        color: var(--rose);
+        text-decoration: none;
+        font-family: var(--font-heading);
+        letter-spacing: 0.16em;
+        font-size: 32px;
+      }
+
+      .backlink {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 15px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.3fr .7fr;
+        gap: 22px;
+        margin-bottom: 22px;
+      }
+
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        box-shadow: 0 22px 60px rgba(50, 27, 33, 0.08);
+      }
+
+      .hero-main {
+        padding: 30px 34px;
+      }
+
+      h1, h2, h3 {
+        margin: 0;
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-style: normal;
+      }
+
+      h1 {
+        font-size: clamp(40px, 7vw, 72px);
+        line-height: 0.95;
+        color: var(--plum);
+      }
+
+      .lede {
+        max-width: 56ch;
+        margin-top: 16px;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.8;
+      }
+
+      .stamp {
+        display: inline-block;
+        margin-bottom: 16px;
+        padding: 6px 10px;
+        border: 1px solid rgba(224, 78, 111, 0.25);
+        color: var(--rose);
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .hero-side {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .hero-side h2 {
+        color: var(--plum);
+        font-size: 24px;
+        margin-bottom: 12px;
+      }
+
+      .hero-side p {
+        margin: 0 0 12px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .meta-list {
+        display: grid;
+        gap: 10px;
+        font-size: 15px;
+      }
+
+      .meta-label {
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        font-size: 12px;
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-bottom: 22px;
+      }
+
+      .summary-card {
+        padding: 22px;
+      }
+
+      .summary-card h3 {
+        font-size: 24px;
+        color: var(--plum);
+        margin-bottom: 16px;
+      }
+
+      .stat {
+        display: grid;
+        gap: 6px;
+      }
+
+      .stat + .stat {
+        margin-top: 14px;
+        padding-top: 14px;
+        border-top: 1px solid var(--line);
+      }
+
+      .stat-label {
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .stat-value {
+        font-size: 34px;
+        line-height: 1;
+        color: var(--rose);
+      }
+
+      .stat-sub {
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .chart-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 22px;
+      }
+
+      .chart-panel {
+        padding: 22px 22px 18px;
+      }
+
+      .chart-panel h2 {
+        font-size: 30px;
+        color: var(--plum);
+        margin-bottom: 8px;
+      }
+
+      .chart-note {
+        color: var(--muted);
+        margin-bottom: 16px;
+        font-size: 15px;
+      }
+
+      .chart-wrap {
+        overflow-x: auto;
+      }
+
+      svg.chart {
+        width: 100%;
+        min-width: 720px;
+        height: auto;
+        display: block;
+      }
+
+      .chart-gridline {
+        stroke: rgba(0, 0, 0, 0.08);
+        stroke-width: 1;
+      }
+
+      .chart-axis-label {
+        fill: var(--muted);
+        font-size: 12px;
+        font-family: var(--font-body);
+      }
+
+      .chart-path {
+        fill: none;
+        stroke: var(--rose);
+        stroke-width: 3.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .chart-area {
+        fill: var(--rose-soft);
+      }
+
+      .chart-caption {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .pages-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.65fr);
+        gap: 18px;
+      }
+
+      .page-bars {
+        display: grid;
+        gap: 10px;
+      }
+
+      .page-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 80px;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .page-path {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.7);
+        min-height: 42px;
+        display: flex;
+        align-items: center;
+      }
+
+      .page-fill {
+        position: absolute;
+        inset: 0 auto 0 0;
+        background: linear-gradient(90deg, rgba(224, 78, 111, 0.18), rgba(179, 138, 78, 0.24));
+      }
+
+      .page-label {
+        position: relative;
+        z-index: 1;
+        padding: 10px 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 13px;
+      }
+
+      .page-count {
+        text-align: right;
+        color: var(--plum);
+        font-size: 16px;
+      }
+
+      .footnote {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .empty {
+        padding: 18px;
+        border: 1px dashed rgba(0,0,0,0.16);
+        color: var(--muted);
+        background: rgba(255,255,255,0.55);
+      }
+
+      @media (max-width: 980px) {
+        .hero,
+        .summary-grid,
+        .pages-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <div class="topbar">
+        <a class="brand" href={`${import.meta.env.BASE_URL}`}>LINDA BAIRD</a>
+        <a class="backlink" href={`${import.meta.env.BASE_URL}`}>Back To Site</a>
+      </div>
+
+      <section class="hero">
+        <div class="panel hero-main">
+          <div class="stamp">Private Analytics Snapshot</div>
+          <h1>Audience Signals, Not Guesswork.</h1>
+          <p class="lede">
+            This page is built from CloudFront access logs and refreshed from Athena query exports.
+            The primary visitor signal here is distinct client IPs on page-like requests, which is a useful trend line,
+            but not the same thing as a true person-level analytics product.
+          </p>
+        </div>
+
+        <aside class="panel hero-side">
+          <div>
+            <h2>Data Freshness</h2>
+            <p>Latest export: {formatDate(generatedAt)}</p>
+            <p>Daily charts use page-like requests only and exclude static assets such as images, CSS, and JS.</p>
+          </div>
+
+          <div class="meta-list">
+            <div>
+              <div class="meta-label">Source</div>
+              <div>CloudFront standard logs + Athena</div>
+            </div>
+            <div>
+              <div class="meta-label">Primary Lens</div>
+              <div>Page requests and distinct IP counts</div>
+            </div>
+            <div>
+              <div class="meta-label">Route</div>
+              <div>/analytics/</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="summary-grid">
+        {summaryItems.length ? summaryItems.map((item) => (
+          <article class="panel summary-card">
+            <h3>{item.label}</h3>
+            <div class="stat">
+              <div class="stat-label">Page Requests</div>
+              <div class="stat-value">{formatNumber(item.requests)}</div>
+              <div class="stat-sub">Filtered to page-like responses</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">Approx. Visitors</div>
+              <div class="stat-value">{formatNumber(item.unique_ip_count)}</div>
+              <div class="stat-sub">Distinct client IPs</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">Bytes Served</div>
+              <div class="stat-value">{formatBytes(item.bytes_served)}</div>
+            </div>
+          </article>
+        )) : (
+          <div class="panel summary-card empty">No summary data exported yet.</div>
+        )}
+      </section>
+
+      <section class="chart-grid">
+        <article class="panel chart-panel">
+          <h2>Page Requests Over Time</h2>
+          <div class="chart-note">Rolling {daily.window_days || 180}-day trend. Asset requests are excluded.</div>
+          {dailyItems.length ? (
+            <>
+              <div class="chart-wrap">
+                <svg class="chart" viewBox="0 0 820 240" role="img" aria-label="Page requests over time">
+                  {requestTicks.map((tick) => {
+                    const y = 28 + (240 - 56) * tick.ratio;
+                    return (
+                      <>
+                        <line x1="28" y1={y} x2="792" y2={y} class="chart-gridline" />
+                        <text x="10" y={y + 4} class="chart-axis-label">{formatNumber(tick.value)}</text>
+                      </>
+                    );
+                  })}
+                  <path d={requestArea} class="chart-area" />
+                  <path d={requestPath} class="chart-path" />
+                </svg>
+              </div>
+              <div class="chart-caption">
+                <span>{dailyItems[0]?.date}</span>
+                <span>{dailyItems[dailyItems.length - 1]?.date}</span>
+              </div>
+            </>
+          ) : (
+            <div class="empty">CloudFront logs have not produced daily analytics rows yet.</div>
+          )}
+        </article>
+
+        <article class="panel chart-panel">
+          <h2>Approximate Visitors Over Time</h2>
+          <div class="chart-note">Distinct client IPs by day on page-like requests.</div>
+          {dailyItems.length ? (
+            <>
+              <div class="chart-wrap">
+                <svg class="chart" viewBox="0 0 820 240" role="img" aria-label="Approximate visitors over time">
+                  {visitorTicks.map((tick) => {
+                    const y = 28 + (240 - 56) * tick.ratio;
+                    return (
+                      <>
+                        <line x1="28" y1={y} x2="792" y2={y} class="chart-gridline" />
+                        <text x="10" y={y + 4} class="chart-axis-label">{formatNumber(tick.value)}</text>
+                      </>
+                    );
+                  })}
+                  <path d={visitorArea} class="chart-area" />
+                  <path d={visitorPath} class="chart-path" />
+                </svg>
+              </div>
+              <div class="chart-caption">
+                <span>{dailyItems[0]?.date}</span>
+                <span>{dailyItems[dailyItems.length - 1]?.date}</span>
+              </div>
+            </>
+          ) : (
+            <div class="empty">CloudFront logs have not produced daily analytics rows yet.</div>
+          )}
+        </article>
+      </section>
+
+      <section class="pages-grid">
+        <article class="panel chart-panel">
+          <h2>Top Pages</h2>
+          <div class="chart-note">Most requested page-like paths in the last {topPages.window_days || 30} days.</div>
+          {topPageItems.length ? (
+            <div class="page-bars">
+              {topPageItems.map((item) => (
+                <div class="page-row">
+                  <div class="page-path">
+                    <div class="page-fill" style={`width: ${(Number(item.requests || 0) / topPageMax) * 100}%`}></div>
+                    <div class="page-label">{item.path}</div>
+                  </div>
+                  <div class="page-count">{formatNumber(item.requests)}</div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div class="empty">Top-page data will appear after the first analytics export with populated log files.</div>
+          )}
+        </article>
+
+        <article class="panel chart-panel">
+          <h2>Read Me First</h2>
+          <div class="footnote">
+            <p>
+              This page is intentionally simple and static. It does not call AWS from the browser.
+              The data is exported into JSON during maintenance refreshes, then rendered at build time.
+            </p>
+            <p>
+              Because the visitor metric is based on distinct IP addresses, it will overcount in some cases
+              and undercount in others. It is best used for directionality, not billing-grade analytics.
+            </p>
+            <p>
+              If you need richer attribution or session analysis later, add a real analytics product.
+              This page is for lightweight traffic visibility without changing the current site architecture.
+            </p>
+          </div>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>

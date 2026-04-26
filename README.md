@@ -52,3 +52,15 @@ See:
 
 - `docs/DEPLOY.md`
 - `docs/DEPLOY-AWS-S3.md`
+
+## Analytics
+
+- Analytics page route: `/analytics/`
+- Snapshot source files: `content/analytics/`
+- Refresh locally:
+
+```bash
+npm run analytics:export
+```
+
+- Scheduled refresh workflow: `.github/workflows/refresh-analytics.yml`
