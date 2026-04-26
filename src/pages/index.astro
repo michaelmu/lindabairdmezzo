@@ -56,7 +56,7 @@ const heroImages = [
       }
 
       * { box-sizing: border-box; }
-      html { scroll-behavior: smooth; }
+      html { scroll-behavior: smooth; scroll-padding-top: 160px; }
       body {
         margin: 0;
         font-family: var(--font-body);
@@ -291,7 +291,7 @@ const heroImages = [
       /* (subtitle removed; we use the holder line below the name) */
 
       /* Sections: match lindabairdmezzo.com spacing */
-      .section { padding: 3em 0; scroll-margin-top: 130px; }
+      .section { padding: 3em 0; scroll-margin-top: 160px; }
       @media (max-width: 480px) { .section { padding: 2em 0; } }
 
       /* Our architecture keeps .panel wrappers; make them visually transparent */
@@ -401,7 +401,7 @@ const heroImages = [
         max-width: 260px;
         height: auto;
         margin-left: auto;
-        margin-top: 18px; /* nudge down */
+        margin-top: 70px; /* nudge down further */
         border-radius: 0;
       }
       @media (max-width: 900px) {
@@ -410,7 +410,7 @@ const heroImages = [
         }
         .about-photo img {
           max-width: 220px;
-          margin: 10px auto 0;
+          margin: 40px auto 0;
         }
       }
 
@@ -531,6 +531,7 @@ const heroImages = [
       }
       .contact-form {
         max-width: 70%; /* ~30% narrower */
+        margin: 0 auto; /* center */
       }
       @media (max-width: 900px) {
         .contact-form { max-width: 100%; }
