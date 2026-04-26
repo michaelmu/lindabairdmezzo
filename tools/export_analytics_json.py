@@ -102,6 +102,12 @@ from_iso8601_timestamp(concat(cast("date" as varchar), 'T', "time", 'Z'))
 """.strip()
 
 
+def aws_env(profile: str | None) -> dict[str, str]:
+    if profile:
+        return {"AWS_PROFILE": profile}
+    return {}
+
+
 def run_aws(args: list[str], env: dict[str, str] | None = None) -> str:
     full_env = os.environ.copy()
     if env:
@@ -128,7 +134,7 @@ def start_query(
     database: str,
     output_location: str,
 ) -> str:
-    env = dict(**{"AWS_PROFILE": profile})
+    env = aws_env(profile)
     stdout = run_aws(
         [
             "athena",
@@ -152,7 +158,7 @@ def start_query(
 
 
 def wait_for_query(query_execution_id: str, *, profile: str) -> None:
-    env = dict(**{"AWS_PROFILE": profile})
+    env = aws_env(profile)
     while True:
         state = run_aws(
             [
@@ -188,7 +194,7 @@ def wait_for_query(query_execution_id: str, *, profile: str) -> None:
 
 
 def fetch_rows(query_execution_id: str, *, profile: str) -> list[dict[str, str]]:
-    env = dict(**{"AWS_PROFILE": profile})
+    env = aws_env(profile)
     stdout = run_aws(
         [
             "athena",
@@ -557,7 +563,10 @@ def export_segments(
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--profile", default="lindabairdmezzo-admin")
+    default_profile = None
+    if "AWS_ACCESS_KEY_ID" not in os.environ:
+        default_profile = os.environ.get("AWS_PROFILE", "lindabairdmezzo-admin")
+    parser.add_argument("--profile", default=default_profile)
     parser.add_argument("--workgroup", default="lindabairdmezzo-analytics")
     parser.add_argument("--database", default="lindabairdmezzo_analytics")
     parser.add_argument(
