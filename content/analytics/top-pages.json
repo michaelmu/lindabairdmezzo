@@ -1,18 +1,54 @@
 {
-  "generated_at": "2026-04-27T05:25:38.518730+00:00",
+  "generated_at": "2026-04-27T07:12:16.567709+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 63
+      "requests": 80
     },
     {
-      "path": "/filemanager/filemanager/js/include.js%2520",
-      "requests": 1
+      "path": "/.aws/config",
+      "requests": 2
     },
     {
-      "path": "/index.html",
-      "requests": 1
+      "path": "/.aws/credentials",
+      "requests": 2
+    },
+    {
+      "path": "/.env",
+      "requests": 2
+    },
+    {
+      "path": "/.env.backup",
+      "requests": 2
+    },
+    {
+      "path": "/.env.development",
+      "requests": 2
+    },
+    {
+      "path": "/.env.local",
+      "requests": 2
+    },
+    {
+      "path": "/.env.old",
+      "requests": 2
+    },
+    {
+      "path": "/.env.production",
+      "requests": 2
+    },
+    {
+      "path": "/.env.staging",
+      "requests": 2
+    },
+    {
+      "path": "/.env.test",
+      "requests": 2
+    },
+    {
+      "path": "/.git/HEAD",
+      "requests": 2
     }
   ]
 }
