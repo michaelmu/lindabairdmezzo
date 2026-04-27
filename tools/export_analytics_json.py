@@ -15,6 +15,8 @@ PAGE_REQUEST_FILTER = """
 sc_status BETWEEN 200 AND 399
 AND cs_method IN ('GET', 'HEAD')
 AND cs_uri_stem NOT LIKE '/include/%'
+AND cs_uri_stem <> '/analytics'
+AND cs_uri_stem NOT LIKE '/analytics/%'
 AND cs_uri_stem NOT LIKE '/favicon.ico'
 AND cs_uri_stem NOT LIKE '/robots.txt'
 AND cs_uri_stem NOT LIKE '/sitemap%'

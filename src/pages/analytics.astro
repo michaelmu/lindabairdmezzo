@@ -544,7 +544,7 @@ const referrerMax = Math.max(...referrerItems.map((item) => Number(item.requests
           <div>
             <h2>Data Freshness</h2>
             <p>Latest export: {formatDate(generatedAt)}</p>
-            <p>Daily charts use page-like requests only and exclude static assets such as images, CSS, and JS.</p>
+            <p>Daily charts use page-like requests only and exclude static assets plus the analytics page itself.</p>
           </div>
 
           <div class="meta-list">
@@ -791,7 +791,7 @@ const referrerMax = Math.max(...referrerItems.map((item) => Number(item.requests
       <section class="pages-grid">
         <article class="panel chart-panel">
           <h2>Top Pages</h2>
-          <div class="chart-note">Most requested page-like paths in the last {topPages.window_days || 30} days.</div>
+          <div class="chart-note">Most requested page-like paths in the last {topPages.window_days || 30} days, excluding the analytics route itself.</div>
           {topPageItems.length ? (
             <div class="page-bars">
               {topPageItems.map((item) => (
