@@ -1,10 +1,14 @@
 {
-  "generated_at": "2026-04-27T19:48:55.514838+00:00",
+  "generated_at": "2026-04-27T20:40:23.438850+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 126
+      "requests": 128
+    },
+    {
+      "path": "/.env",
+      "requests": 4
     },
     {
       "path": "/.aws/config",
@@ -12,10 +16,6 @@
     },
     {
       "path": "/.aws/credentials",
-      "requests": 3
-    },
-    {
-      "path": "/.env",
       "requests": 3
     },
     {
