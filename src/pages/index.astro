@@ -655,7 +655,7 @@ const heroImages = [
             <a href="#gallery"><span>Gallery</span></a>
             <a href="#videos"><span>Videos</span></a>
             <a href="#resume"><span>Resume</span></a>
-            <!-- Engagements removed -->
+            <a href="#events"><span>Upcoming Events</span></a>
             <a href="#contact"><span>Contact</span></a>
           </div>
         </nav>
@@ -804,7 +804,47 @@ const heroImages = [
       </section>
 
 
-      <!-- Engagements section removed -->
+      <section class="section" id="events">
+        <div class="container">
+          <div class="panel">
+            <div class="section-heading">
+              <hr />
+              <h2><span>Upcoming Events</span></h2>
+            </div>
+
+            <div style="overflow:auto; margin-top: 14px;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Presenter</th>
+                    <th>Work</th>
+                    <th>Notes</th>
+                    <th>Link</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {engagements.map((e) => (
+                    <tr>
+                      <td>{e.date}</td>
+                      <td set:html={e.presenterHtml}></td>
+                      <td>{e.work}</td>
+                      <td set:html={e.notesHtml}></td>
+                      <td>
+                        {(e.links && e.links.length > 0) ? (
+                          <a href={e.links[0]} target="_blank" rel="noopener noreferrer">Details</a>
+                        ) : (
+                          ''
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="section" id="contact">
         <div class="container">
