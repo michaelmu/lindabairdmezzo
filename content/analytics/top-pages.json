@@ -1,14 +1,22 @@
 {
-  "generated_at": "2026-04-28T11:54:31.320561+00:00",
+  "generated_at": "2026-04-28T12:56:15.085341+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 190
+      "requests": 197
     },
     {
       "path": "/.env",
-      "requests": 6
+      "requests": 7
+    },
+    {
+      "path": "/.git/config",
+      "requests": 4
+    },
+    {
+      "path": "/index.html",
+      "requests": 4
     },
     {
       "path": "/.aws/config",
@@ -40,14 +48,6 @@
     },
     {
       "path": "/.env.staging",
-      "requests": 3
-    },
-    {
-      "path": "/.env.test",
-      "requests": 3
-    },
-    {
-      "path": "/.git/HEAD",
       "requests": 3
     }
   ]
