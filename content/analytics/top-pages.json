@@ -1,18 +1,26 @@
 {
-  "generated_at": "2026-04-29T18:48:29.898097+00:00",
+  "generated_at": "2026-04-29T19:50:56.095368+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 302
+      "requests": 311
     },
     {
       "path": "/.env",
-      "requests": 10
+      "requests": 11
     },
     {
       "path": "/index.html",
       "requests": 6
+    },
+    {
+      "path": "/.env.local",
+      "requests": 4
+    },
+    {
+      "path": "/.env.production",
+      "requests": 4
     },
     {
       "path": "/.git/config",
@@ -40,14 +48,6 @@
     },
     {
       "path": "/.env.development",
-      "requests": 3
-    },
-    {
-      "path": "/.env.local",
-      "requests": 3
-    },
-    {
-      "path": "/.env.old",
       "requests": 3
     }
   ]
