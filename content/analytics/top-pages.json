@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-04-28T23:35:12.915714+00:00",
+  "generated_at": "2026-04-29T01:10:38.597618+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 249
+      "requests": 251
     },
     {
       "path": "/.env",
       "requests": 8
     },
     {
-      "path": "/.git/config",
-      "requests": 4
+      "path": "/index.html",
+      "requests": 5
     },
     {
-      "path": "/index.html",
+      "path": "/.git/config",
       "requests": 4
     },
     {
