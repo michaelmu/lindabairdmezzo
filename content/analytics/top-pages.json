@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-04-30T03:25:33.764160+00:00",
+  "generated_at": "2026-04-30T05:27:01.492664+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 348
+      "requests": 355
     },
     {
       "path": "/.env",
-      "requests": 11
+      "requests": 12
     },
     {
       "path": "/index.html",
@@ -20,35 +20,35 @@
     },
     {
       "path": "/.env.local",
-      "requests": 4
+      "requests": 5
     },
     {
       "path": "/.env.production",
-      "requests": 4
+      "requests": 5
     },
     {
       "path": "/.git/config",
-      "requests": 4
-    },
-    {
-      "path": "/settings.php",
-      "requests": 4
+      "requests": 5
     },
     {
       "path": "/.aws/config",
-      "requests": 3
+      "requests": 4
     },
     {
       "path": "/.aws/credentials",
-      "requests": 3
+      "requests": 4
     },
     {
       "path": "/.env.backup",
-      "requests": 3
+      "requests": 4
     },
     {
       "path": "/.env.development",
-      "requests": 3
+      "requests": 4
+    },
+    {
+      "path": "/.env.old",
+      "requests": 4
     }
   ]
 }
