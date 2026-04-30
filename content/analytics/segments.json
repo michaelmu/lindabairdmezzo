@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-29T23:35:26.855753+00:00",
+  "generated_at": "2026-04-30T01:09:57.463583+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 309,
-      "unique_ip_count": 112
+      "requests": 324,
+      "unique_ip_count": 120
     },
     {
       "label": "Unknown",
@@ -31,8 +31,8 @@
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 269,
-      "unique_ip_count": 93
+      "requests": 284,
+      "unique_ip_count": 101
     },
     {
       "label": "Unknown",
@@ -78,8 +78,8 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 225,
-      "unique_ip_count": 70
+      "requests": 240,
+      "unique_ip_count": 78
     },
     {
       "label": "Unknown",
@@ -120,18 +120,23 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 463,
-      "unique_ip_count": 143
+      "requests": 465,
+      "unique_ip_count": 144
     },
     {
       "label": "Internal navigation",
-      "requests": 151,
-      "unique_ip_count": 85
+      "requests": 157,
+      "unique_ip_count": 91
     },
     {
       "label": "google.com",
       "requests": 8,
       "unique_ip_count": 8
+    },
+    {
+      "label": "binance.com",
+      "requests": 7,
+      "unique_ip_count": 1
     }
   ]
 }
