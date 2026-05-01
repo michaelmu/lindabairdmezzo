@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-01T18:39:56.942003+00:00",
+  "generated_at": "2026-05-01T19:45:05.068209+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 470,
-      "unique_ip_count": 158
+      "requests": 473,
+      "unique_ip_count": 159
     },
     {
       "label": "Unknown",
@@ -14,8 +14,8 @@
     },
     {
       "label": "Mobile",
-      "requests": 112,
-      "unique_ip_count": 60
+      "requests": 114,
+      "unique_ip_count": 61
     },
     {
       "label": "Bots",
@@ -31,7 +31,7 @@
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 404,
+      "requests": 406,
       "unique_ip_count": 134
     },
     {
@@ -41,8 +41,8 @@
     },
     {
       "label": "Safari",
-      "requests": 110,
-      "unique_ip_count": 60
+      "requests": 112,
+      "unique_ip_count": 61
     },
     {
       "label": "Bots",
@@ -51,8 +51,8 @@
     },
     {
       "label": "Other",
-      "requests": 41,
-      "unique_ip_count": 16
+      "requests": 42,
+      "unique_ip_count": 17
     },
     {
       "label": "Firefox",
@@ -78,7 +78,7 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 340,
+      "requests": 342,
       "unique_ip_count": 103
     },
     {
@@ -88,8 +88,8 @@
     },
     {
       "label": "iOS",
-      "requests": 103,
-      "unique_ip_count": 60
+      "requests": 105,
+      "unique_ip_count": 61
     },
     {
       "label": "Bots",
@@ -103,8 +103,8 @@
     },
     {
       "label": "Other",
-      "requests": 46,
-      "unique_ip_count": 18
+      "requests": 47,
+      "unique_ip_count": 19
     },
     {
       "label": "Linux",
@@ -120,13 +120,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 704,
-      "unique_ip_count": 200
+      "requests": 706,
+      "unique_ip_count": 202
     },
     {
       "label": "Internal navigation",
-      "requests": 228,
-      "unique_ip_count": 117
+      "requests": 231,
+      "unique_ip_count": 118
     },
     {
       "label": "google.com",
