@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-02T08:45:53.443786+00:00",
+  "generated_at": "2026-05-02T09:41:15.230381+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 515,
+      "requests": 517,
       "unique_ip_count": 171
     },
     {
@@ -14,7 +14,7 @@
     },
     {
       "label": "Mobile",
-      "requests": 132,
+      "requests": 134,
       "unique_ip_count": 73
     },
     {
@@ -31,7 +31,7 @@
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 446,
+      "requests": 448,
       "unique_ip_count": 145
     },
     {
@@ -41,7 +41,7 @@
     },
     {
       "label": "Safari",
-      "requests": 130,
+      "requests": 132,
       "unique_ip_count": 74
     },
     {
@@ -78,7 +78,7 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 349,
+      "requests": 351,
       "unique_ip_count": 107
     },
     {
@@ -88,7 +88,7 @@
     },
     {
       "label": "iOS",
-      "requests": 124,
+      "requests": 126,
       "unique_ip_count": 74
     },
     {
@@ -120,13 +120,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 762,
+      "requests": 763,
       "unique_ip_count": 229
     },
     {
       "label": "Internal navigation",
-      "requests": 243,
-      "unique_ip_count": 127
+      "requests": 246,
+      "unique_ip_count": 128
     },
     {
       "label": "google.com",
