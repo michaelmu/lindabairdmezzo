@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T07:21:20.270973+00:00",
+  "generated_at": "2026-05-04T09:06:00.389644+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,18 +9,18 @@
     },
     {
       "label": "Desktop",
-      "requests": 731,
-      "unique_ip_count": 208
+      "requests": 737,
+      "unique_ip_count": 213
     },
     {
       "label": "Mobile",
-      "requests": 184,
-      "unique_ip_count": 99
+      "requests": 186,
+      "unique_ip_count": 100
     },
     {
       "label": "Bots",
-      "requests": 115,
-      "unique_ip_count": 69
+      "requests": 117,
+      "unique_ip_count": 70
     },
     {
       "label": "Tablet",
@@ -36,18 +36,18 @@
     },
     {
       "label": "Chrome",
-      "requests": 613,
-      "unique_ip_count": 174
+      "requests": 619,
+      "unique_ip_count": 179
     },
     {
       "label": "Safari",
-      "requests": 180,
-      "unique_ip_count": 98
+      "requests": 182,
+      "unique_ip_count": 99
     },
     {
       "label": "Bots",
-      "requests": 115,
-      "unique_ip_count": 69
+      "requests": 117,
+      "unique_ip_count": 70
     },
     {
       "label": "Firefox",
@@ -83,18 +83,18 @@
     },
     {
       "label": "Windows",
-      "requests": 501,
-      "unique_ip_count": 130
+      "requests": 507,
+      "unique_ip_count": 135
     },
     {
       "label": "iOS",
-      "requests": 173,
-      "unique_ip_count": 98
+      "requests": 175,
+      "unique_ip_count": 99
     },
     {
       "label": "Bots",
-      "requests": 115,
-      "unique_ip_count": 69
+      "requests": 117,
+      "unique_ip_count": 70
     },
     {
       "label": "Linux",
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 1519,
-      "unique_ip_count": 298
+      "requests": 1522,
+      "unique_ip_count": 301
     },
     {
       "label": "Internal navigation",
-      "requests": 330,
-      "unique_ip_count": 159
+      "requests": 334,
+      "unique_ip_count": 162
     },
     {
       "label": "google.com",
@@ -144,8 +144,18 @@
       "unique_ip_count": 1
     },
     {
+      "label": "baidu.com",
+      "requests": 2,
+      "unique_ip_count": 1
+    },
+    {
       "label": "knvbz.nsujfo.com",
       "requests": 2,
+      "unique_ip_count": 1
+    },
+    {
+      "label": "seokicks.de",
+      "requests": 1,
       "unique_ip_count": 1
     }
   ]
