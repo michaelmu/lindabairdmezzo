@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-05T15:56:34.646467+00:00",
+  "generated_at": "2026-05-05T16:51:56.694687+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 842
+      "requests": 852
     },
     {
       "path": "/index.html",
@@ -43,11 +43,11 @@
       "requests": 8
     },
     {
-      "path": "/info.php",
+      "path": "/backup/",
       "requests": 7
     },
     {
-      "path": "/wp-content/",
+      "path": "/blog/",
       "requests": 7
     }
   ]
