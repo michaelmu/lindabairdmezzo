@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-05T13:56:09.104364+00:00",
+  "generated_at": "2026-05-05T15:56:34.646501+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 2114,
-      "unique_ip_count": 232
+      "requests": 2121,
+      "unique_ip_count": 234
     },
     {
       "label": "Unknown",
@@ -19,8 +19,8 @@
     },
     {
       "label": "Bots",
-      "requests": 142,
-      "unique_ip_count": 81
+      "requests": 143,
+      "unique_ip_count": 82
     },
     {
       "label": "Tablet",
@@ -31,8 +31,8 @@
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 1422,
-      "unique_ip_count": 201
+      "requests": 1427,
+      "unique_ip_count": 202
     },
     {
       "label": "Unknown",
@@ -51,8 +51,8 @@
     },
     {
       "label": "Bots",
-      "requests": 142,
-      "unique_ip_count": 81
+      "requests": 143,
+      "unique_ip_count": 82
     },
     {
       "label": "Other",
@@ -66,8 +66,8 @@
     },
     {
       "label": "Edge",
-      "requests": 10,
-      "unique_ip_count": 7
+      "requests": 12,
+      "unique_ip_count": 8
     },
     {
       "label": "Samsung Internet",
@@ -78,8 +78,8 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 1513,
-      "unique_ip_count": 152
+      "requests": 1520,
+      "unique_ip_count": 154
     },
     {
       "label": "Unknown",
@@ -103,8 +103,8 @@
     },
     {
       "label": "Bots",
-      "requests": 142,
-      "unique_ip_count": 81
+      "requests": 143,
+      "unique_ip_count": 82
     },
     {
       "label": "Other",
@@ -125,18 +125,18 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 3103,
-      "unique_ip_count": 337
+      "requests": 3105,
+      "unique_ip_count": 339
     },
     {
       "label": "Internal navigation",
-      "requests": 373,
+      "requests": 377,
       "unique_ip_count": 177
     },
     {
       "label": "google.com",
-      "requests": 15,
-      "unique_ip_count": 15
+      "requests": 16,
+      "unique_ip_count": 16
     },
     {
       "label": "binance.com",
@@ -159,7 +159,7 @@
       "unique_ip_count": 1
     },
     {
-      "label": "seokicks.de",
+      "label": "bing.com",
       "requests": 1,
       "unique_ip_count": 1
     }
