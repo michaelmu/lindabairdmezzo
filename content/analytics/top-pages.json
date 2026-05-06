@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-06T05:26:40.737484+00:00",
+  "generated_at": "2026-05-06T07:13:29.803991+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 885
+      "requests": 887
     },
     {
       "path": "/index.html",
@@ -20,35 +20,35 @@
     },
     {
       "path": "/about.php",
-      "requests": 9
+      "requests": 10
     },
     {
       "path": "/classwithtostring.php",
-      "requests": 9
+      "requests": 10
+    },
+    {
+      "path": "/ioxi-o.php",
+      "requests": 10
+    },
+    {
+      "path": "/wp-content/admin.php",
+      "requests": 10
     },
     {
       "path": "/dx.php",
       "requests": 9
     },
     {
-      "path": "/ioxi-o.php",
-      "requests": 9
-    },
-    {
-      "path": "/wp-content/admin.php",
-      "requests": 9
-    },
-    {
       "path": "/info.php",
-      "requests": 8
-    },
-    {
-      "path": "/ms-edit.php",
-      "requests": 8
+      "requests": 9
     },
     {
       "path": "/admin.php",
-      "requests": 7
+      "requests": 8
+    },
+    {
+      "path": "/backup/",
+      "requests": 8
     }
   ]
 }
