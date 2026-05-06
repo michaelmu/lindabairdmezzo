@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-06T07:59:30.168961+00:00",
+  "generated_at": "2026-05-06T09:11:58.576995+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 3451,
-      "unique_ip_count": 241
+      "requests": 3454,
+      "unique_ip_count": 242
     },
     {
       "label": "Unknown",
@@ -31,8 +31,8 @@
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 2198,
-      "unique_ip_count": 208
+      "requests": 2201,
+      "unique_ip_count": 209
     },
     {
       "label": "Unknown",
@@ -78,8 +78,8 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 2528,
-      "unique_ip_count": 159
+      "requests": 2531,
+      "unique_ip_count": 160
     },
     {
       "label": "Unknown",
@@ -130,8 +130,8 @@
     },
     {
       "label": "Internal navigation",
-      "requests": 404,
-      "unique_ip_count": 181
+      "requests": 407,
+      "unique_ip_count": 182
     },
     {
       "label": "google.com",
