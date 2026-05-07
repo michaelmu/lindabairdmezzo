@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-07T12:57:24.101082+00:00",
+  "generated_at": "2026-05-07T13:57:10.505107+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 3766,
-      "unique_ip_count": 278
+      "requests": 3773,
+      "unique_ip_count": 280
     },
     {
       "label": "Unknown",
@@ -24,15 +24,15 @@
     },
     {
       "label": "Bots",
-      "requests": 166,
-      "unique_ip_count": 93
+      "requests": 168,
+      "unique_ip_count": 94
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 3385,
-      "unique_ip_count": 247
+      "requests": 3391,
+      "unique_ip_count": 248
     },
     {
       "label": "Unknown",
@@ -41,8 +41,8 @@
     },
     {
       "label": "Firefox",
-      "requests": 959,
-      "unique_ip_count": 30
+      "requests": 960,
+      "unique_ip_count": 31
     },
     {
       "label": "Safari",
@@ -56,8 +56,8 @@
     },
     {
       "label": "Bots",
-      "requests": 166,
-      "unique_ip_count": 93
+      "requests": 168,
+      "unique_ip_count": 94
     },
     {
       "label": "Other",
@@ -78,8 +78,8 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 2722,
-      "unique_ip_count": 186
+      "requests": 2728,
+      "unique_ip_count": 187
     },
     {
       "label": "Unknown",
@@ -93,8 +93,8 @@
     },
     {
       "label": "macOS",
-      "requests": 478,
-      "unique_ip_count": 47
+      "requests": 479,
+      "unique_ip_count": 48
     },
     {
       "label": "Linux",
@@ -108,8 +108,8 @@
     },
     {
       "label": "Bots",
-      "requests": 166,
-      "unique_ip_count": 93
+      "requests": 168,
+      "unique_ip_count": 94
     },
     {
       "label": "Other",
@@ -125,12 +125,12 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 5727,
-      "unique_ip_count": 393
+      "requests": 5730,
+      "unique_ip_count": 395
     },
     {
       "label": "Internal navigation",
-      "requests": 468,
+      "requests": 472,
       "unique_ip_count": 205
     },
     {
