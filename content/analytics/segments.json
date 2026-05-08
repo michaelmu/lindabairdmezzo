@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-08T19:46:41.739569+00:00",
+  "generated_at": "2026-05-08T20:37:22.354098+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 3853,
-      "unique_ip_count": 300
+      "requests": 3856,
+      "unique_ip_count": 301
     },
     {
       "label": "Unknown",
@@ -19,8 +19,8 @@
     },
     {
       "label": "Mobile",
-      "requests": 490,
-      "unique_ip_count": 144
+      "requests": 492,
+      "unique_ip_count": 146
     },
     {
       "label": "Bots",
@@ -31,8 +31,8 @@
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 3469,
-      "unique_ip_count": 269
+      "requests": 3472,
+      "unique_ip_count": 270
     },
     {
       "label": "Unknown",
@@ -46,8 +46,8 @@
     },
     {
       "label": "Safari",
-      "requests": 306,
-      "unique_ip_count": 136
+      "requests": 308,
+      "unique_ip_count": 138
     },
     {
       "label": "Opera",
@@ -78,7 +78,7 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 2789,
+      "requests": 2791,
       "unique_ip_count": 199
     },
     {
@@ -93,8 +93,8 @@
     },
     {
       "label": "macOS",
-      "requests": 485,
-      "unique_ip_count": 51
+      "requests": 486,
+      "unique_ip_count": 52
     },
     {
       "label": "Linux",
@@ -103,8 +103,8 @@
     },
     {
       "label": "iOS",
-      "requests": 285,
-      "unique_ip_count": 132
+      "requests": 287,
+      "unique_ip_count": 134
     },
     {
       "label": "Bots",
@@ -125,18 +125,18 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 5929,
-      "unique_ip_count": 425
+      "requests": 5930,
+      "unique_ip_count": 426
     },
     {
       "label": "Internal navigation",
-      "requests": 531,
+      "requests": 533,
       "unique_ip_count": 221
     },
     {
       "label": "google.com",
-      "requests": 396,
-      "unique_ip_count": 23
+      "requests": 398,
+      "unique_ip_count": 25
     },
     {
       "label": "binance.com",
