@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-10T17:35:15.794756+00:00",
+  "generated_at": "2026-05-10T18:36:53.831195+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 3984,
-      "unique_ip_count": 340
+      "requests": 3991,
+      "unique_ip_count": 346
     },
     {
       "label": "Unknown",
@@ -31,8 +31,8 @@
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 3583,
-      "unique_ip_count": 307
+      "requests": 3585,
+      "unique_ip_count": 309
     },
     {
       "label": "Unknown",
@@ -61,8 +61,8 @@
     },
     {
       "label": "Other",
-      "requests": 164,
-      "unique_ip_count": 29
+      "requests": 169,
+      "unique_ip_count": 33
     },
     {
       "label": "Edge",
@@ -78,8 +78,8 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 2898,
-      "unique_ip_count": 232
+      "requests": 2900,
+      "unique_ip_count": 234
     },
     {
       "label": "Unknown",
@@ -113,8 +113,8 @@
     },
     {
       "label": "Other",
-      "requests": 105,
-      "unique_ip_count": 37
+      "requests": 110,
+      "unique_ip_count": 41
     },
     {
       "label": "ChromeOS",
@@ -125,8 +125,8 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 6405,
-      "unique_ip_count": 467
+      "requests": 6410,
+      "unique_ip_count": 471
     },
     {
       "label": "Internal navigation",
@@ -154,12 +154,12 @@
       "unique_ip_count": 2
     },
     {
-      "label": "baidu.com",
+      "label": "facebook.com",
       "requests": 2,
-      "unique_ip_count": 1
+      "unique_ip_count": 2
     },
     {
-      "label": "duckduckgo.com",
+      "label": "baidu.com",
       "requests": 2,
       "unique_ip_count": 1
     }
