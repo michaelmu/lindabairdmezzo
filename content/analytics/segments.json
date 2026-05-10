@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-10T12:36:43.118928+00:00",
+  "generated_at": "2026-05-10T13:51:33.325562+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 3964,
-      "unique_ip_count": 333
+      "requests": 3971,
+      "unique_ip_count": 334
     },
     {
       "label": "Unknown",
@@ -31,8 +31,8 @@
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 3566,
-      "unique_ip_count": 300
+      "requests": 3573,
+      "unique_ip_count": 301
     },
     {
       "label": "Unknown",
@@ -78,8 +78,8 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 2879,
-      "unique_ip_count": 225
+      "requests": 2886,
+      "unique_ip_count": 226
     },
     {
       "label": "Unknown",
@@ -139,14 +139,14 @@
       "unique_ip_count": 28
     },
     {
+      "label": "binance.com",
+      "requests": 14,
+      "unique_ip_count": 2
+    },
+    {
       "label": "lindabairdmezzo.com",
       "requests": 7,
       "unique_ip_count": 5
-    },
-    {
-      "label": "binance.com",
-      "requests": 7,
-      "unique_ip_count": 1
     },
     {
       "label": "bing.com",
