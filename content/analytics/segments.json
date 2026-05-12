@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-12T01:57:55.201660+00:00",
+  "generated_at": "2026-05-12T03:25:24.898964+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 4079,
-      "unique_ip_count": 377
+      "requests": 4093,
+      "unique_ip_count": 380
     },
     {
       "label": "Unknown",
@@ -14,7 +14,7 @@
     },
     {
       "label": "Tablet",
-      "requests": 771,
+      "requests": 772,
       "unique_ip_count": 18
     },
     {
@@ -31,8 +31,8 @@
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 3670,
-      "unique_ip_count": 336
+      "requests": 3684,
+      "unique_ip_count": 338
     },
     {
       "label": "Unknown",
@@ -41,8 +41,8 @@
     },
     {
       "label": "Firefox",
-      "requests": 968,
-      "unique_ip_count": 35
+      "requests": 969,
+      "unique_ip_count": 36
     },
     {
       "label": "Safari",
@@ -78,8 +78,8 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 2971,
-      "unique_ip_count": 254
+      "requests": 2976,
+      "unique_ip_count": 256
     },
     {
       "label": "Unknown",
@@ -88,18 +88,18 @@
     },
     {
       "label": "Android",
-      "requests": 980,
+      "requests": 981,
       "unique_ip_count": 31
     },
     {
       "label": "macOS",
-      "requests": 507,
+      "requests": 515,
       "unique_ip_count": 64
     },
     {
       "label": "Linux",
-      "requests": 482,
-      "unique_ip_count": 52
+      "requests": 483,
+      "unique_ip_count": 53
     },
     {
       "label": "iOS",
@@ -125,17 +125,17 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 6650,
-      "unique_ip_count": 517
+      "requests": 6659,
+      "unique_ip_count": 518
     },
     {
       "label": "Internal navigation",
-      "requests": 686,
-      "unique_ip_count": 272
+      "requests": 691,
+      "unique_ip_count": 274
     },
     {
       "label": "google.com",
-      "requests": 402,
+      "requests": 403,
       "unique_ip_count": 29
     },
     {
