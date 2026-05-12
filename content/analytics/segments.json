@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-12T17:56:47.959179+00:00",
+  "generated_at": "2026-05-12T18:56:04.464769+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 4151,
+      "requests": 4156,
       "unique_ip_count": 399
     },
     {
@@ -24,14 +24,14 @@
     },
     {
       "label": "Bots",
-      "requests": 251,
-      "unique_ip_count": 134
+      "requests": 255,
+      "unique_ip_count": 136
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 3733,
+      "requests": 3736,
       "unique_ip_count": 355
     },
     {
@@ -51,8 +51,8 @@
     },
     {
       "label": "Bots",
-      "requests": 251,
-      "unique_ip_count": 134
+      "requests": 255,
+      "unique_ip_count": 136
     },
     {
       "label": "Opera",
@@ -61,7 +61,7 @@
     },
     {
       "label": "Other",
-      "requests": 181,
+      "requests": 183,
       "unique_ip_count": 40
     },
     {
@@ -78,8 +78,8 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 3021,
-      "unique_ip_count": 270
+      "requests": 3026,
+      "unique_ip_count": 271
     },
     {
       "label": "Unknown",
@@ -108,8 +108,8 @@
     },
     {
       "label": "Bots",
-      "requests": 251,
-      "unique_ip_count": 134
+      "requests": 255,
+      "unique_ip_count": 136
     },
     {
       "label": "Other",
@@ -125,12 +125,12 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 6695,
-      "unique_ip_count": 541
+      "requests": 6700,
+      "unique_ip_count": 543
     },
     {
       "label": "Internal navigation",
-      "requests": 740,
+      "requests": 743,
       "unique_ip_count": 291
     },
     {
@@ -159,9 +159,9 @@
       "unique_ip_count": 2
     },
     {
-      "label": "baidu.com",
+      "label": "lindabaird.com",
       "requests": 2,
-      "unique_ip_count": 1
+      "unique_ip_count": 2
     }
   ]
 }
