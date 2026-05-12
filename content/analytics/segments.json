@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-12T01:09:09.808955+00:00",
+  "generated_at": "2026-05-12T01:57:55.201660+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 4077,
-      "unique_ip_count": 375
+      "requests": 4079,
+      "unique_ip_count": 377
     },
     {
       "label": "Unknown",
@@ -19,20 +19,20 @@
     },
     {
       "label": "Mobile",
-      "requests": 563,
-      "unique_ip_count": 175
+      "requests": 564,
+      "unique_ip_count": 176
     },
     {
       "label": "Bots",
-      "requests": 242,
-      "unique_ip_count": 129
+      "requests": 244,
+      "unique_ip_count": 130
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 3668,
-      "unique_ip_count": 334
+      "requests": 3670,
+      "unique_ip_count": 336
     },
     {
       "label": "Unknown",
@@ -46,13 +46,13 @@
     },
     {
       "label": "Safari",
-      "requests": 382,
-      "unique_ip_count": 169
+      "requests": 383,
+      "unique_ip_count": 170
     },
     {
       "label": "Bots",
-      "requests": 242,
-      "unique_ip_count": 129
+      "requests": 244,
+      "unique_ip_count": 130
     },
     {
       "label": "Opera",
@@ -78,8 +78,8 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 2969,
-      "unique_ip_count": 252
+      "requests": 2971,
+      "unique_ip_count": 254
     },
     {
       "label": "Unknown",
@@ -103,13 +103,13 @@
     },
     {
       "label": "iOS",
-      "requests": 354,
-      "unique_ip_count": 163
+      "requests": 355,
+      "unique_ip_count": 164
     },
     {
       "label": "Bots",
-      "requests": 242,
-      "unique_ip_count": 129
+      "requests": 244,
+      "unique_ip_count": 130
     },
     {
       "label": "Other",
@@ -125,8 +125,8 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 6645,
-      "unique_ip_count": 513
+      "requests": 6650,
+      "unique_ip_count": 517
     },
     {
       "label": "Internal navigation",
