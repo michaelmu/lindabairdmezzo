@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-13T09:19:26.287185+00:00",
+  "generated_at": "2026-05-13T11:09:54.336373+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 4208,
-      "unique_ip_count": 409
+      "requests": 4210,
+      "unique_ip_count": 410
     },
     {
       "label": "Unknown",
@@ -19,20 +19,20 @@
     },
     {
       "label": "Mobile",
-      "requests": 604,
-      "unique_ip_count": 196
+      "requests": 606,
+      "unique_ip_count": 198
     },
     {
       "label": "Bots",
-      "requests": 263,
-      "unique_ip_count": 142
+      "requests": 264,
+      "unique_ip_count": 143
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 3788,
-      "unique_ip_count": 365
+      "requests": 3792,
+      "unique_ip_count": 367
     },
     {
       "label": "Unknown",
@@ -51,8 +51,8 @@
     },
     {
       "label": "Bots",
-      "requests": 263,
-      "unique_ip_count": 142
+      "requests": 264,
+      "unique_ip_count": 143
     },
     {
       "label": "Opera",
@@ -78,8 +78,8 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 3066,
-      "unique_ip_count": 279
+      "requests": 3068,
+      "unique_ip_count": 280
     },
     {
       "label": "Unknown",
@@ -103,13 +103,13 @@
     },
     {
       "label": "iOS",
-      "requests": 390,
-      "unique_ip_count": 182
+      "requests": 392,
+      "unique_ip_count": 184
     },
     {
       "label": "Bots",
-      "requests": 263,
-      "unique_ip_count": 142
+      "requests": 264,
+      "unique_ip_count": 143
     },
     {
       "label": "Other",
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 6736,
-      "unique_ip_count": 561
+      "requests": 6738,
+      "unique_ip_count": 563
     },
     {
       "label": "Internal navigation",
-      "requests": 783,
-      "unique_ip_count": 303
+      "requests": 786,
+      "unique_ip_count": 304
     },
     {
       "label": "google.com",
