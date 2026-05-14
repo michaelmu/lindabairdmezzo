@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-14T11:03:38.849711+00:00",
+  "generated_at": "2026-05-14T11:55:10.225278+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 4262,
-      "unique_ip_count": 423
+      "requests": 4263,
+      "unique_ip_count": 424
     },
     {
       "label": "Unknown",
@@ -19,13 +19,13 @@
     },
     {
       "label": "Mobile",
-      "requests": 627,
-      "unique_ip_count": 205
+      "requests": 628,
+      "unique_ip_count": 206
     },
     {
       "label": "Bots",
-      "requests": 280,
-      "unique_ip_count": 151
+      "requests": 281,
+      "unique_ip_count": 152
     }
   ],
   "browsers": [
@@ -46,13 +46,13 @@
     },
     {
       "label": "Safari",
-      "requests": 440,
-      "unique_ip_count": 195
+      "requests": 441,
+      "unique_ip_count": 196
     },
     {
       "label": "Bots",
-      "requests": 280,
-      "unique_ip_count": 151
+      "requests": 281,
+      "unique_ip_count": 152
     },
     {
       "label": "Opera",
@@ -61,8 +61,8 @@
     },
     {
       "label": "Other",
-      "requests": 186,
-      "unique_ip_count": 40
+      "requests": 187,
+      "unique_ip_count": 41
     },
     {
       "label": "Edge",
@@ -78,8 +78,8 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 3107,
-      "unique_ip_count": 288
+      "requests": 3108,
+      "unique_ip_count": 289
     },
     {
       "label": "Unknown",
@@ -103,13 +103,13 @@
     },
     {
       "label": "iOS",
-      "requests": 411,
-      "unique_ip_count": 191
+      "requests": 412,
+      "unique_ip_count": 192
     },
     {
       "label": "Bots",
-      "requests": 280,
-      "unique_ip_count": 151
+      "requests": 281,
+      "unique_ip_count": 152
     },
     {
       "label": "Other",
@@ -125,8 +125,8 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 6783,
-      "unique_ip_count": 588
+      "requests": 6785,
+      "unique_ip_count": 590
     },
     {
       "label": "Internal navigation",
