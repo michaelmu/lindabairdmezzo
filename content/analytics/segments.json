@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-15T12:55:35.042369+00:00",
+  "generated_at": "2026-05-15T13:56:53.631185+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 4338,
-      "unique_ip_count": 455
+      "requests": 4345,
+      "unique_ip_count": 460
     },
     {
       "label": "Unknown",
@@ -19,20 +19,20 @@
     },
     {
       "label": "Mobile",
-      "requests": 652,
-      "unique_ip_count": 216
+      "requests": 654,
+      "unique_ip_count": 217
     },
     {
       "label": "Bots",
-      "requests": 297,
-      "unique_ip_count": 160
+      "requests": 298,
+      "unique_ip_count": 161
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 3896,
-      "unique_ip_count": 403
+      "requests": 3902,
+      "unique_ip_count": 407
     },
     {
       "label": "Unknown",
@@ -46,18 +46,18 @@
     },
     {
       "label": "Safari",
-      "requests": 459,
-      "unique_ip_count": 205
+      "requests": 461,
+      "unique_ip_count": 206
     },
     {
       "label": "Bots",
-      "requests": 297,
-      "unique_ip_count": 160
+      "requests": 298,
+      "unique_ip_count": 161
     },
     {
       "label": "Other",
-      "requests": 202,
-      "unique_ip_count": 43
+      "requests": 203,
+      "unique_ip_count": 44
     },
     {
       "label": "Opera",
@@ -78,8 +78,8 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 3153,
-      "unique_ip_count": 309
+      "requests": 3157,
+      "unique_ip_count": 311
     },
     {
       "label": "Unknown",
@@ -98,23 +98,23 @@
     },
     {
       "label": "Linux",
-      "requests": 498,
-      "unique_ip_count": 62
+      "requests": 500,
+      "unique_ip_count": 64
     },
     {
       "label": "iOS",
-      "requests": 431,
-      "unique_ip_count": 202
+      "requests": 433,
+      "unique_ip_count": 203
     },
     {
       "label": "Bots",
-      "requests": 297,
-      "unique_ip_count": 160
+      "requests": 298,
+      "unique_ip_count": 161
     },
     {
       "label": "Other",
-      "requests": 146,
-      "unique_ip_count": 53
+      "requests": 147,
+      "unique_ip_count": 54
     },
     {
       "label": "ChromeOS",
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 6851,
-      "unique_ip_count": 623
+      "requests": 6855,
+      "unique_ip_count": 626
     },
     {
       "label": "Internal navigation",
-      "requests": 877,
-      "unique_ip_count": 340
+      "requests": 883,
+      "unique_ip_count": 344
     },
     {
       "label": "google.com",
