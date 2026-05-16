@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-16T09:50:36.900443+00:00",
+  "generated_at": "2026-05-16T10:42:30.461343+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 4438,
-      "unique_ip_count": 488
+      "requests": 4447,
+      "unique_ip_count": 493
     },
     {
       "label": "Unknown",
@@ -31,8 +31,8 @@
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 3958,
-      "unique_ip_count": 432
+      "requests": 3967,
+      "unique_ip_count": 437
     },
     {
       "label": "Unknown",
@@ -78,8 +78,8 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 3200,
-      "unique_ip_count": 330
+      "requests": 3205,
+      "unique_ip_count": 332
     },
     {
       "label": "Unknown",
@@ -113,8 +113,8 @@
     },
     {
       "label": "Other",
-      "requests": 181,
-      "unique_ip_count": 57
+      "requests": 185,
+      "unique_ip_count": 60
     },
     {
       "label": "ChromeOS",
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 6956,
-      "unique_ip_count": 664
+      "requests": 6960,
+      "unique_ip_count": 667
     },
     {
       "label": "Internal navigation",
-      "requests": 917,
-      "unique_ip_count": 358
+      "requests": 920,
+      "unique_ip_count": 359
     },
     {
       "label": "google.com",
@@ -139,14 +139,14 @@
       "unique_ip_count": 31
     },
     {
+      "label": "lindabairdmezzo.com",
+      "requests": 14,
+      "unique_ip_count": 10
+    },
+    {
       "label": "binance.com",
       "requests": 14,
       "unique_ip_count": 2
-    },
-    {
-      "label": "lindabairdmezzo.com",
-      "requests": 12,
-      "unique_ip_count": 9
     },
     {
       "label": "bing.com",
