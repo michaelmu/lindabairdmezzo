@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-17T12:37:51.887276+00:00",
+  "generated_at": "2026-05-17T13:53:06.988769+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -19,12 +19,12 @@
     },
     {
       "label": "Mobile",
-      "requests": 700,
-      "unique_ip_count": 231
+      "requests": 702,
+      "unique_ip_count": 232
     },
     {
       "label": "Bots",
-      "requests": 333,
+      "requests": 334,
       "unique_ip_count": 179
     }
   ],
@@ -46,12 +46,12 @@
     },
     {
       "label": "Safari",
-      "requests": 505,
-      "unique_ip_count": 222
+      "requests": 507,
+      "unique_ip_count": 223
     },
     {
       "label": "Bots",
-      "requests": 333,
+      "requests": 334,
       "unique_ip_count": 179
     },
     {
@@ -103,12 +103,12 @@
     },
     {
       "label": "iOS",
-      "requests": 473,
-      "unique_ip_count": 215
+      "requests": 475,
+      "unique_ip_count": 216
     },
     {
       "label": "Bots",
-      "requests": 333,
+      "requests": 334,
       "unique_ip_count": 179
     },
     {
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 7017,
-      "unique_ip_count": 689
+      "requests": 7018,
+      "unique_ip_count": 690
     },
     {
       "label": "Internal navigation",
-      "requests": 969,
-      "unique_ip_count": 375
+      "requests": 970,
+      "unique_ip_count": 376
     },
     {
       "label": "google.com",
@@ -149,17 +149,17 @@
       "unique_ip_count": 2
     },
     {
+      "label": "lindabaird.com",
+      "requests": 4,
+      "unique_ip_count": 2
+    },
+    {
       "label": "zsio.net",
       "requests": 4,
       "unique_ip_count": 2
     },
     {
       "label": "bing.com",
-      "requests": 3,
-      "unique_ip_count": 2
-    },
-    {
-      "label": "lindabaird.com",
       "requests": 3,
       "unique_ip_count": 2
     }
