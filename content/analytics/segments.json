@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-18T13:36:16.274948+00:00",
+  "generated_at": "2026-05-18T15:26:57.101735+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 4656,
-      "unique_ip_count": 539
+      "requests": 4657,
+      "unique_ip_count": 540
     },
     {
       "label": "Unknown",
@@ -19,20 +19,20 @@
     },
     {
       "label": "Mobile",
-      "requests": 768,
-      "unique_ip_count": 249
+      "requests": 770,
+      "unique_ip_count": 250
     },
     {
       "label": "Bots",
-      "requests": 350,
+      "requests": 354,
       "unique_ip_count": 187
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 4133,
-      "unique_ip_count": 470
+      "requests": 4134,
+      "unique_ip_count": 471
     },
     {
       "label": "Unknown",
@@ -46,12 +46,12 @@
     },
     {
       "label": "Safari",
-      "requests": 535,
-      "unique_ip_count": 239
+      "requests": 537,
+      "unique_ip_count": 240
     },
     {
       "label": "Bots",
-      "requests": 350,
+      "requests": 354,
       "unique_ip_count": 187
     },
     {
@@ -93,8 +93,8 @@
     },
     {
       "label": "macOS",
-      "requests": 587,
-      "unique_ip_count": 88
+      "requests": 588,
+      "unique_ip_count": 89
     },
     {
       "label": "Linux",
@@ -103,12 +103,12 @@
     },
     {
       "label": "iOS",
-      "requests": 500,
-      "unique_ip_count": 230
+      "requests": 502,
+      "unique_ip_count": 231
     },
     {
       "label": "Bots",
-      "requests": 350,
+      "requests": 354,
       "unique_ip_count": 187
     },
     {
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 7196,
-      "unique_ip_count": 731
+      "requests": 7202,
+      "unique_ip_count": 733
     },
     {
       "label": "Internal navigation",
-      "requests": 1011,
-      "unique_ip_count": 398
+      "requests": 1012,
+      "unique_ip_count": 399
     },
     {
       "label": "google.com",
