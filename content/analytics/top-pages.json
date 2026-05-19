@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-19T21:47:17.574970+00:00",
+  "generated_at": "2026-05-19T22:42:20.694606+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 2535
+      "requests": 2537
     },
     {
       "path": "/index.html",
@@ -20,11 +20,11 @@
     },
     {
       "path": "/backup/",
-      "requests": 19
+      "requests": 20
     },
     {
       "path": "/blog/",
-      "requests": 19
+      "requests": 20
     },
     {
       "path": "/classwithtostring.php",
@@ -35,20 +35,20 @@
       "requests": 18
     },
     {
-      "path": "/file.php",
-      "requests": 17
-    },
-    {
-      "path": "/ioxi-o.php",
-      "requests": 17
-    },
-    {
       "path": "/new/",
-      "requests": 17
+      "requests": 18
     },
     {
       "path": "/old/",
-      "requests": 17
+      "requests": 18
+    },
+    {
+      "path": "/wordpress/",
+      "requests": 18
+    },
+    {
+      "path": "/wp/",
+      "requests": 18
     }
   ]
 }
