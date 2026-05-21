@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-21T18:56:49.431706+00:00",
+  "generated_at": "2026-05-21T19:55:29.648407+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 4905,
-      "unique_ip_count": 608
+      "requests": 4937,
+      "unique_ip_count": 609
     },
     {
       "label": "Unknown",
@@ -14,8 +14,8 @@
     },
     {
       "label": "Mobile",
-      "requests": 856,
-      "unique_ip_count": 285
+      "requests": 860,
+      "unique_ip_count": 287
     },
     {
       "label": "Tablet",
@@ -24,8 +24,8 @@
     },
     {
       "label": "Bots",
-      "requests": 401,
-      "unique_ip_count": 202
+      "requests": 404,
+      "unique_ip_count": 204
     }
   ],
   "browsers": [
@@ -46,18 +46,18 @@
     },
     {
       "label": "Safari",
-      "requests": 613,
-      "unique_ip_count": 274
+      "requests": 617,
+      "unique_ip_count": 276
     },
     {
       "label": "Other",
-      "requests": 407,
-      "unique_ip_count": 61
+      "requests": 439,
+      "unique_ip_count": 62
     },
     {
       "label": "Bots",
-      "requests": 401,
-      "unique_ip_count": 202
+      "requests": 404,
+      "unique_ip_count": 204
     },
     {
       "label": "Opera",
@@ -98,8 +98,8 @@
     },
     {
       "label": "iOS",
-      "requests": 578,
-      "unique_ip_count": 265
+      "requests": 582,
+      "unique_ip_count": 267
     },
     {
       "label": "Linux",
@@ -108,13 +108,13 @@
     },
     {
       "label": "Bots",
-      "requests": 401,
-      "unique_ip_count": 202
+      "requests": 404,
+      "unique_ip_count": 204
     },
     {
       "label": "Other",
-      "requests": 369,
-      "unique_ip_count": 80
+      "requests": 401,
+      "unique_ip_count": 81
     },
     {
       "label": "ChromeOS",
@@ -125,8 +125,8 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 7823,
-      "unique_ip_count": 824
+      "requests": 7861,
+      "unique_ip_count": 828
     },
     {
       "label": "Internal navigation",
@@ -149,14 +149,14 @@
       "unique_ip_count": 2
     },
     {
-      "label": "zsio.net",
+      "label": "lindabaird.com",
       "requests": 6,
       "unique_ip_count": 3
     },
     {
-      "label": "lindabaird.com",
-      "requests": 5,
-      "unique_ip_count": 2
+      "label": "zsio.net",
+      "requests": 6,
+      "unique_ip_count": 3
     },
     {
       "label": "bing.com",
