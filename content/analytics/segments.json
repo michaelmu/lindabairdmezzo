@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-23T19:42:24.732068+00:00",
+  "generated_at": "2026-05-23T20:32:18.172607+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 5014,
-      "unique_ip_count": 643
+      "requests": 5017,
+      "unique_ip_count": 646
     },
     {
       "label": "Unknown",
@@ -31,8 +31,8 @@
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 4340,
-      "unique_ip_count": 548
+      "requests": 4342,
+      "unique_ip_count": 550
     },
     {
       "label": "Unknown",
@@ -71,15 +71,15 @@
     },
     {
       "label": "Samsung Internet",
-      "requests": 8,
-      "unique_ip_count": 8
+      "requests": 9,
+      "unique_ip_count": 9
     }
   ],
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 3469,
-      "unique_ip_count": 435
+      "requests": 3471,
+      "unique_ip_count": 437
     },
     {
       "label": "Unknown",
@@ -103,8 +103,8 @@
     },
     {
       "label": "Linux",
-      "requests": 525,
-      "unique_ip_count": 79
+      "requests": 526,
+      "unique_ip_count": 80
     },
     {
       "label": "Bots",
@@ -125,8 +125,8 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 8263,
-      "unique_ip_count": 885
+      "requests": 8266,
+      "unique_ip_count": 888
     },
     {
       "label": "Internal navigation",
