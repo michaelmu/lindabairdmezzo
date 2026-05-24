@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-23T23:36:54.035606+00:00",
+  "generated_at": "2026-05-24T01:20:23.770263+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,12 +9,12 @@
     },
     {
       "label": "Unknown",
-      "requests": 2770,
-      "unique_ip_count": 35
+      "requests": 2869,
+      "unique_ip_count": 36
     },
     {
       "label": "Mobile",
-      "requests": 943,
+      "requests": 945,
       "unique_ip_count": 314
     },
     {
@@ -24,8 +24,8 @@
     },
     {
       "label": "Bots",
-      "requests": 441,
-      "unique_ip_count": 218
+      "requests": 442,
+      "unique_ip_count": 219
     }
   ],
   "browsers": [
@@ -36,8 +36,8 @@
     },
     {
       "label": "Unknown",
-      "requests": 2770,
-      "unique_ip_count": 35
+      "requests": 2869,
+      "unique_ip_count": 36
     },
     {
       "label": "Firefox",
@@ -46,7 +46,7 @@
     },
     {
       "label": "Safari",
-      "requests": 699,
+      "requests": 701,
       "unique_ip_count": 301
     },
     {
@@ -56,8 +56,8 @@
     },
     {
       "label": "Bots",
-      "requests": 441,
-      "unique_ip_count": 218
+      "requests": 442,
+      "unique_ip_count": 219
     },
     {
       "label": "Opera",
@@ -83,8 +83,8 @@
     },
     {
       "label": "Unknown",
-      "requests": 2770,
-      "unique_ip_count": 35
+      "requests": 2869,
+      "unique_ip_count": 36
     },
     {
       "label": "Android",
@@ -93,7 +93,7 @@
     },
     {
       "label": "iOS",
-      "requests": 659,
+      "requests": 661,
       "unique_ip_count": 289
     },
     {
@@ -108,8 +108,8 @@
     },
     {
       "label": "Bots",
-      "requests": 441,
-      "unique_ip_count": 218
+      "requests": 442,
+      "unique_ip_count": 219
     },
     {
       "label": "Other",
@@ -125,12 +125,12 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 8269,
-      "unique_ip_count": 889
+      "requests": 8370,
+      "unique_ip_count": 891
     },
     {
       "label": "Internal navigation",
-      "requests": 1195,
+      "requests": 1196,
       "unique_ip_count": 479
     },
     {
