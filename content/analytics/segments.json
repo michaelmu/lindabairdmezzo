@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-26T21:54:11.473089+00:00",
+  "generated_at": "2026-05-26T22:44:07.092550+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 5209,
-      "unique_ip_count": 738
+      "requests": 5212,
+      "unique_ip_count": 739
     },
     {
       "label": "Unknown",
@@ -14,8 +14,8 @@
     },
     {
       "label": "Mobile",
-      "requests": 1005,
-      "unique_ip_count": 337
+      "requests": 1010,
+      "unique_ip_count": 338
     },
     {
       "label": "Tablet",
@@ -31,8 +31,8 @@
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 4482,
-      "unique_ip_count": 628
+      "requests": 4487,
+      "unique_ip_count": 629
     },
     {
       "label": "Unknown",
@@ -46,8 +46,8 @@
     },
     {
       "label": "Safari",
-      "requests": 754,
-      "unique_ip_count": 322
+      "requests": 756,
+      "unique_ip_count": 323
     },
     {
       "label": "Other",
@@ -71,15 +71,15 @@
     },
     {
       "label": "Samsung Internet",
-      "requests": 11,
-      "unique_ip_count": 10
+      "requests": 12,
+      "unique_ip_count": 11
     }
   ],
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 3564,
-      "unique_ip_count": 472
+      "requests": 3565,
+      "unique_ip_count": 473
     },
     {
       "label": "Unknown",
@@ -88,8 +88,8 @@
     },
     {
       "label": "Android",
-      "requests": 1076,
-      "unique_ip_count": 60
+      "requests": 1081,
+      "unique_ip_count": 61
     },
     {
       "label": "iOS",
@@ -98,8 +98,8 @@
     },
     {
       "label": "macOS",
-      "requests": 646,
-      "unique_ip_count": 136
+      "requests": 648,
+      "unique_ip_count": 137
     },
     {
       "label": "Linux",
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 9111,
-      "unique_ip_count": 1007
+      "requests": 9118,
+      "unique_ip_count": 1008
     },
     {
       "label": "Internal navigation",
-      "requests": 1277,
-      "unique_ip_count": 510
+      "requests": 1278,
+      "unique_ip_count": 511
     },
     {
       "label": "google.com",
