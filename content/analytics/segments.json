@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-27T07:45:07.306968+00:00",
+  "generated_at": "2026-05-27T09:28:12.181864+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 6239,
+      "requests": 6241,
       "unique_ip_count": 768
     },
     {
@@ -14,8 +14,8 @@
     },
     {
       "label": "Mobile",
-      "requests": 1021,
-      "unique_ip_count": 344
+      "requests": 1023,
+      "unique_ip_count": 345
     },
     {
       "label": "Tablet",
@@ -24,15 +24,15 @@
     },
     {
       "label": "Bots",
-      "requests": 477,
+      "requests": 481,
       "unique_ip_count": 235
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 5512,
-      "unique_ip_count": 657
+      "requests": 5516,
+      "unique_ip_count": 658
     },
     {
       "label": "Unknown",
@@ -56,7 +56,7 @@
     },
     {
       "label": "Bots",
-      "requests": 477,
+      "requests": 481,
       "unique_ip_count": 235
     },
     {
@@ -78,7 +78,7 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 4561,
+      "requests": 4563,
       "unique_ip_count": 479
     },
     {
@@ -88,8 +88,8 @@
     },
     {
       "label": "Android",
-      "requests": 1081,
-      "unique_ip_count": 61
+      "requests": 1083,
+      "unique_ip_count": 62
     },
     {
       "label": "iOS",
@@ -108,7 +108,7 @@
     },
     {
       "label": "Bots",
-      "requests": 477,
+      "requests": 481,
       "unique_ip_count": 235
     },
     {
@@ -125,12 +125,12 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 10152,
+      "requests": 10156,
       "unique_ip_count": 1037
     },
     {
       "label": "Internal navigation",
-      "requests": 1273,
+      "requests": 1275,
       "unique_ip_count": 517
     },
     {
@@ -145,8 +145,8 @@
     },
     {
       "label": "lindabairdmezzo.com",
-      "requests": 19,
-      "unique_ip_count": 14
+      "requests": 21,
+      "unique_ip_count": 15
     },
     {
       "label": "lindabaird.com",
