@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-31T14:52:56.571800+00:00",
+  "generated_at": "2026-05-31T15:43:27.571564+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 6340,
+      "requests": 6346,
       "unique_ip_count": 803
     },
     {
@@ -31,7 +31,7 @@
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 5504,
+      "requests": 5510,
       "unique_ip_count": 687
     },
     {
@@ -78,7 +78,7 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 4522,
+      "requests": 4528,
       "unique_ip_count": 504
     },
     {
@@ -130,7 +130,7 @@
     },
     {
       "label": "Internal navigation",
-      "requests": 1250,
+      "requests": 1256,
       "unique_ip_count": 526
     },
     {
