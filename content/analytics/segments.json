@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-01T10:05:25.048365+00:00",
+  "generated_at": "2026-06-01T12:13:35.448509+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 6309,
-      "unique_ip_count": 796
+      "requests": 6316,
+      "unique_ip_count": 798
     },
     {
       "label": "Unknown",
@@ -24,15 +24,15 @@
     },
     {
       "label": "Bots",
-      "requests": 558,
+      "requests": 562,
       "unique_ip_count": 253
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 5473,
-      "unique_ip_count": 680
+      "requests": 5479,
+      "unique_ip_count": 681
     },
     {
       "label": "Unknown",
@@ -41,8 +41,8 @@
     },
     {
       "label": "Firefox",
-      "requests": 1091,
-      "unique_ip_count": 83
+      "requests": 1092,
+      "unique_ip_count": 84
     },
     {
       "label": "Safari",
@@ -51,7 +51,7 @@
     },
     {
       "label": "Bots",
-      "requests": 558,
+      "requests": 562,
       "unique_ip_count": 253
     },
     {
@@ -78,8 +78,8 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 4506,
-      "unique_ip_count": 501
+      "requests": 4512,
+      "unique_ip_count": 502
     },
     {
       "label": "Unknown",
@@ -93,8 +93,8 @@
     },
     {
       "label": "macOS",
-      "requests": 735,
-      "unique_ip_count": 168
+      "requests": 736,
+      "unique_ip_count": 169
     },
     {
       "label": "iOS",
@@ -108,7 +108,7 @@
     },
     {
       "label": "Bots",
-      "requests": 558,
+      "requests": 562,
       "unique_ip_count": 253
     },
     {
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 10590,
-      "unique_ip_count": 1076
+      "requests": 10595,
+      "unique_ip_count": 1077
     },
     {
       "label": "Internal navigation",
-      "requests": 1244,
-      "unique_ip_count": 528
+      "requests": 1250,
+      "unique_ip_count": 529
     },
     {
       "label": "google.com",
