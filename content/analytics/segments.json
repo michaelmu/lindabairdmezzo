@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-01T08:12:21.826478+00:00",
+  "generated_at": "2026-06-01T10:05:25.048365+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 6307,
-      "unique_ip_count": 795
+      "requests": 6309,
+      "unique_ip_count": 796
     },
     {
       "label": "Unknown",
@@ -14,8 +14,8 @@
     },
     {
       "label": "Mobile",
-      "requests": 1047,
-      "unique_ip_count": 356
+      "requests": 1049,
+      "unique_ip_count": 357
     },
     {
       "label": "Tablet",
@@ -24,15 +24,15 @@
     },
     {
       "label": "Bots",
-      "requests": 556,
+      "requests": 558,
       "unique_ip_count": 253
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 5472,
-      "unique_ip_count": 679
+      "requests": 5473,
+      "unique_ip_count": 680
     },
     {
       "label": "Unknown",
@@ -41,17 +41,17 @@
     },
     {
       "label": "Firefox",
-      "requests": 1090,
-      "unique_ip_count": 82
+      "requests": 1091,
+      "unique_ip_count": 83
     },
     {
       "label": "Safari",
-      "requests": 815,
-      "unique_ip_count": 334
+      "requests": 817,
+      "unique_ip_count": 335
     },
     {
       "label": "Bots",
-      "requests": 556,
+      "requests": 558,
       "unique_ip_count": 253
     },
     {
@@ -98,17 +98,17 @@
     },
     {
       "label": "iOS",
-      "requests": 731,
-      "unique_ip_count": 313
+      "requests": 733,
+      "unique_ip_count": 314
     },
     {
       "label": "Linux",
-      "requests": 585,
-      "unique_ip_count": 78
+      "requests": 587,
+      "unique_ip_count": 79
     },
     {
       "label": "Bots",
-      "requests": 556,
+      "requests": 558,
       "unique_ip_count": 253
     },
     {
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 10585,
-      "unique_ip_count": 1074
+      "requests": 10590,
+      "unique_ip_count": 1076
     },
     {
       "label": "Internal navigation",
-      "requests": 1243,
-      "unique_ip_count": 527
+      "requests": 1244,
+      "unique_ip_count": 528
     },
     {
       "label": "google.com",
