@@ -116,5 +116,26 @@ jobs:
           CF_INVALIDATION_PATHS: ${{ steps.deploy.outputs.cloudfront_invalidation_paths }}
         run: |
           set -euo pipefail
-          # Intentionally allow shell splitting so multiple paths can be supplied.
-          aws cloudfront create-invalidation --distribution-id "${CF_DISTRIBUTION_ID}" --paths ${CF_INVALIDATION_PATHS}
+
+          # Keep invalidation paths literal. In particular, `/*` must be sent to
+          # CloudFront as one wildcard path, not expanded by the shell to `/bin`,
+          # `/etc`, `/usr`, etc. on the GitHub Actions runner.
+          read -r -a invalidation_paths <<< "${CF_INVALIDATION_PATHS:-/*}"
+
+          if [ "${#invalidation_paths[@]}" -eq 0 ]; then
+            echo "No CloudFront invalidation paths configured" >&2
+            exit 1
+          fi
+
+          for path in "${invalidation_paths[@]}"; do
+            if [[ "${path}" != /* ]]; then
+              echo "Invalid CloudFront invalidation path '${path}'; paths must start with /" >&2
+              exit 1
+            fi
+          done
+
+          printf 'Invalidating CloudFront paths:'
+          printf ' %q' "${invalidation_paths[@]}"
+          printf '\n'
+
+          aws cloudfront create-invalidation --distribution-id "${CF_DISTRIBUTION_ID}" --paths "${invalidation_paths[@]}"

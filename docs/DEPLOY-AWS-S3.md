@@ -42,11 +42,13 @@ Optional:
 - `CLOUDFRONT_DISTRIBUTION_ID_PROD`
 - `CLOUDFRONT_INVALIDATION_PATHS_PROD`
   - default: `/*`
+  - use one wildcard path (`/*`) for a full-site refresh, or a small space-separated list such as `/index.html /assets/app.css`
 
 Notes:
 
 - `SITE_BASE_PATH_PROD` must match how the site is actually served, not just where objects live in S3.
 - If you upload into a prefix such as `public/` but serve the site from the domain root through CloudFront, keep `SITE_BASE_PATH_PROD=/`.
+- CloudFront invalidation paths are passed literally by the workflow. Do not generate them from the filesystem root; `/*` counts as one invalidation path in AWS billing.
 
 ## AWS setup
 
