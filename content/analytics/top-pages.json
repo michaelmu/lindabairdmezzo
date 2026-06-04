@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-04T15:25:12.136733+00:00",
+  "generated_at": "2026-06-04T17:20:45.996255+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 3267
+      "requests": 3274
     },
     {
       "path": "/index.html",
@@ -23,6 +23,14 @@
       "requests": 27
     },
     {
+      "path": "/wordpress/",
+      "requests": 26
+    },
+    {
+      "path": "/.env",
+      "requests": 25
+    },
+    {
       "path": "/new/",
       "requests": 25
     },
@@ -31,16 +39,8 @@
       "requests": 25
     },
     {
-      "path": "/wordpress/",
-      "requests": 25
-    },
-    {
       "path": "/wp/",
       "requests": 25
-    },
-    {
-      "path": "/.env",
-      "requests": 24
     },
     {
       "path": "/classwithtostring.php",
