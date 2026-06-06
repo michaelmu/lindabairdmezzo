@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-06T03:25:39.436283+00:00",
+  "generated_at": "2026-06-06T05:37:01.927977+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 4205,
-      "unique_ip_count": 890
+      "requests": 4213,
+      "unique_ip_count": 894
     },
     {
       "label": "Unknown",
@@ -14,7 +14,7 @@
     },
     {
       "label": "Mobile",
-      "requests": 1068,
+      "requests": 1070,
       "unique_ip_count": 362
     },
     {
@@ -31,7 +31,7 @@
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 3888,
+      "requests": 3892,
       "unique_ip_count": 727
     },
     {
@@ -41,12 +41,12 @@
     },
     {
       "label": "Other",
-      "requests": 1041,
-      "unique_ip_count": 127
+      "requests": 1043,
+      "unique_ip_count": 129
     },
     {
       "label": "Safari",
-      "requests": 827,
+      "requests": 829,
       "unique_ip_count": 344
     },
     {
@@ -56,8 +56,8 @@
     },
     {
       "label": "Firefox",
-      "requests": 231,
-      "unique_ip_count": 91
+      "requests": 233,
+      "unique_ip_count": 93
     },
     {
       "label": "Edge",
@@ -83,8 +83,8 @@
     },
     {
       "label": "Windows",
-      "requests": 2471,
-      "unique_ip_count": 533
+      "requests": 2477,
+      "unique_ip_count": 535
     },
     {
       "label": "Android",
@@ -93,12 +93,12 @@
     },
     {
       "label": "Other",
-      "requests": 1092,
-      "unique_ip_count": 149
+      "requests": 1094,
+      "unique_ip_count": 151
     },
     {
       "label": "iOS",
-      "requests": 739,
+      "requests": 741,
       "unique_ip_count": 314
     },
     {
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 8190,
-      "unique_ip_count": 1158
+      "requests": 8194,
+      "unique_ip_count": 1161
     },
     {
       "label": "Internal navigation",
-      "requests": 1220,
-      "unique_ip_count": 541
+      "requests": 1226,
+      "unique_ip_count": 542
     },
     {
       "label": "google.com",
