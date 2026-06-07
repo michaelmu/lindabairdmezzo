@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-07T19:47:23.616609+00:00",
+  "generated_at": "2026-06-07T20:42:29.480142+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 4035,
-      "unique_ip_count": 893
+      "requests": 4036,
+      "unique_ip_count": 894
     },
     {
       "label": "Unknown",
@@ -14,7 +14,7 @@
     },
     {
       "label": "Mobile",
-      "requests": 866,
+      "requests": 868,
       "unique_ip_count": 356
     },
     {
@@ -24,8 +24,8 @@
     },
     {
       "label": "Tablet",
-      "requests": 26,
-      "unique_ip_count": 20
+      "requests": 30,
+      "unique_ip_count": 21
     }
   ],
   "browsers": [
@@ -36,8 +36,8 @@
     },
     {
       "label": "Chrome",
-      "requests": 2840,
-      "unique_ip_count": 724
+      "requests": 2845,
+      "unique_ip_count": 725
     },
     {
       "label": "Other",
@@ -46,7 +46,7 @@
     },
     {
       "label": "Safari",
-      "requests": 799,
+      "requests": 801,
       "unique_ip_count": 342
     },
     {
@@ -83,8 +83,8 @@
     },
     {
       "label": "Windows",
-      "requests": 2380,
-      "unique_ip_count": 535
+      "requests": 2381,
+      "unique_ip_count": 536
     },
     {
       "label": "Other",
@@ -93,7 +93,7 @@
     },
     {
       "label": "iOS",
-      "requests": 712,
+      "requests": 714,
       "unique_ip_count": 312
     },
     {
@@ -113,8 +113,8 @@
     },
     {
       "label": "Android",
-      "requests": 179,
-      "unique_ip_count": 71
+      "requests": 183,
+      "unique_ip_count": 72
     },
     {
       "label": "ChromeOS",
@@ -125,18 +125,18 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 7404,
-      "unique_ip_count": 1156
+      "requests": 7408,
+      "unique_ip_count": 1157
     },
     {
       "label": "Internal navigation",
-      "requests": 1231,
+      "requests": 1232,
       "unique_ip_count": 552
     },
     {
       "label": "google.com",
-      "requests": 56,
-      "unique_ip_count": 49
+      "requests": 58,
+      "unique_ip_count": 50
     },
     {
       "label": "lindabairdmezzo.com",
