@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-06-08T21:05:02.060375+00:00",
+  "generated_at": "2026-06-08T21:54:26.933858+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 4024,
-      "unique_ip_count": 893
+      "requests": 4027,
+      "unique_ip_count": 894
     },
     {
       "label": "Unknown",
-      "requests": 3155,
-      "unique_ip_count": 32
+      "requests": 3323,
+      "unique_ip_count": 33
     },
     {
       "label": "Mobile",
-      "requests": 880,
+      "requests": 882,
       "unique_ip_count": 358
     },
     {
@@ -31,13 +31,13 @@
   "browsers": [
     {
       "label": "Unknown",
-      "requests": 3155,
-      "unique_ip_count": 32
+      "requests": 3323,
+      "unique_ip_count": 33
     },
     {
       "label": "Chrome",
-      "requests": 2838,
-      "unique_ip_count": 725
+      "requests": 2841,
+      "unique_ip_count": 726
     },
     {
       "label": "Other",
@@ -46,7 +46,7 @@
     },
     {
       "label": "Safari",
-      "requests": 799,
+      "requests": 801,
       "unique_ip_count": 341
     },
     {
@@ -78,13 +78,13 @@
   "operating_systems": [
     {
       "label": "Unknown",
-      "requests": 3155,
-      "unique_ip_count": 32
+      "requests": 3323,
+      "unique_ip_count": 33
     },
     {
       "label": "Windows",
-      "requests": 2369,
-      "unique_ip_count": 539
+      "requests": 2372,
+      "unique_ip_count": 540
     },
     {
       "label": "Other",
@@ -93,7 +93,7 @@
     },
     {
       "label": "iOS",
-      "requests": 713,
+      "requests": 715,
       "unique_ip_count": 312
     },
     {
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 7308,
-      "unique_ip_count": 1154
+      "requests": 7477,
+      "unique_ip_count": 1155
     },
     {
       "label": "Internal navigation",
-      "requests": 1222,
-      "unique_ip_count": 557
+      "requests": 1226,
+      "unique_ip_count": 558
     },
     {
       "label": "google.com",
