@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T22:47:55.553927+00:00",
+  "generated_at": "2026-06-12T23:48:38.938250+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -14,8 +14,8 @@
     },
     {
       "label": "Mobile",
-      "requests": 898,
-      "unique_ip_count": 373
+      "requests": 904,
+      "unique_ip_count": 378
     },
     {
       "label": "Bots",
@@ -36,8 +36,8 @@
     },
     {
       "label": "Chrome",
-      "requests": 2780,
-      "unique_ip_count": 730
+      "requests": 2784,
+      "unique_ip_count": 734
     },
     {
       "label": "Other",
@@ -46,8 +46,8 @@
     },
     {
       "label": "Safari",
-      "requests": 813,
-      "unique_ip_count": 358
+      "requests": 815,
+      "unique_ip_count": 359
     },
     {
       "label": "Bots",
@@ -93,8 +93,8 @@
     },
     {
       "label": "iOS",
-      "requests": 726,
-      "unique_ip_count": 324
+      "requests": 728,
+      "unique_ip_count": 325
     },
     {
       "label": "Bots",
@@ -107,14 +107,14 @@
       "unique_ip_count": 178
     },
     {
+      "label": "Android",
+      "requests": 200,
+      "unique_ip_count": 80
+    },
+    {
       "label": "Linux",
       "requests": 196,
       "unique_ip_count": 84
-    },
-    {
-      "label": "Android",
-      "requests": 196,
-      "unique_ip_count": 76
     },
     {
       "label": "ChromeOS",
@@ -125,18 +125,18 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 7199,
-      "unique_ip_count": 1198
+      "requests": 7200,
+      "unique_ip_count": 1199
     },
     {
       "label": "Internal navigation",
-      "requests": 1161,
-      "unique_ip_count": 556
+      "requests": 1162,
+      "unique_ip_count": 557
     },
     {
       "label": "google.com",
-      "requests": 53,
-      "unique_ip_count": 46
+      "requests": 57,
+      "unique_ip_count": 50
     },
     {
       "label": "lindabairdmezzo.com",
