@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-13T09:24:32.368088+00:00",
+  "generated_at": "2026-06-13T11:02:32.821792+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 3928,
-      "unique_ip_count": 882
+      "requests": 3931,
+      "unique_ip_count": 885
     },
     {
       "label": "Unknown",
@@ -19,7 +19,7 @@
     },
     {
       "label": "Bots",
-      "requests": 588,
+      "requests": 591,
       "unique_ip_count": 272
     },
     {
@@ -36,8 +36,8 @@
     },
     {
       "label": "Chrome",
-      "requests": 2760,
-      "unique_ip_count": 720
+      "requests": 2761,
+      "unique_ip_count": 721
     },
     {
       "label": "Other",
@@ -46,18 +46,18 @@
     },
     {
       "label": "Safari",
-      "requests": 801,
-      "unique_ip_count": 353
+      "requests": 802,
+      "unique_ip_count": 354
     },
     {
       "label": "Bots",
-      "requests": 588,
+      "requests": 591,
       "unique_ip_count": 272
     },
     {
       "label": "Firefox",
-      "requests": 181,
-      "unique_ip_count": 80
+      "requests": 182,
+      "unique_ip_count": 81
     },
     {
       "label": "Edge",
@@ -83,8 +83,8 @@
     },
     {
       "label": "Windows",
-      "requests": 2254,
-      "unique_ip_count": 516
+      "requests": 2255,
+      "unique_ip_count": 517
     },
     {
       "label": "Other",
@@ -98,18 +98,18 @@
     },
     {
       "label": "Bots",
-      "requests": 588,
+      "requests": 591,
       "unique_ip_count": 272
     },
     {
       "label": "macOS",
-      "requests": 375,
-      "unique_ip_count": 175
+      "requests": 376,
+      "unique_ip_count": 176
     },
     {
       "label": "Linux",
-      "requests": 197,
-      "unique_ip_count": 84
+      "requests": 198,
+      "unique_ip_count": 85
     },
     {
       "label": "Android",
@@ -125,8 +125,8 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 7222,
-      "unique_ip_count": 1189
+      "requests": 7228,
+      "unique_ip_count": 1192
     },
     {
       "label": "Internal navigation",
