@@ -1,26 +1,26 @@
 {
-  "generated_at": "2026-06-14T15:53:34.117327+00:00",
+  "generated_at": "2026-06-14T16:46:40.186693+00:00",
   "items": [
     {
       "period": "today",
       "label": "Today",
-      "requests": 74,
-      "unique_ip_count": 33,
-      "bytes_served": 656583
+      "requests": 76,
+      "unique_ip_count": 34,
+      "bytes_served": 664904
     },
     {
       "period": "last_7_days",
       "label": "Last 7 Days",
-      "requests": 1738,
-      "unique_ip_count": 425,
-      "bytes_served": 10301107
+      "requests": 1740,
+      "unique_ip_count": 426,
+      "bytes_served": 10309428
     },
     {
       "period": "last_30_days",
       "label": "Last 30 Days",
-      "requests": 8984,
+      "requests": 8986,
       "unique_ip_count": 1529,
-      "bytes_served": 40363356
+      "bytes_served": 40371677
     }
   ]
 }
