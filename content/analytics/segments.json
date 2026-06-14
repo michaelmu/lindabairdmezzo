@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14T15:00:15.221459+00:00",
+  "generated_at": "2026-06-14T15:53:50.942769+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -24,7 +24,7 @@
     },
     {
       "label": "Tablet",
-      "requests": 25,
+      "requests": 37,
       "unique_ip_count": 18
     }
   ],
@@ -36,7 +36,7 @@
     },
     {
       "label": "Chrome",
-      "requests": 2775,
+      "requests": 2787,
       "unique_ip_count": 724
     },
     {
@@ -107,14 +107,14 @@
       "unique_ip_count": 177
     },
     {
+      "label": "Android",
+      "requests": 203,
+      "unique_ip_count": 77
+    },
+    {
       "label": "Linux",
       "requests": 198,
       "unique_ip_count": 86
-    },
-    {
-      "label": "Android",
-      "requests": 191,
-      "unique_ip_count": 77
     },
     {
       "label": "ChromeOS",
@@ -135,7 +135,7 @@
     },
     {
       "label": "google.com",
-      "requests": 56,
+      "requests": 68,
       "unique_ip_count": 49
     },
     {
