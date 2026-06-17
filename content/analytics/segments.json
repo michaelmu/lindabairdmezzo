@@ -1,26 +1,26 @@
 {
-  "generated_at": "2026-06-16T23:47:55.733589+00:00",
+  "generated_at": "2026-06-17T01:30:19.250238+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 3951,
-      "unique_ip_count": 898
+      "requests": 3874,
+      "unique_ip_count": 884
     },
     {
       "label": "Unknown",
-      "requests": 3847,
-      "unique_ip_count": 37
+      "requests": 3845,
+      "unique_ip_count": 35
     },
     {
       "label": "Mobile",
-      "requests": 910,
-      "unique_ip_count": 373
+      "requests": 853,
+      "unique_ip_count": 365
     },
     {
       "label": "Bots",
-      "requests": 587,
-      "unique_ip_count": 264
+      "requests": 576,
+      "unique_ip_count": 256
     },
     {
       "label": "Tablet",
@@ -31,43 +31,43 @@
   "browsers": [
     {
       "label": "Unknown",
-      "requests": 3847,
-      "unique_ip_count": 37
+      "requests": 3845,
+      "unique_ip_count": 35
     },
     {
       "label": "Chrome",
-      "requests": 2803,
-      "unique_ip_count": 722
+      "requests": 2732,
+      "unique_ip_count": 712
     },
     {
       "label": "Other",
-      "requests": 1023,
-      "unique_ip_count": 141
+      "requests": 991,
+      "unique_ip_count": 140
     },
     {
       "label": "Safari",
-      "requests": 814,
-      "unique_ip_count": 347
+      "requests": 791,
+      "unique_ip_count": 341
     },
     {
       "label": "Bots",
-      "requests": 587,
-      "unique_ip_count": 264
+      "requests": 576,
+      "unique_ip_count": 256
     },
     {
       "label": "Firefox",
-      "requests": 191,
-      "unique_ip_count": 81
+      "requests": 188,
+      "unique_ip_count": 79
     },
     {
       "label": "Edge",
-      "requests": 33,
-      "unique_ip_count": 24
+      "requests": 30,
+      "unique_ip_count": 22
     },
     {
       "label": "Samsung Internet",
-      "requests": 19,
-      "unique_ip_count": 15
+      "requests": 17,
+      "unique_ip_count": 13
     },
     {
       "label": "Opera",
@@ -78,43 +78,43 @@
   "operating_systems": [
     {
       "label": "Unknown",
-      "requests": 3847,
-      "unique_ip_count": 37
+      "requests": 3845,
+      "unique_ip_count": 35
     },
     {
       "label": "Windows",
-      "requests": 2244,
-      "unique_ip_count": 513
+      "requests": 2241,
+      "unique_ip_count": 501
     },
     {
       "label": "Other",
-      "requests": 1091,
-      "unique_ip_count": 163
+      "requests": 1059,
+      "unique_ip_count": 162
     },
     {
       "label": "iOS",
-      "requests": 727,
-      "unique_ip_count": 312
+      "requests": 707,
+      "unique_ip_count": 308
     },
     {
       "label": "Bots",
-      "requests": 587,
-      "unique_ip_count": 264
+      "requests": 576,
+      "unique_ip_count": 256
     },
     {
       "label": "macOS",
-      "requests": 420,
-      "unique_ip_count": 186
-    },
-    {
-      "label": "Android",
-      "requests": 218,
-      "unique_ip_count": 88
+      "requests": 381,
+      "unique_ip_count": 183
     },
     {
       "label": "Linux",
-      "requests": 193,
-      "unique_ip_count": 83
+      "requests": 190,
+      "unique_ip_count": 82
+    },
+    {
+      "label": "Android",
+      "requests": 181,
+      "unique_ip_count": 84
     },
     {
       "label": "ChromeOS",
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 8035,
-      "unique_ip_count": 1204
+      "requests": 7915,
+      "unique_ip_count": 1184
     },
     {
       "label": "Internal navigation",
-      "requests": 1162,
-      "unique_ip_count": 537
+      "requests": 1136,
+      "unique_ip_count": 524
     },
     {
       "label": "google.com",
@@ -154,12 +154,12 @@
       "unique_ip_count": 2
     },
     {
-      "label": "lindabaird.com",
-      "requests": 3,
+      "label": "baidu.com",
+      "requests": 2,
       "unique_ip_count": 2
     },
     {
-      "label": "baidu.com",
+      "label": "duckduckgo.com",
       "requests": 2,
       "unique_ip_count": 2
     }
