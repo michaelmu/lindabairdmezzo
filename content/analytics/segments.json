@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-06-18T21:57:17.271386+00:00",
+  "generated_at": "2026-06-18T22:55:33.967705+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Unknown",
-      "requests": 4223,
-      "unique_ip_count": 36
+      "requests": 4323,
+      "unique_ip_count": 37
     },
     {
       "label": "Desktop",
-      "requests": 3973,
-      "unique_ip_count": 925
+      "requests": 3975,
+      "unique_ip_count": 926
     },
     {
       "label": "Mobile",
-      "requests": 869,
-      "unique_ip_count": 372
+      "requests": 870,
+      "unique_ip_count": 373
     },
     {
       "label": "Bots",
@@ -31,8 +31,8 @@
   "browsers": [
     {
       "label": "Unknown",
-      "requests": 4223,
-      "unique_ip_count": 36
+      "requests": 4323,
+      "unique_ip_count": 37
     },
     {
       "label": "Chrome",
@@ -41,13 +41,13 @@
     },
     {
       "label": "Other",
-      "requests": 1023,
-      "unique_ip_count": 166
+      "requests": 1025,
+      "unique_ip_count": 167
     },
     {
       "label": "Safari",
-      "requests": 806,
-      "unique_ip_count": 346
+      "requests": 807,
+      "unique_ip_count": 347
     },
     {
       "label": "Bots",
@@ -78,13 +78,13 @@
   "operating_systems": [
     {
       "label": "Unknown",
-      "requests": 4223,
-      "unique_ip_count": 36
+      "requests": 4323,
+      "unique_ip_count": 37
     },
     {
       "label": "Windows",
-      "requests": 2302,
-      "unique_ip_count": 523
+      "requests": 2304,
+      "unique_ip_count": 524
     },
     {
       "label": "Other",
@@ -93,8 +93,8 @@
     },
     {
       "label": "iOS",
-      "requests": 723,
-      "unique_ip_count": 315
+      "requests": 724,
+      "unique_ip_count": 316
     },
     {
       "label": "Bots",
@@ -125,8 +125,8 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 8357,
-      "unique_ip_count": 1221
+      "requests": 8460,
+      "unique_ip_count": 1224
     },
     {
       "label": "Internal navigation",
