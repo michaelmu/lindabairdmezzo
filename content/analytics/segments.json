@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T15:25:38.999756+00:00",
+  "generated_at": "2026-06-18T17:22:54.055543+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,17 +9,17 @@
     },
     {
       "label": "Desktop",
-      "requests": 3824,
-      "unique_ip_count": 898
+      "requests": 3832,
+      "unique_ip_count": 900
     },
     {
       "label": "Mobile",
-      "requests": 856,
-      "unique_ip_count": 363
+      "requests": 860,
+      "unique_ip_count": 366
     },
     {
       "label": "Bots",
-      "requests": 586,
+      "requests": 589,
       "unique_ip_count": 261
     },
     {
@@ -36,8 +36,8 @@
     },
     {
       "label": "Chrome",
-      "requests": 2770,
-      "unique_ip_count": 726
+      "requests": 2778,
+      "unique_ip_count": 728
     },
     {
       "label": "Other",
@@ -46,12 +46,12 @@
     },
     {
       "label": "Safari",
-      "requests": 792,
-      "unique_ip_count": 337
+      "requests": 796,
+      "unique_ip_count": 340
     },
     {
       "label": "Bots",
-      "requests": 586,
+      "requests": 589,
       "unique_ip_count": 261
     },
     {
@@ -83,8 +83,8 @@
     },
     {
       "label": "Windows",
-      "requests": 2273,
-      "unique_ip_count": 517
+      "requests": 2281,
+      "unique_ip_count": 519
     },
     {
       "label": "Other",
@@ -93,12 +93,12 @@
     },
     {
       "label": "iOS",
-      "requests": 710,
-      "unique_ip_count": 306
+      "requests": 714,
+      "unique_ip_count": 309
     },
     {
       "label": "Bots",
-      "requests": 586,
+      "requests": 589,
       "unique_ip_count": 261
     },
     {
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 8214,
-      "unique_ip_count": 1186
+      "requests": 8219,
+      "unique_ip_count": 1190
     },
     {
       "label": "Internal navigation",
-      "requests": 1175,
-      "unique_ip_count": 536
+      "requests": 1185,
+      "unique_ip_count": 537
     },
     {
       "label": "google.com",
