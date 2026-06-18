@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T19:05:35.471895+00:00",
+  "generated_at": "2026-06-18T19:59:46.686366+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,8 +9,8 @@
     },
     {
       "label": "Desktop",
-      "requests": 3836,
-      "unique_ip_count": 902
+      "requests": 3969,
+      "unique_ip_count": 923
     },
     {
       "label": "Mobile",
@@ -19,8 +19,8 @@
     },
     {
       "label": "Bots",
-      "requests": 592,
-      "unique_ip_count": 261
+      "requests": 593,
+      "unique_ip_count": 262
     },
     {
       "label": "Tablet",
@@ -41,8 +41,8 @@
     },
     {
       "label": "Other",
-      "requests": 906,
-      "unique_ip_count": 145
+      "requests": 1023,
+      "unique_ip_count": 166
     },
     {
       "label": "Safari",
@@ -51,8 +51,8 @@
     },
     {
       "label": "Bots",
-      "requests": 592,
-      "unique_ip_count": 261
+      "requests": 593,
+      "unique_ip_count": 262
     },
     {
       "label": "Firefox",
@@ -61,8 +61,8 @@
     },
     {
       "label": "Edge",
-      "requests": 28,
-      "unique_ip_count": 20
+      "requests": 44,
+      "unique_ip_count": 21
     },
     {
       "label": "Samsung Internet",
@@ -83,13 +83,13 @@
     },
     {
       "label": "Windows",
-      "requests": 2283,
-      "unique_ip_count": 521
+      "requests": 2299,
+      "unique_ip_count": 522
     },
     {
       "label": "Other",
-      "requests": 960,
-      "unique_ip_count": 162
+      "requests": 1077,
+      "unique_ip_count": 183
     },
     {
       "label": "iOS",
@@ -98,8 +98,8 @@
     },
     {
       "label": "Bots",
-      "requests": 592,
-      "unique_ip_count": 261
+      "requests": 593,
+      "unique_ip_count": 262
     },
     {
       "label": "macOS",
@@ -125,12 +125,12 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 8230,
-      "unique_ip_count": 1194
+      "requests": 8348,
+      "unique_ip_count": 1216
     },
     {
       "label": "Internal navigation",
-      "requests": 1186,
+      "requests": 1202,
       "unique_ip_count": 538
     },
     {
