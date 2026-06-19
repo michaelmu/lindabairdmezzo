@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T17:55:25.035196+00:00",
+  "generated_at": "2026-06-19T18:55:28.825023+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,18 +9,18 @@
     },
     {
       "label": "Desktop",
-      "requests": 3969,
-      "unique_ip_count": 925
+      "requests": 3971,
+      "unique_ip_count": 926
     },
     {
       "label": "Mobile",
-      "requests": 861,
+      "requests": 863,
       "unique_ip_count": 368
     },
     {
       "label": "Bots",
-      "requests": 611,
-      "unique_ip_count": 273
+      "requests": 612,
+      "unique_ip_count": 274
     },
     {
       "label": "Tablet",
@@ -36,8 +36,8 @@
     },
     {
       "label": "Chrome",
-      "requests": 2775,
-      "unique_ip_count": 736
+      "requests": 2777,
+      "unique_ip_count": 737
     },
     {
       "label": "Other",
@@ -46,13 +46,13 @@
     },
     {
       "label": "Safari",
-      "requests": 800,
+      "requests": 802,
       "unique_ip_count": 342
     },
     {
       "label": "Bots",
-      "requests": 611,
-      "unique_ip_count": 273
+      "requests": 612,
+      "unique_ip_count": 274
     },
     {
       "label": "Firefox",
@@ -93,13 +93,13 @@
     },
     {
       "label": "iOS",
-      "requests": 716,
+      "requests": 718,
       "unique_ip_count": 311
     },
     {
       "label": "Bots",
-      "requests": 611,
-      "unique_ip_count": 273
+      "requests": 612,
+      "unique_ip_count": 274
     },
     {
       "label": "macOS",
@@ -108,8 +108,8 @@
     },
     {
       "label": "Linux",
-      "requests": 193,
-      "unique_ip_count": 83
+      "requests": 195,
+      "unique_ip_count": 84
     },
     {
       "label": "Android",
@@ -125,12 +125,12 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 9075,
-      "unique_ip_count": 1232
+      "requests": 9079,
+      "unique_ip_count": 1234
     },
     {
       "label": "Internal navigation",
-      "requests": 1200,
+      "requests": 1201,
       "unique_ip_count": 535
     },
     {
