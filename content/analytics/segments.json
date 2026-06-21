@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T01:30:48.561143+00:00",
+  "generated_at": "2026-06-21T03:26:38.273881+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,8 +9,8 @@
     },
     {
       "label": "Desktop",
-      "requests": 3906,
-      "unique_ip_count": 922
+      "requests": 3927,
+      "unique_ip_count": 924
     },
     {
       "label": "Mobile",
@@ -19,8 +19,8 @@
     },
     {
       "label": "Bots",
-      "requests": 602,
-      "unique_ip_count": 270
+      "requests": 603,
+      "unique_ip_count": 271
     },
     {
       "label": "Tablet",
@@ -36,8 +36,8 @@
     },
     {
       "label": "Chrome",
-      "requests": 2766,
-      "unique_ip_count": 734
+      "requests": 2787,
+      "unique_ip_count": 736
     },
     {
       "label": "Other",
@@ -51,8 +51,8 @@
     },
     {
       "label": "Bots",
-      "requests": 602,
-      "unique_ip_count": 270
+      "requests": 603,
+      "unique_ip_count": 271
     },
     {
       "label": "Firefox",
@@ -83,8 +83,8 @@
     },
     {
       "label": "Windows",
-      "requests": 2285,
-      "unique_ip_count": 518
+      "requests": 2306,
+      "unique_ip_count": 520
     },
     {
       "label": "Other",
@@ -98,8 +98,8 @@
     },
     {
       "label": "Bots",
-      "requests": 602,
-      "unique_ip_count": 270
+      "requests": 603,
+      "unique_ip_count": 271
     },
     {
       "label": "macOS",
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 8624,
-      "unique_ip_count": 1225
+      "requests": 8626,
+      "unique_ip_count": 1226
     },
     {
       "label": "Internal navigation",
-      "requests": 1183,
-      "unique_ip_count": 526
+      "requests": 1201,
+      "unique_ip_count": 527
     },
     {
       "label": "google.com",
@@ -154,14 +154,14 @@
       "unique_ip_count": 8
     },
     {
-      "label": "snucm.com",
+      "label": "anyiyun.net",
       "requests": 4,
       "unique_ip_count": 2
     },
     {
-      "label": "duckduckgo.com",
-      "requests": 3,
-      "unique_ip_count": 3
+      "label": "snucm.com",
+      "requests": 4,
+      "unique_ip_count": 2
     }
   ]
 }
