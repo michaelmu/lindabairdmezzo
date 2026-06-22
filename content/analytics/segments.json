@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T13:10:48.066773+00:00",
+  "generated_at": "2026-06-22T15:07:02.309894+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,18 +9,18 @@
     },
     {
       "label": "Desktop",
-      "requests": 3981,
-      "unique_ip_count": 939
+      "requests": 3989,
+      "unique_ip_count": 942
     },
     {
       "label": "Mobile",
-      "requests": 801,
+      "requests": 803,
       "unique_ip_count": 355
     },
     {
       "label": "Bots",
-      "requests": 605,
-      "unique_ip_count": 270
+      "requests": 606,
+      "unique_ip_count": 271
     },
     {
       "label": "Tablet",
@@ -36,8 +36,8 @@
     },
     {
       "label": "Chrome",
-      "requests": 2835,
-      "unique_ip_count": 748
+      "requests": 2843,
+      "unique_ip_count": 751
     },
     {
       "label": "Other",
@@ -46,13 +46,13 @@
     },
     {
       "label": "Safari",
-      "requests": 741,
+      "requests": 743,
       "unique_ip_count": 329
     },
     {
       "label": "Bots",
-      "requests": 605,
-      "unique_ip_count": 270
+      "requests": 606,
+      "unique_ip_count": 271
     },
     {
       "label": "Firefox",
@@ -83,8 +83,8 @@
     },
     {
       "label": "Windows",
-      "requests": 2338,
-      "unique_ip_count": 524
+      "requests": 2346,
+      "unique_ip_count": 527
     },
     {
       "label": "Other",
@@ -93,13 +93,13 @@
     },
     {
       "label": "iOS",
-      "requests": 661,
+      "requests": 663,
       "unique_ip_count": 300
     },
     {
       "label": "Bots",
-      "requests": 605,
-      "unique_ip_count": 270
+      "requests": 606,
+      "unique_ip_count": 271
     },
     {
       "label": "macOS",
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 8540,
-      "unique_ip_count": 1235
+      "requests": 8542,
+      "unique_ip_count": 1236
     },
     {
       "label": "Internal navigation",
-      "requests": 1236,
-      "unique_ip_count": 537
+      "requests": 1245,
+      "unique_ip_count": 540
     },
     {
       "label": "google.com",
