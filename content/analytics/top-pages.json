@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-26T21:44:13.821222+00:00",
+  "generated_at": "2026-06-26T22:41:52.465896+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 3190
+      "requests": 3193
     },
     {
       "path": "/index.html",
@@ -27,28 +27,28 @@
       "requests": 32
     },
     {
+      "path": "/wordpress/",
+      "requests": 28
+    },
+    {
       "path": "/classwithtostring.php",
       "requests": 27
     },
     {
-      "path": "/wordpress/",
-      "requests": 27
+      "path": "/backup/",
+      "requests": 26
+    },
+    {
+      "path": "/blog/",
+      "requests": 26
     },
     {
       "path": "/ms-edit.php",
       "requests": 26
     },
     {
-      "path": "/x.php",
+      "path": "/new/",
       "requests": 26
-    },
-    {
-      "path": "/backup/",
-      "requests": 25
-    },
-    {
-      "path": "/blog/",
-      "requests": 25
     }
   ]
 }
