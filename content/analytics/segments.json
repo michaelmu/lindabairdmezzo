@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T16:54:19.853368+00:00",
+  "generated_at": "2026-07-02T17:54:16.202693+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,18 +9,18 @@
     },
     {
       "label": "Desktop",
-      "requests": 5275,
-      "unique_ip_count": 841
+      "requests": 5276,
+      "unique_ip_count": 842
     },
     {
       "label": "Mobile",
-      "requests": 784,
+      "requests": 786,
       "unique_ip_count": 345
     },
     {
       "label": "Bots",
-      "requests": 535,
-      "unique_ip_count": 265
+      "requests": 536,
+      "unique_ip_count": 266
     },
     {
       "label": "Tablet",
@@ -36,13 +36,13 @@
     },
     {
       "label": "Safari",
-      "requests": 2798,
+      "requests": 2800,
       "unique_ip_count": 311
     },
     {
       "label": "Chrome",
-      "requests": 1776,
-      "unique_ip_count": 659
+      "requests": 1777,
+      "unique_ip_count": 660
     },
     {
       "label": "Other",
@@ -51,8 +51,8 @@
     },
     {
       "label": "Bots",
-      "requests": 535,
-      "unique_ip_count": 265
+      "requests": 536,
+      "unique_ip_count": 266
     },
     {
       "label": "Firefox",
@@ -98,13 +98,13 @@
     },
     {
       "label": "iOS",
-      "requests": 642,
+      "requests": 644,
       "unique_ip_count": 295
     },
     {
       "label": "Bots",
-      "requests": 535,
-      "unique_ip_count": 265
+      "requests": 536,
+      "unique_ip_count": 266
     },
     {
       "label": "Android",
@@ -113,8 +113,8 @@
     },
     {
       "label": "Linux",
-      "requests": 154,
-      "unique_ip_count": 90
+      "requests": 155,
+      "unique_ip_count": 91
     },
     {
       "label": "ChromeOS",
@@ -125,12 +125,12 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 8878,
-      "unique_ip_count": 1120
+      "requests": 8879,
+      "unique_ip_count": 1121
     },
     {
       "label": "Internal navigation",
-      "requests": 2934,
+      "requests": 2936,
       "unique_ip_count": 541
     },
     {
