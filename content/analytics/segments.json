@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-07-02T20:40:47.053011+00:00",
+  "generated_at": "2026-07-02T21:41:32.824180+00:00",
   "window_days": 30,
   "device_types": [
+    {
+      "label": "Desktop",
+      "requests": 5296,
+      "unique_ip_count": 850
+    },
     {
       "label": "Unknown",
       "requests": 5292,
       "unique_ip_count": 46
-    },
-    {
-      "label": "Desktop",
-      "requests": 5283,
-      "unique_ip_count": 844
     },
     {
       "label": "Mobile",
@@ -36,13 +36,13 @@
     },
     {
       "label": "Safari",
-      "requests": 2809,
-      "unique_ip_count": 314
+      "requests": 2810,
+      "unique_ip_count": 315
     },
     {
       "label": "Chrome",
-      "requests": 1787,
-      "unique_ip_count": 663
+      "requests": 1797,
+      "unique_ip_count": 667
     },
     {
       "label": "Other",
@@ -56,8 +56,8 @@
     },
     {
       "label": "Firefox",
-      "requests": 431,
-      "unique_ip_count": 92
+      "requests": 433,
+      "unique_ip_count": 94
     },
     {
       "label": "Edge",
@@ -83,13 +83,13 @@
     },
     {
       "label": "macOS",
-      "requests": 2404,
-      "unique_ip_count": 118
+      "requests": 2407,
+      "unique_ip_count": 121
     },
     {
       "label": "Windows",
-      "requests": 1644,
-      "unique_ip_count": 500
+      "requests": 1654,
+      "unique_ip_count": 504
     },
     {
       "label": "Other",
@@ -125,18 +125,18 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 8892,
-      "unique_ip_count": 1124
+      "requests": 8896,
+      "unique_ip_count": 1128
     },
     {
       "label": "Internal navigation",
-      "requests": 2945,
-      "unique_ip_count": 545
+      "requests": 2952,
+      "unique_ip_count": 546
     },
     {
       "label": "google.com",
-      "requests": 63,
-      "unique_ip_count": 49
+      "requests": 64,
+      "unique_ip_count": 50
     },
     {
       "label": "lindabairdmezzo.com",
