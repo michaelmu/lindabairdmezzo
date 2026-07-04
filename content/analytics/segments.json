@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T03:24:51.464109+00:00",
+  "generated_at": "2026-07-04T05:30:10.392564+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,12 +9,12 @@
     },
     {
       "label": "Desktop",
-      "requests": 5238,
-      "unique_ip_count": 820
+      "requests": 5244,
+      "unique_ip_count": 824
     },
     {
       "label": "Mobile",
-      "requests": 780,
+      "requests": 783,
       "unique_ip_count": 339
     },
     {
@@ -36,7 +36,7 @@
     },
     {
       "label": "Safari",
-      "requests": 2796,
+      "requests": 2799,
       "unique_ip_count": 306
     },
     {
@@ -46,8 +46,8 @@
     },
     {
       "label": "Other",
-      "requests": 1002,
-      "unique_ip_count": 144
+      "requests": 1006,
+      "unique_ip_count": 146
     },
     {
       "label": "Bots",
@@ -56,8 +56,8 @@
     },
     {
       "label": "Firefox",
-      "requests": 434,
-      "unique_ip_count": 91
+      "requests": 436,
+      "unique_ip_count": 93
     },
     {
       "label": "Edge",
@@ -83,22 +83,22 @@
     },
     {
       "label": "macOS",
-      "requests": 2382,
-      "unique_ip_count": 108
+      "requests": 2384,
+      "unique_ip_count": 109
     },
     {
       "label": "Windows",
-      "requests": 1634,
-      "unique_ip_count": 493
+      "requests": 1636,
+      "unique_ip_count": 495
     },
     {
       "label": "Other",
-      "requests": 1064,
-      "unique_ip_count": 171
+      "requests": 1066,
+      "unique_ip_count": 172
     },
     {
       "label": "iOS",
-      "requests": 646,
+      "requests": 649,
       "unique_ip_count": 295
     },
     {
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 9267,
-      "unique_ip_count": 1099
+      "requests": 9273,
+      "unique_ip_count": 1103
     },
     {
       "label": "Internal navigation",
-      "requests": 2917,
-      "unique_ip_count": 529
+      "requests": 2920,
+      "unique_ip_count": 530
     },
     {
       "label": "google.com",
