@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T03:25:03.207529+00:00",
+  "generated_at": "2026-07-10T05:39:37.677354+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,8 +9,8 @@
     },
     {
       "label": "Desktop",
-      "requests": 4604,
-      "unique_ip_count": 759
+      "requests": 4612,
+      "unique_ip_count": 762
     },
     {
       "label": "Mobile",
@@ -41,8 +41,8 @@
     },
     {
       "label": "Chrome",
-      "requests": 1713,
-      "unique_ip_count": 615
+      "requests": 1718,
+      "unique_ip_count": 618
     },
     {
       "label": "Bots",
@@ -51,8 +51,8 @@
     },
     {
       "label": "Firefox",
-      "requests": 423,
-      "unique_ip_count": 84
+      "requests": 425,
+      "unique_ip_count": 86
     },
     {
       "label": "Other",
@@ -61,8 +61,8 @@
     },
     {
       "label": "Edge",
-      "requests": 36,
-      "unique_ip_count": 17
+      "requests": 37,
+      "unique_ip_count": 18
     },
     {
       "label": "Opera",
@@ -83,13 +83,13 @@
     },
     {
       "label": "macOS",
-      "requests": 2384,
-      "unique_ip_count": 108
+      "requests": 2385,
+      "unique_ip_count": 109
     },
     {
       "label": "Windows",
-      "requests": 1626,
-      "unique_ip_count": 465
+      "requests": 1632,
+      "unique_ip_count": 468
     },
     {
       "label": "iOS",
@@ -113,8 +113,8 @@
     },
     {
       "label": "Linux",
-      "requests": 139,
-      "unique_ip_count": 82
+      "requests": 140,
+      "unique_ip_count": 83
     },
     {
       "label": "ChromeOS",
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 9629,
-      "unique_ip_count": 1039
+      "requests": 9635,
+      "unique_ip_count": 1042
     },
     {
       "label": "Internal navigation",
-      "requests": 2962,
-      "unique_ip_count": 520
+      "requests": 2963,
+      "unique_ip_count": 521
     },
     {
       "label": "google.com",
@@ -159,9 +159,9 @@
       "unique_ip_count": 2
     },
     {
-      "label": "l.instagram.com",
+      "label": "bing.com",
       "requests": 3,
-      "unique_ip_count": 2
+      "unique_ip_count": 3
     }
   ]
 }
