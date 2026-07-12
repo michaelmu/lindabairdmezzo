@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T17:37:16.190177+00:00",
+  "generated_at": "2026-07-12T18:34:15.429219+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,8 +9,8 @@
     },
     {
       "label": "Desktop",
-      "requests": 4734,
-      "unique_ip_count": 766
+      "requests": 4746,
+      "unique_ip_count": 773
     },
     {
       "label": "Mobile",
@@ -19,7 +19,7 @@
     },
     {
       "label": "Bots",
-      "requests": 495,
+      "requests": 496,
       "unique_ip_count": 255
     },
     {
@@ -41,23 +41,23 @@
     },
     {
       "label": "Chrome",
-      "requests": 1829,
+      "requests": 1832,
       "unique_ip_count": 621
     },
     {
       "label": "Bots",
-      "requests": 495,
+      "requests": 496,
       "unique_ip_count": 255
     },
     {
       "label": "Firefox",
-      "requests": 430,
-      "unique_ip_count": 88
+      "requests": 432,
+      "unique_ip_count": 90
     },
     {
       "label": "Other",
-      "requests": 418,
-      "unique_ip_count": 122
+      "requests": 425,
+      "unique_ip_count": 127
     },
     {
       "label": "Edge",
@@ -88,8 +88,8 @@
     },
     {
       "label": "Windows",
-      "requests": 1661,
-      "unique_ip_count": 469
+      "requests": 1666,
+      "unique_ip_count": 471
     },
     {
       "label": "iOS",
@@ -98,13 +98,13 @@
     },
     {
       "label": "Bots",
-      "requests": 495,
+      "requests": 496,
       "unique_ip_count": 255
     },
     {
       "label": "Other",
-      "requests": 481,
-      "unique_ip_count": 149
+      "requests": 488,
+      "unique_ip_count": 154
     },
     {
       "label": "Linux",
@@ -125,12 +125,12 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 9648,
-      "unique_ip_count": 1052
+      "requests": 9655,
+      "unique_ip_count": 1057
     },
     {
       "label": "Internal navigation",
-      "requests": 3002,
+      "requests": 3005,
       "unique_ip_count": 528
     },
     {
@@ -145,8 +145,8 @@
     },
     {
       "label": "facebook.com",
-      "requests": 6,
-      "unique_ip_count": 6
+      "requests": 8,
+      "unique_ip_count": 8
     },
     {
       "label": "lindabaird.com",
