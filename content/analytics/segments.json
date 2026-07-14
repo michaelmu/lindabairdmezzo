@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T05:59:19.515906+00:00",
+  "generated_at": "2026-07-14T06:59:00.165944+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,18 +9,18 @@
     },
     {
       "label": "Desktop",
-      "requests": 4695,
-      "unique_ip_count": 752
+      "requests": 4706,
+      "unique_ip_count": 754
     },
     {
       "label": "Mobile",
-      "requests": 777,
-      "unique_ip_count": 336
+      "requests": 785,
+      "unique_ip_count": 337
     },
     {
       "label": "Bots",
-      "requests": 478,
-      "unique_ip_count": 248
+      "requests": 480,
+      "unique_ip_count": 249
     },
     {
       "label": "Tablet",
@@ -36,23 +36,23 @@
     },
     {
       "label": "Safari",
-      "requests": 2780,
-      "unique_ip_count": 296
+      "requests": 2786,
+      "unique_ip_count": 297
     },
     {
       "label": "Chrome",
-      "requests": 1806,
-      "unique_ip_count": 601
+      "requests": 1815,
+      "unique_ip_count": 603
     },
     {
       "label": "Bots",
-      "requests": 478,
-      "unique_ip_count": 248
+      "requests": 480,
+      "unique_ip_count": 249
     },
     {
       "label": "Firefox",
-      "requests": 426,
-      "unique_ip_count": 89
+      "requests": 428,
+      "unique_ip_count": 90
     },
     {
       "label": "Other",
@@ -71,8 +71,8 @@
     },
     {
       "label": "Samsung Internet",
-      "requests": 13,
-      "unique_ip_count": 11
+      "requests": 15,
+      "unique_ip_count": 12
     }
   ],
   "operating_systems": [
@@ -83,18 +83,18 @@
     },
     {
       "label": "macOS",
-      "requests": 2382,
-      "unique_ip_count": 100
+      "requests": 2386,
+      "unique_ip_count": 101
     },
     {
       "label": "Windows",
-      "requests": 1647,
-      "unique_ip_count": 461
+      "requests": 1652,
+      "unique_ip_count": 463
     },
     {
       "label": "iOS",
-      "requests": 628,
-      "unique_ip_count": 289
+      "requests": 630,
+      "unique_ip_count": 290
     },
     {
       "label": "Other",
@@ -103,18 +103,18 @@
     },
     {
       "label": "Bots",
-      "requests": 478,
-      "unique_ip_count": 248
+      "requests": 480,
+      "unique_ip_count": 249
     },
     {
       "label": "Android",
-      "requests": 191,
-      "unique_ip_count": 84
+      "requests": 197,
+      "unique_ip_count": 85
     },
     {
       "label": "Linux",
-      "requests": 174,
-      "unique_ip_count": 72
+      "requests": 176,
+      "unique_ip_count": 73
     },
     {
       "label": "ChromeOS",
@@ -125,18 +125,23 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 9272,
-      "unique_ip_count": 1024
+      "requests": 9274,
+      "unique_ip_count": 1025
     },
     {
       "label": "Internal navigation",
-      "requests": 2991,
-      "unique_ip_count": 527
+      "requests": 2993,
+      "unique_ip_count": 528
     },
     {
       "label": "google.com",
-      "requests": 66,
-      "unique_ip_count": 41
+      "requests": 75,
+      "unique_ip_count": 42
+    },
+    {
+      "label": "bing.com",
+      "requests": 10,
+      "unique_ip_count": 4
     },
     {
       "label": "lindabairdmezzo.com",
@@ -157,11 +162,6 @@
       "label": "sacramentochoral.org",
       "requests": 5,
       "unique_ip_count": 2
-    },
-    {
-      "label": "bing.com",
-      "requests": 3,
-      "unique_ip_count": 3
     }
   ]
 }
