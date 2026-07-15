@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T03:22:40.308811+00:00",
+  "generated_at": "2026-07-15T05:12:13.112077+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,13 +9,13 @@
     },
     {
       "label": "Desktop",
-      "requests": 4728,
-      "unique_ip_count": 747
+      "requests": 4733,
+      "unique_ip_count": 749
     },
     {
       "label": "Mobile",
-      "requests": 786,
-      "unique_ip_count": 334
+      "requests": 788,
+      "unique_ip_count": 335
     },
     {
       "label": "Bots",
@@ -36,12 +36,12 @@
     },
     {
       "label": "Safari",
-      "requests": 2786,
-      "unique_ip_count": 296
+      "requests": 2788,
+      "unique_ip_count": 297
     },
     {
       "label": "Chrome",
-      "requests": 1828,
+      "requests": 1830,
       "unique_ip_count": 599
     },
     {
@@ -56,13 +56,13 @@
     },
     {
       "label": "Other",
-      "requests": 413,
-      "unique_ip_count": 119
+      "requests": 415,
+      "unique_ip_count": 120
     },
     {
       "label": "Edge",
-      "requests": 39,
-      "unique_ip_count": 20
+      "requests": 40,
+      "unique_ip_count": 21
     },
     {
       "label": "Opera",
@@ -88,13 +88,13 @@
     },
     {
       "label": "Windows",
-      "requests": 1705,
-      "unique_ip_count": 468
+      "requests": 1710,
+      "unique_ip_count": 470
     },
     {
       "label": "iOS",
-      "requests": 631,
-      "unique_ip_count": 289
+      "requests": 633,
+      "unique_ip_count": 290
     },
     {
       "label": "Bots",
@@ -125,18 +125,18 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 9257,
-      "unique_ip_count": 1013
+      "requests": 9260,
+      "unique_ip_count": 1015
     },
     {
       "label": "Internal navigation",
-      "requests": 2997,
-      "unique_ip_count": 529
+      "requests": 3000,
+      "unique_ip_count": 530
     },
     {
       "label": "google.com",
-      "requests": 60,
-      "unique_ip_count": 38
+      "requests": 61,
+      "unique_ip_count": 39
     },
     {
       "label": "bing.com",
