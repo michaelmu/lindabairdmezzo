@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T16:40:23.764097+00:00",
+  "generated_at": "2026-07-17T17:39:18.816435+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,8 +9,8 @@
     },
     {
       "label": "Desktop",
-      "requests": 4725,
-      "unique_ip_count": 747
+      "requests": 4728,
+      "unique_ip_count": 748
     },
     {
       "label": "Mobile",
@@ -41,7 +41,7 @@
     },
     {
       "label": "Chrome",
-      "requests": 1842,
+      "requests": 1844,
       "unique_ip_count": 600
     },
     {
@@ -51,8 +51,8 @@
     },
     {
       "label": "Firefox",
-      "requests": 429,
-      "unique_ip_count": 96
+      "requests": 430,
+      "unique_ip_count": 97
     },
     {
       "label": "Other",
@@ -83,12 +83,12 @@
     },
     {
       "label": "macOS",
-      "requests": 2349,
-      "unique_ip_count": 92
+      "requests": 2350,
+      "unique_ip_count": 93
     },
     {
       "label": "Windows",
-      "requests": 1744,
+      "requests": 1746,
       "unique_ip_count": 475
     },
     {
@@ -130,7 +130,7 @@
     },
     {
       "label": "Internal navigation",
-      "requests": 3007,
+      "requests": 3009,
       "unique_ip_count": 535
     },
     {
@@ -144,14 +144,14 @@
       "unique_ip_count": 4
     },
     {
+      "label": "facebook.com",
+      "requests": 9,
+      "unique_ip_count": 9
+    },
+    {
       "label": "lindabairdmezzo.com",
       "requests": 9,
       "unique_ip_count": 6
-    },
-    {
-      "label": "facebook.com",
-      "requests": 8,
-      "unique_ip_count": 8
     },
     {
       "label": "lindabaird.com",
