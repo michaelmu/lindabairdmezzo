@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T18:18:23.637179+00:00",
+  "generated_at": "2026-07-20T20:39:40.849913+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,18 +9,18 @@
     },
     {
       "label": "Desktop",
-      "requests": 4673,
-      "unique_ip_count": 716
+      "requests": 4684,
+      "unique_ip_count": 717
     },
     {
       "label": "Mobile",
-      "requests": 805,
+      "requests": 806,
       "unique_ip_count": 337
     },
     {
       "label": "Bots",
-      "requests": 463,
-      "unique_ip_count": 246
+      "requests": 466,
+      "unique_ip_count": 247
     },
     {
       "label": "Tablet",
@@ -36,23 +36,23 @@
     },
     {
       "label": "Safari",
-      "requests": 2815,
+      "requests": 2816,
       "unique_ip_count": 308
     },
     {
       "label": "Chrome",
-      "requests": 1940,
-      "unique_ip_count": 601
+      "requests": 1950,
+      "unique_ip_count": 602
     },
     {
       "label": "Bots",
-      "requests": 463,
-      "unique_ip_count": 246
+      "requests": 466,
+      "unique_ip_count": 247
     },
     {
       "label": "Firefox",
-      "requests": 421,
-      "unique_ip_count": 94
+      "requests": 422,
+      "unique_ip_count": 95
     },
     {
       "label": "Other",
@@ -88,18 +88,18 @@
     },
     {
       "label": "Windows",
-      "requests": 1809,
-      "unique_ip_count": 461
+      "requests": 1820,
+      "unique_ip_count": 462
     },
     {
       "label": "iOS",
-      "requests": 658,
+      "requests": 659,
       "unique_ip_count": 295
     },
     {
       "label": "Bots",
-      "requests": 463,
-      "unique_ip_count": 246
+      "requests": 466,
+      "unique_ip_count": 247
     },
     {
       "label": "Other",
@@ -125,12 +125,12 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 11367,
-      "unique_ip_count": 976
+      "requests": 11374,
+      "unique_ip_count": 978
     },
     {
       "label": "Internal navigation",
-      "requests": 3012,
+      "requests": 3020,
       "unique_ip_count": 531
     },
     {
