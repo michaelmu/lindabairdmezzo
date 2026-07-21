@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T14:19:58.794532+00:00",
+  "generated_at": "2026-07-21T16:40:41.988931+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,18 +9,18 @@
     },
     {
       "label": "Desktop",
-      "requests": 4666,
+      "requests": 4668,
       "unique_ip_count": 707
     },
     {
       "label": "Mobile",
-      "requests": 799,
+      "requests": 804,
       "unique_ip_count": 333
     },
     {
       "label": "Bots",
-      "requests": 461,
-      "unique_ip_count": 247
+      "requests": 463,
+      "unique_ip_count": 248
     },
     {
       "label": "Tablet",
@@ -36,18 +36,18 @@
     },
     {
       "label": "Safari",
-      "requests": 2810,
+      "requests": 2815,
       "unique_ip_count": 303
     },
     {
       "label": "Chrome",
-      "requests": 1941,
+      "requests": 1943,
       "unique_ip_count": 595
     },
     {
       "label": "Bots",
-      "requests": 461,
-      "unique_ip_count": 247
+      "requests": 463,
+      "unique_ip_count": 248
     },
     {
       "label": "Firefox",
@@ -88,18 +88,18 @@
     },
     {
       "label": "Windows",
-      "requests": 1818,
+      "requests": 1819,
       "unique_ip_count": 455
     },
     {
       "label": "iOS",
-      "requests": 655,
+      "requests": 660,
       "unique_ip_count": 292
     },
     {
       "label": "Bots",
-      "requests": 461,
-      "unique_ip_count": 247
+      "requests": 463,
+      "unique_ip_count": 248
     },
     {
       "label": "Other",
@@ -108,7 +108,7 @@
     },
     {
       "label": "Linux",
-      "requests": 178,
+      "requests": 179,
       "unique_ip_count": 78
     },
     {
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 11392,
-      "unique_ip_count": 967
+      "requests": 11395,
+      "unique_ip_count": 968
     },
     {
       "label": "Internal navigation",
-      "requests": 3012,
-      "unique_ip_count": 524
+      "requests": 3017,
+      "unique_ip_count": 525
     },
     {
       "label": "google.com",
@@ -154,14 +154,14 @@
       "unique_ip_count": 3
     },
     {
+      "label": "facebook.com",
+      "requests": 4,
+      "unique_ip_count": 3
+    },
+    {
       "label": "sacramentochoral.org",
       "requests": 4,
       "unique_ip_count": 2
-    },
-    {
-      "label": "facebook.com",
-      "requests": 3,
-      "unique_ip_count": 3
     }
   ]
 }
