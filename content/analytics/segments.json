@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T09:38:29.468806+00:00",
+  "generated_at": "2026-07-21T11:59:00.581958+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,18 +9,18 @@
     },
     {
       "label": "Desktop",
-      "requests": 4657,
+      "requests": 4660,
       "unique_ip_count": 704
     },
     {
       "label": "Mobile",
-      "requests": 797,
+      "requests": 799,
       "unique_ip_count": 333
     },
     {
       "label": "Bots",
-      "requests": 454,
-      "unique_ip_count": 243
+      "requests": 459,
+      "unique_ip_count": 246
     },
     {
       "label": "Tablet",
@@ -36,18 +36,18 @@
     },
     {
       "label": "Safari",
-      "requests": 2808,
+      "requests": 2810,
       "unique_ip_count": 303
     },
     {
       "label": "Chrome",
-      "requests": 1932,
+      "requests": 1935,
       "unique_ip_count": 592
     },
     {
       "label": "Bots",
-      "requests": 454,
-      "unique_ip_count": 243
+      "requests": 459,
+      "unique_ip_count": 246
     },
     {
       "label": "Firefox",
@@ -88,18 +88,18 @@
     },
     {
       "label": "Windows",
-      "requests": 1810,
+      "requests": 1813,
       "unique_ip_count": 453
     },
     {
       "label": "iOS",
-      "requests": 653,
+      "requests": 655,
       "unique_ip_count": 292
     },
     {
       "label": "Bots",
-      "requests": 454,
-      "unique_ip_count": 243
+      "requests": 459,
+      "unique_ip_count": 246
     },
     {
       "label": "Other",
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 11382,
-      "unique_ip_count": 961
+      "requests": 11387,
+      "unique_ip_count": 963
     },
     {
       "label": "Internal navigation",
-      "requests": 3005,
-      "unique_ip_count": 522
+      "requests": 3009,
+      "unique_ip_count": 523
     },
     {
       "label": "google.com",
@@ -150,8 +150,8 @@
     },
     {
       "label": "lindabaird.com",
-      "requests": 4,
-      "unique_ip_count": 2
+      "requests": 5,
+      "unique_ip_count": 3
     },
     {
       "label": "sacramentochoral.org",
