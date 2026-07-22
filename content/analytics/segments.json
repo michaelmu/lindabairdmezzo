@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T12:02:46.026858+00:00",
+  "generated_at": "2026-07-22T14:20:39.673833+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,18 +9,18 @@
     },
     {
       "label": "Desktop",
-      "requests": 4653,
-      "unique_ip_count": 691
+      "requests": 4659,
+      "unique_ip_count": 692
     },
     {
       "label": "Mobile",
-      "requests": 805,
-      "unique_ip_count": 337
+      "requests": 810,
+      "unique_ip_count": 338
     },
     {
       "label": "Bots",
-      "requests": 465,
-      "unique_ip_count": 252
+      "requests": 469,
+      "unique_ip_count": 255
     },
     {
       "label": "Tablet",
@@ -36,18 +36,18 @@
     },
     {
       "label": "Safari",
-      "requests": 2810,
-      "unique_ip_count": 306
+      "requests": 2815,
+      "unique_ip_count": 307
     },
     {
       "label": "Chrome",
-      "requests": 1937,
-      "unique_ip_count": 585
+      "requests": 1943,
+      "unique_ip_count": 586
     },
     {
       "label": "Bots",
-      "requests": 465,
-      "unique_ip_count": 252
+      "requests": 469,
+      "unique_ip_count": 255
     },
     {
       "label": "Firefox",
@@ -88,18 +88,18 @@
     },
     {
       "label": "Windows",
-      "requests": 1813,
-      "unique_ip_count": 447
+      "requests": 1819,
+      "unique_ip_count": 448
     },
     {
       "label": "iOS",
-      "requests": 655,
-      "unique_ip_count": 295
+      "requests": 660,
+      "unique_ip_count": 296
     },
     {
       "label": "Bots",
-      "requests": 465,
-      "unique_ip_count": 252
+      "requests": 469,
+      "unique_ip_count": 255
     },
     {
       "label": "Other",
@@ -120,13 +120,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 11488,
-      "unique_ip_count": 964
+      "requests": 11494,
+      "unique_ip_count": 969
     },
     {
       "label": "Internal navigation",
-      "requests": 2998,
-      "unique_ip_count": 516
+      "requests": 3007,
+      "unique_ip_count": 517
     },
     {
       "label": "google.com",
