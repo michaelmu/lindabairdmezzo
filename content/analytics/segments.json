@@ -1,63 +1,63 @@
 {
-  "generated_at": "2026-07-25T23:10:54.938117+00:00",
+  "generated_at": "2026-07-26T00:11:53.626274+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Unknown",
-      "requests": 10361,
-      "unique_ip_count": 61
+      "requests": 10135,
+      "unique_ip_count": 59
     },
     {
       "label": "Desktop",
-      "requests": 4890,
-      "unique_ip_count": 709
+      "requests": 4825,
+      "unique_ip_count": 685
     },
     {
       "label": "Mobile",
-      "requests": 820,
-      "unique_ip_count": 343
+      "requests": 798,
+      "unique_ip_count": 338
     },
     {
       "label": "Bots",
-      "requests": 487,
-      "unique_ip_count": 258
+      "requests": 471,
+      "unique_ip_count": 250
     },
     {
       "label": "Tablet",
-      "requests": 26,
-      "unique_ip_count": 10
+      "requests": 25,
+      "unique_ip_count": 9
     }
   ],
   "browsers": [
     {
       "label": "Unknown",
-      "requests": 10361,
-      "unique_ip_count": 61
+      "requests": 10135,
+      "unique_ip_count": 59
     },
     {
       "label": "Safari",
-      "requests": 2832,
-      "unique_ip_count": 317
+      "requests": 2816,
+      "unique_ip_count": 313
     },
     {
       "label": "Chrome",
-      "requests": 2147,
-      "unique_ip_count": 593
+      "requests": 2092,
+      "unique_ip_count": 575
     },
     {
       "label": "Bots",
-      "requests": 487,
-      "unique_ip_count": 258
+      "requests": 471,
+      "unique_ip_count": 250
     },
     {
       "label": "Firefox",
-      "requests": 404,
-      "unique_ip_count": 80
+      "requests": 398,
+      "unique_ip_count": 75
     },
     {
       "label": "Other",
-      "requests": 268,
-      "unique_ip_count": 89
+      "requests": 260,
+      "unique_ip_count": 87
     },
     {
       "label": "Opera",
@@ -66,8 +66,8 @@
     },
     {
       "label": "Edge",
-      "requests": 27,
-      "unique_ip_count": 21
+      "requests": 24,
+      "unique_ip_count": 18
     },
     {
       "label": "Samsung Internet",
@@ -78,70 +78,65 @@
   "operating_systems": [
     {
       "label": "Unknown",
-      "requests": 10361,
-      "unique_ip_count": 61
+      "requests": 10135,
+      "unique_ip_count": 59
     },
     {
       "label": "macOS",
-      "requests": 2323,
-      "unique_ip_count": 94
+      "requests": 2324,
+      "unique_ip_count": 95
     },
     {
       "label": "Windows",
-      "requests": 2050,
-      "unique_ip_count": 451
+      "requests": 2005,
+      "unique_ip_count": 435
     },
     {
       "label": "iOS",
-      "requests": 673,
-      "unique_ip_count": 304
+      "requests": 655,
+      "unique_ip_count": 299
     },
     {
       "label": "Bots",
-      "requests": 487,
-      "unique_ip_count": 258
+      "requests": 471,
+      "unique_ip_count": 250
     },
     {
       "label": "Other",
-      "requests": 334,
-      "unique_ip_count": 123
+      "requests": 322,
+      "unique_ip_count": 118
     },
     {
       "label": "Linux",
-      "requests": 183,
-      "unique_ip_count": 76
+      "requests": 174,
+      "unique_ip_count": 72
     },
     {
       "label": "Android",
-      "requests": 173,
-      "unique_ip_count": 69
+      "requests": 168,
+      "unique_ip_count": 67
     }
   ],
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 13491,
-      "unique_ip_count": 1017
+      "requests": 13209,
+      "unique_ip_count": 988
     },
     {
       "label": "Internal navigation",
-      "requests": 2978,
-      "unique_ip_count": 507
+      "requests": 2935,
+      "unique_ip_count": 496
     },
     {
       "label": "google.com",
-      "requests": 64,
-      "unique_ip_count": 42
+      "requests": 63,
+      "unique_ip_count": 41
     },
     {
       "label": "bing.com",
       "requests": 8,
       "unique_ip_count": 2
-    },
-    {
-      "label": "lindabairdmezzo.com",
-      "requests": 5,
-      "unique_ip_count": 4
     },
     {
       "label": "lindabaird.com",
@@ -157,6 +152,11 @@
       "label": "osdzc.com",
       "requests": 4,
       "unique_ip_count": 2
+    },
+    {
+      "label": "lindabairdmezzo.com",
+      "requests": 3,
+      "unique_ip_count": 3
     }
   ]
 }
