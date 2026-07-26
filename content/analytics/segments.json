@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T06:47:51.964077+00:00",
+  "generated_at": "2026-07-26T09:23:06.953822+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,12 +9,12 @@
     },
     {
       "label": "Desktop",
-      "requests": 4842,
-      "unique_ip_count": 690
+      "requests": 4850,
+      "unique_ip_count": 691
     },
     {
       "label": "Mobile",
-      "requests": 803,
+      "requests": 805,
       "unique_ip_count": 339
     },
     {
@@ -36,13 +36,13 @@
     },
     {
       "label": "Safari",
-      "requests": 2820,
+      "requests": 2822,
       "unique_ip_count": 313
     },
     {
       "label": "Chrome",
-      "requests": 2109,
-      "unique_ip_count": 580
+      "requests": 2117,
+      "unique_ip_count": 581
     },
     {
       "label": "Bots",
@@ -88,12 +88,12 @@
     },
     {
       "label": "Windows",
-      "requests": 2019,
-      "unique_ip_count": 437
+      "requests": 2027,
+      "unique_ip_count": 438
     },
     {
       "label": "iOS",
-      "requests": 659,
+      "requests": 661,
       "unique_ip_count": 299
     },
     {
@@ -120,12 +120,12 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 13264,
+      "requests": 13266,
       "unique_ip_count": 992
     },
     {
       "label": "Internal navigation",
-      "requests": 2950,
+      "requests": 2951,
       "unique_ip_count": 499
     },
     {
@@ -137,6 +137,11 @@
       "label": "bing.com",
       "requests": 8,
       "unique_ip_count": 2
+    },
+    {
+      "label": "binance.com",
+      "requests": 7,
+      "unique_ip_count": 1
     },
     {
       "label": "lindabaird.com",
@@ -152,11 +157,6 @@
       "label": "osdzc.com",
       "requests": 4,
       "unique_ip_count": 2
-    },
-    {
-      "label": "lindabairdmezzo.com",
-      "requests": 3,
-      "unique_ip_count": 3
     }
   ]
 }
