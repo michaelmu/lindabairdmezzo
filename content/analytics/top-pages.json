@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T18:11:42.520063+00:00",
+  "generated_at": "2026-07-26T19:33:16.582542+00:00",
   "window_days": 30,
   "pages": [
     {
@@ -39,16 +39,16 @@
       "requests": 45
     },
     {
+      "path": "/.env",
+      "requests": 43
+    },
+    {
       "path": "//",
       "requests": 43
     },
     {
       "path": "/file.php",
       "requests": 43
-    },
-    {
-      "path": "/.env",
-      "requests": 42
     }
   ]
 }
