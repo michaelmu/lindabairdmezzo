@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T18:44:03.977213+00:00",
+  "generated_at": "2026-07-30T20:34:20.983980+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,18 +9,18 @@
     },
     {
       "label": "Desktop",
-      "requests": 2722,
-      "unique_ip_count": 707
+      "requests": 2727,
+      "unique_ip_count": 709
     },
     {
       "label": "Mobile",
-      "requests": 824,
+      "requests": 826,
       "unique_ip_count": 340
     },
     {
       "label": "Bots",
-      "requests": 500,
-      "unique_ip_count": 249
+      "requests": 501,
+      "unique_ip_count": 250
     },
     {
       "label": "Tablet",
@@ -36,18 +36,18 @@
     },
     {
       "label": "Chrome",
-      "requests": 2395,
-      "unique_ip_count": 598
+      "requests": 2400,
+      "unique_ip_count": 600
     },
     {
       "label": "Safari",
-      "requests": 720,
+      "requests": 722,
       "unique_ip_count": 317
     },
     {
       "label": "Bots",
-      "requests": 500,
-      "unique_ip_count": 249
+      "requests": 501,
+      "unique_ip_count": 250
     },
     {
       "label": "Other",
@@ -83,18 +83,18 @@
     },
     {
       "label": "Windows",
-      "requests": 1972,
-      "unique_ip_count": 452
+      "requests": 1976,
+      "unique_ip_count": 453
     },
     {
       "label": "iOS",
-      "requests": 672,
+      "requests": 674,
       "unique_ip_count": 302
     },
     {
       "label": "Bots",
-      "requests": 500,
-      "unique_ip_count": 249
+      "requests": 501,
+      "unique_ip_count": 250
     },
     {
       "label": "Other",
@@ -103,8 +103,8 @@
     },
     {
       "label": "macOS",
-      "requests": 236,
-      "unique_ip_count": 101
+      "requests": 237,
+      "unique_ip_count": 102
     },
     {
       "label": "Linux",
@@ -120,12 +120,12 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 13987,
-      "unique_ip_count": 1024
+      "requests": 13991,
+      "unique_ip_count": 1027
     },
     {
       "label": "Internal navigation",
-      "requests": 1377,
+      "requests": 1381,
       "unique_ip_count": 493
     },
     {
