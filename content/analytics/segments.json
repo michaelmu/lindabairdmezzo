@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T14:29:59.204466+00:00",
+  "generated_at": "2026-07-30T16:48:01.950357+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,18 +9,18 @@
     },
     {
       "label": "Desktop",
-      "requests": 2713,
-      "unique_ip_count": 705
+      "requests": 2717,
+      "unique_ip_count": 706
     },
     {
       "label": "Mobile",
-      "requests": 817,
-      "unique_ip_count": 336
+      "requests": 824,
+      "unique_ip_count": 340
     },
     {
       "label": "Bots",
-      "requests": 497,
-      "unique_ip_count": 247
+      "requests": 498,
+      "unique_ip_count": 248
     },
     {
       "label": "Tablet",
@@ -36,18 +36,18 @@
     },
     {
       "label": "Chrome",
-      "requests": 2386,
-      "unique_ip_count": 596
+      "requests": 2390,
+      "unique_ip_count": 597
     },
     {
       "label": "Safari",
-      "requests": 713,
-      "unique_ip_count": 313
+      "requests": 720,
+      "unique_ip_count": 317
     },
     {
       "label": "Bots",
-      "requests": 497,
-      "unique_ip_count": 247
+      "requests": 498,
+      "unique_ip_count": 248
     },
     {
       "label": "Other",
@@ -83,18 +83,18 @@
     },
     {
       "label": "Windows",
-      "requests": 1966,
-      "unique_ip_count": 451
+      "requests": 1970,
+      "unique_ip_count": 452
     },
     {
       "label": "iOS",
-      "requests": 665,
-      "unique_ip_count": 298
+      "requests": 672,
+      "unique_ip_count": 302
     },
     {
       "label": "Bots",
-      "requests": 497,
-      "unique_ip_count": 247
+      "requests": 498,
+      "unique_ip_count": 248
     },
     {
       "label": "Other",
@@ -120,13 +120,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 13896,
-      "unique_ip_count": 1017
+      "requests": 13901,
+      "unique_ip_count": 1022
     },
     {
       "label": "Internal navigation",
-      "requests": 1366,
-      "unique_ip_count": 489
+      "requests": 1373,
+      "unique_ip_count": 492
     },
     {
       "label": "google.com",
