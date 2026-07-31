@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-07-31T16:56:07.587721+00:00",
+  "generated_at": "2026-07-31T18:44:11.511442+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Unknown",
-      "requests": 11304,
-      "unique_ip_count": 66
+      "requests": 11411,
+      "unique_ip_count": 67
     },
     {
       "label": "Desktop",
-      "requests": 2772,
-      "unique_ip_count": 717
+      "requests": 2776,
+      "unique_ip_count": 719
     },
     {
       "label": "Mobile",
-      "requests": 832,
+      "requests": 834,
       "unique_ip_count": 346
     },
     {
@@ -31,17 +31,17 @@
   "browsers": [
     {
       "label": "Unknown",
-      "requests": 11304,
-      "unique_ip_count": 66
+      "requests": 11411,
+      "unique_ip_count": 67
     },
     {
       "label": "Chrome",
-      "requests": 2428,
-      "unique_ip_count": 609
+      "requests": 2432,
+      "unique_ip_count": 611
     },
     {
       "label": "Safari",
-      "requests": 723,
+      "requests": 725,
       "unique_ip_count": 321
     },
     {
@@ -78,17 +78,17 @@
   "operating_systems": [
     {
       "label": "Unknown",
-      "requests": 11304,
-      "unique_ip_count": 66
+      "requests": 11411,
+      "unique_ip_count": 67
     },
     {
       "label": "Windows",
-      "requests": 2024,
-      "unique_ip_count": 462
+      "requests": 2028,
+      "unique_ip_count": 464
     },
     {
       "label": "iOS",
-      "requests": 675,
+      "requests": 677,
       "unique_ip_count": 305
     },
     {
@@ -120,18 +120,18 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 13907,
-      "unique_ip_count": 1029
+      "requests": 14016,
+      "unique_ip_count": 1031
     },
     {
       "label": "Internal navigation",
-      "requests": 1394,
+      "requests": 1397,
       "unique_ip_count": 499
     },
     {
       "label": "google.com",
-      "requests": 64,
-      "unique_ip_count": 42
+      "requests": 65,
+      "unique_ip_count": 43
     },
     {
       "label": "bing.com",
