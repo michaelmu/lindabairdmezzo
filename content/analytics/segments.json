@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-01T13:53:02.721760+00:00",
+  "generated_at": "2026-08-01T15:17:38.122712+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Unknown",
-      "requests": 11210,
-      "unique_ip_count": 66
+      "requests": 11277,
+      "unique_ip_count": 67
     },
     {
       "label": "Desktop",
-      "requests": 2783,
+      "requests": 2788,
       "unique_ip_count": 718
     },
     {
@@ -19,8 +19,8 @@
     },
     {
       "label": "Bots",
-      "requests": 478,
-      "unique_ip_count": 245
+      "requests": 480,
+      "unique_ip_count": 246
     },
     {
       "label": "Tablet",
@@ -31,12 +31,12 @@
   "browsers": [
     {
       "label": "Unknown",
-      "requests": 11210,
-      "unique_ip_count": 66
+      "requests": 11277,
+      "unique_ip_count": 67
     },
     {
       "label": "Chrome",
-      "requests": 2442,
+      "requests": 2447,
       "unique_ip_count": 613
     },
     {
@@ -46,8 +46,8 @@
     },
     {
       "label": "Bots",
-      "requests": 478,
-      "unique_ip_count": 245
+      "requests": 480,
+      "unique_ip_count": 246
     },
     {
       "label": "Other",
@@ -78,12 +78,12 @@
   "operating_systems": [
     {
       "label": "Unknown",
-      "requests": 11210,
-      "unique_ip_count": 66
+      "requests": 11277,
+      "unique_ip_count": 67
     },
     {
       "label": "Windows",
-      "requests": 2038,
+      "requests": 2043,
       "unique_ip_count": 464
     },
     {
@@ -93,8 +93,8 @@
     },
     {
       "label": "Bots",
-      "requests": 478,
-      "unique_ip_count": 245
+      "requests": 480,
+      "unique_ip_count": 246
     },
     {
       "label": "Other",
@@ -120,12 +120,12 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 13824,
-      "unique_ip_count": 1026
+      "requests": 13896,
+      "unique_ip_count": 1028
     },
     {
       "label": "Internal navigation",
-      "requests": 1387,
+      "requests": 1389,
       "unique_ip_count": 491
     },
     {
