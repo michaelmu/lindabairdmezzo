@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T00:10:42.837770+00:00",
+  "generated_at": "2026-08-02T03:51:09.023316+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,17 +9,17 @@
     },
     {
       "label": "Desktop",
-      "requests": 2787,
-      "unique_ip_count": 705
+      "requests": 2803,
+      "unique_ip_count": 707
     },
     {
       "label": "Mobile",
-      "requests": 809,
-      "unique_ip_count": 338
+      "requests": 813,
+      "unique_ip_count": 339
     },
     {
       "label": "Bots",
-      "requests": 471,
+      "requests": 474,
       "unique_ip_count": 241
     },
     {
@@ -36,17 +36,17 @@
     },
     {
       "label": "Chrome",
-      "requests": 2449,
-      "unique_ip_count": 605
+      "requests": 2465,
+      "unique_ip_count": 607
     },
     {
       "label": "Safari",
-      "requests": 701,
-      "unique_ip_count": 310
+      "requests": 705,
+      "unique_ip_count": 311
     },
     {
       "label": "Bots",
-      "requests": 471,
+      "requests": 474,
       "unique_ip_count": 241
     },
     {
@@ -83,17 +83,17 @@
     },
     {
       "label": "Windows",
-      "requests": 2059,
+      "requests": 2063,
       "unique_ip_count": 458
     },
     {
       "label": "iOS",
-      "requests": 655,
-      "unique_ip_count": 296
+      "requests": 659,
+      "unique_ip_count": 297
     },
     {
       "label": "Bots",
-      "requests": 471,
+      "requests": 474,
       "unique_ip_count": 241
     },
     {
@@ -103,8 +103,8 @@
     },
     {
       "label": "macOS",
-      "requests": 223,
-      "unique_ip_count": 96
+      "requests": 235,
+      "unique_ip_count": 98
     },
     {
       "label": "Linux",
@@ -120,12 +120,12 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 14069,
-      "unique_ip_count": 1011
+      "requests": 14087,
+      "unique_ip_count": 1014
     },
     {
       "label": "Internal navigation",
-      "requests": 1350,
+      "requests": 1355,
       "unique_ip_count": 481
     },
     {
