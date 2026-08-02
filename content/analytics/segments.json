@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T17:14:06.759153+00:00",
+  "generated_at": "2026-08-02T18:10:48.937947+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,13 +9,13 @@
     },
     {
       "label": "Desktop",
-      "requests": 2851,
-      "unique_ip_count": 724
+      "requests": 2855,
+      "unique_ip_count": 726
     },
     {
       "label": "Mobile",
-      "requests": 821,
-      "unique_ip_count": 341
+      "requests": 822,
+      "unique_ip_count": 342
     },
     {
       "label": "Bots",
@@ -36,8 +36,8 @@
     },
     {
       "label": "Chrome",
-      "requests": 2510,
-      "unique_ip_count": 622
+      "requests": 2514,
+      "unique_ip_count": 624
     },
     {
       "label": "Safari",
@@ -51,8 +51,8 @@
     },
     {
       "label": "Other",
-      "requests": 248,
-      "unique_ip_count": 88
+      "requests": 249,
+      "unique_ip_count": 89
     },
     {
       "label": "Firefox",
@@ -83,8 +83,8 @@
     },
     {
       "label": "Windows",
-      "requests": 2105,
-      "unique_ip_count": 471
+      "requests": 2108,
+      "unique_ip_count": 472
     },
     {
       "label": "iOS",
@@ -98,8 +98,8 @@
     },
     {
       "label": "Other",
-      "requests": 311,
-      "unique_ip_count": 119
+      "requests": 312,
+      "unique_ip_count": 120
     },
     {
       "label": "macOS",
@@ -113,25 +113,25 @@
     },
     {
       "label": "Android",
-      "requests": 184,
-      "unique_ip_count": 67
+      "requests": 185,
+      "unique_ip_count": 68
     }
   ],
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 14285,
-      "unique_ip_count": 1025
+      "requests": 14286,
+      "unique_ip_count": 1026
     },
     {
       "label": "Internal navigation",
-      "requests": 1397,
-      "unique_ip_count": 493
+      "requests": 1400,
+      "unique_ip_count": 494
     },
     {
       "label": "google.com",
-      "requests": 64,
-      "unique_ip_count": 42
+      "requests": 65,
+      "unique_ip_count": 43
     },
     {
       "label": "bing.com",
