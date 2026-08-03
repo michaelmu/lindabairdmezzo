@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T07:44:55.231544+00:00",
+  "generated_at": "2026-08-03T11:42:48.194844+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,18 +9,18 @@
     },
     {
       "label": "Desktop",
-      "requests": 2821,
-      "unique_ip_count": 713
+      "requests": 2830,
+      "unique_ip_count": 717
     },
     {
       "label": "Mobile",
-      "requests": 808,
+      "requests": 812,
       "unique_ip_count": 343
     },
     {
       "label": "Bots",
-      "requests": 476,
-      "unique_ip_count": 242
+      "requests": 482,
+      "unique_ip_count": 245
     },
     {
       "label": "Tablet",
@@ -36,18 +36,18 @@
     },
     {
       "label": "Chrome",
-      "requests": 2491,
-      "unique_ip_count": 611
+      "requests": 2498,
+      "unique_ip_count": 613
     },
     {
       "label": "Safari",
-      "requests": 702,
+      "requests": 706,
       "unique_ip_count": 315
     },
     {
       "label": "Bots",
-      "requests": 476,
-      "unique_ip_count": 242
+      "requests": 482,
+      "unique_ip_count": 245
     },
     {
       "label": "Other",
@@ -66,8 +66,8 @@
     },
     {
       "label": "Edge",
-      "requests": 42,
-      "unique_ip_count": 18
+      "requests": 44,
+      "unique_ip_count": 20
     },
     {
       "label": "Samsung Internet",
@@ -83,18 +83,18 @@
     },
     {
       "label": "Windows",
-      "requests": 2084,
-      "unique_ip_count": 458
+      "requests": 2093,
+      "unique_ip_count": 462
     },
     {
       "label": "iOS",
-      "requests": 654,
+      "requests": 658,
       "unique_ip_count": 299
     },
     {
       "label": "Bots",
-      "requests": 476,
-      "unique_ip_count": 242
+      "requests": 482,
+      "unique_ip_count": 245
     },
     {
       "label": "Other",
@@ -120,13 +120,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 13719,
-      "unique_ip_count": 1024
+      "requests": 13729,
+      "unique_ip_count": 1030
     },
     {
       "label": "Internal navigation",
-      "requests": 1388,
-      "unique_ip_count": 490
+      "requests": 1397,
+      "unique_ip_count": 492
     },
     {
       "label": "google.com",
