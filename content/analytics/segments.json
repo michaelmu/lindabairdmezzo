@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T00:11:39.188109+00:00",
+  "generated_at": "2026-08-03T03:52:39.429594+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,18 +9,18 @@
     },
     {
       "label": "Desktop",
-      "requests": 2806,
-      "unique_ip_count": 709
+      "requests": 2810,
+      "unique_ip_count": 711
     },
     {
       "label": "Mobile",
-      "requests": 804,
-      "unique_ip_count": 341
+      "requests": 806,
+      "unique_ip_count": 342
     },
     {
       "label": "Bots",
-      "requests": 471,
-      "unique_ip_count": 241
+      "requests": 473,
+      "unique_ip_count": 242
     },
     {
       "label": "Tablet",
@@ -36,23 +36,23 @@
     },
     {
       "label": "Chrome",
-      "requests": 2478,
-      "unique_ip_count": 608
+      "requests": 2480,
+      "unique_ip_count": 609
     },
     {
       "label": "Safari",
-      "requests": 698,
-      "unique_ip_count": 313
+      "requests": 700,
+      "unique_ip_count": 314
     },
     {
       "label": "Bots",
-      "requests": 471,
-      "unique_ip_count": 241
+      "requests": 473,
+      "unique_ip_count": 242
     },
     {
       "label": "Other",
-      "requests": 241,
-      "unique_ip_count": 88
+      "requests": 243,
+      "unique_ip_count": 89
     },
     {
       "label": "Firefox",
@@ -83,23 +83,23 @@
     },
     {
       "label": "Windows",
-      "requests": 2071,
-      "unique_ip_count": 454
+      "requests": 2073,
+      "unique_ip_count": 456
     },
     {
       "label": "iOS",
-      "requests": 650,
-      "unique_ip_count": 297
+      "requests": 652,
+      "unique_ip_count": 298
     },
     {
       "label": "Bots",
-      "requests": 471,
-      "unique_ip_count": 241
+      "requests": 473,
+      "unique_ip_count": 242
     },
     {
       "label": "Other",
-      "requests": 303,
-      "unique_ip_count": 118
+      "requests": 305,
+      "unique_ip_count": 119
     },
     {
       "label": "macOS",
@@ -120,13 +120,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 13702,
-      "unique_ip_count": 1018
+      "requests": 13708,
+      "unique_ip_count": 1021
     },
     {
       "label": "Internal navigation",
-      "requests": 1377,
-      "unique_ip_count": 485
+      "requests": 1379,
+      "unique_ip_count": 487
     },
     {
       "label": "google.com",
