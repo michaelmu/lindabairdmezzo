@@ -1,42 +1,42 @@
 {
-  "generated_at": "2026-08-07T11:56:01.590472+00:00",
+  "generated_at": "2026-08-07T13:37:24.918923+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 3059
+      "requests": 3074
     },
     {
       "path": "/wp-content/plugins/hellopress/wp_filemanager.php",
-      "requests": 93
+      "requests": 94
     },
     {
       "path": "/this_is_a_new_hello_world.php",
-      "requests": 92
+      "requests": 93
     },
     {
       "path": "/1.php",
-      "requests": 65
+      "requests": 66
     },
     {
       "path": "/wp-content/uploads/",
       "requests": 61
     },
     {
+      "path": "/classwithtostring.php",
+      "requests": 58
+    },
+    {
       "path": "/.env",
       "requests": 57
     },
     {
-      "path": "/classwithtostring.php",
+      "path": "/222.php",
       "requests": 57
     },
     {
-      "path": "/222.php",
-      "requests": 56
-    },
-    {
       "path": "/8.php",
-      "requests": 51
+      "requests": 52
     },
     {
       "path": "/about.php",
@@ -48,7 +48,7 @@
     },
     {
       "path": "/mac.php",
-      "requests": 49
+      "requests": 50
     }
   ]
 }
