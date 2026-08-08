@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T02:20:27.806819+00:00",
+  "generated_at": "2026-08-08T04:20:10.386547+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,17 +9,17 @@
     },
     {
       "label": "Desktop",
-      "requests": 3040,
-      "unique_ip_count": 711
+      "requests": 3046,
+      "unique_ip_count": 712
     },
     {
       "label": "Mobile",
-      "requests": 792,
-      "unique_ip_count": 346
+      "requests": 795,
+      "unique_ip_count": 348
     },
     {
       "label": "Bots",
-      "requests": 528,
+      "requests": 529,
       "unique_ip_count": 254
     },
     {
@@ -36,17 +36,17 @@
     },
     {
       "label": "Chrome",
-      "requests": 2560,
-      "unique_ip_count": 611
+      "requests": 2567,
+      "unique_ip_count": 613
     },
     {
       "label": "Safari",
-      "requests": 689,
-      "unique_ip_count": 315
+      "requests": 691,
+      "unique_ip_count": 316
     },
     {
       "label": "Bots",
-      "requests": 528,
+      "requests": 529,
       "unique_ip_count": 254
     },
     {
@@ -83,17 +83,17 @@
     },
     {
       "label": "Windows",
-      "requests": 2143,
-      "unique_ip_count": 461
+      "requests": 2149,
+      "unique_ip_count": 462
     },
     {
       "label": "iOS",
-      "requests": 651,
-      "unique_ip_count": 305
+      "requests": 653,
+      "unique_ip_count": 306
     },
     {
       "label": "Bots",
-      "requests": 528,
+      "requests": 529,
       "unique_ip_count": 254
     },
     {
@@ -113,20 +113,20 @@
     },
     {
       "label": "Android",
-      "requests": 172,
-      "unique_ip_count": 64
+      "requests": 173,
+      "unique_ip_count": 65
     }
   ],
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 14091,
-      "unique_ip_count": 1041
+      "requests": 14099,
+      "unique_ip_count": 1043
     },
     {
       "label": "Internal navigation",
-      "requests": 1372,
-      "unique_ip_count": 491
+      "requests": 1373,
+      "unique_ip_count": 492
     },
     {
       "label": "google.com",
