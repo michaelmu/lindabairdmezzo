@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-09T02:27:25.948440+00:00",
+  "generated_at": "2026-08-09T04:35:32.025013+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Unknown",
-      "requests": 11170,
-      "unique_ip_count": 65
+      "requests": 11447,
+      "unique_ip_count": 67
     },
     {
       "label": "Desktop",
@@ -14,13 +14,13 @@
     },
     {
       "label": "Mobile",
-      "requests": 787,
-      "unique_ip_count": 345
+      "requests": 789,
+      "unique_ip_count": 346
     },
     {
       "label": "Bots",
-      "requests": 542,
-      "unique_ip_count": 259
+      "requests": 545,
+      "unique_ip_count": 260
     },
     {
       "label": "Tablet",
@@ -31,23 +31,23 @@
   "browsers": [
     {
       "label": "Unknown",
-      "requests": 11170,
-      "unique_ip_count": 65
+      "requests": 11447,
+      "unique_ip_count": 67
     },
     {
       "label": "Chrome",
-      "requests": 2584,
-      "unique_ip_count": 618
+      "requests": 2585,
+      "unique_ip_count": 619
     },
     {
       "label": "Safari",
-      "requests": 682,
+      "requests": 683,
       "unique_ip_count": 312
     },
     {
       "label": "Bots",
-      "requests": 542,
-      "unique_ip_count": 259
+      "requests": 545,
+      "unique_ip_count": 260
     },
     {
       "label": "Other",
@@ -78,8 +78,8 @@
   "operating_systems": [
     {
       "label": "Unknown",
-      "requests": 11170,
-      "unique_ip_count": 65
+      "requests": 11447,
+      "unique_ip_count": 67
     },
     {
       "label": "Windows",
@@ -88,13 +88,13 @@
     },
     {
       "label": "iOS",
-      "requests": 645,
+      "requests": 646,
       "unique_ip_count": 303
     },
     {
       "label": "Bots",
-      "requests": 542,
-      "unique_ip_count": 259
+      "requests": 545,
+      "unique_ip_count": 260
     },
     {
       "label": "Other",
@@ -113,15 +113,15 @@
     },
     {
       "label": "Android",
-      "requests": 173,
-      "unique_ip_count": 65
+      "requests": 174,
+      "unique_ip_count": 66
     }
   ],
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 14080,
-      "unique_ip_count": 1046
+      "requests": 14361,
+      "unique_ip_count": 1049
     },
     {
       "label": "Internal navigation",
@@ -130,8 +130,8 @@
     },
     {
       "label": "google.com",
-      "requests": 53,
-      "unique_ip_count": 33
+      "requests": 54,
+      "unique_ip_count": 34
     },
     {
       "label": "lindabairdmezzo.com",
