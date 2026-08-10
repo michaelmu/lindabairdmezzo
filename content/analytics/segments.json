@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T21:00:59.154722+00:00",
+  "generated_at": "2026-08-10T21:56:57.910015+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,8 +9,8 @@
     },
     {
       "label": "Desktop",
-      "requests": 3078,
-      "unique_ip_count": 731
+      "requests": 3085,
+      "unique_ip_count": 736
     },
     {
       "label": "Mobile",
@@ -19,8 +19,8 @@
     },
     {
       "label": "Bots",
-      "requests": 567,
-      "unique_ip_count": 265
+      "requests": 571,
+      "unique_ip_count": 268
     },
     {
       "label": "Tablet",
@@ -36,8 +36,8 @@
     },
     {
       "label": "Chrome",
-      "requests": 2558,
-      "unique_ip_count": 621
+      "requests": 2563,
+      "unique_ip_count": 624
     },
     {
       "label": "Safari",
@@ -46,13 +46,13 @@
     },
     {
       "label": "Bots",
-      "requests": 567,
-      "unique_ip_count": 265
+      "requests": 571,
+      "unique_ip_count": 268
     },
     {
       "label": "Other",
-      "requests": 425,
-      "unique_ip_count": 100
+      "requests": 427,
+      "unique_ip_count": 102
     },
     {
       "label": "Firefox",
@@ -83,8 +83,8 @@
     },
     {
       "label": "Windows",
-      "requests": 2193,
-      "unique_ip_count": 466
+      "requests": 2198,
+      "unique_ip_count": 469
     },
     {
       "label": "iOS",
@@ -93,13 +93,13 @@
     },
     {
       "label": "Bots",
-      "requests": 567,
-      "unique_ip_count": 265
+      "requests": 571,
+      "unique_ip_count": 268
     },
     {
       "label": "Other",
-      "requests": 464,
-      "unique_ip_count": 126
+      "requests": 466,
+      "unique_ip_count": 128
     },
     {
       "label": "macOS",
@@ -120,12 +120,12 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 15221,
-      "unique_ip_count": 1079
+      "requests": 15230,
+      "unique_ip_count": 1087
     },
     {
       "label": "Internal navigation",
-      "requests": 1432,
+      "requests": 1434,
       "unique_ip_count": 501
     },
     {
