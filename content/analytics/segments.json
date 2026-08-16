@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-16T16:41:02.706107+00:00",
+  "generated_at": "2026-08-16T17:32:45.154916+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,17 +9,17 @@
     },
     {
       "label": "Desktop",
-      "requests": 3184,
-      "unique_ip_count": 734
+      "requests": 3186,
+      "unique_ip_count": 735
     },
     {
       "label": "Mobile",
-      "requests": 720,
-      "unique_ip_count": 313
+      "requests": 723,
+      "unique_ip_count": 314
     },
     {
       "label": "Bots",
-      "requests": 621,
+      "requests": 623,
       "unique_ip_count": 291
     },
     {
@@ -36,17 +36,17 @@
     },
     {
       "label": "Chrome",
-      "requests": 2575,
-      "unique_ip_count": 625
+      "requests": 2577,
+      "unique_ip_count": 626
     },
     {
       "label": "Safari",
-      "requests": 643,
-      "unique_ip_count": 281
+      "requests": 646,
+      "unique_ip_count": 282
     },
     {
       "label": "Bots",
-      "requests": 621,
+      "requests": 623,
       "unique_ip_count": 291
     },
     {
@@ -83,18 +83,18 @@
     },
     {
       "label": "Windows",
-      "requests": 2231,
+      "requests": 2232,
       "unique_ip_count": 472
     },
     {
       "label": "Bots",
-      "requests": 621,
+      "requests": 623,
       "unique_ip_count": 291
     },
     {
       "label": "iOS",
-      "requests": 598,
-      "unique_ip_count": 268
+      "requests": 601,
+      "unique_ip_count": 269
     },
     {
       "label": "Other",
@@ -108,8 +108,8 @@
     },
     {
       "label": "Linux",
-      "requests": 178,
-      "unique_ip_count": 85
+      "requests": 179,
+      "unique_ip_count": 86
     },
     {
       "label": "Android",
@@ -125,12 +125,12 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 17078,
-      "unique_ip_count": 1114
+      "requests": 17084,
+      "unique_ip_count": 1116
     },
     {
       "label": "Internal navigation",
-      "requests": 1388,
+      "requests": 1389,
       "unique_ip_count": 468
     },
     {
