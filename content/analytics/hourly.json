@@ -1,12 +1,7 @@
 {
-  "generated_at": "2026-08-16T05:41:29.578429+00:00",
+  "generated_at": "2026-08-16T06:57:27.023164+00:00",
   "window_hours": 48,
   "hours": [
-    {
-      "hour": "2026-08-14T06:00:00Z",
-      "requests": 2,
-      "unique_ip_count": 1
-    },
     {
       "hour": "2026-08-14T07:00:00Z",
       "requests": 1,
@@ -241,6 +236,11 @@
       "hour": "2026-08-16T05:00:00Z",
       "requests": 156,
       "unique_ip_count": 3
+    },
+    {
+      "hour": "2026-08-16T06:00:00Z",
+      "requests": 2,
+      "unique_ip_count": 1
     }
   ]
 }
