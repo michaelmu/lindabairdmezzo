@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T21:34:29.004838+00:00",
+  "generated_at": "2026-08-22T22:36:58.357265+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,8 +9,8 @@
     },
     {
       "label": "Desktop",
-      "requests": 3237,
-      "unique_ip_count": 741
+      "requests": 3241,
+      "unique_ip_count": 743
     },
     {
       "label": "Mobile",
@@ -19,12 +19,12 @@
     },
     {
       "label": "Bots",
-      "requests": 649,
-      "unique_ip_count": 309
+      "requests": 654,
+      "unique_ip_count": 310
     },
     {
       "label": "Tablet",
-      "requests": 38,
+      "requests": 49,
       "unique_ip_count": 10
     }
   ],
@@ -36,13 +36,13 @@
     },
     {
       "label": "Chrome",
-      "requests": 2605,
-      "unique_ip_count": 621
+      "requests": 2620,
+      "unique_ip_count": 623
     },
     {
       "label": "Bots",
-      "requests": 649,
-      "unique_ip_count": 309
+      "requests": 654,
+      "unique_ip_count": 310
     },
     {
       "label": "Safari",
@@ -83,13 +83,13 @@
     },
     {
       "label": "Windows",
-      "requests": 2230,
-      "unique_ip_count": 467
+      "requests": 2233,
+      "unique_ip_count": 469
     },
     {
       "label": "Bots",
-      "requests": 649,
-      "unique_ip_count": 309
+      "requests": 654,
+      "unique_ip_count": 310
     },
     {
       "label": "iOS",
@@ -108,12 +108,12 @@
     },
     {
       "label": "Linux",
-      "requests": 187,
+      "requests": 188,
       "unique_ip_count": 89
     },
     {
       "label": "Android",
-      "requests": 166,
+      "requests": 177,
       "unique_ip_count": 66
     },
     {
@@ -125,8 +125,8 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 17380,
-      "unique_ip_count": 1144
+      "requests": 17389,
+      "unique_ip_count": 1147
     },
     {
       "label": "Internal navigation",
@@ -135,7 +135,7 @@
     },
     {
       "label": "google.com",
-      "requests": 63,
+      "requests": 74,
       "unique_ip_count": 37
     },
     {
