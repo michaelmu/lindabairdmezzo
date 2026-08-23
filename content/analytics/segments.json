@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-23T10:38:39.837386+00:00",
+  "generated_at": "2026-08-23T11:33:27.245624+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Unknown",
-      "requests": 13651,
-      "unique_ip_count": 105
+      "requests": 13869,
+      "unique_ip_count": 106
     },
     {
       "label": "Desktop",
-      "requests": 3132,
+      "requests": 3135,
       "unique_ip_count": 731
     },
     {
       "label": "Mobile",
-      "requests": 686,
-      "unique_ip_count": 302
+      "requests": 688,
+      "unique_ip_count": 303
     },
     {
       "label": "Bots",
@@ -31,12 +31,12 @@
   "browsers": [
     {
       "label": "Unknown",
-      "requests": 13651,
-      "unique_ip_count": 105
+      "requests": 13869,
+      "unique_ip_count": 106
     },
     {
       "label": "Chrome",
-      "requests": 2595,
+      "requests": 2598,
       "unique_ip_count": 618
     },
     {
@@ -46,8 +46,8 @@
     },
     {
       "label": "Safari",
-      "requests": 610,
-      "unique_ip_count": 267
+      "requests": 612,
+      "unique_ip_count": 268
     },
     {
       "label": "Other",
@@ -78,12 +78,12 @@
   "operating_systems": [
     {
       "label": "Unknown",
-      "requests": 13651,
-      "unique_ip_count": 105
+      "requests": 13869,
+      "unique_ip_count": 106
     },
     {
       "label": "Windows",
-      "requests": 2222,
+      "requests": 2225,
       "unique_ip_count": 471
     },
     {
@@ -93,8 +93,8 @@
     },
     {
       "label": "iOS",
-      "requests": 562,
-      "unique_ip_count": 252
+      "requests": 564,
+      "unique_ip_count": 253
     },
     {
       "label": "Other",
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 16620,
-      "unique_ip_count": 1133
+      "requests": 16839,
+      "unique_ip_count": 1135
     },
     {
       "label": "Internal navigation",
-      "requests": 1425,
-      "unique_ip_count": 470
+      "requests": 1429,
+      "unique_ip_count": 471
     },
     {
       "label": "google.com",
