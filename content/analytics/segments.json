@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T21:43:04.256025+00:00",
+  "generated_at": "2026-08-24T22:43:01.110690+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,13 +9,13 @@
     },
     {
       "label": "Desktop",
-      "requests": 3009,
-      "unique_ip_count": 747
+      "requests": 3016,
+      "unique_ip_count": 753
     },
     {
       "label": "Mobile",
-      "requests": 698,
-      "unique_ip_count": 310
+      "requests": 700,
+      "unique_ip_count": 312
     },
     {
       "label": "Bots",
@@ -36,8 +36,8 @@
     },
     {
       "label": "Chrome",
-      "requests": 2453,
-      "unique_ip_count": 623
+      "requests": 2455,
+      "unique_ip_count": 625
     },
     {
       "label": "Bots",
@@ -51,8 +51,8 @@
     },
     {
       "label": "Other",
-      "requests": 409,
-      "unique_ip_count": 95
+      "requests": 416,
+      "unique_ip_count": 101
     },
     {
       "label": "Firefox",
@@ -98,8 +98,8 @@
     },
     {
       "label": "Other",
-      "requests": 461,
-      "unique_ip_count": 118
+      "requests": 468,
+      "unique_ip_count": 124
     },
     {
       "label": "macOS",
@@ -108,8 +108,8 @@
     },
     {
       "label": "Android",
-      "requests": 178,
-      "unique_ip_count": 73
+      "requests": 180,
+      "unique_ip_count": 75
     },
     {
       "label": "Linux",
@@ -125,8 +125,8 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 17668,
-      "unique_ip_count": 1150
+      "requests": 17675,
+      "unique_ip_count": 1156
     },
     {
       "label": "Internal navigation",
@@ -159,7 +159,7 @@
       "unique_ip_count": 2
     },
     {
-      "label": "sacramentochoral.com",
+      "label": "m.facebook.com",
       "requests": 2,
       "unique_ip_count": 2
     }
