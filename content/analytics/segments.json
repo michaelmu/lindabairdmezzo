@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-08-26T11:43:30.022675+00:00",
+  "generated_at": "2026-08-26T13:15:44.675702+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Unknown",
-      "requests": 16645,
+      "requests": 16788,
       "unique_ip_count": 115
     },
     {
       "label": "Desktop",
-      "requests": 3033,
-      "unique_ip_count": 763
+      "requests": 3037,
+      "unique_ip_count": 766
     },
     {
       "label": "Mobile",
@@ -19,7 +19,7 @@
     },
     {
       "label": "Bots",
-      "requests": 668,
+      "requests": 669,
       "unique_ip_count": 314
     },
     {
@@ -31,17 +31,17 @@
   "browsers": [
     {
       "label": "Unknown",
-      "requests": 16645,
+      "requests": 16788,
       "unique_ip_count": 115
     },
     {
       "label": "Chrome",
-      "requests": 2437,
-      "unique_ip_count": 617
+      "requests": 2439,
+      "unique_ip_count": 618
     },
     {
       "label": "Bots",
-      "requests": 668,
+      "requests": 669,
       "unique_ip_count": 314
     },
     {
@@ -66,8 +66,8 @@
     },
     {
       "label": "Edge",
-      "requests": 63,
-      "unique_ip_count": 27
+      "requests": 65,
+      "unique_ip_count": 29
     },
     {
       "label": "Samsung Internet",
@@ -78,17 +78,17 @@
   "operating_systems": [
     {
       "label": "Unknown",
-      "requests": 16645,
+      "requests": 16788,
       "unique_ip_count": 115
     },
     {
       "label": "Windows",
-      "requests": 2085,
-      "unique_ip_count": 491
+      "requests": 2089,
+      "unique_ip_count": 494
     },
     {
       "label": "Bots",
-      "requests": 668,
+      "requests": 669,
       "unique_ip_count": 314
     },
     {
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 19483,
+      "requests": 19628,
       "unique_ip_count": 1157
     },
     {
       "label": "Internal navigation",
-      "requests": 1472,
-      "unique_ip_count": 486
+      "requests": 1473,
+      "unique_ip_count": 487
     },
     {
       "label": "google.com",
@@ -149,17 +149,17 @@
       "unique_ip_count": 3
     },
     {
+      "label": "johnbologni.com",
+      "requests": 3,
+      "unique_ip_count": 2
+    },
+    {
       "label": "facebook.com",
       "requests": 2,
       "unique_ip_count": 2
     },
     {
       "label": "m.facebook.com",
-      "requests": 2,
-      "unique_ip_count": 2
-    },
-    {
-      "label": "sacramentochoral.com",
       "requests": 2,
       "unique_ip_count": 2
     }
