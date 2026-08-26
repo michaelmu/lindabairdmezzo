@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-08-26T15:51:44.186516+00:00",
+  "generated_at": "2026-08-26T16:58:17.645877+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Unknown",
-      "requests": 16819,
+      "requests": 16908,
       "unique_ip_count": 115
     },
     {
       "label": "Desktop",
-      "requests": 3042,
-      "unique_ip_count": 769
+      "requests": 3046,
+      "unique_ip_count": 770
     },
     {
       "label": "Mobile",
-      "requests": 690,
+      "requests": 691,
       "unique_ip_count": 303
     },
     {
@@ -31,13 +31,13 @@
   "browsers": [
     {
       "label": "Unknown",
-      "requests": 16819,
+      "requests": 16908,
       "unique_ip_count": 115
     },
     {
       "label": "Chrome",
-      "requests": 2443,
-      "unique_ip_count": 620
+      "requests": 2447,
+      "unique_ip_count": 621
     },
     {
       "label": "Bots",
@@ -46,7 +46,7 @@
     },
     {
       "label": "Safari",
-      "requests": 616,
+      "requests": 617,
       "unique_ip_count": 268
     },
     {
@@ -78,12 +78,12 @@
   "operating_systems": [
     {
       "label": "Unknown",
-      "requests": 16819,
+      "requests": 16908,
       "unique_ip_count": 115
     },
     {
       "label": "Windows",
-      "requests": 2091,
+      "requests": 2094,
       "unique_ip_count": 494
     },
     {
@@ -93,7 +93,7 @@
     },
     {
       "label": "iOS",
-      "requests": 566,
+      "requests": 567,
       "unique_ip_count": 249
     },
     {
@@ -113,8 +113,8 @@
     },
     {
       "label": "Linux",
-      "requests": 171,
-      "unique_ip_count": 84
+      "requests": 172,
+      "unique_ip_count": 85
     },
     {
       "label": "ChromeOS",
@@ -125,12 +125,12 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 19663,
+      "requests": 19753,
       "unique_ip_count": 1158
     },
     {
       "label": "Internal navigation",
-      "requests": 1474,
+      "requests": 1477,
       "unique_ip_count": 488
     },
     {
@@ -159,7 +159,7 @@
       "unique_ip_count": 2
     },
     {
-      "label": "m.facebook.com",
+      "label": "lindabaird.com",
       "requests": 2,
       "unique_ip_count": 2
     }
