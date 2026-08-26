@@ -1,26 +1,26 @@
 {
-  "generated_at": "2026-08-26T19:18:31.108478+00:00",
+  "generated_at": "2026-08-26T23:31:03.961584+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Unknown",
-      "requests": 17087,
-      "unique_ip_count": 115
+      "requests": 17379,
+      "unique_ip_count": 116
     },
     {
       "label": "Desktop",
-      "requests": 3058,
-      "unique_ip_count": 775
+      "requests": 3080,
+      "unique_ip_count": 780
     },
     {
       "label": "Mobile",
-      "requests": 691,
-      "unique_ip_count": 303
+      "requests": 695,
+      "unique_ip_count": 306
     },
     {
       "label": "Bots",
-      "requests": 670,
-      "unique_ip_count": 315
+      "requests": 675,
+      "unique_ip_count": 318
     },
     {
       "label": "Tablet",
@@ -31,23 +31,23 @@
   "browsers": [
     {
       "label": "Unknown",
-      "requests": 17087,
-      "unique_ip_count": 115
+      "requests": 17379,
+      "unique_ip_count": 116
     },
     {
       "label": "Chrome",
-      "requests": 2457,
-      "unique_ip_count": 625
+      "requests": 2478,
+      "unique_ip_count": 629
     },
     {
       "label": "Bots",
-      "requests": 670,
-      "unique_ip_count": 315
+      "requests": 675,
+      "unique_ip_count": 318
     },
     {
       "label": "Safari",
-      "requests": 617,
-      "unique_ip_count": 268
+      "requests": 621,
+      "unique_ip_count": 271
     },
     {
       "label": "Other",
@@ -56,8 +56,8 @@
     },
     {
       "label": "Firefox",
-      "requests": 170,
-      "unique_ip_count": 87
+      "requests": 171,
+      "unique_ip_count": 88
     },
     {
       "label": "Opera",
@@ -78,23 +78,23 @@
   "operating_systems": [
     {
       "label": "Unknown",
-      "requests": 17087,
-      "unique_ip_count": 115
+      "requests": 17379,
+      "unique_ip_count": 116
     },
     {
       "label": "Windows",
-      "requests": 2104,
-      "unique_ip_count": 498
+      "requests": 2125,
+      "unique_ip_count": 502
     },
     {
       "label": "Bots",
-      "requests": 670,
-      "unique_ip_count": 315
+      "requests": 675,
+      "unique_ip_count": 318
     },
     {
       "label": "iOS",
-      "requests": 567,
-      "unique_ip_count": 249
+      "requests": 571,
+      "unique_ip_count": 252
     },
     {
       "label": "Other",
@@ -113,8 +113,8 @@
     },
     {
       "label": "Linux",
-      "requests": 172,
-      "unique_ip_count": 85
+      "requests": 173,
+      "unique_ip_count": 86
     },
     {
       "label": "ChromeOS",
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 19937,
-      "unique_ip_count": 1162
+      "requests": 20241,
+      "unique_ip_count": 1169
     },
     {
       "label": "Internal navigation",
-      "requests": 1483,
-      "unique_ip_count": 488
+      "requests": 1501,
+      "unique_ip_count": 493
     },
     {
       "label": "google.com",
@@ -144,13 +144,13 @@
       "unique_ip_count": 11
     },
     {
-      "label": "google.com.hk",
+      "label": "wecelebrities.com",
       "requests": 4,
-      "unique_ip_count": 3
+      "unique_ip_count": 4
     },
     {
-      "label": "wecelebrities.com",
-      "requests": 3,
+      "label": "google.com.hk",
+      "requests": 4,
       "unique_ip_count": 3
     },
     {
