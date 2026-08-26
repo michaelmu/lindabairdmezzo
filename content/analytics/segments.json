@@ -1,26 +1,26 @@
 {
-  "generated_at": "2026-08-25T23:36:21.790303+00:00",
+  "generated_at": "2026-08-26T01:57:14.315473+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Unknown",
-      "requests": 16453,
-      "unique_ip_count": 116
+      "requests": 16192,
+      "unique_ip_count": 114
     },
     {
       "label": "Desktop",
-      "requests": 3046,
-      "unique_ip_count": 756
+      "requests": 2998,
+      "unique_ip_count": 749
     },
     {
       "label": "Mobile",
-      "requests": 704,
-      "unique_ip_count": 310
+      "requests": 682,
+      "unique_ip_count": 303
     },
     {
       "label": "Bots",
-      "requests": 674,
-      "unique_ip_count": 315
+      "requests": 665,
+      "unique_ip_count": 312
     },
     {
       "label": "Tablet",
@@ -31,33 +31,33 @@
   "browsers": [
     {
       "label": "Unknown",
-      "requests": 16453,
-      "unique_ip_count": 116
+      "requests": 16192,
+      "unique_ip_count": 114
     },
     {
       "label": "Chrome",
-      "requests": 2462,
-      "unique_ip_count": 619
+      "requests": 2409,
+      "unique_ip_count": 609
     },
     {
       "label": "Bots",
-      "requests": 674,
-      "unique_ip_count": 315
+      "requests": 665,
+      "unique_ip_count": 312
     },
     {
       "label": "Safari",
-      "requests": 623,
-      "unique_ip_count": 272
+      "requests": 608,
+      "unique_ip_count": 268
     },
     {
       "label": "Other",
-      "requests": 407,
-      "unique_ip_count": 102
+      "requests": 404,
+      "unique_ip_count": 101
     },
     {
       "label": "Firefox",
-      "requests": 167,
-      "unique_ip_count": 84
+      "requests": 166,
+      "unique_ip_count": 83
     },
     {
       "label": "Opera",
@@ -66,8 +66,8 @@
     },
     {
       "label": "Edge",
-      "requests": 61,
-      "unique_ip_count": 25
+      "requests": 63,
+      "unique_ip_count": 27
     },
     {
       "label": "Samsung Internet",
@@ -78,27 +78,27 @@
   "operating_systems": [
     {
       "label": "Unknown",
-      "requests": 16453,
-      "unique_ip_count": 116
+      "requests": 16192,
+      "unique_ip_count": 114
     },
     {
       "label": "Windows",
-      "requests": 2100,
-      "unique_ip_count": 488
+      "requests": 2056,
+      "unique_ip_count": 482
     },
     {
       "label": "Bots",
-      "requests": 674,
-      "unique_ip_count": 315
+      "requests": 665,
+      "unique_ip_count": 312
     },
     {
       "label": "iOS",
-      "requests": 573,
-      "unique_ip_count": 253
+      "requests": 558,
+      "unique_ip_count": 249
     },
     {
       "label": "Other",
-      "requests": 452,
+      "requests": 450,
       "unique_ip_count": 122
     },
     {
@@ -108,13 +108,13 @@
     },
     {
       "label": "Android",
-      "requests": 181,
-      "unique_ip_count": 76
+      "requests": 174,
+      "unique_ip_count": 73
     },
     {
       "label": "Linux",
-      "requests": 171,
-      "unique_ip_count": 85
+      "requests": 169,
+      "unique_ip_count": 83
     },
     {
       "label": "ChromeOS",
@@ -125,28 +125,23 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 19309,
-      "unique_ip_count": 1156
+      "requests": 19007,
+      "unique_ip_count": 1144
     },
     {
       "label": "Internal navigation",
-      "requests": 1481,
-      "unique_ip_count": 487
+      "requests": 1452,
+      "unique_ip_count": 482
     },
     {
       "label": "google.com",
-      "requests": 76,
-      "unique_ip_count": 39
+      "requests": 75,
+      "unique_ip_count": 38
     },
     {
       "label": "lindabairdmezzo.com",
       "requests": 16,
       "unique_ip_count": 11
-    },
-    {
-      "label": "binance.com",
-      "requests": 7,
-      "unique_ip_count": 1
     },
     {
       "label": "google.com.hk",
@@ -160,6 +155,11 @@
     },
     {
       "label": "m.facebook.com",
+      "requests": 2,
+      "unique_ip_count": 2
+    },
+    {
+      "label": "sacramentochoral.com",
       "requests": 2,
       "unique_ip_count": 2
     }
