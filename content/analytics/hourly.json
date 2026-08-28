@@ -1,52 +1,7 @@
 {
-  "generated_at": "2026-08-27T20:29:32.919335+00:00",
+  "generated_at": "2026-08-28T05:22:36.878451+00:00",
   "window_hours": 48,
   "hours": [
-    {
-      "hour": "2026-08-25T21:00:00Z",
-      "requests": 6,
-      "unique_ip_count": 5
-    },
-    {
-      "hour": "2026-08-25T22:00:00Z",
-      "requests": 124,
-      "unique_ip_count": 10
-    },
-    {
-      "hour": "2026-08-25T23:00:00Z",
-      "requests": 4,
-      "unique_ip_count": 4
-    },
-    {
-      "hour": "2026-08-26T00:00:00Z",
-      "requests": 2,
-      "unique_ip_count": 2
-    },
-    {
-      "hour": "2026-08-26T01:00:00Z",
-      "requests": 6,
-      "unique_ip_count": 3
-    },
-    {
-      "hour": "2026-08-26T02:00:00Z",
-      "requests": 4,
-      "unique_ip_count": 2
-    },
-    {
-      "hour": "2026-08-26T03:00:00Z",
-      "requests": 172,
-      "unique_ip_count": 4
-    },
-    {
-      "hour": "2026-08-26T04:00:00Z",
-      "requests": 4,
-      "unique_ip_count": 3
-    },
-    {
-      "hour": "2026-08-26T05:00:00Z",
-      "requests": 115,
-      "unique_ip_count": 3
-    },
     {
       "hour": "2026-08-26T06:00:00Z",
       "requests": 35,
@@ -239,8 +194,53 @@
     },
     {
       "hour": "2026-08-27T20:00:00Z",
-      "requests": 6,
+      "requests": 8,
+      "unique_ip_count": 3
+    },
+    {
+      "hour": "2026-08-27T21:00:00Z",
+      "requests": 12,
+      "unique_ip_count": 7
+    },
+    {
+      "hour": "2026-08-27T22:00:00Z",
+      "requests": 4,
+      "unique_ip_count": 3
+    },
+    {
+      "hour": "2026-08-27T23:00:00Z",
+      "requests": 5,
+      "unique_ip_count": 4
+    },
+    {
+      "hour": "2026-08-28T00:00:00Z",
+      "requests": 5,
+      "unique_ip_count": 4
+    },
+    {
+      "hour": "2026-08-28T01:00:00Z",
+      "requests": 13,
+      "unique_ip_count": 4
+    },
+    {
+      "hour": "2026-08-28T02:00:00Z",
+      "requests": 3,
+      "unique_ip_count": 3
+    },
+    {
+      "hour": "2026-08-28T03:00:00Z",
+      "requests": 4,
+      "unique_ip_count": 4
+    },
+    {
+      "hour": "2026-08-28T04:00:00Z",
+      "requests": 3,
       "unique_ip_count": 2
+    },
+    {
+      "hour": "2026-08-28T05:00:00Z",
+      "requests": 0,
+      "unique_ip_count": 0
     }
   ]
 }
