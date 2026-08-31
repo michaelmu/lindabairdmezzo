@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-30T23:29:04.620867+00:00",
+  "generated_at": "2026-08-31T05:31:57.564313+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Unknown",
-      "requests": 18054,
-      "unique_ip_count": 110
+      "requests": 17832,
+      "unique_ip_count": 107
     },
     {
       "label": "Desktop",
-      "requests": 3125,
-      "unique_ip_count": 813
+      "requests": 3066,
+      "unique_ip_count": 795
     },
     {
       "label": "Bots",
-      "requests": 687,
-      "unique_ip_count": 335
+      "requests": 679,
+      "unique_ip_count": 328
     },
     {
       "label": "Mobile",
-      "requests": 653,
-      "unique_ip_count": 292
+      "requests": 636,
+      "unique_ip_count": 277
     },
     {
       "label": "Tablet",
-      "requests": 51,
-      "unique_ip_count": 10
+      "requests": 48,
+      "unique_ip_count": 9
     }
   ],
   "browsers": [
     {
       "label": "Unknown",
-      "requests": 18054,
-      "unique_ip_count": 110
+      "requests": 17832,
+      "unique_ip_count": 107
     },
     {
       "label": "Chrome",
-      "requests": 2476,
-      "unique_ip_count": 624
+      "requests": 2443,
+      "unique_ip_count": 605
     },
     {
       "label": "Bots",
-      "requests": 687,
-      "unique_ip_count": 335
+      "requests": 679,
+      "unique_ip_count": 328
     },
     {
       "label": "Safari",
-      "requests": 604,
-      "unique_ip_count": 276
+      "requests": 593,
+      "unique_ip_count": 267
     },
     {
       "label": "Other",
-      "requests": 432,
-      "unique_ip_count": 127
+      "requests": 428,
+      "unique_ip_count": 126
     },
     {
       "label": "Firefox",
-      "requests": 189,
-      "unique_ip_count": 110
+      "requests": 160,
+      "unique_ip_count": 105
     },
     {
       "label": "Opera",
-      "requests": 75,
-      "unique_ip_count": 20
+      "requests": 74,
+      "unique_ip_count": 19
     },
     {
       "label": "Edge",
-      "requests": 50,
-      "unique_ip_count": 32
+      "requests": 49,
+      "unique_ip_count": 33
     },
     {
       "label": "Samsung Internet",
@@ -78,43 +78,43 @@
   "operating_systems": [
     {
       "label": "Unknown",
-      "requests": 18054,
-      "unique_ip_count": 110
+      "requests": 17832,
+      "unique_ip_count": 107
     },
     {
       "label": "Windows",
-      "requests": 2190,
-      "unique_ip_count": 512
+      "requests": 2136,
+      "unique_ip_count": 497
     },
     {
       "label": "Bots",
-      "requests": 687,
-      "unique_ip_count": 335
+      "requests": 679,
+      "unique_ip_count": 328
     },
     {
       "label": "iOS",
-      "requests": 553,
-      "unique_ip_count": 240
+      "requests": 540,
+      "unique_ip_count": 229
     },
     {
       "label": "Other",
       "requests": 486,
-      "unique_ip_count": 151
+      "unique_ip_count": 152
     },
     {
       "label": "macOS",
-      "requests": 299,
-      "unique_ip_count": 134
-    },
-    {
-      "label": "Android",
-      "requests": 151,
-      "unique_ip_count": 70
+      "requests": 298,
+      "unique_ip_count": 132
     },
     {
       "label": "Linux",
-      "requests": 148,
-      "unique_ip_count": 83
+      "requests": 144,
+      "unique_ip_count": 81
+    },
+    {
+      "label": "Android",
+      "requests": 144,
+      "unique_ip_count": 66
     },
     {
       "label": "ChromeOS",
@@ -125,18 +125,18 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 20862,
-      "unique_ip_count": 1185
+      "requests": 20581,
+      "unique_ip_count": 1154
     },
     {
       "label": "Internal navigation",
-      "requests": 1556,
-      "unique_ip_count": 505
+      "requests": 1532,
+      "unique_ip_count": 491
     },
     {
       "label": "google.com",
-      "requests": 79,
-      "unique_ip_count": 41
+      "requests": 75,
+      "unique_ip_count": 37
     },
     {
       "label": "lindabairdmezzo.com",

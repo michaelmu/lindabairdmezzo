@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T23:28:54.403425+00:00",
+  "generated_at": "2026-08-31T05:31:45.890338+00:00",
   "window_days": 180,
   "days": [
     {
@@ -760,9 +760,15 @@
     },
     {
       "date": "2026-08-30",
-      "requests": 797,
+      "requests": 798,
       "unique_ip_count": 71,
-      "bytes_served": 2422939
+      "bytes_served": 2430232
+    },
+    {
+      "date": "2026-08-31",
+      "requests": 38,
+      "unique_ip_count": 17,
+      "bytes_served": 494317
     }
   ]
 }
