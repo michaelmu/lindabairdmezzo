@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T18:26:47.730719+00:00",
+  "generated_at": "2026-09-10T21:37:08.131041+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,17 +9,17 @@
     },
     {
       "label": "Desktop",
-      "requests": 4007,
-      "unique_ip_count": 921
+      "requests": 4016,
+      "unique_ip_count": 923
     },
     {
       "label": "Mobile",
-      "requests": 816,
+      "requests": 817,
       "unique_ip_count": 288
     },
     {
       "label": "Bots",
-      "requests": 679,
+      "requests": 684,
       "unique_ip_count": 341
     },
     {
@@ -36,17 +36,17 @@
     },
     {
       "label": "Chrome",
-      "requests": 3232,
-      "unique_ip_count": 666
+      "requests": 3241,
+      "unique_ip_count": 668
     },
     {
       "label": "Safari",
-      "requests": 720,
+      "requests": 721,
       "unique_ip_count": 294
     },
     {
       "label": "Bots",
-      "requests": 679,
+      "requests": 684,
       "unique_ip_count": 341
     },
     {
@@ -83,17 +83,17 @@
     },
     {
       "label": "Windows",
-      "requests": 2874,
-      "unique_ip_count": 531
+      "requests": 2881,
+      "unique_ip_count": 532
     },
     {
       "label": "Bots",
-      "requests": 679,
+      "requests": 684,
       "unique_ip_count": 341
     },
     {
       "label": "iOS",
-      "requests": 623,
+      "requests": 624,
       "unique_ip_count": 248
     },
     {
@@ -103,8 +103,8 @@
     },
     {
       "label": "macOS",
-      "requests": 436,
-      "unique_ip_count": 156
+      "requests": 438,
+      "unique_ip_count": 157
     },
     {
       "label": "Android",
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 19331,
-      "unique_ip_count": 1262
+      "requests": 19338,
+      "unique_ip_count": 1263
     },
     {
       "label": "Internal navigation",
-      "requests": 1592,
-      "unique_ip_count": 512
+      "requests": 1600,
+      "unique_ip_count": 513
     },
     {
       "label": "google.com",
