@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T09:39:47.111878+00:00",
+  "generated_at": "2026-09-11T14:25:18.325883+00:00",
   "window_days": 30,
   "device_types": [
     {
@@ -9,18 +9,18 @@
     },
     {
       "label": "Desktop",
-      "requests": 4088,
+      "requests": 4091,
       "unique_ip_count": 923
     },
     {
       "label": "Mobile",
-      "requests": 813,
+      "requests": 815,
       "unique_ip_count": 290
     },
     {
       "label": "Bots",
-      "requests": 692,
-      "unique_ip_count": 337
+      "requests": 699,
+      "unique_ip_count": 342
     },
     {
       "label": "Tablet",
@@ -41,22 +41,22 @@
     },
     {
       "label": "Safari",
-      "requests": 712,
+      "requests": 714,
       "unique_ip_count": 293
     },
     {
       "label": "Bots",
-      "requests": 692,
-      "unique_ip_count": 337
+      "requests": 699,
+      "unique_ip_count": 342
     },
     {
       "label": "Other",
-      "requests": 413,
+      "requests": 414,
       "unique_ip_count": 186
     },
     {
       "label": "Firefox",
-      "requests": 277,
+      "requests": 279,
       "unique_ip_count": 123
     },
     {
@@ -83,22 +83,22 @@
     },
     {
       "label": "Windows",
-      "requests": 2991,
+      "requests": 2993,
       "unique_ip_count": 534
     },
     {
       "label": "Bots",
-      "requests": 692,
-      "unique_ip_count": 337
+      "requests": 699,
+      "unique_ip_count": 342
     },
     {
       "label": "iOS",
-      "requests": 617,
+      "requests": 619,
       "unique_ip_count": 248
     },
     {
       "label": "Other",
-      "requests": 485,
+      "requests": 486,
       "unique_ip_count": 218
     },
     {
@@ -125,12 +125,12 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 19109,
-      "unique_ip_count": 1259
+      "requests": 19120,
+      "unique_ip_count": 1264
     },
     {
       "label": "Internal navigation",
-      "requests": 1575,
+      "requests": 1576,
       "unique_ip_count": 513
     },
     {
