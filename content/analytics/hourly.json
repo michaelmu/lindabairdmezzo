@@ -1,27 +1,7 @@
 {
-  "generated_at": "2026-09-12T13:36:11.727843+00:00",
+  "generated_at": "2026-09-12T17:08:23.699371+00:00",
   "window_hours": 48,
   "hours": [
-    {
-      "hour": "2026-09-10T14:00:00Z",
-      "requests": 5,
-      "unique_ip_count": 3
-    },
-    {
-      "hour": "2026-09-10T15:00:00Z",
-      "requests": 138,
-      "unique_ip_count": 4
-    },
-    {
-      "hour": "2026-09-10T16:00:00Z",
-      "requests": 1,
-      "unique_ip_count": 1
-    },
-    {
-      "hour": "2026-09-10T17:00:00Z",
-      "requests": 16,
-      "unique_ip_count": 8
-    },
     {
       "hour": "2026-09-10T18:00:00Z",
       "requests": 2,
@@ -239,7 +219,27 @@
     },
     {
       "hour": "2026-09-12T13:00:00Z",
+      "requests": 3,
+      "unique_ip_count": 3
+    },
+    {
+      "hour": "2026-09-12T14:00:00Z",
+      "requests": 6,
+      "unique_ip_count": 2
+    },
+    {
+      "hour": "2026-09-12T15:00:00Z",
+      "requests": 2,
+      "unique_ip_count": 2
+    },
+    {
+      "hour": "2026-09-12T16:00:00Z",
       "requests": 1,
+      "unique_ip_count": 1
+    },
+    {
+      "hour": "2026-09-12T17:00:00Z",
+      "requests": 2,
       "unique_ip_count": 1
     }
   ]
