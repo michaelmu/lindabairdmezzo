@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-25T18:35:03.755010+00:00",
+  "generated_at": "2026-09-25T22:18:41.979476+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 7575,
-      "unique_ip_count": 1011
+      "requests": 7585,
+      "unique_ip_count": 1013
     },
     {
       "label": "Unknown",
@@ -36,13 +36,13 @@
     },
     {
       "label": "Chrome",
-      "requests": 5814,
+      "requests": 5822,
       "unique_ip_count": 751
     },
     {
       "label": "Firefox",
-      "requests": 1372,
-      "unique_ip_count": 128
+      "requests": 1373,
+      "unique_ip_count": 129
     },
     {
       "label": "Safari",
@@ -66,8 +66,8 @@
     },
     {
       "label": "Edge",
-      "requests": 113,
-      "unique_ip_count": 44
+      "requests": 114,
+      "unique_ip_count": 45
     },
     {
       "label": "Samsung Internet",
@@ -83,8 +83,8 @@
     },
     {
       "label": "Windows",
-      "requests": 5799,
-      "unique_ip_count": 583
+      "requests": 5809,
+      "unique_ip_count": 585
     },
     {
       "label": "iOS",
@@ -130,7 +130,7 @@
     },
     {
       "label": "Internal navigation",
-      "requests": 2285,
+      "requests": 2293,
       "unique_ip_count": 541
     },
     {
