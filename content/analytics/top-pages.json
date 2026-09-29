@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-29T15:50:04.120276+00:00",
+  "generated_at": "2026-09-29T20:45:43.697883+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 4466
+      "requests": 4499
     },
     {
       "path": "/index.html",
-      "requests": 46
+      "requests": 47
     },
     {
       "path": "/.git/config",
-      "requests": 40
+      "requests": 41
     },
     {
       "path": "/this_is_a_new_hello_world.php",
@@ -39,15 +39,15 @@
       "requests": 28
     },
     {
+      "path": "/wp-content/uploads/",
+      "requests": 28
+    },
+    {
       "path": "/dex.php",
       "requests": 27
     },
     {
       "path": "/images.php",
-      "requests": 27
-    },
-    {
-      "path": "/media.php",
       "requests": 27
     }
   ]
