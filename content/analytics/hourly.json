@@ -1,47 +1,7 @@
 {
-  "generated_at": "2026-10-01T05:49:20.535872+00:00",
+  "generated_at": "2026-10-01T13:10:07.509209+00:00",
   "window_hours": 48,
   "hours": [
-    {
-      "hour": "2026-09-29T06:00:00Z",
-      "requests": 17,
-      "unique_ip_count": 6
-    },
-    {
-      "hour": "2026-09-29T07:00:00Z",
-      "requests": 10,
-      "unique_ip_count": 6
-    },
-    {
-      "hour": "2026-09-29T08:00:00Z",
-      "requests": 6,
-      "unique_ip_count": 2
-    },
-    {
-      "hour": "2026-09-29T09:00:00Z",
-      "requests": 13,
-      "unique_ip_count": 9
-    },
-    {
-      "hour": "2026-09-29T10:00:00Z",
-      "requests": 23,
-      "unique_ip_count": 6
-    },
-    {
-      "hour": "2026-09-29T11:00:00Z",
-      "requests": 132,
-      "unique_ip_count": 4
-    },
-    {
-      "hour": "2026-09-29T12:00:00Z",
-      "requests": 13,
-      "unique_ip_count": 7
-    },
-    {
-      "hour": "2026-09-29T13:00:00Z",
-      "requests": 7,
-      "unique_ip_count": 4
-    },
     {
       "hour": "2026-09-29T14:00:00Z",
       "requests": 3,
@@ -239,8 +199,48 @@
     },
     {
       "hour": "2026-10-01T05:00:00Z",
-      "requests": 10,
-      "unique_ip_count": 5
+      "requests": 17,
+      "unique_ip_count": 7
+    },
+    {
+      "hour": "2026-10-01T06:00:00Z",
+      "requests": 6,
+      "unique_ip_count": 4
+    },
+    {
+      "hour": "2026-10-01T07:00:00Z",
+      "requests": 2,
+      "unique_ip_count": 1
+    },
+    {
+      "hour": "2026-10-01T08:00:00Z",
+      "requests": 5,
+      "unique_ip_count": 3
+    },
+    {
+      "hour": "2026-10-01T09:00:00Z",
+      "requests": 12,
+      "unique_ip_count": 6
+    },
+    {
+      "hour": "2026-10-01T10:00:00Z",
+      "requests": 5,
+      "unique_ip_count": 3
+    },
+    {
+      "hour": "2026-10-01T11:00:00Z",
+      "requests": 16,
+      "unique_ip_count": 7
+    },
+    {
+      "hour": "2026-10-01T12:00:00Z",
+      "requests": 5,
+      "unique_ip_count": 4
+    },
+    {
+      "hour": "2026-10-01T13:00:00Z",
+      "requests": 59,
+      "unique_ip_count": 2
     }
   ]
 }
