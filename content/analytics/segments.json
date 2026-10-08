@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-10-08T15:34:54.822159+00:00",
+  "generated_at": "2026-10-08T21:18:31.816311+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 7883,
-      "unique_ip_count": 907
+      "requests": 7907,
+      "unique_ip_count": 914
     },
     {
       "label": "Unknown",
-      "requests": 4188,
+      "requests": 4414,
       "unique_ip_count": 43
     },
     {
       "label": "Mobile",
-      "requests": 2322,
-      "unique_ip_count": 346
+      "requests": 2334,
+      "unique_ip_count": 353
     },
     {
       "label": "Bots",
-      "requests": 620,
+      "requests": 622,
       "unique_ip_count": 314
     },
     {
@@ -31,33 +31,33 @@
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 7025,
-      "unique_ip_count": 710
+      "requests": 7046,
+      "unique_ip_count": 715
     },
     {
       "label": "Unknown",
-      "requests": 4188,
+      "requests": 4414,
       "unique_ip_count": 43
     },
     {
       "label": "Firefox",
-      "requests": 1441,
-      "unique_ip_count": 141
+      "requests": 1443,
+      "unique_ip_count": 142
     },
     {
       "label": "Safari",
-      "requests": 981,
-      "unique_ip_count": 336
+      "requests": 989,
+      "unique_ip_count": 341
     },
     {
       "label": "Bots",
-      "requests": 620,
+      "requests": 622,
       "unique_ip_count": 314
     },
     {
       "label": "Other",
-      "requests": 435,
-      "unique_ip_count": 133
+      "requests": 440,
+      "unique_ip_count": 137
     },
     {
       "label": "Opera",
@@ -78,43 +78,43 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 6309,
-      "unique_ip_count": 549
+      "requests": 6326,
+      "unique_ip_count": 551
     },
     {
       "label": "Unknown",
-      "requests": 4188,
+      "requests": 4414,
       "unique_ip_count": 43
     },
     {
       "label": "Android",
-      "requests": 1238,
-      "unique_ip_count": 92
+      "requests": 1242,
+      "unique_ip_count": 95
     },
     {
       "label": "iOS",
-      "requests": 1109,
-      "unique_ip_count": 297
+      "requests": 1117,
+      "unique_ip_count": 302
     },
     {
       "label": "macOS",
-      "requests": 640,
-      "unique_ip_count": 193
+      "requests": 641,
+      "unique_ip_count": 194
     },
     {
       "label": "Bots",
-      "requests": 620,
+      "requests": 622,
       "unique_ip_count": 314
     },
     {
       "label": "Linux",
-      "requests": 551,
-      "unique_ip_count": 111
+      "requests": 553,
+      "unique_ip_count": 112
     },
     {
       "label": "Other",
-      "requests": 377,
-      "unique_ip_count": 150
+      "requests": 381,
+      "unique_ip_count": 153
     },
     {
       "label": "ChromeOS",
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 10774,
-      "unique_ip_count": 1101
+      "requests": 11017,
+      "unique_ip_count": 1112
     },
     {
       "label": "Internal navigation",
-      "requests": 3825,
-      "unique_ip_count": 522
+      "requests": 3844,
+      "unique_ip_count": 525
     },
     {
       "label": "binance.com",
