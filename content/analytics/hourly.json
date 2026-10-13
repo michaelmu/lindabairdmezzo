@@ -1,47 +1,7 @@
 {
-  "generated_at": "2026-10-13T11:45:26.614930+00:00",
+  "generated_at": "2026-10-13T19:15:10.052639+00:00",
   "window_hours": 48,
   "hours": [
-    {
-      "hour": "2026-10-11T12:00:00Z",
-      "requests": 3,
-      "unique_ip_count": 2
-    },
-    {
-      "hour": "2026-10-11T13:00:00Z",
-      "requests": 6,
-      "unique_ip_count": 3
-    },
-    {
-      "hour": "2026-10-11T14:00:00Z",
-      "requests": 35,
-      "unique_ip_count": 13
-    },
-    {
-      "hour": "2026-10-11T15:00:00Z",
-      "requests": 6,
-      "unique_ip_count": 3
-    },
-    {
-      "hour": "2026-10-11T16:00:00Z",
-      "requests": 3,
-      "unique_ip_count": 1
-    },
-    {
-      "hour": "2026-10-11T17:00:00Z",
-      "requests": 8,
-      "unique_ip_count": 3
-    },
-    {
-      "hour": "2026-10-11T18:00:00Z",
-      "requests": 95,
-      "unique_ip_count": 3
-    },
-    {
-      "hour": "2026-10-11T19:00:00Z",
-      "requests": 12,
-      "unique_ip_count": 5
-    },
     {
       "hour": "2026-10-11T20:00:00Z",
       "requests": 6,
@@ -239,8 +199,48 @@
     },
     {
       "hour": "2026-10-13T11:00:00Z",
-      "requests": 4,
+      "requests": 6,
+      "unique_ip_count": 4
+    },
+    {
+      "hour": "2026-10-13T12:00:00Z",
+      "requests": 8,
+      "unique_ip_count": 6
+    },
+    {
+      "hour": "2026-10-13T13:00:00Z",
+      "requests": 2,
+      "unique_ip_count": 1
+    },
+    {
+      "hour": "2026-10-13T14:00:00Z",
+      "requests": 7,
+      "unique_ip_count": 5
+    },
+    {
+      "hour": "2026-10-13T15:00:00Z",
+      "requests": 1,
+      "unique_ip_count": 1
+    },
+    {
+      "hour": "2026-10-13T16:00:00Z",
+      "requests": 9,
+      "unique_ip_count": 6
+    },
+    {
+      "hour": "2026-10-13T17:00:00Z",
+      "requests": 35,
       "unique_ip_count": 3
+    },
+    {
+      "hour": "2026-10-13T18:00:00Z",
+      "requests": 14,
+      "unique_ip_count": 10
+    },
+    {
+      "hour": "2026-10-13T19:00:00Z",
+      "requests": 2,
+      "unique_ip_count": 2
     }
   ]
 }
