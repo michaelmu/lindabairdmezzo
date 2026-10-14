@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-14T07:36:12.294178+00:00",
+  "generated_at": "2026-10-14T13:42:18.460135+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 5063
+      "requests": 5100
     },
     {
       "path": "/index.html",
@@ -31,6 +31,10 @@
       "requests": 36
     },
     {
+      "path": "/.git/config",
+      "requests": 35
+    },
+    {
       "path": "/b8.php",
       "requests": 35
     },
@@ -41,10 +45,6 @@
     {
       "path": "/wp/",
       "requests": 34
-    },
-    {
-      "path": "/.git/config",
-      "requests": 33
     },
     {
       "path": "/3PJcpMFsD8B.php",
