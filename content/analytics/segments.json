@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-15T18:16:29.929689+00:00",
+  "generated_at": "2026-10-15T21:26:18.803452+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 9150,
-      "unique_ip_count": 942
+      "requests": 9174,
+      "unique_ip_count": 944
     },
     {
       "label": "Unknown",
@@ -14,8 +14,8 @@
     },
     {
       "label": "Mobile",
-      "requests": 2374,
-      "unique_ip_count": 346
+      "requests": 2381,
+      "unique_ip_count": 348
     },
     {
       "label": "Bots",
@@ -31,8 +31,8 @@
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 7905,
-      "unique_ip_count": 758
+      "requests": 7924,
+      "unique_ip_count": 761
     },
     {
       "label": "Unknown",
@@ -41,13 +41,13 @@
     },
     {
       "label": "Firefox",
-      "requests": 1714,
-      "unique_ip_count": 139
+      "requests": 1716,
+      "unique_ip_count": 140
     },
     {
       "label": "Safari",
-      "requests": 1012,
-      "unique_ip_count": 329
+      "requests": 1014,
+      "unique_ip_count": 330
     },
     {
       "label": "Bots",
@@ -66,8 +66,8 @@
     },
     {
       "label": "Edge",
-      "requests": 127,
-      "unique_ip_count": 70
+      "requests": 135,
+      "unique_ip_count": 71
     },
     {
       "label": "Samsung Internet",
@@ -78,8 +78,8 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 7224,
-      "unique_ip_count": 579
+      "requests": 7240,
+      "unique_ip_count": 581
     },
     {
       "label": "Unknown",
@@ -88,17 +88,17 @@
     },
     {
       "label": "Android",
-      "requests": 1315,
-      "unique_ip_count": 92
+      "requests": 1320,
+      "unique_ip_count": 93
     },
     {
       "label": "iOS",
-      "requests": 1105,
-      "unique_ip_count": 297
+      "requests": 1107,
+      "unique_ip_count": 298
     },
     {
       "label": "macOS",
-      "requests": 798,
+      "requests": 806,
       "unique_ip_count": 204
     },
     {
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 13641,
-      "unique_ip_count": 1137
+      "requests": 13654,
+      "unique_ip_count": 1139
     },
     {
       "label": "Internal navigation",
-      "requests": 4061,
-      "unique_ip_count": 522
+      "requests": 4079,
+      "unique_ip_count": 525
     },
     {
       "label": "binance.com",
