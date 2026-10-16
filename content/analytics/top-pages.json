@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-16T05:50:08.347119+00:00",
+  "generated_at": "2026-10-16T11:20:23.706694+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 5122
+      "requests": 5155
     },
     {
       "path": "/index.html",
@@ -39,15 +39,15 @@
       "requests": 36
     },
     {
+      "path": "/.git/config",
+      "requests": 35
+    },
+    {
       "path": "/BDKR28WP.php",
       "requests": 35
     },
     {
       "path": "/alfa.php",
-      "requests": 35
-    },
-    {
-      "path": "/b8.php",
       "requests": 35
     }
   ]
