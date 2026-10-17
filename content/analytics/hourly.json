@@ -1,32 +1,7 @@
 {
-  "generated_at": "2026-10-17T06:55:12.435813+00:00",
+  "generated_at": "2026-10-17T11:36:03.471006+00:00",
   "window_hours": 48,
   "hours": [
-    {
-      "hour": "2026-10-15T07:00:00Z",
-      "requests": 3,
-      "unique_ip_count": 2
-    },
-    {
-      "hour": "2026-10-15T08:00:00Z",
-      "requests": 4,
-      "unique_ip_count": 4
-    },
-    {
-      "hour": "2026-10-15T09:00:00Z",
-      "requests": 7,
-      "unique_ip_count": 4
-    },
-    {
-      "hour": "2026-10-15T10:00:00Z",
-      "requests": 1,
-      "unique_ip_count": 1
-    },
-    {
-      "hour": "2026-10-15T11:00:00Z",
-      "requests": 3,
-      "unique_ip_count": 2
-    },
     {
       "hour": "2026-10-15T12:00:00Z",
       "requests": 8,
@@ -239,8 +214,33 @@
     },
     {
       "hour": "2026-10-17T06:00:00Z",
-      "requests": 7,
-      "unique_ip_count": 4
+      "requests": 8,
+      "unique_ip_count": 5
+    },
+    {
+      "hour": "2026-10-17T07:00:00Z",
+      "requests": 63,
+      "unique_ip_count": 7
+    },
+    {
+      "hour": "2026-10-17T08:00:00Z",
+      "requests": 6,
+      "unique_ip_count": 3
+    },
+    {
+      "hour": "2026-10-17T09:00:00Z",
+      "requests": 6,
+      "unique_ip_count": 5
+    },
+    {
+      "hour": "2026-10-17T10:00:00Z",
+      "requests": 4,
+      "unique_ip_count": 2
+    },
+    {
+      "hour": "2026-10-17T11:00:00Z",
+      "requests": 83,
+      "unique_ip_count": 1
     }
   ]
 }
