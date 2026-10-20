@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-20T10:02:20.637814+00:00",
+  "generated_at": "2026-10-20T15:03:32.702566+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 9559,
-      "unique_ip_count": 936
+      "requests": 9578,
+      "unique_ip_count": 940
     },
     {
       "label": "Unknown",
@@ -14,13 +14,13 @@
     },
     {
       "label": "Mobile",
-      "requests": 2582,
+      "requests": 2584,
       "unique_ip_count": 348
     },
     {
       "label": "Bots",
-      "requests": 560,
-      "unique_ip_count": 307
+      "requests": 564,
+      "unique_ip_count": 310
     },
     {
       "label": "Tablet",
@@ -31,8 +31,8 @@
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 8113,
-      "unique_ip_count": 739
+      "requests": 8132,
+      "unique_ip_count": 744
     },
     {
       "label": "Unknown",
@@ -46,7 +46,7 @@
     },
     {
       "label": "Safari",
-      "requests": 1259,
+      "requests": 1261,
       "unique_ip_count": 331
     },
     {
@@ -56,8 +56,8 @@
     },
     {
       "label": "Bots",
-      "requests": 560,
-      "unique_ip_count": 307
+      "requests": 564,
+      "unique_ip_count": 310
     },
     {
       "label": "Opera",
@@ -78,8 +78,8 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 7267,
-      "unique_ip_count": 569
+      "requests": 7284,
+      "unique_ip_count": 572
     },
     {
       "label": "Unknown",
@@ -93,13 +93,13 @@
     },
     {
       "label": "iOS",
-      "requests": 1228,
+      "requests": 1230,
       "unique_ip_count": 296
     },
     {
       "label": "macOS",
-      "requests": 1003,
-      "unique_ip_count": 195
+      "requests": 1005,
+      "unique_ip_count": 196
     },
     {
       "label": "Linux",
@@ -108,8 +108,8 @@
     },
     {
       "label": "Bots",
-      "requests": 560,
-      "unique_ip_count": 307
+      "requests": 564,
+      "unique_ip_count": 310
     },
     {
       "label": "Other",
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 14750,
-      "unique_ip_count": 1168
+      "requests": 14758,
+      "unique_ip_count": 1172
     },
     {
       "label": "Internal navigation",
-      "requests": 4189,
-      "unique_ip_count": 511
+      "requests": 4205,
+      "unique_ip_count": 513
     },
     {
       "label": "binance.com",
@@ -140,8 +140,8 @@
     },
     {
       "label": "google.com",
-      "requests": 43,
-      "unique_ip_count": 31
+      "requests": 44,
+      "unique_ip_count": 32
     },
     {
       "label": "baidu.com",
