@@ -1,26 +1,26 @@
 {
-  "generated_at": "2026-10-28T23:13:16.008715+00:00",
+  "generated_at": "2026-10-29T02:26:08.244130+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 9239,
-      "unique_ip_count": 989
+      "requests": 9117,
+      "unique_ip_count": 959
     },
     {
       "label": "Unknown",
-      "requests": 5924,
-      "unique_ip_count": 50
+      "requests": 5554,
+      "unique_ip_count": 46
     },
     {
       "label": "Mobile",
-      "requests": 2018,
-      "unique_ip_count": 366
+      "requests": 1995,
+      "unique_ip_count": 353
     },
     {
       "label": "Bots",
-      "requests": 590,
-      "unique_ip_count": 301
+      "requests": 586,
+      "unique_ip_count": 298
     },
     {
       "label": "Tablet",
@@ -31,43 +31,43 @@
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 7488,
-      "unique_ip_count": 761
+      "requests": 7377,
+      "unique_ip_count": 738
     },
     {
       "label": "Unknown",
-      "requests": 5924,
-      "unique_ip_count": 50
+      "requests": 5554,
+      "unique_ip_count": 46
     },
     {
       "label": "Firefox",
-      "requests": 1524,
-      "unique_ip_count": 139
+      "requests": 1522,
+      "unique_ip_count": 137
     },
     {
       "label": "Safari",
-      "requests": 1170,
-      "unique_ip_count": 338
+      "requests": 1146,
+      "unique_ip_count": 324
     },
     {
       "label": "Other",
-      "requests": 637,
-      "unique_ip_count": 186
+      "requests": 632,
+      "unique_ip_count": 182
     },
     {
       "label": "Bots",
-      "requests": 590,
-      "unique_ip_count": 301
+      "requests": 586,
+      "unique_ip_count": 298
     },
     {
       "label": "Opera",
-      "requests": 341,
-      "unique_ip_count": 21
+      "requests": 340,
+      "unique_ip_count": 20
     },
     {
       "label": "Edge",
-      "requests": 126,
-      "unique_ip_count": 63
+      "requests": 124,
+      "unique_ip_count": 61
     },
     {
       "label": "Samsung Internet",
@@ -78,23 +78,23 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 6659,
-      "unique_ip_count": 547
+      "requests": 6544,
+      "unique_ip_count": 523
     },
     {
       "label": "Unknown",
-      "requests": 5924,
-      "unique_ip_count": 50
-    },
-    {
-      "label": "iOS",
-      "requests": 1095,
-      "unique_ip_count": 303
+      "requests": 5554,
+      "unique_ip_count": 46
     },
     {
       "label": "macOS",
-      "requests": 1085,
-      "unique_ip_count": 200
+      "requests": 1082,
+      "unique_ip_count": 197
+    },
+    {
+      "label": "iOS",
+      "requests": 1072,
+      "unique_ip_count": 290
     },
     {
       "label": "Android",
@@ -103,18 +103,18 @@
     },
     {
       "label": "Linux",
-      "requests": 892,
-      "unique_ip_count": 128
+      "requests": 891,
+      "unique_ip_count": 127
     },
     {
       "label": "Other",
-      "requests": 602,
-      "unique_ip_count": 224
+      "requests": 599,
+      "unique_ip_count": 220
     },
     {
       "label": "Bots",
-      "requests": 590,
-      "unique_ip_count": 301
+      "requests": 586,
+      "unique_ip_count": 298
     },
     {
       "label": "ChromeOS",
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 13986,
-      "unique_ip_count": 1239
+      "requests": 13557,
+      "unique_ip_count": 1209
     },
     {
       "label": "Internal navigation",
-      "requests": 3494,
-      "unique_ip_count": 514
+      "requests": 3412,
+      "unique_ip_count": 497
     },
     {
       "label": "binance.com",
@@ -140,13 +140,8 @@
     },
     {
       "label": "google.com",
-      "requests": 45,
-      "unique_ip_count": 30
-    },
-    {
-      "label": "operavoicebodywork.com",
-      "requests": 7,
-      "unique_ip_count": 7
+      "requests": 43,
+      "unique_ip_count": 28
     },
     {
       "label": "baidu.com",
@@ -161,6 +156,11 @@
     {
       "label": "sacramentochoral.com",
       "requests": 5,
+      "unique_ip_count": 4
+    },
+    {
+      "label": "operavoicebodywork.com",
+      "requests": 4,
       "unique_ip_count": 4
     }
   ]
