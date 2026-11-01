@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-01T09:13:48.664365+00:00",
+  "generated_at": "2026-11-01T16:01:32.380802+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 4618
+      "requests": 4743
     },
     {
       "path": "/index.html",
@@ -15,40 +15,40 @@
       "requests": 59
     },
     {
+      "path": "/blog/",
+      "requests": 57
+    },
+    {
       "path": "/this_is_a_new_hello_world.php",
       "requests": 57
     },
     {
-      "path": "/blog/",
-      "requests": 45
+      "path": "/wordpress/",
+      "requests": 55
+    },
+    {
+      "path": "/wp/",
+      "requests": 55
+    },
+    {
+      "path": "/cms/",
+      "requests": 53
+    },
+    {
+      "path": "/news/",
+      "requests": 53
+    },
+    {
+      "path": "/press/",
+      "requests": 53
+    },
+    {
+      "path": "/site/",
+      "requests": 53
     },
     {
       "path": "/1.php",
       "requests": 44
-    },
-    {
-      "path": "/chosen.php",
-      "requests": 44
-    },
-    {
-      "path": "/wordpress/",
-      "requests": 43
-    },
-    {
-      "path": "/wp/",
-      "requests": 43
-    },
-    {
-      "path": "/cms/",
-      "requests": 41
-    },
-    {
-      "path": "/news/",
-      "requests": 41
-    },
-    {
-      "path": "/press/",
-      "requests": 41
     }
   ]
 }
