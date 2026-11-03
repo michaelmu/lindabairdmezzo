@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-03T17:50:32.576822+00:00",
+  "generated_at": "2026-11-03T23:20:20.404493+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 9137,
-      "unique_ip_count": 993
+      "requests": 9154,
+      "unique_ip_count": 998
     },
     {
       "label": "Unknown",
@@ -19,8 +19,8 @@
     },
     {
       "label": "Bots",
-      "requests": 751,
-      "unique_ip_count": 284
+      "requests": 752,
+      "unique_ip_count": 285
     },
     {
       "label": "Tablet",
@@ -31,8 +31,8 @@
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 6735,
-      "unique_ip_count": 739
+      "requests": 6752,
+      "unique_ip_count": 744
     },
     {
       "label": "Unknown",
@@ -51,8 +51,8 @@
     },
     {
       "label": "Bots",
-      "requests": 751,
-      "unique_ip_count": 284
+      "requests": 752,
+      "unique_ip_count": 285
     },
     {
       "label": "Other",
@@ -78,8 +78,8 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 6285,
-      "unique_ip_count": 510
+      "requests": 6296,
+      "unique_ip_count": 511
     },
     {
       "label": "Unknown",
@@ -88,8 +88,8 @@
     },
     {
       "label": "macOS",
-      "requests": 1215,
-      "unique_ip_count": 194
+      "requests": 1218,
+      "unique_ip_count": 196
     },
     {
       "label": "Linux",
@@ -103,13 +103,13 @@
     },
     {
       "label": "Bots",
-      "requests": 751,
-      "unique_ip_count": 284
+      "requests": 752,
+      "unique_ip_count": 285
     },
     {
       "label": "Other",
-      "requests": 672,
-      "unique_ip_count": 277
+      "requests": 675,
+      "unique_ip_count": 279
     },
     {
       "label": "Android",
@@ -125,13 +125,13 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 13909,
-      "unique_ip_count": 1274
+      "requests": 13922,
+      "unique_ip_count": 1279
     },
     {
       "label": "Internal navigation",
-      "requests": 2472,
-      "unique_ip_count": 499
+      "requests": 2477,
+      "unique_ip_count": 501
     },
     {
       "label": "binance.com",
