@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-12T09:47:51.175784+00:00",
+  "generated_at": "2026-11-12T18:17:57.600185+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 4154
+      "requests": 4183
+    },
+    {
+      "path": "/index.html",
+      "requests": 64
     },
     {
       "path": "/blog/",
       "requests": 62
-    },
-    {
-      "path": "/index.html",
-      "requests": 61
     },
     {
       "path": "/cms/",
@@ -48,7 +48,7 @@
     },
     {
       "path": "/.env",
-      "requests": 32
+      "requests": 33
     }
   ]
 }
