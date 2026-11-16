@@ -1,54 +1,54 @@
 {
-  "generated_at": "2026-11-15T21:46:56.363545+00:00",
+  "generated_at": "2026-11-16T02:02:19.242335+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 4035
+      "requests": 3905
     },
     {
       "path": "/blog/",
-      "requests": 61
+      "requests": 59
     },
     {
       "path": "/wordpress/",
-      "requests": 57
+      "requests": 56
     },
     {
       "path": "/cms/",
-      "requests": 56
+      "requests": 55
     },
     {
       "path": "/news/",
-      "requests": 56
+      "requests": 55
     },
     {
       "path": "/press/",
-      "requests": 56
+      "requests": 55
     },
     {
       "path": "/site/",
-      "requests": 56
+      "requests": 55
     },
     {
       "path": "/wp/",
-      "requests": 56
+      "requests": 55
     },
     {
       "path": "/index.html",
-      "requests": 52
+      "requests": 48
     },
     {
       "path": "/wp-content/plugins/hellopress/wp_filemanager.php",
-      "requests": 40
-    },
-    {
-      "path": "/this_is_a_new_hello_world.php",
       "requests": 38
     },
     {
+      "path": "/this_is_a_new_hello_world.php",
+      "requests": 35
+    },
+    {
       "path": "/.env",
-      "requests": 34
+      "requests": 33
     }
   ]
 }
