@@ -1,47 +1,7 @@
 {
-  "generated_at": "2026-11-19T13:00:24.292442+00:00",
+  "generated_at": "2026-11-19T21:30:11.122572+00:00",
   "window_hours": 48,
   "hours": [
-    {
-      "hour": "2026-11-17T14:00:00Z",
-      "requests": 3,
-      "unique_ip_count": 1
-    },
-    {
-      "hour": "2026-11-17T15:00:00Z",
-      "requests": 7,
-      "unique_ip_count": 3
-    },
-    {
-      "hour": "2026-11-17T16:00:00Z",
-      "requests": 2,
-      "unique_ip_count": 2
-    },
-    {
-      "hour": "2026-11-17T17:00:00Z",
-      "requests": 3,
-      "unique_ip_count": 1
-    },
-    {
-      "hour": "2026-11-17T18:00:00Z",
-      "requests": 17,
-      "unique_ip_count": 4
-    },
-    {
-      "hour": "2026-11-17T19:00:00Z",
-      "requests": 7,
-      "unique_ip_count": 7
-    },
-    {
-      "hour": "2026-11-17T20:00:00Z",
-      "requests": 5,
-      "unique_ip_count": 3
-    },
-    {
-      "hour": "2026-11-17T21:00:00Z",
-      "requests": 11,
-      "unique_ip_count": 8
-    },
     {
       "hour": "2026-11-17T22:00:00Z",
       "requests": 2,
@@ -234,11 +194,51 @@
     },
     {
       "hour": "2026-11-19T12:00:00Z",
+      "requests": 3,
+      "unique_ip_count": 2
+    },
+    {
+      "hour": "2026-11-19T13:00:00Z",
+      "requests": 1,
+      "unique_ip_count": 1
+    },
+    {
+      "hour": "2026-11-19T14:00:00Z",
       "requests": 2,
       "unique_ip_count": 1
     },
     {
-      "hour": "2026-11-19T13:00:00Z",
+      "hour": "2026-11-19T15:00:00Z",
+      "requests": 0,
+      "unique_ip_count": 0
+    },
+    {
+      "hour": "2026-11-19T16:00:00Z",
+      "requests": 5,
+      "unique_ip_count": 3
+    },
+    {
+      "hour": "2026-11-19T17:00:00Z",
+      "requests": 12,
+      "unique_ip_count": 2
+    },
+    {
+      "hour": "2026-11-19T18:00:00Z",
+      "requests": 2,
+      "unique_ip_count": 1
+    },
+    {
+      "hour": "2026-11-19T19:00:00Z",
+      "requests": 24,
+      "unique_ip_count": 3
+    },
+    {
+      "hour": "2026-11-19T20:00:00Z",
+      "requests": 1,
+      "unique_ip_count": 1
+    },
+    {
+      "hour": "2026-11-19T21:00:00Z",
       "requests": 0,
       "unique_ip_count": 0
     }
