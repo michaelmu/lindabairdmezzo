@@ -1,47 +1,7 @@
 {
-  "generated_at": "2026-11-21T09:46:26.693969+00:00",
+  "generated_at": "2026-11-21T17:29:07.827113+00:00",
   "window_hours": 48,
   "hours": [
-    {
-      "hour": "2026-11-19T10:00:00Z",
-      "requests": 6,
-      "unique_ip_count": 2
-    },
-    {
-      "hour": "2026-11-19T11:00:00Z",
-      "requests": 9,
-      "unique_ip_count": 3
-    },
-    {
-      "hour": "2026-11-19T12:00:00Z",
-      "requests": 3,
-      "unique_ip_count": 2
-    },
-    {
-      "hour": "2026-11-19T13:00:00Z",
-      "requests": 1,
-      "unique_ip_count": 1
-    },
-    {
-      "hour": "2026-11-19T14:00:00Z",
-      "requests": 2,
-      "unique_ip_count": 1
-    },
-    {
-      "hour": "2026-11-19T15:00:00Z",
-      "requests": 0,
-      "unique_ip_count": 0
-    },
-    {
-      "hour": "2026-11-19T16:00:00Z",
-      "requests": 5,
-      "unique_ip_count": 3
-    },
-    {
-      "hour": "2026-11-19T17:00:00Z",
-      "requests": 12,
-      "unique_ip_count": 2
-    },
     {
       "hour": "2026-11-19T18:00:00Z",
       "requests": 2,
@@ -239,8 +199,48 @@
     },
     {
       "hour": "2026-11-21T09:00:00Z",
-      "requests": 0,
-      "unique_ip_count": 0
+      "requests": 1,
+      "unique_ip_count": 1
+    },
+    {
+      "hour": "2026-11-21T10:00:00Z",
+      "requests": 8,
+      "unique_ip_count": 6
+    },
+    {
+      "hour": "2026-11-21T11:00:00Z",
+      "requests": 4,
+      "unique_ip_count": 2
+    },
+    {
+      "hour": "2026-11-21T12:00:00Z",
+      "requests": 13,
+      "unique_ip_count": 4
+    },
+    {
+      "hour": "2026-11-21T13:00:00Z",
+      "requests": 3,
+      "unique_ip_count": 2
+    },
+    {
+      "hour": "2026-11-21T14:00:00Z",
+      "requests": 2,
+      "unique_ip_count": 1
+    },
+    {
+      "hour": "2026-11-21T15:00:00Z",
+      "requests": 10,
+      "unique_ip_count": 3
+    },
+    {
+      "hour": "2026-11-21T16:00:00Z",
+      "requests": 58,
+      "unique_ip_count": 2
+    },
+    {
+      "hour": "2026-11-21T17:00:00Z",
+      "requests": 2,
+      "unique_ip_count": 1
     }
   ]
 }

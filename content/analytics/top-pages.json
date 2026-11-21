@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-21T09:46:34.854871+00:00",
+  "generated_at": "2026-11-21T17:29:12.521077+00:00",
   "window_days": 30,
   "pages": [
     {
       "path": "/",
-      "requests": 3775
+      "requests": 3808
     },
     {
       "path": "/blog/",
@@ -39,16 +39,16 @@
       "requests": 43
     },
     {
+      "path": "/backup",
+      "requests": 41
+    },
+    {
       "path": "/index.html",
       "requests": 41
     },
     {
-      "path": "/backup",
-      "requests": 39
-    },
-    {
       "path": "/old",
-      "requests": 39
+      "requests": 41
     }
   ]
 }
