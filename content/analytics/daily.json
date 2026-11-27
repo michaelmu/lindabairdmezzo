@@ -1,13 +1,7 @@
 {
-  "generated_at": "2026-11-26T23:49:57.080233+00:00",
+  "generated_at": "2026-11-27T08:24:52.613688+00:00",
   "window_days": 180,
   "days": [
-    {
-      "date": "2026-05-30",
-      "requests": 95,
-      "unique_ip_count": 54,
-      "bytes_served": 806464
-    },
     {
       "date": "2026-05-31",
       "requests": 87,
@@ -1084,9 +1078,15 @@
     },
     {
       "date": "2026-11-26",
-      "requests": 1348,
-      "unique_ip_count": 47,
-      "bytes_served": 1808033
+      "requests": 1350,
+      "unique_ip_count": 48,
+      "bytes_served": 1894165
+    },
+    {
+      "date": "2026-11-27",
+      "requests": 48,
+      "unique_ip_count": 29,
+      "bytes_served": 816640
     }
   ]
 }
