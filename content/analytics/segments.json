@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-27T18:56:46.882939+00:00",
+  "generated_at": "2026-11-28T01:57:37.776664+00:00",
   "window_days": 30,
   "device_types": [
     {
       "label": "Desktop",
-      "requests": 12330,
-      "unique_ip_count": 948
+      "requests": 10963,
+      "unique_ip_count": 943
     },
     {
       "label": "Unknown",
@@ -14,25 +14,25 @@
     },
     {
       "label": "Mobile",
-      "requests": 1159,
-      "unique_ip_count": 282
+      "requests": 1136,
+      "unique_ip_count": 275
     },
     {
       "label": "Bots",
-      "requests": 768,
-      "unique_ip_count": 306
+      "requests": 755,
+      "unique_ip_count": 299
     },
     {
       "label": "Tablet",
-      "requests": 127,
-      "unique_ip_count": 25
+      "requests": 115,
+      "unique_ip_count": 24
     }
   ],
   "browsers": [
     {
       "label": "Chrome",
-      "requests": 7916,
-      "unique_ip_count": 693
+      "requests": 7101,
+      "unique_ip_count": 685
     },
     {
       "label": "Unknown",
@@ -41,32 +41,32 @@
     },
     {
       "label": "Firefox",
-      "requests": 2474,
-      "unique_ip_count": 96
+      "requests": 2048,
+      "unique_ip_count": 95
     },
     {
       "label": "Other",
-      "requests": 1346,
-      "unique_ip_count": 214
+      "requests": 1294,
+      "unique_ip_count": 212
     },
     {
       "label": "Safari",
-      "requests": 934,
-      "unique_ip_count": 267
+      "requests": 916,
+      "unique_ip_count": 261
     },
     {
       "label": "Bots",
-      "requests": 768,
-      "unique_ip_count": 306
+      "requests": 755,
+      "unique_ip_count": 299
     },
     {
       "label": "Opera",
-      "requests": 549,
-      "unique_ip_count": 34
+      "requests": 460,
+      "unique_ip_count": 33
     },
     {
       "label": "Edge",
-      "requests": 310,
+      "requests": 308,
       "unique_ip_count": 81
     },
     {
@@ -78,8 +78,8 @@
   "operating_systems": [
     {
       "label": "Windows",
-      "requests": 8211,
-      "unique_ip_count": 466
+      "requests": 7239,
+      "unique_ip_count": 464
     },
     {
       "label": "Unknown",
@@ -88,33 +88,33 @@
     },
     {
       "label": "macOS",
-      "requests": 1507,
-      "unique_ip_count": 189
-    },
-    {
-      "label": "Linux",
-      "requests": 1379,
-      "unique_ip_count": 126
+      "requests": 1362,
+      "unique_ip_count": 187
     },
     {
       "label": "Other",
-      "requests": 1224,
-      "unique_ip_count": 256
+      "requests": 1220,
+      "unique_ip_count": 255
+    },
+    {
+      "label": "Linux",
+      "requests": 1133,
+      "unique_ip_count": 124
     },
     {
       "label": "Bots",
-      "requests": 768,
-      "unique_ip_count": 306
+      "requests": 755,
+      "unique_ip_count": 299
     },
     {
       "label": "Android",
-      "requests": 702,
-      "unique_ip_count": 82
+      "requests": 683,
+      "unique_ip_count": 80
     },
     {
       "label": "iOS",
-      "requests": 584,
-      "unique_ip_count": 241
+      "requests": 568,
+      "unique_ip_count": 235
     },
     {
       "label": "ChromeOS",
@@ -125,18 +125,18 @@
   "referrers": [
     {
       "label": "Direct / Unknown",
-      "requests": 15783,
-      "unique_ip_count": 1251
+      "requests": 14354,
+      "unique_ip_count": 1232
     },
     {
       "label": "Internal navigation",
-      "requests": 1377,
-      "unique_ip_count": 443
+      "requests": 1347,
+      "unique_ip_count": 436
     },
     {
       "label": "google.com",
-      "requests": 396,
-      "unique_ip_count": 36
+      "requests": 382,
+      "unique_ip_count": 33
     },
     {
       "label": "duckduckgo.com",
@@ -150,13 +150,13 @@
     },
     {
       "label": "binance.com",
-      "requests": 63,
-      "unique_ip_count": 2
+      "requests": 119,
+      "unique_ip_count": 3
     },
     {
       "label": "operavoicebodywork.com",
-      "requests": 24,
-      "unique_ip_count": 24
+      "requests": 26,
+      "unique_ip_count": 26
     },
     {
       "label": "five.co.in",
